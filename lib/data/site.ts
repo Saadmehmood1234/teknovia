@@ -206,3 +206,23 @@ export const reasons = [
       "Consistent delivery, transparent communication, and dependable support. You get clear timelines, regular updates, and a team that stands behind the work.",
   },
 ];
+
+
+export const stats = [
+  {
+    value: "25+",
+    label: "Happy Clients",
+  },
+  {
+    value: "50+",
+    label: "Projects Completed",
+  },
+  {
+    value: "15+",
+    label: "Team Members",
+  },
+  {
+    value: "98%",
+    label: "Client Satisfaction",
+  },
+];

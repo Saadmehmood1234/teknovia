@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 
 export function About() {
   return (
-    <section id="about" className="py-8 border-b border-gray-200 bg-white">
+    <section id="about" className="sm:py-8 py-4 border-b border-gray-200 bg-white">
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div className="relative">
@@ -13,7 +13,7 @@ export function About() {
                 alt="Modern workspace with professionals planning strategy"
                 width={900}
                 height={700}
-                className="h-96 w-full object-cover"
+                className="sm:h-96 h-auto w-full object-cover"
               />
             </div>
           </div>
@@ -27,7 +27,7 @@ export function About() {
               Technology-driven growth for modern businesses
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-6 text-sm leading-8 text-gray-500">
               Integrated digital marketing, custom software, EduTech, and talent
               solutions designed to help businesses scale efficiently.
             </p>

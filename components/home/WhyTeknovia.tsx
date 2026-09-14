@@ -26,19 +26,19 @@ export function WhyTeknovia() {
 
   const activeTxt = activeReason.txtColor;
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-8 sm:py-16">
       <Container className="flex justify-center items-center flex-col">
         <div className="max-w-3xl text-center">
           <p className="font-mono text-lg font-extrabold uppercase tracking-widest text-primary">
             Why Choose Teknovia
           </p>
 
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
             Your Growth is Our Commitment
           </h2>
         </div>
 
-        <div className="mt-16 flex w-full max-w-5xl min-w-0 gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-[#1D3C5F] to-[#009689] p-4">
+        <div className="mt-16 flex w-full max-w-5xl min-w-0 gap-3 overflow-hidden rounded-2xl bg-linear-to-br from-[#1D3C5F] to-[#009689] p-4">
           <div className="flex shrink-0 flex-col items-center gap-2 py-6">
             {Array.from({ length: 14 }).map((_, index) => (
               <div
@@ -126,7 +126,7 @@ export function WhyTeknovia() {
               </div>
             </div>
             <div className="min-w-0 max-w-full overflow-hidden">
-              <div className="flex min-w-0 gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:flex-col md:overflow-x-visible md:pb-0">
+              <div className="flex min-w-0 gap-2 overflow-x-auto pb-2 scrollbar-none [&::-webkit-scrollbar]:hidden md:flex-col md:overflow-x-visible md:pb-0">
                 {reasons.map((reason, index) => {
                   const isActive = activeIndex === index;
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { testimonials } from "@/lib/data/site";
@@ -9,7 +9,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden bg-surface pt-16"
+      className="relative overflow-hidden bg-surface pt-8 sm:pt-16"
     >
       <Image
         src="/images/home-testimonials-bg.jpg"
@@ -21,15 +21,15 @@ export function Testimonials() {
 
       <Container className="relative">
         <div className="text-center">
-          <p className="font-mono text-lg font-extrabold uppercase tracking-widest text-primary">
+          <p className="font-mono text-md font-extrabold uppercase tracking-widest text-primary">
             Testimonials & Success Stories
           </p>
 
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
             What Our Clients Say
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">
+          <p className="mx-auto mt-5 max-w-2xl text-sm text-center sm:text-lg text-gray-500">
             Real results from businesses that partnered with Teknovia to scale
             smarter.
           </p>

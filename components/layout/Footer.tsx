@@ -25,7 +25,7 @@ const industries = [
 
 export function Footer() {
   return (
-    <footer className="bg-slate-950 text-white">
+    <footer className="bg-[#040506] text-white">
       <Container>
         {/* Main footer */}
         <div className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,1fr)] lg:gap-10">

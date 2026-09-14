@@ -4,14 +4,14 @@ import { BottomImageCard } from "../ui/BottomImageCard";
 
 export function Industries() {
   return (
-    <section id="industries" className="py-16 bg-surface bg-[#FAFAFA]">
+    <section id="industries" className="sm:py-16 py-8 bg-surface bg-[#FAFAFA]">
       <Container>
         <div className="text-center">
           <p className="font-mono text-lg font-extrabold uppercase tracking-widest text-primary">
             Industries We Serve
           </p>
 
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="mt-4 sm:text-4xl text-3xl font-extrabold tracking-tight text-[#040506]">
             Multi-Industry Expertise
           </h2>
 

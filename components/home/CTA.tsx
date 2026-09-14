@@ -9,9 +9,9 @@ export function CTA() {
       <Image src="/images/home-hero.jpg" alt="" fill className="object-cover" />
 
       <div className="absolute inset-0 bg-[#0B7B74]/90" />
-      <div className="relative gap-10 max-w-345 py-16 px-8 lg:flex-row flex-col flex justify-between items-center w-full">
+      <div className="relative gap-10 max-w-345 py-8 sm:py-16 px-8 lg:flex-row flex-col flex justify-between items-center w-full">
         <div>
-          <p className="text-3xl font-bold text-white">
+          <p className="text-2xl sm:text-3xl font-bold text-white">
             Let&apos;s Build Smart Solutions Together
           </p>
 

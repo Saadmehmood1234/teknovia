@@ -41,13 +41,20 @@ export function DigitalServices() {
   }, []);
 
   const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return;
+    const element = scrollRef.current;
 
-    const cardWidth = scrollRef.current.clientWidth / 4;
+    if (!element) return;
+
+    const firstCard = element.firstElementChild as HTMLElement | null;
+
+    if (!firstCard) return;
+
     const gap = 16;
+    const cardWidth = firstCard.getBoundingClientRect().width;
+    const scrollAmount = cardWidth + gap;
 
-    scrollRef.current.scrollBy({
-      left: direction === "right" ? cardWidth + gap : -(cardWidth + gap),
+    element.scrollBy({
+      left: direction === "right" ? scrollAmount : -scrollAmount,
       behavior: "smooth",
     });
   };
@@ -77,12 +84,12 @@ export function DigitalServices() {
         <div className="mt-6">
           <div
             ref={scrollRef}
-            className="flex gap-4 overflow-hidden scroll-smooth"
+            className="flex snap-x snap-mandatory gap-4 overflow-hidden scroll-smooth"
           >
             {digitalServices.map((service) => (
               <div
                 key={service.title}
-                className="w-full shrink-0 sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]"
+                className="w-full shrink-0 snap-start sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]"
               >
                 <ServiceCard
                   image={service.image}
@@ -99,7 +106,7 @@ export function DigitalServices() {
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
               aria-label="Previous services"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition-all hover:border-primary-300 hover:text-primary disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400 disabled:shadow-none disabled:hover:border-slate-200 disabled:hover:bg-slate-100 disabled:hover:text-slate-400"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition-all hover:border-primary-300 hover:text-primary disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400 disabled:shadow-none"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
@@ -109,7 +116,7 @@ export function DigitalServices() {
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
               aria-label="Next services"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition-all hover:border-primary-300 hover:text-primary disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400 disabled:shadow-none disabled:hover:border-slate-200 disabled:hover:bg-slate-100 disabled:hover:text-slate-400"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition-all hover:border-primary-300 hover:text-primary disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400 disabled:shadow-none"
             >
               <ArrowRight className="h-4 w-4" />
             </button>

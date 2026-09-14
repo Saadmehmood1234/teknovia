@@ -10,7 +10,6 @@ import { Ecosystem } from "@/components/home/Ecosystem";
 import { Industries } from "@/components/home/Industries";
 import { WhyTeknovia } from "@/components/home/WhyTeknovia";
 import { Testimonials } from "@/components/home/Testimonials";
-import { CTA } from "@/components/home/CTA";
 
 export default function Home() {
   return (

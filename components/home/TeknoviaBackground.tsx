@@ -83,8 +83,8 @@ function MovingStream({
         <div
           className={`absolute top-1/2 h-px w-40 -translate-y-1/2 blur-[1px] ${
             reverse
-              ? "right-3 bg-gradient-to-l from-primary/50 via-primary/20 to-transparent"
-              : "left-3 bg-gradient-to-r from-primary/50 via-primary/20 to-transparent"
+              ? "right-3 bg-linear-to-l from-primary/50 via-primary/20 to-transparent"
+              : "left-3 bg-linear-to-r from-primary/50 via-primary/20 to-transparent"
           }`}
         />
 
@@ -161,8 +161,8 @@ function MovingStream({
 
         {/* Tiny bright core */}
         <motion.span
-          className={`absolute top-1/2 z-20 h-[2px] w-[2px] -translate-y-1/2 rounded-full bg-primary ${
-            reverse ? "right-[-2px]" : "left-[-2px]"
+          className={`absolute top-1/2 z-20 h-0.5 w-0.5 -translate-y-1/2 rounded-full bg-primary ${
+            reverse ? "-right-0.5" : "-left-0.5"
           }`}
           animate={{
             opacity: [0.4, 1, 0.4],

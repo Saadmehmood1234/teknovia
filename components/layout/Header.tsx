@@ -211,7 +211,7 @@ function Dropdown({
         />
       </button>
 
-      <div className="invisible absolute left-1/2 top-full z-50 w-max min-w-[220px] -translate-x-1/2 translate-y-2 rounded-xl border border-slate-100 bg-white p-1.5 opacity-0 shadow-soft transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+      <div className="invisible absolute left-1/2 top-full z-50 w-max min-w-55 -translate-x-1/2 translate-y-2 rounded-xl border border-slate-100 bg-white p-1.5 opacity-0 shadow-soft transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
         {children}
       </div>
     </div>

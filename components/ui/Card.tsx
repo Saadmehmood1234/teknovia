@@ -24,7 +24,7 @@ export function ServiceCard({
         />
       </div>
 
-      <div className="flex min-h-52 flex-col p-5">
+      <div className="flex flex-col p-5">
         <h3 className="text-md font-bold text-slate-950 transition-colors duration-200 group-hover:text-primary">
           {title}
         </h3>

@@ -1,10 +1,3 @@
-import {
-  BriefcaseBusiness,
-  Code2,
-  GraduationCap,
-  Megaphone,
-  ShoppingCart,
-} from "lucide-react";
 import Image from "next/image";
 
 import { Container } from "@/components/ui/Container";
@@ -33,7 +26,7 @@ export function Ecosystem() {
             One framework. End-to-end growth.
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-white/60">
+          <p className="mt-6 sm:text-lg text-sm leading-8 text-center text-white/60">
             Integrated Service Ecosystem unifies digital marketing, custom
             software development, eCommerce solutions, EduTech platforms,
             Academic ERP, and talent services into one scalable growth
