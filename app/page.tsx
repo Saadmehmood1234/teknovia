@@ -1,4 +1,3 @@
-import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 import { Hero } from "@/components/home/Hero";
@@ -14,8 +13,6 @@ import { Testimonials } from "@/components/home/Testimonials";
 export default function Home() {
   return (
     <>
-      <Header />
-
       <main>
         <Hero />
         <Stats />
@@ -27,8 +24,6 @@ export default function Home() {
         <WhyTeknovia />
         <Testimonials />
       </main>
-
-      <Footer />
     </>
   );
 }

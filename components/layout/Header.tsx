@@ -4,8 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 
-import { Container } from "@/components/ui/Container";
-
 const softwareLinks = [
   "Enterprise Software Development",
   "Web Application Development",
@@ -40,10 +38,13 @@ export function Header() {
   const [active, setActive] = useState("home");
 
   return (
-    <header className="sticky text-xs top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
-      <Container>
+    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 text-xs backdrop-blur">
+      <div className="px-5 sm:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <div className="flex h-16 items-center justify-between">
-          <a href="#home" className="flex shrink-0 pr-4 items-center">
+          <a
+            href="#home"
+            className="flex shrink-0 items-center pr-4"
+          >
             <Image
               src="/logo.png"
               alt="Teknovia"
@@ -66,18 +67,24 @@ export function Header() {
             <NavLink
               active={active === "about"}
               onClick={() => setActive("about")}
-              href="#about"
+              href="/corporate"
             >
               Corporate
             </NavLink>
 
-            <Dropdown label="Software Solution" active={active === "software"}>
+            <Dropdown
+              label="Software Solution"
+              active={active === "software"}
+            >
               {softwareLinks.map((item) => (
                 <DropdownItem key={item} label={item} />
               ))}
             </Dropdown>
 
-            <Dropdown label="Digital Services" active={active === "digital"}>
+            <Dropdown
+              label="Digital Services"
+              active={active === "digital"}
+            >
               {digitalLinks.map((item) => (
                 <DropdownItem key={item} label={item} />
               ))}
@@ -99,7 +106,10 @@ export function Header() {
               EdTech Solution
             </NavLink>
 
-            <Dropdown label="Industries" active={active === "industries"}>
+            <Dropdown
+              label="Industries"
+              active={active === "industries"}
+            >
               {industries.map((item) => (
                 <DropdownItem key={item} label={item} />
               ))}
@@ -157,7 +167,7 @@ export function Header() {
             </nav>
           </div>
         )}
-      </Container>
+      </div>
     </header>
   );
 }
@@ -177,7 +187,11 @@ function NavLink({
     <a
       href={href}
       onClick={onClick}
-      className={`whitespace-nowrap text-sm font-medium transition-colors ${active ? "bg-primary-50 text-primary px-2 py-1 rounded-lg" : "text-slate-700 hover:bg-slate-50 hover:text-primary"}`}
+      className={`whitespace-nowrap text-sm font-medium transition-colors ${
+        active
+          ? "rounded-lg bg-primary-50 px-2 py-1 text-primary"
+          : "text-slate-700 hover:bg-slate-50 hover:text-primary"
+      }`}
     >
       {children}
     </a>
@@ -204,6 +218,7 @@ function Dropdown({
         }`}
       >
         {label}
+
         <ChevronDown
           size={14}
           strokeWidth={1.8}

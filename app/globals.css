@@ -21,7 +21,7 @@
   --font-body: var(--font-manrope);
   --font-heading: var(--font-space-grotesk);
 
-  --container-width: 1380px;
+  --container-width: 1320px;
 }
 
 @theme {
