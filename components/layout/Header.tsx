@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const softwareLinks = [
   "Enterprise Software Development",
@@ -35,16 +36,16 @@ const industries = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("home");
+  const pathname = usePathname();
 
+  const isHome = pathname === "/";
+  const isCorporate = pathname === "/corporate";
+  const isContact = pathname === "/contact";
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 text-xs backdrop-blur">
       <div className="px-5 sm:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <div className="flex h-16 items-center justify-between">
-          <a
-            href="#home"
-            className="flex shrink-0 items-center pr-4"
-          >
+          <a href="#home" className="flex shrink-0 items-center pr-4">
             <Image
               src="/logo.png"
               alt="Teknovia"
@@ -56,25 +57,17 @@ export function Header() {
           </a>
 
           <nav className="hidden items-center gap-4 xl:flex 2xl:gap-6">
-            <NavLink
-              active={active === "home"}
-              onClick={() => setActive("home")}
-              href="#home"
-            >
+            <NavLink active={isHome} href="/">
               Home
             </NavLink>
 
-            <NavLink
-              active={active === "about"}
-              onClick={() => setActive("about")}
-              href="/corporate"
-            >
+            <NavLink active={isCorporate} href="/corporate">
               Corporate
             </NavLink>
 
             <Dropdown
               label="Software Solution"
-              active={active === "software"}
+              active={pathname.startsWith("/software")}
             >
               {softwareLinks.map((item) => (
                 <DropdownItem key={item} label={item} />
@@ -83,7 +76,7 @@ export function Header() {
 
             <Dropdown
               label="Digital Services"
-              active={active === "digital"}
+              active={pathname.startsWith("/digital-services")}
             >
               {digitalLinks.map((item) => (
                 <DropdownItem key={item} label={item} />
@@ -92,40 +85,36 @@ export function Header() {
 
             <Dropdown
               label="e-Commerce Solution"
-              active={active === "ecommerce"}
+              active={pathname.startsWith("/ecommerce")}
             >
               <DropdownItem label="Jio Mart" />
               <DropdownItem label="Shopify" />
             </Dropdown>
 
-            <NavLink
-              active={active === "services"}
-              onClick={() => setActive("services")}
-              href="#services"
-            >
+            <NavLink active={pathname === "/edtech"} href="/edtech">
               EdTech Solution
             </NavLink>
 
             <Dropdown
               label="Industries"
-              active={active === "industries"}
+              active={pathname.startsWith("/industries")}
             >
               {industries.map((item) => (
                 <DropdownItem key={item} label={item} />
               ))}
             </Dropdown>
 
-            <NavLink
-              active={active === "testimonials"}
-              onClick={() => setActive("testimonials")}
-              href="#testimonials"
-            >
+            <NavLink active={pathname === "/blog"} href="/blog">
               Blog
             </NavLink>
 
             <a
-              href="#contact"
-              className="ml-1 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+              href="/contact"
+              className={`ml-1 inline-flex items-center justify-center rounded-lg px-4 py-2 text-xs font-semibold transition-colors ${
+                isContact
+                  ? "bg-primary-50 text-primary"
+                  : "bg-primary text-white hover:bg-primary-dark"
+              }`}
             >
               Contact Us
             </a>
@@ -187,7 +176,7 @@ function NavLink({
     <a
       href={href}
       onClick={onClick}
-      className={`whitespace-nowrap text-sm font-medium transition-colors ${
+      className={`whitespace-nowrap text-xs font-medium transition-colors ${
         active
           ? "rounded-lg bg-primary-50 px-2 py-1 text-primary"
           : "text-slate-700 hover:bg-slate-50 hover:text-primary"

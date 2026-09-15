@@ -1,5 +1,4 @@
 https://teknovia.deva3s.xyz/contact
-https://teknovia.deva3s.xyz/corporate
 https://teknovia.deva3s.xyz/services
 https://teknovia.deva3s.xyz/software-services
 https://teknovia.deva3s.xyz/software-services/enterprise-software-solution

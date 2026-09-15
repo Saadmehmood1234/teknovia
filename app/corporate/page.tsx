@@ -3,27 +3,37 @@ import { ArrowRight, Eye, Rocket, Target } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { leaders, stats, strengths, values } from "@/lib/data/site";
 import Image from "next/image";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Corporate",
+  description:
+    "Learn about Teknovia, our technology solutions, expertise, and commitment to helping modern businesses grow.",
+};
+
 
 export default function CorporatePage() {
   return (
     <main className="overflow-hidden bg-white">
-      <section className="relative pt-6 border-b border-gray-200 pb-12 isolate overflow-hidden bg-linear-to-r from-primary/10 via-white to-white gap-10">
+      <section className="relative pt-8 border-b border-gray-200 pb-12 isolate overflow-hidden bg-linear-to-r from-primary/10 via-primary/5 to-white gap-10">
         <Container>
+          <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8" />
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="w-full lg:w-[58%]">
-              <div className="mb-5 flex items-center gap-3">
+              <div className="mb-2 flex items-center gap-3">
                 <span className="text-lg font-extrabold uppercase tracking-widest text-primary">
                   About&nbsp;Teknovia
                 </span>
               </div>
 
-              <h1 className="max-w-4xl text-4xl font-black leading-[1.02] tracking-tight text-black sm:text-5xl">
+              <h1 className="max-w-4xl text-4xl font-black leading-[1.2] tracking-tight text-black sm:text-5xl">
                 Technology, Software &{" "}
                 <span className="lg:block">
                   Growth Solutions{" "}
                   <span className="text-primary">
                     Built for
-                    <br className="hidden lg:block"/>
+                    <br className="hidden lg:block" />
                     Modern Businesses
                   </span>
                 </span>
