@@ -6,15 +6,20 @@ import { motion } from "framer-motion";
 const letters = ["T", "E", "K", "N", "O", "V", "I", "A"];
 
 const streams = [
-  { top: "9%", duration: 15, delay: -3, reverse: false },
-  { top: "19%", duration: 21, delay: -12, reverse: true },
-  { top: "30%", duration: 17, delay: -7, reverse: false },
-  { top: "41%", duration: 24, delay: -18, reverse: true },
-  { top: "53%", duration: 16, delay: -9, reverse: false },
-  { top: "64%", duration: 22, delay: -15, reverse: true },
-  { top: "75%", duration: 18, delay: -5, reverse: false },
-  { top: "86%", duration: 25, delay: -20, reverse: true },
-  { top: "96%", duration: 19, delay: -11, reverse: false },
+  { top: "4%", duration: 17, delay: -4, reverse: false },
+  { top: "11%", duration: 21, delay: -13, reverse: true },
+  { top: "18%", duration: 16, delay: -7, reverse: false },
+  { top: "25%", duration: 23, delay: -17, reverse: true },
+  { top: "32%", duration: 18, delay: -9, reverse: false },
+  { top: "39%", duration: 25, delay: -19, reverse: true },
+  { top: "46%", duration: 17, delay: -6, reverse: false },
+  { top: "53%", duration: 22, delay: -14, reverse: true },
+  { top: "60%", duration: 16, delay: -8, reverse: false },
+  { top: "67%", duration: 24, delay: -18, reverse: true },
+  { top: "74%", duration: 18, delay: -5, reverse: false },
+  { top: "81%", duration: 23, delay: -16, reverse: true },
+  { top: "88%", duration: 17, delay: -10, reverse: false },
+  { top: "94%", duration: 25, delay: -20, reverse: true },
 ];
 
 export function TeknoviaBackground() {
@@ -66,10 +71,10 @@ function MovingStream({
       className="absolute"
       style={{ top }}
       initial={{
-        x: reverse ? "110vw" : "-10vw",
+        x: reverse ? "110vw" : "-15vw",
       }}
       animate={{
-        x: reverse ? "-10vw" : "110vw",
+        x: reverse ? "-15vw" : "110vw",
       }}
       transition={{
         duration,
@@ -78,24 +83,24 @@ function MovingStream({
         ease: "linear",
       }}
     >
-      <div className="relative h-8 w-44">
-        {/* Long atmospheric trail */}
+      <div className="relative h-12 w-64">
+        {/* Main horizontal line */}
         <div
-          className={`absolute top-1/2 h-px w-40 -translate-y-1/2 blur-[1px] ${
+          className={`absolute top-1/2 h-[2px] w-56 -translate-y-1/2 blur-[1px] ${
             reverse
-              ? "right-3 bg-linear-to-l from-primary/50 via-primary/20 to-transparent"
-              : "left-3 bg-linear-to-r from-primary/50 via-primary/20 to-transparent"
+              ? "right-3 bg-linear-to-l from-primary/60 via-primary/25 to-transparent"
+              : "left-3 bg-linear-to-r from-primary/60 via-primary/25 to-transparent"
           }`}
         />
 
-        {/* Soft glow underneath the trail */}
+        {/* Glow */}
         <motion.div
-          className={`absolute top-1/2 h-5 w-32 -translate-y-1/2 rounded-full bg-primary/20 blur-xl ${
+          className={`absolute top-1/2 h-7 w-44 -translate-y-1/2 rounded-full bg-primary/25 blur-xl ${
             reverse ? "right-2" : "left-2"
           }`}
           animate={{
-            opacity: [0.25, 0.55, 0.25],
-            scaleX: [0.85, 1.1, 0.85],
+            opacity: [0.25, 0.65, 0.25],
+            scaleX: [0.85, 1.15, 0.85],
           }}
           transition={{
             duration: 1.6,
@@ -104,34 +109,34 @@ function MovingStream({
           }}
         />
 
-        {/* Temporal ghost 3 */}
+        {/* Outer blurred letter */}
         <motion.span
-          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[12px] font-semibold tracking-[0.2em] text-primary/10 blur-[3px] ${
+          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/10 blur-[4px] ${
             reverse ? "right-2" : "left-2"
           }`}
         >
           {letter}
         </motion.span>
 
-        {/* Temporal ghost 2 */}
+        {/* Middle blurred letter */}
         <motion.span
-          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[12px] font-semibold tracking-[0.2em] text-primary/20 blur-[2px] ${
-            reverse ? "right-5" : "left-5"
+          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/20 blur-[3px] ${
+            reverse ? "right-6" : "left-6"
           }`}
         >
           {letter}
         </motion.span>
 
-        {/* Temporal ghost 1 */}
+        {/* Inner blurred letter */}
         <motion.span
-          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[12px] font-semibold tracking-[0.2em] text-primary/35 blur-[1px] ${
-            reverse ? "right-8" : "left-8"
+          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/35 blur-[1px] ${
+            reverse ? "right-10" : "left-10"
           }`}
         >
           {letter}
         </motion.span>
 
-        {/* Main character */}
+        {/* Main animated letter */}
         <motion.span
           key={letterIndex}
           initial={{
@@ -148,25 +153,25 @@ function MovingStream({
             duration: 0.6,
             ease: "easeOut",
           }}
-          className={`absolute top-1/2 z-10 -translate-y-1/2 font-mono text-[12px] font-bold tracking-[0.2em] text-primary ${
+          className={`absolute top-1/2 z-10 -translate-y-1/2 font-mono text-[20px] font-bold tracking-[0.2em] text-primary ${
             reverse ? "right-0" : "left-0"
           }`}
           style={{
             textShadow:
-              "0 0 5px rgba(0,150,137,0.9), 0 0 12px rgba(0,150,137,0.65), 0 0 22px rgba(0,150,137,0.35)",
+              "0 0 7px rgba(0,150,137,0.9), 0 0 16px rgba(0,150,137,0.65), 0 0 28px rgba(0,150,137,0.35)",
           }}
         >
           {letter}
         </motion.span>
 
-        {/* Tiny bright core */}
+        {/* Moving point */}
         <motion.span
-          className={`absolute top-1/2 z-20 h-0.5 w-0.5 -translate-y-1/2 rounded-full bg-primary ${
+          className={`absolute top-1/2 z-20 h-1 w-1 -translate-y-1/2 rounded-full bg-primary ${
             reverse ? "-right-0.5" : "-left-0.5"
           }`}
           animate={{
             opacity: [0.4, 1, 0.4],
-            scale: [0.8, 1.5, 0.8],
+            scale: [0.8, 1.7, 0.8],
           }}
           transition={{
             duration: 0.9,

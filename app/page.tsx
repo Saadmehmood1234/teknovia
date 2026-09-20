@@ -1,5 +1,3 @@
-import { Footer } from "@/components/layout/Footer";
-
 import { Hero } from "@/components/home/Hero";
 import { Stats } from "@/components/home/Stats";
 import { About } from "@/components/home/About";
@@ -18,7 +16,7 @@ export default function Home() {
         <Stats />
         <About />
         <Services />
-        <DigitalServices />
+        {/* <DigitalServices /> */}
         <Ecosystem />
         <Industries />
         <WhyTeknovia />

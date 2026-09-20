@@ -5,6 +5,7 @@ import { leaders, stats, strengths, values } from "@/lib/data/site";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Metadata } from "next";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 export const metadata: Metadata = {
   title: "Corporate",
@@ -21,11 +22,7 @@ export default function CorporatePage() {
           <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8" />
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="w-full lg:w-[58%]">
-              <div className="mb-2 flex items-center gap-3">
-                <span className="text-lg font-extrabold uppercase tracking-widest text-primary">
-                  About&nbsp;Teknovia
-                </span>
-              </div>
+              <TopBadge data="About&nbsp;Teknovia"/>
 
               <h1 className="max-w-4xl text-4xl font-black leading-[1.2] tracking-tight text-black sm:text-5xl">
                 Technology, Software &{" "}
@@ -61,10 +58,8 @@ export default function CorporatePage() {
                 </a>
               </div>
             </div>
-
-            {/* Right Image */}
             <div className="relative w-full lg:w-[38%]">
-              <div className="relative aspect-[5/4] overflow-hidden rounded-2xl">
+              <div className="relative aspect-5/4 overflow-hidden rounded-2xl">
                 <Image
                   src="/images/corporate-hero.png"
                   alt="Teknovia technology and business solutions"

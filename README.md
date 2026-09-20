@@ -1,5 +1,4 @@
-https://teknovia.deva3s.xyz/contact
-https://teknovia.deva3s.xyz/services
+
 https://teknovia.deva3s.xyz/software-services
 https://teknovia.deva3s.xyz/software-services/enterprise-software-solution
 https://teknovia.deva3s.xyz/software-services/web-application-development
@@ -27,8 +26,3 @@ https://teknovia.deva3s.xyz/industries/manufacturing
 https://teknovia.deva3s.xyz/industries/logistics-supply-chain
 https://teknovia.deva3s.xyz/industries/hospitality-travel
 https://teknovia.deva3s.xyz/industries/professional-services
-https://teknovia.deva3s.xyz/blog
-https://teknovia.deva3s.xyz/corporate#about
-https://teknovia.deva3s.xyz/#process
-https://teknovia.deva3s.xyz/faqs
-

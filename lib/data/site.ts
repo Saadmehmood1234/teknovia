@@ -1,4 +1,21 @@
-import { ShieldCheck,Layers,Users,Lightbulb,Target,TrendingUp, Check, Circle, SlidersHorizontal, Signal, Puzzle, Globe, Zap, Phone, Send, Mail } from "lucide-react";
+import {
+  ShieldCheck,
+  Layers,
+  Users,
+  Lightbulb,
+  Target,
+  TrendingUp,
+  Check,
+  Circle,
+  SlidersHorizontal,
+  Signal,
+  Puzzle,
+  Globe,
+  Zap,
+  Phone,
+  Send,
+  Mail,
+} from "lucide-react";
 export const services = [
   {
     image: "/images/card-1.png",
@@ -8,7 +25,7 @@ export const services = [
   },
   {
     image: "/images/card-2.png",
-    title: "Digital Services",
+    title: "Digital Edge",
     description: "Explore our Services offerings.",
   },
   {
@@ -69,8 +86,23 @@ export const digitalServices = [
   },
 ];
 
-
 export const industries = [
+  {
+    image: "/images/card-17.png",
+    title: "Manufacturing",
+    description: "Automation and digital systems to boost productivity.",
+  },
+  {
+    image: "/images/card-19.png",
+    title: "Hospitality & Travel",
+    description: "Smart platforms that enhance guest experience and bookings.",
+  },
+  {
+    image: "/images/card-18.png",
+    title: "Logistics & Supply Chain",
+    description:
+      "Intelligent digital solutions for tracking and supply chain management.",
+  },
   {
     image: "/images/card-12.png",
     title: "Education",
@@ -102,31 +134,11 @@ export const industries = [
       "Secure solutions for financial operations, taxation and compliance.",
   },
   {
-    image: "/images/card-17.png",
-    title: "Manufacturing",
-    description:
-      "Automation and digital systems to boost productivity.",
-  },
-  {
-    image: "/images/card-18.png",
-    title: "Logistics & Supply Chain",
-    description:
-      "Intelligent digital solutions for tracking and supply chain management.",
-  },
-  {
-    image: "/images/card-19.png",
-    title: "Hospitality & Travel",
-    description:
-      "Smart platforms that enhance guest experience and bookings.",
-  },
-  {
     image: "/images/card-20.png",
     title: "Professional Services",
-    description:
-      "Digital tools for projects, clients and business operations.",
+    description: "Digital tools for projects, clients and business operations.",
   },
 ];
-
 
 export const testimonials = [
   {
@@ -149,84 +161,82 @@ export const testimonials = [
   },
 ];
 
-
 export const reasons = [
   {
     number: "01",
-    bgColor:"bg-gradient-to-r from-[#33A5F1] to-[#2369E0]",
-    txtColor:"text-[#2369E0]",
-    icon:Target,
+    bgColor: "bg-gradient-to-r from-[#33A5F1] to-[#2369E0]",
+    txtColor: "text-[#2369E0]",
+    icon: Target,
     title: "Result Driven Approach",
     description:
       "We focus on measurable outcomes that align with your business objectives. Every engagement is tied to clear KPIs so you see real progress, not just activity.",
   },
   {
     number: "02",
-    bgColor:"bg-gradient-to-r from-[#9D7AF4] to-[#7A3EE1]",
-    txtColor:"text-[#7A3EE1]",
-    icon:Layers,
+    bgColor: "bg-gradient-to-r from-[#9D7AF4] to-[#7A3EE1]",
+    txtColor: "text-[#7A3EE1]",
+    icon: Layers,
     title: "Complete Solutions",
     description:
       "From strategy to execution, we deliver end-to-end technology and marketing services. One partner for web, software, SEO, and growth—without the coordination headaches.",
   },
   {
     number: "03",
-    bgColor:"bg-gradient-to-r from-[#24C0A8] to-[#109476]",
-    txtColor:"text-[#109476]",
-    icon:Users,
+    bgColor: "bg-gradient-to-r from-[#24C0A8] to-[#109476]",
+    txtColor: "text-[#109476]",
+    icon: Users,
     title: "Expert Team",
     description:
       "Skilled professionals across software, marketing, and industry domains. Our specialists bring deep experience to every project, from discovery through launch.",
   },
   {
     number: "04",
-    bgColor:"bg-gradient-to-r from-[#F0A720] to-[#CD5A11]",
-    txtColor:"text-[#CD5A11]",
-    icon:TrendingUp,
+    bgColor: "bg-gradient-to-r from-[#F0A720] to-[#CD5A11]",
+    txtColor: "text-[#CD5A11]",
+    icon: TrendingUp,
     title: "Scalable Systems",
     description:
       "Solutions built to grow with your business and adapt to changing needs. We architect for today’s goals and tomorrow’s scale, so you are never rebuilding from scratch.",
   },
   {
     number: "05",
-    bgColor:"bg-gradient-to-r from-[#E960A4] to-[#CD3176]",
-    txtColor:"text-[#CD3176]",
-    icon:Lightbulb,
+    bgColor: "bg-gradient-to-r from-[#E960A4] to-[#CD3176]",
+    txtColor: "text-[#CD3176]",
+    icon: Lightbulb,
     title: "Innovative Thinking",
     description:
       "We leverage emerging technologies to keep you ahead of the competition. Practical innovation that improves efficiency, reach, and customer experience.",
   },
   {
     number: "06",
-    bgColor:"bg-gradient-to-r from-[#2DC084] to-[#1B904F]",
-    txtColor:"text-[#1B904F]",
-    icon:ShieldCheck,
+    bgColor: "bg-gradient-to-r from-[#2DC084] to-[#1B904F]",
+    txtColor: "text-[#1B904F]",
+    icon: ShieldCheck,
     title: "Reliable Execution",
     description:
       "Consistent delivery, transparent communication, and dependable support. You get clear timelines, regular updates, and a team that stands behind the work.",
   },
 ];
 
-
 export const stats = [
   {
     value: "25+",
-    icon:Users,
+    icon: Users,
     label: "Happy Clients",
   },
   {
     value: "50+",
-    icon:Check,
+    icon: Check,
     label: "Projects Completed",
   },
   {
     value: "15+",
-    icon:Circle,
+    icon: Circle,
     label: "Team Members",
   },
   {
     value: "98%",
-    icon:ShieldCheck,
+    icon: ShieldCheck,
     label: "Client Satisfaction",
   },
 ];
@@ -264,8 +274,6 @@ export const strengths = [
   },
 ];
 
-
-
 export const values = [
   {
     number: "01",
@@ -296,8 +304,6 @@ export const values = [
   },
 ];
 
-
-
 export const leaders = [
   {
     initials: "RK",
@@ -313,42 +319,47 @@ export const leaders = [
   },
 ];
 
+export const contactFeatures = [
+  {
+    id: 1,
+    icon: Zap,
+    title: "Quick Response",
+    description: "We respond within 24 hours.",
+  },
+  {
+    id: 2,
+    icon: ShieldCheck,
+    title: "Trusted Partner",
+    description: "Reliable solutions you can count on.",
+  },
+  {
+    id: 3,
+    icon: Signal,
+    title: "Results Focused",
+    description: "We deliver measurable business impact.",
+  },
+];
 
-export const contactFeatures=[
-    {  id:1,
-        icon:Zap,
-        title:"Quick Response",
-        description:"We respond within 24 hours."
-    },
-        {  id:2,
-        icon:ShieldCheck,
-        title:"Trusted Partner",
-        description:"Reliable solutions you can count on."
-    },
-        {  id:3,
-        icon:Signal,
-        title:"Results Focused",
-        description:"We deliver measurable business impact."
-    }
-]
-
-export const contactFeatures2=[
-    {  id:1,
-        icon:Zap,
-        title:"Quick Response",
-        description:"We respond within 24 hours."
-    },
-        {  id:2,
-        icon:ShieldCheck,
-        title:"Trusted Partner",
-        description:"Reliable solutions you can count on."
-    },
-        {  id:3,
-        icon:Signal,
-        title:"Results Focused",
-        description:"We deliver measurable business impact."
-    }
-]
+export const contactFeatures2 = [
+  {
+    id: 1,
+    icon: Zap,
+    title: "Quick Response",
+    description: "We respond within 24 hours.",
+  },
+  {
+    id: 2,
+    icon: ShieldCheck,
+    title: "Trusted Partner",
+    description: "Reliable solutions you can count on.",
+  },
+  {
+    id: 3,
+    icon: Signal,
+    title: "Results Focused",
+    description: "We deliver measurable business impact.",
+  },
+];
 
 type ContactTab = "message" | "callback" | "enquiry";
 

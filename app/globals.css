@@ -22,12 +22,13 @@
   --font-heading: var(--font-space-grotesk);
 
   --container-width: 1320px;
+
   --hero-grid-line: rgba(0, 150, 137, 0.08);
 }
 
 @theme {
-   --color-white: #ffffff;
-   
+  --color-white: #ffffff;
+
   --font-sans: var(--font-manrope);
   --font-heading: var(--font-space-grotesk);
 
@@ -87,6 +88,7 @@ select {
 button {
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
 }
@@ -147,5 +149,6 @@ img {
       var(--hero-grid-line) 1px,
       transparent 1px
     );
+
   background-size: 40px 40px;
 }

@@ -1,127 +1,220 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useState, type ReactNode } from "react";
 
-const softwareLinks = [
-  "Enterprise Software Development",
-  "Web Application Development",
-  "Mobile Application Development",
-  "SaaS & Software Products",
-];
+export const navigation = [
+  {
+    label: "Software Solution",
+    href: "/software-services",
+    children: [
+      {
+        label: "Enterprise Software Development",
+        href: "/software-services/enterprise-software-solution",
+      },
+      {
+        label: "Web Application Development",
+        href: "/software-services/web-application-development",
+      },
+      {
+        label: "Mobile Application Development",
+        href: "/software-services/mobile-application-development",
+      },
+      {
+        label: "SaaS & Software Products",
+        href: "/software-services/software-product",
+      },
+    ],
+  },
 
-const digitalLinks = [
-  "Website Development",
-  "Local SEO (GMB)",
-  "Search Engine Optimization (SEO)",
-  "SMO (Instagram & Facebook)",
-  "Whatsapp Marketing",
-  "B2B Marketing",
-  "Influencer Marketing",
-];
+  {
+    label: "Digital Services",
+    href: "/digital-marketing",
+    children: [
+      {
+        label: "Website Development",
+        href: "/digital-marketing/website-development",
+      },
+      {
+        label: "Local SEO",
+        href: "/digital-marketing/local-seo",
+      },
+      {
+        label: "Search Engine Optimization",
+        href: "/digital-marketing/web-seo",
+      },
+      {
+        label: "Social Media Optimization",
+        href: "/digital-marketing/social-media-optimization",
+      },
+      {
+        label: "WhatsApp Marketing",
+        href: "/digital-marketing/whatsapp-marketing",
+      },
+      {
+        label: "B2B Marketing",
+        href: "/digital-marketing/b2b-marketing",
+      },
+      {
+        label: "Influencer Marketing",
+        href: "/digital-marketing/influencer-marketing",
+      },
+    ],
+  },
 
-const industries = [
-  "Education",
-  "Healthcare",
-  "Retail & eCommerce",
-  "Real Estate",
-  "Finance & Accounting",
-  "Manufacturing",
-  "Logistics & Supply Chain",
-  "Hospitality & Travel",
-  "Professional Services",
+  {
+    label: "eCommerce Solution",
+    href: "/ecommerce-solutions",
+    children: [
+      {
+        label: "JioMart",
+        href: "/ecommerce-solutions/jio-mart",
+      },
+      {
+        label: "Shopify",
+        href: "/ecommerce-solutions/shopify",
+      },
+    ],
+  },
+
+  {
+    label: "EdTech Solution",
+    href: "/edtech-solution",
+  },
+
+  {
+    label: "Industries",
+    href: "/industries",
+    children: [
+      {
+        label: "Education",
+        href: "/industries/education",
+      },
+      {
+        label: "Healthcare",
+        href: "/industries/healthcare",
+      },
+      {
+        label: "Retail & eCommerce",
+        href: "/industries/retail-ecommerce",
+      },
+      {
+        label: "Real Estate",
+        href: "/industries/real-estate",
+      },
+      {
+        label: "Finance & Accounting",
+        href: "/industries/finance-accounting",
+      },
+      {
+        label: "Manufacturing",
+        href: "/industries/manufacturing",
+      },
+      {
+        label: "Logistics & Supply Chain",
+        href: "/industries/logistics-supply-chain",
+      },
+      {
+        label: "Hospitality & Travel",
+        href: "/industries/hospitality-travel",
+      },
+      {
+        label: "Professional Services",
+        href: "/industries/professional-services",
+      },
+    ],
+  },
+
+  {
+    label: "Blog",
+    href: "/blog",
+  },
 ];
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const isHome = pathname === "/";
-  const isCorporate = pathname === "/corporate";
-  const isContact = pathname === "/contact";
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 text-xs backdrop-blur">
       <div className="px-5 sm:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <div className="flex h-16 items-center justify-between">
-          <a href="#home" className="flex shrink-0 items-center pr-4">
+          <Link
+            href="/"
+            className="flex shrink-0 items-center pr-4"
+            onClick={() => setOpen(false)}
+          >
             <Image
-              src="/logo.png"
+              src="/teknovia-logo.png"
               alt="Teknovia"
               width={120}
               height={40}
               priority
-              className="h-7 w-auto object-contain"
+              className="h-8 w-auto object-contain"
             />
-          </a>
-
-          <nav className="hidden items-center gap-4 xl:flex 2xl:gap-6">
-            <NavLink active={isHome} href="/">
+          </Link>
+          <nav className="hidden items-center gap-4 xl:flex 2xl:gap-4">
+            <NavLink href="/" active={isActive("/")}>
               Home
             </NavLink>
-
-            <NavLink active={isCorporate} href="/corporate">
+            <NavLink href="/corporate" active={isActive("/corporate")}>
               Corporate
             </NavLink>
 
-            <Dropdown
-              label="Software Solution"
-              active={pathname.startsWith("/software")}
-            >
-              {softwareLinks.map((item) => (
-                <DropdownItem key={item} label={item} />
-              ))}
-            </Dropdown>
-
-            <Dropdown
-              label="Digital Services"
-              active={pathname.startsWith("/digital-services")}
-            >
-              {digitalLinks.map((item) => (
-                <DropdownItem key={item} label={item} />
-              ))}
-            </Dropdown>
-
-            <Dropdown
-              label="e-Commerce Solution"
-              active={pathname.startsWith("/ecommerce")}
-            >
-              <DropdownItem label="Jio Mart" />
-              <DropdownItem label="Shopify" />
-            </Dropdown>
-
-            <NavLink active={pathname === "/edtech"} href="/edtech">
-              EdTech Solution
-            </NavLink>
-
-            <Dropdown
-              label="Industries"
-              active={pathname.startsWith("/industries")}
-            >
-              {industries.map((item) => (
-                <DropdownItem key={item} label={item} />
-              ))}
-            </Dropdown>
-
-            <NavLink active={pathname === "/blog"} href="/blog">
-              Blog
-            </NavLink>
-
-            <a
-              href="/contact"
-              className={`ml-1 inline-flex items-center justify-center rounded-lg px-4 py-2 text-xs font-semibold transition-colors ${
-                isContact
-                  ? "bg-primary-50 text-primary"
-                  : "bg-primary text-white hover:bg-primary-dark"
-              }`}
-            >
-              Contact Us
-            </a>
+            {navigation.map((item) =>
+              item.children ? (
+                <Dropdown
+                  key={item.href}
+                  label={item.label}
+                  href={item.href}
+                  active={isActive(item.href)}
+                >
+                  {item.children.map((child) => (
+                    <DropdownItem
+                      key={child.href}
+                      label={child.label}
+                      href={child.href}
+                      active={pathname === child.href}
+                    />
+                  ))}
+                </Dropdown>
+              ) : (
+                <NavLink
+                  key={item.href}
+                  href={item.href}
+                  active={isActive(item.href)}
+                >
+                  {item.label}
+                </NavLink>
+              ),
+            )}
           </nav>
+          <Link
+            href="/contact"
+            className={`ml-1 hidden xl:inline-flex items-center justify-center rounded-lg px-4 py-2 text-xs font-semibold transition-colors ${
+              isActive("/contact")
+                ? "bg-primary-50 text-primary"
+                : "bg-primary text-white hover:bg-primary-dark"
+            }`}
+          >
+            Contact Us
+          </Link>
 
+          {/* Mobile Button */}
           <button
-            onClick={() => setOpen(!open)}
+            type="button"
+            onClick={() => setOpen((value) => !value)}
             className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:border-primary/30 hover:text-primary xl:hidden"
             aria-label="Toggle navigation"
             aria-expanded={open}
@@ -130,29 +223,47 @@ export function Header() {
           </button>
         </div>
 
+        {/* Mobile Navigation */}
         {open && (
           <div className="border-t border-slate-100 py-5 xl:hidden">
             <nav className="flex flex-col gap-1 pb-2">
-              {[
-                ["Home", "#home"],
-                ["Corporate", "#about"],
-                ["Software Solution", "#services"],
-                ["Digital Services", "#digital-services"],
-                ["e-Commerce Solution", "#ecosystem"],
-                ["EdTech Solution", "#services"],
-                ["Industries", "#industries"],
-                ["Blog", "#testimonials"],
-                ["Contact Us", "#contact"],
-              ].map(([label, href]) => (
-                <a
-                  key={label}
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-primary-50 hover:text-primary"
-                >
-                  {label}
-                </a>
+              {/* Home */}
+              <MobileNavLink
+                href="/"
+                active={isActive("/")}
+                onClick={() => setOpen(false)}
+              >
+                Home
+              </MobileNavLink>
+
+              {/* Corporate */}
+              <MobileNavLink
+                href="/corporate"
+                active={isActive("/corporate")}
+                onClick={() => setOpen(false)}
+              >
+                Corporate
+              </MobileNavLink>
+
+              {/* Dynamic navigation */}
+              {navigation.map((item) => (
+                <MobileNavItem
+                  key={item.href}
+                  item={item}
+                  pathname={pathname}
+                  onNavigate={() => setOpen(false)}
+                />
               ))}
+
+              {/* Contact */}
+              <MobileNavLink
+                href="/contact"
+                active={isActive("/contact")}
+                onClick={() => setOpen(false)}
+                primary
+              >
+                Contact Us
+              </MobileNavLink>
             </nav>
           </div>
         )}
@@ -161,59 +272,60 @@ export function Header() {
   );
 }
 
+
 function NavLink({
   href,
   children,
   active,
-  onClick,
 }: {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
   active?: boolean;
-  onClick?: () => void;
 }) {
   return (
-    <a
+    <Link
       href={href}
-      onClick={onClick}
-      className={`whitespace-nowrap text-xs font-medium transition-colors ${
+      className={`whitespace-nowrap rounded-lg px-2 py-1 text-sm font-medium transition-colors ${
         active
-          ? "rounded-lg bg-primary-50 px-2 py-1 text-primary"
+          ? "bg-primary-50 text-primary"
           : "text-slate-700 hover:bg-slate-50 hover:text-primary"
       }`}
     >
       {children}
-    </a>
+    </Link>
   );
 }
 
 function Dropdown({
   label,
+  href,
   children,
   active,
 }: {
   label: string;
-  children: React.ReactNode;
+  href: string;
+  children: ReactNode;
   active?: boolean;
 }) {
   return (
     <div className="group relative">
-      <button
-        type="button"
-        className={`flex items-center gap-1 whitespace-nowrap py-5 text-sm font-medium transition-colors ${
+      <div
+        className={`flex items-center gap-1 whitespace-nowrap rounded-md text-sm font-medium transition-colors ${
           active
-            ? "bg-primary-50 text-primary"
+            ? "bg-primary-50 px-2 text-primary"
             : "text-slate-700 hover:bg-slate-50 hover:text-primary"
         }`}
       >
-        {label}
+        <Link href={href} className="py-2 leading-none">
+          {label}
+        </Link>
 
         <ChevronDown
           size={14}
           strokeWidth={1.8}
           className="transition-transform duration-200 group-hover:rotate-180"
         />
-      </button>
+      </div>
 
       <div className="invisible absolute left-1/2 top-full z-50 w-max min-w-55 -translate-x-1/2 translate-y-2 rounded-xl border border-slate-100 bg-white p-1.5 opacity-0 shadow-soft transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
         {children}
@@ -222,13 +334,112 @@ function Dropdown({
   );
 }
 
-function DropdownItem({ label }: { label: string }) {
+function DropdownItem({
+  label,
+  href,
+  active,
+}: {
+  label: string;
+  href: string;
+  active?: boolean;
+}) {
   return (
-    <a
-      href="#services"
-      className="block whitespace-nowrap rounded-lg px-3 py-2 text-sm leading-5 text-slate-600 transition-colors hover:bg-primary-50 hover:text-primary"
+    <Link
+      href={href}
+      className={`block whitespace-nowrap rounded-lg px-3 py-2 text-sm leading-5 transition-colors ${
+        active
+          ? "bg-primary-50 text-primary"
+          : "text-slate-600 hover:bg-primary-50 hover:text-primary"
+      }`}
     >
       {label}
-    </a>
+    </Link>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mobile Navigation                                                         */
+/* -------------------------------------------------------------------------- */
+
+function MobileNavItem({
+  item,
+  pathname,
+  onNavigate,
+}: {
+  item: (typeof navigation)[number];
+  pathname: string;
+  onNavigate: () => void;
+}) {
+  const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+  if (!item.children) {
+    return (
+      <MobileNavLink href={item.href} active={active} onClick={onNavigate}>
+        {item.label}
+      </MobileNavLink>
+    );
+  }
+
+  return (
+    <div className="rounded-lg">
+      <Link
+        href={item.href}
+        onClick={onNavigate}
+        className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+          active
+            ? "bg-primary-50 text-primary"
+            : "text-slate-700 hover:bg-primary-50 hover:text-primary"
+        }`}
+      >
+        {item.label}
+      </Link>
+
+      <div className="ml-3 border-l border-slate-200 pl-3">
+        {item.children.map((child) => (
+          <Link
+            key={child.href}
+            href={child.href}
+            onClick={onNavigate}
+            className={`block rounded-lg px-3 py-2 text-sm transition-colors ${
+              pathname === child.href
+                ? "text-primary"
+                : "text-slate-500 hover:bg-primary-50 hover:text-primary"
+            }`}
+          >
+            {child.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MobileNavLink({
+  href,
+  children,
+  active,
+  onClick,
+  primary = false,
+}: {
+  href: string;
+  children: ReactNode;
+  active?: boolean;
+  onClick?: () => void;
+  primary?: boolean;
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+        primary
+          ? "mt-2 bg-primary text-center text-white hover:bg-primary-dark"
+          : active
+            ? "bg-primary-50 text-primary"
+            : "text-slate-700 hover:bg-primary-50 hover:text-primary"
+      }`}
+    >
+      {children}
+    </Link>
   );
 }
