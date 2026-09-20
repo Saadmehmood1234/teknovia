@@ -30,7 +30,7 @@ export const services = [
   },
   {
     image: "/images/card-3.png",
-    title: "e-Commerce Solution",
+    title: "Marketplace & eCommerce",
     description: "Explore our Marketplace Solutions offerings.",
   },
   {

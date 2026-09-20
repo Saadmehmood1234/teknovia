@@ -9,7 +9,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden bg-surface pt-8 sm:pt-16"
+      className="relative overflow-hidden border-b border-gray-100 bg-surface py-8 sm:py-16"
     >
       <Image
         src="/images/home-testimonials-bg.jpg"
@@ -60,8 +60,6 @@ export function Testimonials() {
           ))}
         </div>
       </Container>
-
-      <CTA />
     </section>
   );
 }

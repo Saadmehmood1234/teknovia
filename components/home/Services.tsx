@@ -15,10 +15,11 @@ export function Services() {
             Built to Help Businesses Grow, Scale, and Succeed
           </h2>
 
-          <p className="mt-5 sm:text-lg text-center text-sm leading-8 text-gray-500">
+          <p className="mt-5 text-center text-md leading-8 text-gray-500">
             Comprehensive technology, digital marketing, eCommerce, EduTech, and
-            talent solutions designed to improve efficiency, accelerate growth,
-            and help businesses build scalable, future-ready operations
+            business development solutions designed to improve efficiency,
+            accelerate growth, and help businesses build scalable, future-ready
+            operations
           </p>
         </div>
 

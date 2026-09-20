@@ -1,7 +1,7 @@
 import { ArrowRight, Eye, Rocket, Target } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-import { leaders, stats, strengths, values } from "@/lib/data/site";
+import { leaders, strengths, values } from "@/lib/data/site";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Metadata } from "next";
@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     "Learn about Teknovia, our technology solutions, expertise, and commitment to helping modern businesses grow.",
 };
 
-
 export default function CorporatePage() {
   return (
     <main className="overflow-hidden bg-white">
@@ -22,7 +21,7 @@ export default function CorporatePage() {
           <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8" />
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="w-full lg:w-[58%]">
-              <TopBadge data="About&nbsp;Teknovia"/>
+              <TopBadge data="About&nbsp;Teknovia" />
 
               <h1 className="max-w-4xl text-4xl font-black leading-[1.2] tracking-tight text-black sm:text-5xl">
                 Technology, Software &{" "}
@@ -71,71 +70,46 @@ export default function CorporatePage() {
               </div>
             </div>
           </div>
-
-          <div className="mt-8 grid overflow-hidden rounded-2xl bg-[#09090B] p-2 shadow-xl shadow-slate-900/5 sm:grid-cols-2 lg:mt-10 lg:grid-cols-4">
-            {stats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className={`flex items-center gap-4 p-4 ${
-                  index !== 0 ? "border-gray-800 sm:border-l" : ""
-                } ${
-                  index === 2
-                    ? "border-t sm:border-t-0 lg:border-l"
-                    : index === 3
-                      ? "border-t sm:border-l lg:border-t-0"
-                      : ""
-                }`}
-              >
-                <div className="rounded-xl border border-white/20 bg-white/10 p-3 text-primary-300 shadow-sm backdrop-blur-lg">
-                  <stat.icon size={24} />
-                </div>
-
-                <div className="flex flex-col items-start justify-start">
-                  <p className="text-xl font-black tracking-tight text-white">
-                    {stat.value}
-                  </p>
-
-                  <p className="mt-1 text-xs font-medium text-white/70">
-                    {stat.label}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
         </Container>
       </section>
 
-      <section id="about" className="py-8 lg:py-16 border-b border-gray-200 ">
+      <section id="about" className="border-b border-gray-200 py-8 lg:py-16">
         <Container>
           <div className="grid items-start gap-14 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
             <div className="relative pb-10 lg:pb-12">
-              <div className="relative aspect-4/3 overflow-hidden">
+              <div className="relative w-full overflow-hidden rounded-2xl">
                 <Image
                   src="/images/about-teknovia.png"
                   alt="Teknovia technology solutions"
-                  fill
-                  className="object-cover"
+                  width={1000}
+                  height={750}
+                  className="h-auto w-full object-contain"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute bottom-0 left-5 right-5 rounded-2xl border border-white/10 bg-white px-6 py-6 shadow-xl flex gap-4 justify-start items-center">
+
+              {/* Purpose Card */}
+              <div className="absolute bottom-0 left-5 right-5 flex items-center justify-start gap-4 rounded-2xl border border-white/10 bg-white px-6 py-6 shadow-xl">
                 <Target
-                  className="p-2 bg-primary-50 rounded-lg border border-primary-100 text-primary"
-                  size={32}
+                  className="shrink-0 rounded-lg border border-primary-100 bg-primary-50 p-2 text-primary"
+                  size={40}
                 />
+
                 <div className="flex flex-col">
                   <p className="font-mono text-sm font-extrabold uppercase tracking-wider text-gray-400">
                     Our Purpose
                   </p>
 
-                  <p className=" text-sm font-semibold leading-7 text-gray-600">
+                  <p className="text-sm font-semibold leading-7 text-gray-600">
                     To create value through technology, talent, and innovation.
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* Content */}
             <div>
-              <p className="text-md font-extrabold uppercase tracking-wider text-primary ">
+              <p className="text-md font-extrabold uppercase tracking-wider text-primary">
                 About Teknovia
               </p>
 

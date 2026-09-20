@@ -22,8 +22,8 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
-              Digital Growth, Software Solutions, and Talent Systems to help
-              your business scale efficiently.
+              Technology, digital growth, and innovative solutions that help
+              businesses scale smarter, faster, and more efficiently.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">

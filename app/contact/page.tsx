@@ -16,6 +16,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { contactFeatures, contactFeatures2, tabs } from "@/lib/data/site";
 import Image from "next/image";
+import Link from "next/link";
 
 type ContactTab = "message" | "callback" | "enquiry";
 
@@ -117,12 +118,12 @@ export default function ContactPage() {
                   requirements.
                 </p>
 
-                <a
+                <Link
                   href="/contact#contact-form"
                   className="mt-5 inline-flex w-full items-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary-800 transition hover:bg-primary-dark"
                 >
                   Schedule a Meeting
-                </a>
+                </Link>
               </div>
             </div>
           </div>
