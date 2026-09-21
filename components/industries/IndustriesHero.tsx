@@ -1,46 +1,40 @@
-import { ArrowRight, Building2 } from "lucide-react";
-import Link from "next/link";
+"use client";
+
+import Image from "next/image";
+
+import { Container } from "@/components/ui/Container";
+import { Breadcrumb } from "../ui/breadcrumb";
 
 export function IndustriesHero() {
   return (
-    <section className="hero-grid relative isolate border-b border-primary-100 bg-primary-50/40">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(0,150,137,0.12),transparent_35%)]" />
-
-      <div className="container-page section-padding">
-        <div className="mx-auto max-w-5xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-4 py-2 text-sm font-semibold text-primary shadow-sm">
-            <Building2 size={16} />
-            INDUSTRIES
-          </div>
-
-          <h1 className="font-heading text-4xl font-semibold leading-[1.08] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-            Technology Solutions Designed for Your Industry
+    <section id="home" className="relative isolate overflow-hidden py-8">
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/industry-hero.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
+      <div className="absolute inset-0 bg-[#040506]/30" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.14),transparent_55%)]" />
+      <Container className="relative z-10">
+        <Breadcrumb items={[{ label: "Industries" }]} />
+        <div className="mt-8">
+          <h1 className="w-full text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl lg:text-[3.5rem]">
+            Solutions Built for{" "}
+            <span className="text-primary-300">Every Industry.</span>
           </h1>
 
-          <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-            From education and healthcare to finance, manufacturing and
-            hospitality, we create digital experiences and software solutions
-            that address industry-specific challenges.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/65">
+            We understand every industry has unique challenges. Our solutions
+            are crafted to drive growth, efficiency, and long-term impact across
+            diverse sectors.
           </p>
-
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
-            >
-              Discuss Your Industry
-              <ArrowRight size={17} />
-            </Link>
-
-            <Link
-              href="#industries"
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-800 transition hover:border-primary hover:text-primary"
-            >
-              Explore Industries
-            </Link>
-          </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

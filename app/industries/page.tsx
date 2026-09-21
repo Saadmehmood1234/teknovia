@@ -1,72 +1,79 @@
-import { CTASection } from "@/components/pages/CTASection";
-import { SectionHeading } from "@/components/pages/SectionHeading";
-import { IndustriesHero } from "@/components/industries/IndustriesHero";
 import { IndustriesGrid } from "@/components/industries/IndustriesGrid";
+import { IndustriesHero } from "@/components/industries/IndustriesHero";
+import { IndustriesOverview } from "@/components/industries/IndustriesOverview";
+import { Container } from "@/components/ui/Container";
+import Image from "next/image";
 
 export default function IndustriesPage() {
   return (
-    <main className="overflow-hidden bg-white">
+    <main>
       <IndustriesHero />
 
-      <section className="section-padding">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="INDUSTRIES WE SERVE"
-            title="Digital Solutions Across Industries"
-            description="We understand that every industry has different users, workflows and challenges. Our solutions are adapted to the specific needs of each business."
-          />
+      <section className="border-b border-gray-100 bg-gray-50/50 py-8 sm:py-16">
+        <Container>
+          <div className="grid items-start gap-14 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
+            <div className="relative pb-10 lg:pb-12">
+              <div className="relative w-full overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/about-ind.png"
+                  alt="Teknovia technology solutions"
+                  width={1000}
+                  height={750}
+                  className="h-auto w-full object-contain"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-md sm:text-lg font-extrabold uppercase tracking-wider text-primary">
+                Technology That Creates Impact
+              </p>
 
-          <IndustriesGrid />
-        </div>
-      </section>
+              <h2 className="mt-3 text-2xl  sm:text-3xl font-black leading-tight tracking-tight text-slate-950">
+                Intelligent software built around your business.
+              </h2>
 
-      <section className="section-padding bg-slate-50/70">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="OUR APPROACH"
-            title="Industry Knowledge Meets Technology"
-            description="We combine business understanding with modern technology to create solutions that fit the way your organization works."
-          />
+              <div className="mt-7 space-y-5 text-sm leading-7 text-slate-600">
+                <p>
+                  At{" "}
+                  <strong className="font-semibold text-slate-900">
+                    TEKNOVIA Technologies Private Limited
+                  </strong>
+                  , we design and develop intelligent software solutions
+                  tailored to unique business requirements. From{" "}
+                  <strong className="font-semibold text-slate-900">
+                    enterprise-grade ERP systems, CRM and EduTech platforms to
+                    IoT-enabled applications and ready-to-deploy products
+                  </strong>
+                  , we help organizations streamline operations, automate
+                  processes, improve efficiency, and accelerate digital growth.
+                </p>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {[
-              {
-                title: "Understand",
-                description:
-                  "We learn about your industry, customers, processes and business challenges.",
-              },
-              {
-                title: "Customize",
-                description:
-                  "We design technology around your workflows rather than forcing your business into a fixed solution.",
-              },
-              {
-                title: "Scale",
-                description:
-                  "We build flexible solutions that can evolve as your organization and market change.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-slate-200 bg-white p-8"
-              >
-                <h3 className="font-heading text-2xl font-semibold text-slate-900">
-                  {item.title}
-                </h3>
+                <p>
+                  Our team combines expertise in{" "}
+                  <strong className="font-semibold text-slate-900">
+                    software engineering, business process analysis, cloud
+                    technologies, data management, UI/UX design, and system
+                    integration
+                  </strong>{" "}
+                  to build scalable and future-ready solutions. We focus on
+                  understanding business challenges first, then delivering
+                  technology that creates measurable impact.
+                </p>
 
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  {item.description}
+                <p>
+                  Whether developing a customized ERP, an educational platform,
+                  an automation system, or an industry-specific application, we
+                  focus on technology that is practical, scalable, and aligned
+                  with your business objectives.
                 </p>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
+        </Container>
       </section>
-
-      <CTASection
-        title="Have a Challenge in Your Industry?"
-        description="Let's discuss your business requirements and build a digital solution around them."
-      />
+      <IndustriesGrid />
+      <IndustriesOverview />
     </main>
   );
 }

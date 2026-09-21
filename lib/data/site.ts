@@ -34,7 +34,7 @@ export const services = [
     description: "Explore our Marketplace Solutions offerings.",
   },
   {
-    image: "/images/card-4.jpg",
+    image: "/images/edutech.png",
     title: "EdTech Solution",
     description:
       "Build scalable EdTech platforms for schools, coaching institutes, startups, corporate training, and skill development with TEKNOVIA.",

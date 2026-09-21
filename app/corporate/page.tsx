@@ -159,14 +159,14 @@ export default function CorporatePage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
             {strengths.map((strength) => {
               const Icon = strength.icon;
 
               return (
                 <article
                   key={strength.title}
-                  className="flex justify-start items-start gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-md shadow-gray-100"
+                  className="flex flex-col justify-center items-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-md shadow-gray-100"
                 >
                   <div className="flex p-3 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary-100">
                     <Icon />
