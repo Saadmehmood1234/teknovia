@@ -60,7 +60,7 @@ export default function DynamicServicePage({ data }: Props) {
       )}
 
       {data.process && data.process.length > 0 && (
-        <ProcessSection process={data.process} />
+        <ProcessSection/>
       )}
 
       {data.solutions && data.solutions.length > 0 && (
