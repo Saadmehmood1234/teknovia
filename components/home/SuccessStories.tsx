@@ -171,17 +171,13 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
 
   return (
     <article className="group rounded-xl border border-slate-200 bg-white p-4 shadow-[0_4px_20px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(15,23,42,0.09)]">
-      <div className="flex min-h-[180px] gap-4">
-        {/* Left content */}
+      <div className="flex min-h-45 gap-4">
         <div className="flex min-w-0 flex-1 gap-3">
-          {/* Icon */}
           <div
             className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-lg ${study.iconBg}`}
           >
             <MainIcon className={`h-8 w-8 ${study.iconColor}`} strokeWidth={1.8} />
           </div>
-
-          {/* Text */}
           <div className="min-w-0">
             <h3 className="text-[15px] font-extrabold leading-5 text-slate-950">
               {study.title}
@@ -198,12 +194,8 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
             </p>
           </div>
         </div>
-
-        {/* Divider */}
         <div className="w-px shrink-0 bg-slate-200" />
-
-        {/* Metrics */}
-        <div className="flex w-[105px] shrink-0 flex-col justify-between py-0.5">
+        <div className="flex w-26.25 shrink-0 flex-col justify-between py-0.5">
           {study.metrics.map((metric) => (
             <MetricItem key={metric.label} metric={metric} />
           ))}

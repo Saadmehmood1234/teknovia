@@ -1,11 +1,12 @@
-import { ArrowRight, Eye, Rocket, Target } from "lucide-react";
+import { ArrowRight, Target } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-import { leaders, strengths, values } from "@/lib/data/site";
+import { leaders, strengths } from "@/lib/data/site";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Metadata } from "next";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { VisionMissionValues } from "@/components/corporate/VisionMissionValues";
 
 export const metadata: Metadata = {
   title: "Corporate",
@@ -18,11 +19,10 @@ export default function CorporatePage() {
     <main className="overflow-hidden bg-white">
       <section className="relative pt-8 border-b border-gray-200 pb-12 isolate overflow-hidden bg-linear-to-r from-primary/10 via-primary/5 to-white gap-10">
         <Container>
-          <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8" />
+          <Breadcrumb items={[{ label: "Corporate" }]}/>
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-            <div className="w-full lg:w-[58%]">
+            <div className="w-full">
               <TopBadge data="About&nbsp;Teknovia" />
-
               <h1 className="max-w-4xl text-4xl font-black leading-[1.2] tracking-tight text-black sm:text-5xl">
                 Technology, Software &{" "}
                 <span className="lg:block">
@@ -57,7 +57,7 @@ export default function CorporatePage() {
                 </a>
               </div>
             </div>
-            <div className="relative w-full lg:w-[38%]">
+            <div className="relative w-full">
               <div className="relative aspect-5/4 overflow-hidden rounded-2xl">
                 <Image
                   src="/images/corporate-hero.png"
@@ -79,7 +79,7 @@ export default function CorporatePage() {
             <div className="relative pb-10 lg:pb-12">
               <div className="relative w-full overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/about-teknovia.png"
+                  src="/corporate-text.png"
                   alt="Teknovia technology solutions"
                   width={1000}
                   height={750}
@@ -143,80 +143,8 @@ export default function CorporatePage() {
           </div>
         </Container>
       </section>
+      <VisionMissionValues />
 
-      <section className="pt-8">
-        <Container>
-          <div className="grid gap-6 lg:grid-cols-2">
-            <div className="flex items-start gap-4 rounded-3xl border border-slate-100 bg-white p-8 shadow-sm shadow-gray-200 ">
-              <div className="flex p-4 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <Eye size={24} />
-              </div>
-
-              <div className="flex flex-col items-start gap-2">
-                <p className="text-sm font-extrabold uppercase tracking-wider text-black">
-                  Our Vision
-                </p>
-
-                <p className="max-w-xl text-base leading-7 text-slate-600">
-                  To be a trusted technology and digital solutions partner,
-                  empowering businesses with scalable systems and data-driven
-                  growth.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 rounded-3xl border border-slate-100 bg-white p-8 shadow-sm shadow-gray-200 ">
-              <div className="flex p-4 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <Rocket size={24} />
-              </div>
-
-              <div className="flex flex-col items-start gap-2">
-                <p className="text-sm font-extrabold uppercase tracking-wider text-black">
-                  Our Mission
-                </p>
-
-                <p className="max-w-xl text-base leading-7 text-slate-600">
-                  To deliver integrated digital marketing, software, EduTech,
-                  and talent solutions that enhance efficiency, drive measurable
-                  results, and create long-term business value.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="pt-8 pb-16 border-b border-gray-100">
-        <Container>
-          <div className="bg-[#FBFBFB] p-8 rounded-3xl shadow-sm shadow-gray-200 border border-gray-100">
-            <div className="max-w-2xl flex justify-start items-center gap-4">
-              <div className="p-3 text-primary bg-primary-50/40 border border-primary-100 rounded-2xl">
-                <Target />
-              </div>
-              <p className="font-mono text-md font-extrabold uppercase tracking-wider text-blac">
-                Our Core Values
-              </p>
-            </div>
-
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-              {values.map((value) => (
-                <article
-                  key={value.number}
-                  className="group rounded-2xl border border-slate-200 bg-white shadow-sm shadow-gray-200 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-slate-900/5"
-                >
-                  <h3 className=" text-md font-extrabold text-slate-950">
-                    {value.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-6 text-slate-500">
-                    {value.description}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
       <section className="bg-[#FAFAFA] py-16">
         <Container>
           <div className="flex flex-col w-full justify-between items-center text-center gap-6">
