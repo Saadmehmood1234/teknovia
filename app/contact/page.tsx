@@ -83,7 +83,7 @@ export default function ContactPage() {
             <div className="relative w-full pb-8 sm:pb-10">
               <div className="aspect-3/2 overflow-hidden">
                 <Image
-                  src="/images/contact-image.jpg"
+                  src="/images/contact-hero.png"
                   alt="Teknovia technology and business solutions"
                   fill
                   priority
@@ -120,7 +120,7 @@ export default function ContactPage() {
 
                 <Link
                   href="/contact#contact-form"
-                  className="mt-5 inline-flex w-full items-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary-800 transition hover:bg-primary-dark"
+                  className="mt-5 inline-flex w-full items-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-primary-800 transition duration-200 hover:bg-primary hover:text-white"
                 >
                   Schedule a Meeting
                 </Link>
@@ -265,24 +265,15 @@ export default function ContactPage() {
                 <FaLinkedinIn className="h-6 w-6" />
               </a>
 
-              <div className="mt-10 overflow-hidden rounded-2xl border border-gray-200/80 bg-white/70 p-4 shadow-sm backdrop-blur-sm">
-                <div className="relative flex min-h-40 items-center justify-center overflow-hidden rounded-xl bg-primary-100/70">
-                  <div className="absolute left-10 top-9 h-12 w-12 rounded-full bg-primary-300/50" />
-                  <div className="absolute right-12 top-10 h-10 w-10 rounded-full bg-primary-300/50" />
-                  <div className="absolute bottom-5 right-20 h-14 w-14 rounded-full bg-primary-300/40" />
-                  <div className="absolute left-[22%] top-[35%] h-16 w-20 rounded-xl bg-white shadow-sm">
-                    <div className="mx-4 mt-4 h-1 rounded-full bg-primary-300" />
-                    <div className="mx-4 mt-2 h-1 w-10 rounded-full bg-primary-200" />
-                  </div>
-                  <div className="absolute right-[22%] top-[35%] h-16 w-20 rounded-xl bg-white shadow-sm">
-                    <div className="mx-4 mt-4 h-1 rounded-full bg-primary-300" />
-                    <div className="mx-4 mt-2 h-1 w-10 rounded-full bg-primary-200" />
-                  </div>
-                  <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg">
-                    <MessageCircle className="h-6 w-6" />
-                  </div>
-                  <div className="absolute bottom-5 left-[20%] h-5 w-28 rounded-[50%] bg-primary-200/60 blur-sm" />
-                  <div className="absolute bottom-5 right-[20%] h-5 w-28 rounded-[50%] bg-primary-200/60 blur-sm" />
+              <div className="mt-10 overflow-hidden rounded-2xl border border-gray-200/80 bg-white/70 shadow-sm backdrop-blur-sm">
+                <div className="relative md:h-80 h-48 sm:h-64 lg:h-48 w-full">
+                  <Image
+                    src="/images/connect-us.jpeg"
+                    fill
+                    alt="Connect Us"
+                    className="object-cover object-center"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                  />
                 </div>
               </div>
             </div>
@@ -557,7 +548,12 @@ function MessageForm({
         <Field label="Company name" name="company" placeholder="Your company" />
       </div>
 
-      <SelectField label="Service interested in" name="service" required />
+      <Field
+        label="Service interested in"
+        name="service"
+        type="text"
+        placeholder="Custom Software"
+      />
 
       <TextareaField
         label="Message"

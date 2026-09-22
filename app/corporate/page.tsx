@@ -19,7 +19,7 @@ export default function CorporatePage() {
     <main className="overflow-hidden bg-white">
       <section className="relative pt-8 border-b border-gray-200 pb-12 isolate overflow-hidden bg-linear-to-r from-primary/10 via-primary/5 to-white gap-10">
         <Container>
-          <Breadcrumb items={[{ label: "Corporate" }]}/>
+          <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8"/>
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="w-full">
               <TopBadge data="About&nbsp;Teknovia" />
@@ -58,7 +58,7 @@ export default function CorporatePage() {
               </div>
             </div>
             <div className="relative w-full">
-              <div className="relative aspect-5/4 overflow-hidden rounded-2xl">
+              <div className="relative aspect-3/2 overflow-hidden rounded-2xl">
                 <Image
                   src="/images/corporate-hero.png"
                   alt="Teknovia technology and business solutions"
@@ -159,19 +159,19 @@ export default function CorporatePage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6">
             {strengths.map((strength) => {
               const Icon = strength.icon;
 
               return (
                 <article
                   key={strength.title}
-                  className="flex flex-col justify-center items-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-md shadow-gray-100"
+                  className="flex flex-col justify-center items-center gap-4 rounded-2xl p-6"
                 >
                   <div className="flex p-3 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary-100">
                     <Icon />
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col items-center justify-center text-center">
                     <h3 className="text-md font-extrabold text-slate-950">
                       {strength.title}
                     </h3>

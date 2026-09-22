@@ -64,15 +64,11 @@ export function Hero() {
           </div>
 
           <div className="relative mx-auto w-full max-w-2xl">
-            {/* Glow */}
-            <div className="absolute -inset-5 rounded-4xl bg-primary/10 blur-3xl" />
-
-            {/* Image + floating cards */}
-            <div className="relative overflow-visible rounded-4xl shadow-2xl">
-              {/* Image container */}
-              <div className="relative aspect-4/3 overflow-hidden rounded-4xl">
+            <div className="absolute -inset-5 bg-primary/10 blur-3xl" />
+            <div className="relative overflow-visible shadow-2xl">
+              <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/teknovia-home.jpg"
+                  src="/images/hero-right.png"
                   alt="Technology team collaborating in a modern office"
                   fill
                   priority

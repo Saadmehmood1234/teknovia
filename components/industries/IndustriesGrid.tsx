@@ -8,7 +8,7 @@ import { industries } from "@/lib/data/industries";
 import { useRef } from "react";
 
 export function IndustriesGrid() {
-  const [activeIndustry, setActiveIndustry] = useState("education");
+  const [activeIndustry, setActiveIndustry] = useState("manufacturing");
 
   const industryScrollRef = useRef<HTMLDivElement>(null);
 
