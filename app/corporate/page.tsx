@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 export default function CorporatePage() {
   return (
     <main className="overflow-hidden bg-white">
-      <section className="relative pt-8 border-b border-gray-200 pb-12 isolate overflow-hidden bg-linear-to-r from-primary/10 via-primary/5 to-white gap-10">
+      <section className="relative pt-8 border-b border-gray-200 pb-12 isolate overflow-hidden bg-[#EEF7F9] to-white gap-10">
         <Container>
-          <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8"/>
+          <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8 xl:mb-0" />
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="w-full">
               <TopBadge data="About&nbsp;Teknovia" />
@@ -57,14 +57,14 @@ export default function CorporatePage() {
                 </a>
               </div>
             </div>
-            <div className="relative w-full">
-              <div className="relative aspect-3/2 overflow-hidden rounded-2xl">
+            <div className="relative w-full" >
+              <div className="relative aspect-5/4 overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/corporate-hero.png"
+                  src="/images/corporate-background.png"
                   alt="Teknovia technology and business solutions"
                   fill
                   priority
-                  className="object-cover"
+                  className="object-contain object-center"
                   sizes="(max-width: 1024px) 100vw, 38vw"
                 />
               </div>
