@@ -66,9 +66,9 @@ export function Hero() {
           <div className="relative mx-auto w-full max-w-2xl">
             <div className="absolute -inset-5 bg-primary/10 blur-3xl" />
             <div className="relative overflow-visible shadow-2xl">
-              <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+              {/* <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/hero-right.png"
+                  src="/images/hero-background.png"
                   alt="Technology team collaborating in a modern office"
                   fill
                   priority
@@ -76,6 +76,26 @@ export function Hero() {
                 />
 
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 via-transparent to-slate-950/10" />
+              </div> */}
+
+              <div
+                className="
+                  relative aspect-4/3 overflow-hidden
+                  mask-[linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%),linear-gradient(to_right,transparent_0%,black_8%,black_92%,transparent_100%)]
+                  mask-intersect
+                  [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%),linear-gradient(to_right,transparent_0%,black_8%,black_92%,transparent_100%)]
+                  [-webkit-mask-composite:source-in]
+                  "
+                  >
+                <Image
+                  src="/images/hero-background.png"
+                  alt="Technology team collaborating in a modern office"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/50 via-transparent to-slate-950/10" />
               </div>
 
               <div className="absolute -left-8 -top-5 z-99 sm:-left-4 sm:-top-6">
