@@ -2,7 +2,14 @@ import { IndustriesGrid } from "@/components/industries/IndustriesGrid";
 import { IndustriesHero } from "@/components/industries/IndustriesHero";
 import { IndustriesOverview } from "@/components/industries/IndustriesOverview";
 import { Container } from "@/components/ui/Container";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Industries",
+  description:
+    "Explore the industries Teknovia serves with technology solutions designed to improve operations, efficiency, and business growth.",
+};
 
 export default function IndustriesPage() {
   return (

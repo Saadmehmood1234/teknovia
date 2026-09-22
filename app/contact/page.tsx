@@ -83,11 +83,11 @@ export default function ContactPage() {
             <div className="relative w-full pb-8 sm:pb-10">
               <div className="aspect-3/2 overflow-hidden">
                 <Image
-                  src="/images/contact-hero.png"
+                  src="/images/contact-background.png"
                   alt="Teknovia technology and business solutions"
                   fill
                   priority
-                  className="object-cover"
+                  className="object-cover rounded-3xl"
                   sizes="(max-width: 1024px) 100vw, 38vw"
                 />
               </div>

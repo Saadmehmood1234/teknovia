@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function CorporatePage() {
   return (
     <main className="overflow-hidden bg-white">
-      <section className="relative pt-8 border-b border-gray-200 pb-12 isolate overflow-hidden bg-[#EEF7F9] to-white gap-10">
+      <section className="relative pt-8 border-b border-gray-200 isolate overflow-hidden bg-[#EEF7F9] to-white gap-10">
         <Container>
           <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8 xl:mb-0" />
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
