@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight, ArrowLeft, Check } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Container } from "@/components/ui/Container";
 import { industries } from "@/lib/data/industries";
@@ -20,6 +20,51 @@ export function IndustriesGrid() {
       behavior: "smooth",
     });
   };
+  const industryAliases: Record<string, string> = {
+    "retail-ecommerce": "retail",
+    "logistics-supply-chain": "logistics",
+    "hospitality-travel": "hospitality",
+  };
+
+  useEffect(() => {
+    const handleIndustryFromUrl = () => {
+      const hash = window.location.hash.replace("#", "").toLowerCase();
+
+      if (!hash) return;
+
+      const industryId = industryAliases[hash] || hash;
+
+      const matchedIndustry = industries.find(
+        (industry) => industry.id.toLowerCase() === industryId,
+      );
+
+      if (!matchedIndustry) return;
+
+      setActiveIndustry(matchedIndustry.id);
+
+      requestAnimationFrame(() => {
+        document.getElementById("industries")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    };
+
+
+    handleIndustryFromUrl();
+
+    // Normal browser hash navigation
+    window.addEventListener("hashchange", handleIndustryFromUrl);
+
+    // Same-page Next.js navigation
+    window.addEventListener("industrychange", handleIndustryFromUrl);
+
+    return () => {
+      window.removeEventListener("hashchange", handleIndustryFromUrl);
+      window.removeEventListener("industrychange", handleIndustryFromUrl);
+    };
+  }, []);
+
   const active = industries.find((industry) => industry.id === activeIndustry)!;
 
   const ActiveIcon = active.icon;
@@ -71,7 +116,10 @@ export function IndustriesGrid() {
                   <button
                     key={industry.id}
                     type="button"
-                    onClick={() => setActiveIndustry(industry.id)}
+                    onClick={() => {
+                      setActiveIndustry(industry.id);
+                      window.location.hash = industry.id;
+                    }}
                     className={`group flex shrink-0 min-w-max items-center gap-3 rounded-xl border px-4 py-3 text-left transition-all duration-200 lg:w-full ${
                       isActive
                         ? "border-primary bg-primary-100/50 text-primary shadow-[0_8px_25px_rgba(0,150,137,0.15)]"

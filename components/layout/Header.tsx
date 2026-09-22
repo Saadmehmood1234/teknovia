@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { useState, type ReactNode, type MouseEvent } from "react";
 
 export const navigation = [
   {
@@ -90,40 +90,40 @@ export const navigation = [
     href: "/industries",
     children: [
       {
-        label: "Education",
-        href: "/industries/education",
-      },
-      {
-        label: "Healthcare",
-        href: "/industries/healthcare",
-      },
-      {
-        label: "Retail & eCommerce",
-        href: "/industries/retail-ecommerce",
-      },
-      {
-        label: "Real Estate",
-        href: "/industries/real-estate",
-      },
-      {
-        label: "Finance & Accounting",
-        href: "/industries/finance-accounting",
-      },
-      {
         label: "Manufacturing",
-        href: "/industries/manufacturing",
-      },
-      {
-        label: "Logistics & Supply Chain",
-        href: "/industries/logistics-supply-chain",
+        href: "/industries#manufacturing",
       },
       {
         label: "Hospitality & Travel",
-        href: "/industries/hospitality-travel",
+        href: "/industries#hospitality",
       },
       {
-        label: "Professional Services",
-        href: "/industries/professional-services",
+        label: "Logistics & Supply Chain",
+        href: "/industries#logistics",
+      },
+      {
+        label: "Education",
+        href: "/industries#education",
+      },
+      {
+        label: "Healthcare",
+        href: "/industries#healthcare",
+      },
+      {
+        label: "Retail & eCommerce",
+        href: "/industries#retail",
+      },
+      {
+        label: "Real Estate",
+        href: "/industries#real-estate",
+      },
+      // {
+      //   label: "Finance & Accounting",
+      //   href: "/industries#finance-accounting",
+      // },
+      {
+        label: "SMEs & Businesses",
+        href: "/industries#smes",
       },
     ],
   },
@@ -146,6 +146,24 @@ export function Header() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
+  const handleIndustryNavigation = (
+    e: MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+    const url = new URL(href, window.location.origin);
+    const targetPath = url.pathname.replace(/\/$/, "");
+
+    if (currentPath === "/industries" && targetPath === "/industries") {
+      e.preventDefault();
+
+      const newUrl = `${url.pathname}${url.hash}`;
+
+      window.history.pushState(null, "", newUrl);
+
+      window.dispatchEvent(new Event("industrychange"));
+    }
+  };
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 text-xs backdrop-blur">
       <div className="px-5 sm:px-8 lg:px-10 xl:px-12 2xl:px-16">
@@ -186,6 +204,7 @@ export function Header() {
                       label={child.label}
                       href={child.href}
                       active={pathname === child.href}
+                      onClick={(e) => handleIndustryNavigation(e, child.href)}
                     />
                   ))}
                 </Dropdown>
@@ -252,6 +271,7 @@ export function Header() {
                   item={item}
                   pathname={pathname}
                   onNavigate={() => setOpen(false)}
+                  onIndustryNavigate={handleIndustryNavigation}
                 />
               ))}
 
@@ -271,7 +291,6 @@ export function Header() {
     </header>
   );
 }
-
 
 function NavLink({
   href,
@@ -338,14 +357,17 @@ function DropdownItem({
   label,
   href,
   active,
+  onClick,
 }: {
   label: string;
   href: string;
   active?: boolean;
+  onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
 }) {
   return (
     <Link
       href={href}
+      onClick={(e) => onClick?.(e)}
       className={`block whitespace-nowrap rounded-lg px-3 py-2 text-sm leading-5 transition-colors ${
         active
           ? "bg-primary-50 text-primary"
@@ -357,18 +379,16 @@ function DropdownItem({
   );
 }
 
-/* -------------------------------------------------------------------------- */
-/* Mobile Navigation                                                         */
-/* -------------------------------------------------------------------------- */
-
 function MobileNavItem({
   item,
   pathname,
   onNavigate,
+  onIndustryNavigate,
 }: {
   item: (typeof navigation)[number];
   pathname: string;
   onNavigate: () => void;
+  onIndustryNavigate: (e: MouseEvent<HTMLAnchorElement>, href: string) => void;
 }) {
   const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
 
@@ -399,7 +419,10 @@ function MobileNavItem({
           <Link
             key={child.href}
             href={child.href}
-            onClick={onNavigate}
+            onClick={(e) => {
+              onIndustryNavigate(e, child.href);
+              onNavigate();
+            }}
             className={`block rounded-lg px-3 py-2 text-sm transition-colors ${
               pathname === child.href
                 ? "text-primary"
