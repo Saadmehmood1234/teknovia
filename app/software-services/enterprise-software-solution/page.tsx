@@ -1,5 +1,4 @@
 import FAQ from "@/components/FAQ";
-import { IndustriesOverview } from "@/components/industries/IndustriesOverview";
 import { EnterpriseHero } from "@/components/software-services/enterprise-software-solution/EnterpriseHero";
 import { EnterpriseSolutions } from "@/components/software-services/enterprise-software-solution/EnterpriseSolutions";
 import SixDModel from "@/components/software-services/enterprise-software-solution/SixDModel";

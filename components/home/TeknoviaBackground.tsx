@@ -84,9 +84,8 @@ function MovingStream({
       }}
     >
       <div className="relative h-12 w-64">
-        {/* Main horizontal line */}
         <div
-          className={`absolute top-1/2 h-[2px] w-56 -translate-y-1/2 blur-[1px] ${
+          className={`absolute top-1/2 h-0.5 w-56 -translate-y-1/2 blur-[1px] ${
             reverse
               ? "right-3 bg-linear-to-l from-primary/60 via-primary/25 to-transparent"
               : "left-3 bg-linear-to-r from-primary/60 via-primary/25 to-transparent"
@@ -111,7 +110,7 @@ function MovingStream({
 
         {/* Outer blurred letter */}
         <motion.span
-          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/10 blur-[4px] ${
+          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/10 blur-xs ${
             reverse ? "right-2" : "left-2"
           }`}
         >
@@ -164,7 +163,6 @@ function MovingStream({
           {letter}
         </motion.span>
 
-        {/* Moving point */}
         <motion.span
           className={`absolute top-1/2 z-20 h-1 w-1 -translate-y-1/2 rounded-full bg-primary ${
             reverse ? "-right-0.5" : "-left-0.5"

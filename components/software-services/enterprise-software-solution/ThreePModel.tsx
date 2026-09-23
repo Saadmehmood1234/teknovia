@@ -198,11 +198,7 @@ export default function ThreePModel() {
           className="object-cover object-center"
         />
       </div>
-
-      {/* Dark overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[#040506]/85" />
-
-      {/* Subtle center glow */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.10),transparent_60%)]" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
@@ -254,7 +250,7 @@ export default function ThreePModel() {
                 />
               </div>
 
-              <div className="absolute bottom-[2%] left-[8%] z-10">
+              <div className="absolute bottom-[20%] left-[0%] z-10">
                 <Pillar
                   type="process"
                   title="PROCESS"
@@ -262,16 +258,16 @@ export default function ThreePModel() {
                 />
               </div>
 
-              <div className="absolute bottom-[2%] right-[8%] z-10">
+              <div className="absolute bottom-[20%] right-[0%] z-10">
                 <Pillar
                   type="performance"
                   title="PERFORMANCE"
                   description="Drive measurable results and business impact"
                 />
               </div>
-              <div className="absolute right-0 top-[12%] z-0 h-px w-[12%] border-t border-dashed border-sky-400/50" />
-              <div className="absolute left-0 bottom-[30%] z-0 h-px w-[12%] border-t border-dashed border-emerald-400/50" />
-              <div className="absolute right-0 bottom-[30%] z-0 h-px w-[12%] border-t border-dashed border-orange-400/50" />
+              <div className="absolute right-0 top-[12%] z-0 h-px w-[36%] border-t border-dashed border-sky-400/50" />
+              <div className="absolute -left-8 bottom-[35%] z-0 h-px w-[12%] border-t border-dashed border-emerald-400/50" />
+              <div className="absolute -right-8 bottom-[35%] z-0 h-px w-[12%] border-t border-dashed border-orange-400/50" />
             </div>
             <div className="space-y-8">
               <ChallengeCard type="people" items={challenges.people} />
@@ -283,7 +279,7 @@ export default function ThreePModel() {
           </div>
         </div>
 
-        <div className="mt-12 lg:hidden">
+        <div className="lg:mt-12 sm:mt-24 lg:hidden">
           <div className="relative mx-auto aspect-square w-full max-w-md">
             <div className="absolute inset-[4%] rounded-full border border-primary/20" />
             <div className="absolute inset-[9%] rounded-full border border-dashed border-primary/40" />
@@ -309,14 +305,14 @@ export default function ThreePModel() {
                 description="Empower your people and teams"
               />
             </div>
-            <div className="absolute sm:bottom-[2%] sm:left-[6%] bottom-[20%] left-[10%] z-10">
+            <div className="absolute sm:bottom-[16%] sm:left-[-4%] bottom-[20%] left-[10%] z-10">
               <Pillar
                 type="process"
                 title="PROCESS"
                 description="Streamline and automate with smart processes"
               />
             </div>
-            <div className="absolute sm:bottom-[2%] sm:right-[6%] bottom-[20%] right-[10%] z-10">
+            <div className="absolute sm:bottom-[16%] sm:right-[-4%] bottom-[20%] right-[10%] z-10">
               <Pillar
                 type="performance"
                 title="PERFORMANCE"
