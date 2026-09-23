@@ -35,10 +35,6 @@ export const navigation = [
     href: "/digital-marketing",
     children: [
       {
-        label: "Website Development",
-        href: "/digital-marketing/website-development",
-      },
-      {
         label: "Local SEO",
         href: "/digital-marketing/local-seo",
       },

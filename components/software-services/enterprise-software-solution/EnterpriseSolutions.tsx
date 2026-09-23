@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { enterpriseSolutions } from "@/lib/data/software-solutions";
+import { enterpriseSolutions } from "@/lib/data/software-services";
 
 export function EnterpriseSolutions() {
   return (

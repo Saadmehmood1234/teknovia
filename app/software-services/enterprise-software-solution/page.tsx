@@ -4,7 +4,7 @@ import { EnterpriseSolutions } from "@/components/software-services/enterprise-s
 import SixDModel from "@/components/software-services/enterprise-software-solution/SixDModel";
 import ThreePModel from "@/components/software-services/enterprise-software-solution/ThreePModel";
 import { Container } from "@/components/ui/Container";
-import { enterpriseFaqs } from "@/lib/data/software-solutions";
+import { enterpriseFaqs } from "@/lib/data/software-services";
 import Image from "next/image";
 
 export default function IndustriesPage() {

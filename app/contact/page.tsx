@@ -7,7 +7,6 @@ import {
   ExternalLink,
   Mail,
   MapPin,
-  MessageCircle,
   Phone,
   ShieldCheck,
 } from "lucide-react";
