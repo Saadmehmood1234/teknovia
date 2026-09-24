@@ -16,11 +16,8 @@ import {
   Code2,
   Gauge,
   Cloud,
-  Blocks,
-  LockKeyhole,
   Smartphone,
   Layers3,
-  Server,
   Globe2,
   UsersRound,
   Building2,
@@ -571,5 +568,137 @@ export const WebDevCapabilities = [
     description:
       "Clean architecture, optimized code, caching, database optimization, and modern development practices deliver reliable applications.",
     icon: Gauge,
+  },
+];
+
+
+export const mobileAppFaqs = [
+  {
+    question: "How long does it take to develop a mobile application?",
+    answer:
+      "The timeline depends on the application's complexity, number of features, platforms, integrations, and design requirements. After understanding your requirements, we can provide a more accurate development estimate.",
+  },
+  {
+    question: "Can you develop apps for both Android and iOS?",
+    answer:
+      "Yes. We can develop native Android and iOS applications as well as cross-platform applications using modern frameworks. The right approach depends on your product requirements, budget, performance expectations, and long-term roadmap.",
+  },
+  {
+    question: "Can you integrate APIs and third-party services?",
+    answer:
+      "Yes. Mobile applications can be integrated with REST APIs, authentication systems, payment gateways, cloud services, analytics platforms, maps, notifications, and other third-party services.",
+  },
+  {
+    question: "Do you provide UI/UX design for mobile applications?",
+    answer:
+      "Yes. We can handle the complete mobile UI/UX process, including user flows, wireframes, visual design, interactive prototypes, and responsive design systems.",
+  },
+  {
+    question: "Can you maintain and update an existing mobile application?",
+    answer:
+      "Yes. We provide ongoing maintenance, bug fixes, performance optimization, security improvements, OS compatibility updates, and new feature development for existing applications.",
+  },
+  {
+    question: "Can you help publish the app to the App Store and Google Play?",
+    answer:
+      "Yes. We can assist with production preparation, release builds, store requirements, deployment, and the technical steps required to publish your application.",
+  },
+];
+
+export const mobileAppTechnologies = [
+  {
+    category: "Mobile",
+    items: [
+      {
+        title: "React Native",
+        image: "/images/technologies/react.png",
+      },
+      {
+        title: "Flutter",
+        image: "/images/technologies/flutter.png",
+      },
+      {
+        title: "Android",
+        image: "/images/technologies/android.png",
+      },
+      {
+        title: "iOS",
+        image: "/images/technologies/apple.webp",
+      },
+      {
+        title: "Expo",
+        image: "/images/technologies/expo.svg",
+      },
+    ],
+  },
+
+  {
+    category: "Frontend",
+    items: [
+      {
+        title: "React",
+        image: "/images/technologies/react.png",
+      },
+      {
+        title: "Next.js",
+        image: "/images/technologies/nextjs.jpeg",
+      },
+      {
+        title: "TypeScript",
+        image: "/images/technologies/typescript.webp",
+      },
+      {
+        title: "JavaScript",
+        image: "/images/technologies/javascript.jpeg",
+      },
+    ],
+  },
+
+  {
+    category: "Backend",
+    items: [
+      {
+        title: "Node.js",
+        image: "/images/technologies/nodejs.jpg",
+      },
+      {
+        title: "Express.js",
+        image: "/images/technologies/express.avif",
+      },
+      {
+        title: "REST APIs",
+        image: "/images/technologies/api.png",
+      },
+      {
+        title: "JWT",
+        image: "/images/technologies/jwt.webp",
+      },
+    ],
+  },
+
+  {
+    category: "Database & Cloud",
+    items: [
+      {
+        title: "PostgreSQL",
+        image: "/images/technologies/postgresql.svg",
+      },
+      {
+        title: "MongoDB",
+        image: "/images/technologies/mongodb.png",
+      },
+      {
+        title: "Redis",
+        image: "/images/technologies/redis.svg",
+      },
+      {
+        title: "Docker",
+        image: "/images/technologies/docker.png",
+      },
+      {
+        title: "Cloud Storage",
+        image: "/images/technologies/cloud.png",
+      },
+    ],
   },
 ];

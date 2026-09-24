@@ -257,7 +257,7 @@ export default function ContactPage() {
               </div>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/company/teknovia-tech"
                 aria-label="LinkedIn"
                 className="mt-7 flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-700 shadow-md transition hover:-translate-y-1 hover:text-primary"
               >
@@ -310,15 +310,15 @@ function ContactInformation() {
           <ContactDetail
             icon={Phone}
             label="Call us"
-            value="+91 98765 43210"
-            href="tel:+919876543210"
+            value="+91 97129 80864"
+            href="tel:+91 97129 80864"
           />
 
           <ContactDetail
             icon={Mail}
             label="Email us"
-            value="info@yourcompany.com"
-            href="mailto:info@yourcompany.com"
+            value="info@teknovia.in"
+            href="mailto:info@teknovia.in"
           />
         </div>
 

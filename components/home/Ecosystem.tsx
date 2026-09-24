@@ -15,7 +15,7 @@ export function Ecosystem() {
         priority
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-slate-950/85" />
+      <div className="absolute inset-0 bg-[#040706]/80" />
       <Container className="relative flex flex-col items-center justify-center text-center">
         <div className="max-w-3xl">
           <p className="font-mono text-lg font-extrabold uppercase tracking-widest text-primary">

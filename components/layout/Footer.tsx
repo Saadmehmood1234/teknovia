@@ -1,6 +1,8 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
+import { LiaLinkedin } from "react-icons/lia";
+import { BsLinkedin } from "react-icons/bs";
 
 const solutions = [
   "Digital Growth Solutions",
@@ -12,13 +14,7 @@ const solutions = [
 
 const company = ["About Us", "Our Process", "Case Studies", "Careers"];
 
-const resources = [
-  "Whitepapers",
-  "Ebooks",
-  "FAQ's",
-  "Insights",
-  "Help Center",
-];
+const resources = ["Whitepapers", "Ebooks", "FAQ's", "Insights", "Help Center"];
 
 const industries = [
   "Education",
@@ -47,10 +43,7 @@ export function Footer() {
         <Container>
           <div className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,1fr)] lg:gap-10">
             <div>
-              <a
-                href="#home"
-                className="flex shrink-0 items-center pr-4"
-              >
+              <a href="#home" className="flex shrink-0 items-center pr-4">
                 <Image
                   src="/dark-logo.png"
                   alt="Teknovia"
@@ -89,25 +82,45 @@ export function Footer() {
                   />
 
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919712980864"
                     className="block transition hover:text-white"
                   >
-                    +91 98765 43210
+                    +91 97129 80864
+                  </a>
+                  <a
+                    href="tel:++919897053555"
+                    className="block transition hover:text-white"
+                  >
+                    +91 9897053555
                   </a>
                 </div>
+                <div className="flex items-center justify-start gap-4">
+                  <div className="flex gap-2">
+                    <Mail
+                      className="mt-0.5 shrink-0 text-primary-300"
+                      size={16}
+                    />
 
-                <div className="flex items-start justify-start gap-2">
-                  <Mail
-                    className="mt-0.5 shrink-0 text-primary-300"
-                    size={16}
-                  />
+                    <a
+                      href="mailto:info@teknovia.in"
+                      className="block transition hover:text-white"
+                    >
+                      info@teknovia.in
+                    </a>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <BsLinkedin
+                      className="mt-0.5 shrink-0 text-primary-300"
+                      size={16}
+                    />
 
-                  <a
-                    href="mailto:info@teknovia.com"
-                    className="block transition hover:text-white"
-                  >
-                    info@teknovia.com
-                  </a>
+                    <a
+                      href="https://www.linkedin.com/company/teknovia-tech"
+                      className="block transition hover:text-white"
+                    >
+                      linkedin
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,13 +185,7 @@ export function Footer() {
   );
 }
 
-function FooterColumn({
-  title,
-  items,
-}: {
-  title: string;
-  items: string[];
-}) {
+function FooterColumn({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
       <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-primary">
