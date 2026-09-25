@@ -702,3 +702,67 @@ export const mobileAppTechnologies = [
     ],
   },
 ];
+
+export const saasFaqs = [
+  {
+    question: "What is SaaS product development?",
+    answer:
+      "SaaS (Software as a Service) product development is the process of designing, building, deploying, and maintaining cloud-based software applications that users access through a web browser or mobile app. SaaS solutions offer scalability, lower infrastructure costs, and recurring revenue opportunities for businesses.",
+  },
+  {
+    question:
+      "Why should I choose custom SaaS development instead of off-the-shelf software?",
+    answer:
+      "Custom SaaS development provides features, workflows, and integrations tailored to your business requirements. Unlike generic software, a custom SaaS solution offers greater flexibility, scalability, security, and a competitive advantage.",
+  },
+  {
+    question: "How much does SaaS product development cost?",
+    answer:
+      "The cost of SaaS product development depends on factors such as features, complexity, integrations, user roles, security requirements, and deployment architecture. TEKNOVIA provides customized development plans based on your business objectives and budget.",
+  },
+  {
+    question: "How long does it take to develop a SaaS application?",
+    answer:
+      "The timeline for SaaS application development varies based on project scope and functionality. An MVP can typically be developed within a few months, while a full-featured SaaS platform may require a longer development cycle.",
+  },
+  {
+    question: "What is an MVP in software product development?",
+    answer:
+      "A Minimum Viable Product (MVP) is an early version of a software product that includes essential features needed to validate an idea in the market. MVP development helps businesses reduce risk, gather user feedback, and accelerate time-to-market.",
+  },
+  {
+    question: "Can TEKNOVIA develop both web and mobile SaaS applications?",
+    answer:
+      "Yes. We develop scalable web applications, mobile apps, and cross-platform software products that provide seamless user experiences across desktops, tablets, and smartphones.",
+  },
+  {
+    question: "What technologies do you use for SaaS software development?",
+    answer:
+      "Our SaaS development team works with modern technologies including React, Next.js, Node.js, .NET, Java, Python, cloud platforms, APIs, databases, and microservices architectures to build high-performance software products.",
+  },
+  {
+    question: "Can you integrate my SaaS platform with third-party applications?",
+    answer:
+      "Absolutely. We provide API development and third-party integrations for CRM systems, ERP software, accounting solutions, payment gateways, eCommerce platforms, marketing tools, and other business applications.",
+  },
+  {
+    question: "How do you ensure security in SaaS applications?",
+    answer:
+      "We implement enterprise-grade security measures including secure authentication, role-based access control, data encryption, secure APIs, cloud security best practices, and compliance-focused development processes.",
+  },
+  {
+    question: "Do you provide SaaS product maintenance and support after launch?",
+    answer:
+      "Yes. Our software maintenance and support services include performance monitoring, security updates, bug fixes, feature enhancements, cloud optimization, and ongoing technical assistance.",
+  },
+  {
+    question: "Can you modernize or upgrade an existing software product?",
+    answer:
+      "Yes. We help businesses modernize legacy applications by upgrading technology stacks, improving user experiences, enhancing security, migrating to the cloud, and optimizing performance for future growth.",
+  },
+  {
+    question: "Why choose TEKNOVIA for SaaS and software product development?",
+    answer:
+      "TEKNOVIA combines technical expertise with real-world product development experience. In addition to building custom solutions for clients, we have developed in-house CRM, Accounting, Inventory Management, and eCommerce software products, giving us practical insights into creating scalable software platforms.",
+  },
+];
