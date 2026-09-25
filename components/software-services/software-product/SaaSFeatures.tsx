@@ -289,7 +289,7 @@ export function SaaSFeatures() {
   const rightFeatures = features.slice(5, 10);
 
   return (
-    <section className="relative overflow-hidden bg-white py-12 sm:py-16 lg:py-20 2xl:py-24">
+    <section className="relative overflow-hidden bg-white py-12 sm:py-16 ">
       {/* Background grid + glow */}
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-30" />
       <div className="pointer-events-none absolute left-1/2 top-40 size-80 -translate-x-1/2 rounded-full bg-primary-50/60 blur-3xl" />
