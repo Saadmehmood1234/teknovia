@@ -26,7 +26,7 @@ const services = [
   "SaaS Development",
   "ERP & Business Solutions",
   "eCommerce Development",
-  "Digital Marketing",
+  "",
   "Other",
 ];
 

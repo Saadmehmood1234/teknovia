@@ -88,10 +88,10 @@ export function MobileAppProcess() {
                   className="group relative bg-white text-center lg:px-2"
                 >
                   <div className="relative z-10 mx-auto flex size-24 items-center justify-center rounded-full border border-primary/25 bg-white shadow-[0_10px_35px_rgba(0,150,137,0.08)] transition-all duration-300 group-hover:border-primary group-hover:shadow-[0_15px_40px_rgba(0,150,137,0.15)]">
-                    <Icon className="size-7 text-primary" />
+                    <Icon className="size-10 text-primary" />
                   </div>
 
-                  <span className="mt-5 block font-mono text-xs font-bold tracking-widest text-primary">
+                  <span className="mt-5 block font-mono text-md font-bold tracking-widest text-primary">
                     {step.number}
                   </span>
 

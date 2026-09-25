@@ -26,7 +26,7 @@ const posts = [
       "Technology decisions should follow product requirements, users and long-term business goals.",
   },
   {
-    category: "Digital Marketing",
+    category: "Digital Marketin",
     title: "Building a Strong Digital Presence",
     description:
       "Learn how consistent digital experiences across search, social media and websites can support growth.",

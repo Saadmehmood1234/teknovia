@@ -31,11 +31,11 @@ export const navigation = [
   },
 
   {
-    label: "Digital Services",
+    label: "Digital Edge",
     href: "/digital-marketing",
     children: [
       {
-        label: "Local SEO",
+        label: "Google My Business - Local SEO",
         href: "/digital-marketing/local-seo",
       },
       {
@@ -54,10 +54,10 @@ export const navigation = [
         label: "B2B Marketing",
         href: "/digital-marketing/b2b-marketing",
       },
-      {
-        label: "Influencer Marketing",
-        href: "/digital-marketing/influencer-marketing",
-      },
+      // {
+      //   label: "Influencer Marketing",
+      //   href: "/digital-marketing/influencer-marketing",
+      // },
     ],
   },
 

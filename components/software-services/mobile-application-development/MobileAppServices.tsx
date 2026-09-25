@@ -6,49 +6,49 @@ const services = [
     title: "Android App Development",
     description:
       "Custom Android applications designed for performance, scalability, and compatibility across Android devices.",
-    image: "/images/services/android.png",
+    image: "/images/services/android-app.png",
   },
   {
     title: "iOS App Development",
     description:
       "Premium iPhone and iPad applications built with security, speed, and seamless user experience.",
-    image: "/images/services/ios.png",
+    image: "/images/services/ios-app.png",
   },
   {
     title: "Cross-Platform App Development",
     description:
       "Develop once and deploy across Android and iOS using modern frameworks to reduce costs and accelerate time-to-market.",
-    image: "/images/services/cross-platform.png",
+    image: "/images/services/cross-platform-app.png",
   },
   {
     title: "Enterprise Mobile Applications",
     description:
       "Internal business applications that improve productivity, communication, and operational efficiency.",
-    image: "/images/services/enterprise-mobile.png",
+    image: "/images/services/enterprise-mobile-app.png",
   },
   {
     title: "eCommerce Mobile Applications",
     description:
       "Feature-rich shopping applications with secure payments, product management, and customer engagement tools.",
-    image: "/images/services/ecommerce-mobiles.png",
+    image: "/images/services/ecommerce-mobiles-app.png",
   },
   {
     title: "Progressive Web Apps",
     description:
       "Fast, installable web applications that deliver app-like experiences across devices.",
-    image: "/images/services/pwa.png",
+    image: "/images/services/pwa-app.png",
   },
   {
     title: "Mobile App UI/UX Design",
     description:
       "User-centered design focused on engagement, usability, accessibility, and conversion optimization.",
-    image: "/images/services/mobile-uiux.png",
+    image: "/images/services/mobile-uiux-app.png",
   },
   {
     title: "App Maintenance & Support",
     description:
       "Ongoing updates, performance optimization, security enhancements, and feature upgrades.",
-    image: "/images/services/mobile-maintenances.png",
+    image: "/images/services/mobile-maintenances-app.png",
   },
 ];
 
@@ -78,15 +78,14 @@ export function MobileAppServices() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="group flex h-full min-h-65 flex-col overflow-hidden rounded-2xl border border-gray-200 bg-[#FAFAFA] text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:bg-white hover:shadow-[0_12px_30px_rgba(0,150,137,0.08)]"
+              className="flex h-full min-h-65 flex-col items-center justify-center rounded-2xl border border-gray-200 bg-[#FAFAFA] p-6 text-center"
             >
-              <div className="relative aspect-5/3 w-full overflow-hidden bg-primary/10">
+              <div className="relative flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-full border border-primary-100 bg-primary/10 p-3">
                 <Image
                   src={service.image}
-                  alt={service.title}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  alt={service.title}
+                  className="object-contain p-0"
                 />
               </div>
 

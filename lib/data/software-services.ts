@@ -278,7 +278,7 @@ export const webApptechnologies = [
   {
     category: "Frontend",
     items: [
-      { title: "React.js", image: "/images/technologies/react.png" },
+      { title: "React.js", image: "/images/technologies/reactjs.png" },
       { title: "Next.js", image: "/images/technologies/nextjs.jpeg" },
       { title: "Angular", image: "/images/technologies/angular.png" },
       { title: "JavaScript", image: "/images/technologies/javascript.jpeg" },
@@ -288,7 +288,7 @@ export const webApptechnologies = [
   {
     category: "Backend",
     items: [
-      { title: "Node.js", image: "/images/technologies/nodejs.jpg" },
+      { title: "Node.js", image: "/images/technologies/nodejs.webp" },
       { title: "Express.js", image: "/images/technologies/express.avif" },
       { title: "Laravel", image: "/images/technologies/laravel.webp" },
       { title: "Python", image: "/images/technologies/python.webp" },
@@ -611,7 +611,7 @@ export const mobileAppTechnologies = [
     items: [
       {
         title: "React Native",
-        image: "/images/technologies/react.png",
+        image: "/images/technologies/reactjs.png",
       },
       {
         title: "Flutter",
@@ -637,7 +637,7 @@ export const mobileAppTechnologies = [
     items: [
       {
         title: "React",
-        image: "/images/technologies/react.png",
+        image: "/images/technologies/reactjs.png",
       },
       {
         title: "Next.js",
@@ -659,7 +659,7 @@ export const mobileAppTechnologies = [
     items: [
       {
         title: "Node.js",
-        image: "/images/technologies/nodejs.jpg",
+        image: "/images/technologies/nodejs.webp",
       },
       {
         title: "Express.js",
