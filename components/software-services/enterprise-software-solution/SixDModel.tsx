@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 import {
   Search,
   ClipboardCheck,
@@ -118,11 +119,9 @@ export default function SixDModel() {
           />
         </div>
 
-        <div className="container-page relative">
+        <div className="relative">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="font-mono text-lg font-extrabold uppercase tracking-widest text-primary">
-              OUR DEVELOPMENT APPROACH
-            </p>
+             <TopBadge data="Our&nbsp;Development&nbsp;Approach" centerItem={true}/>
 
             <h2 className="mt-4 font-heading text-3xl font-semibold tracking-tight text-gray-950 sm:text-4xl ">
               6D SOLUTION FRAMEWORK

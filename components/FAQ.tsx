@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Container } from "./ui/Container";
+import { TopBadge } from "./ui/Top-Badge";
 
 export type FAQItem = {
   question: string;
@@ -31,7 +32,7 @@ export default function FAQ({
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <span className="eyebrow">FAQ</span>
+            <TopBadge data="FAQ" />
 
             <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-tight text-gray-950 sm:text-4xl lg:text-5xl">
               {title}

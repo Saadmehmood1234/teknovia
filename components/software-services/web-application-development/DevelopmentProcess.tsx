@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 import { developmentProcess } from "@/lib/data/software-services";
 import Image from "next/image";
 
@@ -22,9 +23,10 @@ export default function DevelopmentProcess() {
         <div className="relative px-5 sm:px-6 lg:px-8">
           <div className="flex flex-col w-full justify-between items-center text-center gap-6">
             <div className="max-w-2xl">
-              <p className="font-mono text-lg font-extrabold uppercase tracking-[0.2em] text-primary">
-                OUR DEVELOPMENT PROCESS
-              </p>
+              <TopBadge
+                data="OUR&nbsp;DEVELOPMENT&nbsp;PROCESS"
+                centerItem={true}
+              />
 
               <h2 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
                 A Clear Process. Proven Results.

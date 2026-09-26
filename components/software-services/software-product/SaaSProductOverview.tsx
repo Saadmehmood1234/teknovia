@@ -2,6 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const points = [
   "MVP and product development",
@@ -39,9 +40,7 @@ export function SaaSProductOverview() {
             </div>
           </div>
           <div>
-            <p className="font-mono text-sm font-extrabold uppercase tracking-[0.18em] text-primary sm:text-base">
-              SAAS & SOFTWARE PRODUCTS
-            </p>
+            <TopBadge data="SAAS&nbsp;&&nbsp;SOFTWARE&nbsp;PRODUCTS" />
 
             <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
               Turn Ideas Into Scalable Software Products

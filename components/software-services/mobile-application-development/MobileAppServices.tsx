@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const services = [
   {
@@ -58,9 +59,7 @@ export function MobileAppServices() {
       <Container>
         <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
           <div className="max-w-2xl">
-            <p className="font-mono text-lg font-extrabold uppercase tracking-[0.2em] text-primary">
-              Our Services
-            </p>
+            <TopBadge data="Our&nbsp;Services" centerItem={true} />
 
             <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
               Complete Mobile App Development Services

@@ -4,6 +4,7 @@ import { EnterpriseSolutions } from "@/components/software-services/enterprise-s
 import SixDModel from "@/components/software-services/enterprise-software-solution/SixDModel";
 import ThreePModel from "@/components/software-services/enterprise-software-solution/ThreePModel";
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 import { enterpriseFaqs } from "@/lib/data/software-services";
 import Image from "next/image";
 
@@ -50,9 +51,7 @@ export default function IndustriesPage() {
               </div>
             </div>
             <div>
-              <p className="text-md sm:text-lg font-extrabold uppercase tracking-wider text-primary">
-                Enterprise Software
-              </p>
+              <TopBadge data="Enterprise&nbsp;Software" />
 
               <h2 className="mt-3 text-2xl  sm:text-3xl font-black leading-tight tracking-tight text-slate-950">
                 Enterprise Software Development Solutions
@@ -102,7 +101,7 @@ export default function IndustriesPage() {
       </section>
       <ThreePModel />
       <SixDModel />
-      <EnterpriseSolutions/>
+      <EnterpriseSolutions />
       <FAQ
         title="Frequently Asked Questions"
         description="Common questions about enterprise software development"

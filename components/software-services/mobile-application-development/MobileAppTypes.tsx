@@ -11,6 +11,7 @@ import {
   WalletCards,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const applications = [
   {
@@ -71,16 +72,17 @@ export function MobileAppTypes() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="eyebrow">APPLICATIONS WE BUILD</p>
-
+            <TopBadge
+              data="APPLICATIONS&nbsp;WE&nbsp;BUILD"
+            />
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-gray-950 sm:text-4xl">
               Mobile Solutions for Different Business Models
             </h2>
 
             <p className="mt-5 max-w-md text-sm leading-7 text-gray-600 sm:text-base">
               We build mobile applications across industries and business
-              models, adapting the technology, workflows, and user experience
-              to your specific requirements.
+              models, adapting the technology, workflows, and user experience to
+              your specific requirements.
             </p>
 
             <div className="mt-8 h-px w-20 bg-primary" />

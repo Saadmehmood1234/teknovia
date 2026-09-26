@@ -9,6 +9,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const steps = [
   {
@@ -60,9 +61,10 @@ export function MobileAppProcess() {
     <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-sm font-bold uppercase tracking-[0.18em] text-primary sm:text-base">
-            OUR DEVELOPMENT APPROACH
-          </p>
+          <TopBadge
+            data="OUR&nbsp;DEVELOPMENT&nbsp;APPROACH"
+            centerItem={true}
+          />
 
           <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
             From Idea to App Store
@@ -124,9 +126,7 @@ export function MobileAppProcess() {
           <div className="flex items-center gap-4 border-primary/20 sm:border-l sm:pl-5">
             <Smartphone className="size-8 shrink-0 text-primary" />
             <div>
-              <p className="text-sm font-bold text-gray-950">
-                Mobile-First UX
-              </p>
+              <p className="text-sm font-bold text-gray-950">Mobile-First UX</p>
               <p className="mt-1 text-xs text-gray-600">
                 Interfaces designed for real-world usage.
               </p>

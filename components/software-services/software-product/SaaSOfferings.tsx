@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const offerings = [
   {
@@ -100,7 +101,7 @@ export function SaaSOfferings() {
     <section className="border-b border-gray-100 bg-white py-8 sm:py-16">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow">What We Offer</p>
+          <TopBadge data="What&nbsp;We&nbsp;Offer" centerItem={true}/>
 
           <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
             SaaS & Software Product Development

@@ -19,7 +19,10 @@ export default function CorporatePage() {
     <main className="overflow-hidden bg-white">
       <section className="relative pt-8 border-b border-gray-200 isolate overflow-hidden bg-[#EEF7F9] to-white gap-10">
         <Container>
-          <Breadcrumb items={[{ label: "Corporate" }]} className="mb-8 xl:mb-0" />
+          <Breadcrumb
+            items={[{ label: "Corporate" }]}
+            className="mb-8 xl:mb-0"
+          />
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="w-full">
               <TopBadge data="About&nbsp;Teknovia" />
@@ -57,7 +60,7 @@ export default function CorporatePage() {
                 </a>
               </div>
             </div>
-            <div className="relative w-full" >
+            <div className="relative w-full">
               <div className="relative aspect-5/4 overflow-hidden rounded-2xl">
                 <Image
                   src="/images/corporate-background.png"
@@ -106,12 +109,8 @@ export default function CorporatePage() {
                 </div>
               </div>
             </div>
-
-            {/* Content */}
             <div>
-              <p className="text-md font-extrabold uppercase tracking-wider text-primary">
-                About Teknovia
-              </p>
+              <TopBadge data="About&nbsp;Teknovia" />
 
               <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-slate-950">
                 Transforming ideas into scalable digital solutions that drive
@@ -149,9 +148,7 @@ export default function CorporatePage() {
         <Container>
           <div className="flex flex-col w-full justify-between items-center text-center gap-6">
             <div className="max-w-2xl">
-              <p className="font-mono text-lg font-extrabold uppercase tracking-[0.2em] text-primary">
-                Our Strengths
-              </p>
+              <TopBadge data="Our&nbsp;Strengths" centerItem={true} />
 
               <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
                 What sets us apart.
@@ -189,9 +186,7 @@ export default function CorporatePage() {
       <section className="py-16">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="font-mono text-lg font-extrabold uppercase tracking-wider text-primary">
-              Our Leadership
-            </p>
+            <TopBadge data="Our&nbsp;Leadership" centerItem={true} />
 
             <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
               Meet the leaders driving Teknovia forward.

@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 import { mobileAppTechnologies } from "@/lib/data/software-services";
 import Image from "next/image";
 
@@ -10,9 +11,7 @@ export default function MobileAppTechStack() {
           {/* Header */}
           <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
             <div className="max-w-2xl">
-              <p className="font-mono text-lg font-extrabold uppercase tracking-[0.2em] text-primary">
-                Technology Stack
-              </p>
+              <TopBadge data="Technology&nbsp;Stack" centerItem={true} />
 
               <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
                 Technologies We Use

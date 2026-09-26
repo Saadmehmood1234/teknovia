@@ -7,6 +7,7 @@ import DevelopmentProcess from "@/components/software-services/web-application-d
 import WebApplications from "@/components/software-services/web-application-development/WebApplications";
 import CoreCapabilities from "@/components/software-services/web-application-development/CoreCapabilities";
 import TechnologyStack from "@/components/software-services/web-application-development/TechnologyStack";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 export default function WebApplicationDevelopmentPage() {
   return (
@@ -38,9 +39,7 @@ export default function WebApplicationDevelopmentPage() {
               </div>
             </div>
             <div>
-              <p className="text-md sm:text-lg font-extrabold uppercase tracking-wider text-primary">
-                Web Application Development Services
-              </p>
+              <TopBadge data="Web&nbsp;Application&nbsp;Development&nbsp;Services" />
 
               <h2 className="mt-3 text-2xl  sm:text-3xl font-black leading-tight tracking-tight text-slate-950">
                 Building Digital Experiences That Work for Your Business
@@ -84,9 +83,7 @@ export default function WebApplicationDevelopmentPage() {
         <Container>
           <div className="flex flex-col w-full justify-between items-center text-center gap-6">
             <div className="max-w-2xl">
-              <p className="font-mono text-lg font-extrabold uppercase tracking-[0.2em] text-primary">
-                Our Services
-              </p>
+              <TopBadge data="Our&nbsp;Services" centerItem={true} />
 
               <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
                 Web Application Development Services

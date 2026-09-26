@@ -7,8 +7,6 @@ import { SaaSProducts } from "@/components/software-services/software-product/Sa
 import { SaaSWhyTeknovia } from "@/components/software-services/software-product/SaaSWhyTeknovia";
 
 import { saasFaqs } from "@/lib/data/software-services";
-import Link from "next/link";
-
 export default function SaaSSoftwareProductPage() {
   return (
     <main>

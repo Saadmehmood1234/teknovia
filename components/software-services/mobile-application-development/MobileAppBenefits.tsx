@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
-
 
 export function MobileAppBenefits() {
   return (
@@ -16,9 +16,7 @@ export function MobileAppBenefits() {
 
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-sm font-bold uppercase tracking-[0.18em] text-primary sm:text-base">
-            WHY MOBILE
-          </p>
+          <TopBadge data="WHY&nbsp;MOBILE" centerItem={true} />
 
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
             Why Your Business Needs a Mobile App

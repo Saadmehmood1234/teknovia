@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const reasons = [
   {
@@ -61,9 +62,7 @@ export function SaaSWhyTeknovia() {
       <Container className="relative">
         <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
           <div className="max-w-2xl">
-            <p className="font-mono text-lg font-extrabold uppercase tracking-[0.2em] text-primary">
-              WHY TEKNOVIA
-            </p>
+            <TopBadge data="WHY&nbsp;TEKNOVIA" centerItem={true} />
 
             <h2 className="mt-3 text-3xl font-black tracking-tight text-white/70 sm:text-4xl">
               More Than a Development Team

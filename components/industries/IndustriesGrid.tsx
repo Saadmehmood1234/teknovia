@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { industries } from "@/lib/data/industries";
 import { useRef } from "react";
+import { TopBadge } from "../ui/Top-Badge";
 
 export function IndustriesGrid() {
   const [activeIndustry, setActiveIndustry] = useState("manufacturing");
@@ -50,7 +51,6 @@ export function IndustriesGrid() {
       });
     };
 
-
     handleIndustryFromUrl();
 
     // Normal browser hash navigation
@@ -77,9 +77,7 @@ export function IndustriesGrid() {
       <Container>
         <div className="flex justify-center items-center">
           <div className="max-w-3xl flex items-center justify-center flex-col">
-            <p className="font-mono text-md sm:text-lg font-bold uppercase tracking-wider text-primary">
-              Industries We Serve
-            </p>
+            <TopBadge data="Industries&nbsp;We&nbsp;Serve" centerItem={true} />
 
             <h2 className="mt-3 text-2xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
               Domains and Industry
@@ -188,7 +186,7 @@ export function IndustriesGrid() {
                     </div>
 
                     <div>
-                      <p className="font-mono text-xs font-bold uppercase tracking-wider text-primary">
+                      <p className="font-mono text-lg font-extrabold uppercase tracking-widest text-primary">
                         Industry Solutions
                       </p>
 

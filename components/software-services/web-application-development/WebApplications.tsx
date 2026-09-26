@@ -6,7 +6,7 @@ import {
 
 export default function WebApplications() {
   return (
-    <section className="relative overflow-hidden bg-[#071416] py-16 text-white sm:py-24">
+    <section className="relative overflow-hidden bg-[#071416] sm:py-16 text-white py-8">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute -right-32 -top-32 h-125 w-125 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute -bottom-32 -left-32 h-100 w-100 rounded-full bg-primary/5 blur-3xl" />

@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 import { enterpriseSolutions } from "@/lib/data/software-services";
 
 export function EnterpriseSolutions() {
@@ -7,9 +8,7 @@ export function EnterpriseSolutions() {
       <Container>
         <div className="flex justify-center items-center">
           <div className="max-w-3xl flex items-center justify-center text-center flex-col">
-            <p className="font-mono text-md sm:text-lg font-bold uppercase tracking-[0.18em] text-primary">
-              ENTERPRISE SOLUTIONS
-            </p>
+            <TopBadge data="ENTERPRISE&nbsp;SOLUTIONS" />
 
             <h2 className="mt-3 text-2xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
               Enterprise Software Solutions We Build
@@ -40,7 +39,7 @@ export function EnterpriseSolutions() {
                   lg:border-r
                   lg:nth-[4n]:border-r-0
                   "
-                  >
+              >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs font-semibold tracking-[0.2em] text-slate-300 transition-colors duration-300 group-hover:text-primary/50">
                     {String(index + 1).padStart(2, "0")}

@@ -1,11 +1,7 @@
-import {
-  Boxes,
-  Calculator,
-  ShoppingCart,
-  Users,
-} from "lucide-react";
+import { Boxes, Calculator, ShoppingCart, Users } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const products = [
   {
@@ -66,8 +62,10 @@ export function SaaSProducts() {
     >
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow">OUR SAAS & SOFTWARE PRODUCTS</p>
-
+          <TopBadge
+            data="OUR&nbsp;SAAS&nbsp;&&nbsp;SOFTWARE&nbsp;PRODUCTS"
+            centerItem={true}
+          />
           <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
             Built on Real-World Product Experience
           </h2>

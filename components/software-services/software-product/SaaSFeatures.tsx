@@ -14,6 +14,7 @@ import {
   UsersRound,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const features = [
   {
@@ -245,7 +246,6 @@ function SaaSCenterVisual() {
   );
 }
 
-
 function FeatureCard({
   feature,
   index,
@@ -290,16 +290,12 @@ export function SaaSFeatures() {
 
   return (
     <section className="relative overflow-hidden bg-white py-12 sm:py-16 ">
-      {/* Background grid + glow */}
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-30" />
       <div className="pointer-events-none absolute left-1/2 top-40 size-80 -translate-x-1/2 rounded-full bg-primary-50/60 blur-3xl" />
 
       <Container className="relative">
-        {/* ── Header ─────────────────────────────────────── */}
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-primary sm:text-xs lg:text-sm">
-            KEY FEATURES
-          </p>
+          <TopBadge data="KEY&nbsp;FEATURES" centerItem={true} />
 
           <h2 className="mt-3 font-heading text-2xl font-bold tracking-tight text-[#10284B] sm:text-3xl lg:text-4xl xl:text-5xl">
             Built for Scale,{" "}
@@ -311,15 +307,10 @@ export function SaaSFeatures() {
             product with confidence.
           </p>
         </div>
-
-        {/* ── DESKTOP: orbital layout (lg+) ──────────────── */}
-        <div className="relative mx-auto mt-14 hidden h-160 w-full max-w-[1400px] lg:block xl:h-175 xl:max-w-[1500px] 2xl:h-190 2xl:max-w-375">
-          {/* Center visual */}
+        <div className="relative mx-auto mt-14 hidden h-160 w-full max-w-350 lg:block xl:h-175 xl:max-w-[375 2xl:h-190 2xl:max-w-375">
           <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
             <SaaSCenterVisual />
           </div>
-
-          {/* Left column — 5 items */}
           <div className="absolute left-0 top-[5%] w-full xl:left-4 2xl:left-10">
             <FeatureItem feature={leftFeatures[0]} index={0} side="left" />
           </div>
@@ -335,8 +326,6 @@ export function SaaSFeatures() {
           <div className="absolute left-0 top-[81%] w-full xl:left-4 2xl:left-10">
             <FeatureItem feature={leftFeatures[4]} index={4} side="left" />
           </div>
-
-          {/* Right column — 5 items */}
           <div className="absolute right-0 top-[5%] w-full xl:right-4 2xl:right-10">
             <FeatureItem feature={rightFeatures[0]} index={5} side="right" />
           </div>
@@ -353,8 +342,6 @@ export function SaaSFeatures() {
             <FeatureItem feature={rightFeatures[4]} index={9} side="right" />
           </div>
         </div>
-
-        {/* ── MOBILE / TABLET: card grid (below lg) ─────── */}
         <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:hidden">
           {features.map((feature, index) => (
             <FeatureCard key={feature.title} feature={feature} index={index} />

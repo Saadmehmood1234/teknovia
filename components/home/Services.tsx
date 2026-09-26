@@ -1,15 +1,14 @@
 import { Container } from "@/components/ui/Container";
 import { ServiceCard } from "../ui/Card";
 import { services } from "@/lib/data/site";
+import { TopBadge } from "../ui/Top-Badge";
 
 export function Services() {
   return (
     <section id="services" className="bg-surface py-8 sm:py-16">
       <Container className="flex flex-col items-center justify-center">
         <div className="w-full max-w-3xl text-center">
-          <p className="font-mono text-lg font-extrabold uppercase tracking-widest text-primary">
-            Our Core Service Domains
-          </p>
+            <TopBadge data="Core&nbsp;Service&nbsp;Domains" centerItem={true}/>
 
           <h2 className="mt-4 text-center text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
             Built to Help Businesses Grow, Scale, and Succeed

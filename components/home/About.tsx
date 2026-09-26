@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "../ui/Top-Badge";
 
 export function About() {
   return (
@@ -10,8 +11,7 @@ export function About() {
       className="border-b border-gray-200 bg-white py-4 sm:py-8"
     >
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* Image */}
+        <div className="grid items-start gap-14 lg:grid-cols-2">
           <div className="relative overflow-hidden rounded-2xl">
             <Image
               src="/images/teknovia-about.png"
@@ -24,9 +24,8 @@ export function About() {
           </div>
 
           <div>
-            <p className="font-extrabold uppercase text-primary">
-              About TEKNOVIA
-            </p>
+            <p className="font-extrabold uppercase text-primary"></p>
+            <TopBadge data="About&nbsp;TEKNOVIA" />
 
             <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-950">
               Technology-driven growth for modern businesses

@@ -3,6 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import { Container } from "../ui/Container";
 import { principles } from "@/lib/data/industries";
 import Image from "next/image";
+import { TopBadge } from "../ui/Top-Badge";
 
 const industries = [
   "Educational Institutions",
@@ -20,9 +21,7 @@ export function IndustriesOverview() {
       <Container>
         <div className="flex justify-center items-center">
           <div className="max-w-3xl flex items-center justify-center text-center flex-col">
-            <p className="font-mono text-md sm:text-lg font-bold uppercase tracking-[0.18em] text-primary">
-              How We Build
-            </p>
+            <TopBadge data="How&nbsp;We&nbsp;Build" centerItem={true} />
 
             <h2 className="mt-3 text-2xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
               Designed for real-world
@@ -80,7 +79,7 @@ export function IndustriesOverview() {
           <Container>
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
               <div>
-                <p className="font-mono text-md font-bold uppercase tracking-[0.18em] text-white sm:text-lg">
+                <p className="font-mono text-lg font-extrabold uppercase tracking-widest text-primary">
                   Built For Diverse Industries
                 </p>
 

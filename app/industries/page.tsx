@@ -2,6 +2,7 @@ import { IndustriesGrid } from "@/components/industries/IndustriesGrid";
 import { IndustriesHero } from "@/components/industries/IndustriesHero";
 import { IndustriesOverview } from "@/components/industries/IndustriesOverview";
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -32,9 +33,9 @@ export default function IndustriesPage() {
               </div>
             </div>
             <div>
-              <p className="text-md sm:text-lg font-extrabold uppercase tracking-wider text-primary">
-                Technology That Creates Impact
-              </p>
+              <TopBadge
+                data="Technology&nbsp;That&nbsp;Creates&nbsp;Impact"
+              />
 
               <h2 className="mt-3 text-2xl  sm:text-3xl font-black leading-tight tracking-tight text-slate-950">
                 Intelligent software built around your business.

@@ -1,19 +1,12 @@
-import {
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { WebDevCapabilities } from "@/lib/data/software-services";
-
-
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 export default function CoreCapabilities() {
   return (
-    <section className="relative overflow-hidden bg-[#EFF3F6] py-12 sm:py-16 lg:py-20">
-      {/* Background decoration */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-      >
+    <section className="relative overflow-hidden bg-[#EFF3F6] py-8 sm:py-16">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute -right-40 top-0 h-100 w-100 rounded-full bg-primary/5 blur-3xl" />
 
         <div className="absolute -left-40 bottom-0 h-100 w-100 rounded-full bg-white/70 blur-3xl" />
@@ -21,20 +14,17 @@ export default function CoreCapabilities() {
 
       <Container>
         <div className="relative">
-          {/* Heading */}
           <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
             <div className="max-w-2xl">
-              <p className="font-mono text-lg font-extrabold uppercase tracking-[0.2em] text-primary">
-                Core Capabilities
-              </p>
+              <TopBadge data="Core&nbsp;Capabilities" centerItem={true} />
 
               <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
                 Built to Perform. Designed to Scale.
               </h2>
 
               <p className="mt-5 text-base leading-7 text-gray-600 sm:text-lg">
-                Our applications are built with the capabilities businesses
-                need to operate, scale, and adapt.
+                Our applications are built with the capabilities businesses need
+                to operate, scale, and adapt.
               </p>
             </div>
           </div>
@@ -49,9 +39,7 @@ export default function CoreCapabilities() {
                 <div
                   key={capability.number}
                   className={`group relative overflow-hidden border border-slate-200 bg-white transition-all duration-300 hover:border-primary/30 hover:shadow-[0_18px_50px_rgba(0,0,0,0.07)] ${
-                    isFeatured
-                      ? "lg:row-span-2"
-                      : ""
+                    isFeatured ? "lg:row-span-2" : ""
                   }`}
                 >
                   {/* Large background number */}
@@ -64,9 +52,7 @@ export default function CoreCapabilities() {
 
                   <div
                     className={`relative flex h-full flex-col ${
-                      isFeatured
-                        ? "justify-between p-7 sm:p-9"
-                        : "p-6 sm:p-7"
+                      isFeatured ? "justify-between p-7 sm:p-9" : "p-6 sm:p-7"
                     }`}
                   >
                     {/* Top */}
@@ -90,13 +76,7 @@ export default function CoreCapabilities() {
                     </div>
 
                     {/* Content */}
-                    <div
-                      className={
-                        isFeatured
-                          ? "mt-20 sm:mt-28"
-                          : "mt-8"
-                      }
-                    >
+                    <div className={isFeatured ? "mt-20 sm:mt-28" : "mt-8"}>
                       <h3
                         className={`font-black tracking-tight text-slate-950 transition-colors duration-300 group-hover:text-primary ${
                           isFeatured
@@ -109,9 +89,7 @@ export default function CoreCapabilities() {
 
                       <p
                         className={`mt-3 leading-7 text-slate-500 ${
-                          isFeatured
-                            ? "max-w-lg text-base"
-                            : "text-sm"
+                          isFeatured ? "max-w-lg text-base" : "text-sm"
                         }`}
                       >
                         {capability.description}
@@ -129,9 +107,7 @@ export default function CoreCapabilities() {
                       </span>
 
                       <div className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400 transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-white">
-                        <ArrowUpRight
-                          className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                        />
+                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                       </div>
                     </div>
                   </div>

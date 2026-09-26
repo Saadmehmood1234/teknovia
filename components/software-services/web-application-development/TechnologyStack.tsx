@@ -1,17 +1,16 @@
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 import { webApptechnologies } from "@/lib/data/software-services";
 import Image from "next/image";
 
 export default function TechnologyStack() {
   return (
-    <section className="relative overflow-hidden py-12 text-black sm:py-16 lg:py-20">
+    <section className="relative overflow-hidden py-8 text-black sm:py-16">
       <Container>
         <div className="relative">
           <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
             <div className="max-w-2xl">
-              <p className="font-mono text-lg font-extrabold uppercase tracking-[0.2em] text-primary">
-                Technology Stack
-              </p>
+              <TopBadge data="Technology&nbsp;Stack" centerItem={true} />
 
               <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
                 Technologies We Use
@@ -31,7 +30,6 @@ export default function TechnologyStack() {
                 className="border-t border-slate-200 py-8 last:border-b sm:py-10"
               >
                 <div className="grid gap-6 lg:grid-cols-[220px_1fr] lg:gap-12">
-                  {/* Category */}
                   <div>
                     <p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-primary">
                       Technology

@@ -27,6 +27,10 @@ export const navigation = [
         label: "SaaS & Software Products",
         href: "/software-services/software-product",
       },
+      {
+        label:"IOT Development",
+        href:"/software-services/iot-development"
+      }
     ],
   },
 

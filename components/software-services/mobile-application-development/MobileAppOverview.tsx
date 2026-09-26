@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
 
 const points = [
   "Customer-facing mobile experiences",
@@ -39,9 +40,9 @@ export function MobileAppOverview() {
           </div>
 
           <div>
-            <p className="font-mono text-sm font-extrabold uppercase tracking-[0.18em] text-primary sm:text-base">
-              MOBILE APP DEVELOPMENT
-            </p>
+            <TopBadge
+              data="MOBILE&nbsp;APP&nbsp;DEVELOPMENT"
+            />
 
             <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
               Mobile Experiences Built Around Your Business
@@ -50,8 +51,8 @@ export function MobileAppOverview() {
             <div className="mt-6 space-y-5 text-sm leading-7 text-slate-600 sm:text-base">
               <p>
                 Mobile devices have become a primary touchpoint between
-                businesses and customers. A well-designed mobile application
-                can improve customer engagement, strengthen brand visibility,
+                businesses and customers. A well-designed mobile application can
+                improve customer engagement, strengthen brand visibility,
                 enhance user experience, and create new digital revenue
                 opportunities.
               </p>

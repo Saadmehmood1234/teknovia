@@ -4,6 +4,7 @@ import { Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { testimonials } from "@/lib/data/site";
 import { CTA } from "./CTA";
+import { TopBadge } from "../ui/Top-Badge";
 
 export function Testimonials() {
   return (
@@ -21,9 +22,7 @@ export function Testimonials() {
 
       <Container className="relative">
         <div className="text-center">
-          <p className="font-mono text-md font-extrabold uppercase tracking-widest text-primary">
-            Testimonials & Success Stories
-          </p>
+          <TopBadge data="Testimonials&nbsp;&&nbsp;Success&nbsp;Stories" centerItem={true} />
 
           <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
             What Our Clients Say
