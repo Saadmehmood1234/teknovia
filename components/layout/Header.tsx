@@ -28,35 +28,35 @@ export const navigation = [
         href: "/software-services/software-product",
       },
       {
-        label:"IOT Development",
-        href:"/software-services/iot-development"
-      }
+        label: "IOT Development",
+        href: "/software-services/iot-development",
+      },
     ],
   },
 
   {
     label: "Digital Edge",
-    href: "/digital-marketing",
+    href: "/digital-edge",
     children: [
       {
         label: "Google My Business - Local SEO",
-        href: "/digital-marketing/local-seo",
+        href: "/digital-edge/local-seo",
       },
       {
         label: "Search Engine Optimization",
-        href: "/digital-marketing/web-seo",
+        href: "/digital-edge/web-seo",
       },
       {
         label: "Social Media Optimization",
-        href: "/digital-marketing/social-media-optimization",
+        href: "/digital-edge/social-media-optimization",
       },
       {
         label: "WhatsApp Marketing",
-        href: "/digital-marketing/whatsapp-marketing",
+        href: "/digital-edge/whatsapp-marketing",
       },
       {
         label: "B2B Marketing",
-        href: "/digital-marketing/b2b-marketing",
+        href: "/digital-edge/b2b-marketing",
       },
       // {
       //   label: "Influencer Marketing",
