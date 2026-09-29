@@ -79,7 +79,7 @@ export default function WebApplicationDevelopmentPage() {
         </Container>
       </section>
 
-      <section id="web-dev-services" className=" py-8 sm:py-16">
+      <section id="web-services" className=" py-8 sm:py-16">
         <Container>
           <div className="flex flex-col w-full justify-between items-center text-center gap-6">
             <div className="max-w-2xl">

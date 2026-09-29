@@ -1,4 +1,3 @@
-import { CTASection } from "@/components/pages/CTASection";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { FeaturedPost } from "@/components/blog/FeaturedPost";
 import { BlogGrid } from "@/components/blog/BlogGrid";
@@ -26,10 +25,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <CTASection
-        title="Have a Digital Project in Mind?"
-        description="Let's turn your idea into a practical digital solution."
-      />
     </main>
   );
 }

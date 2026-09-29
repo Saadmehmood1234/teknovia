@@ -8,7 +8,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="border-b border-gray-200 bg-white py-4 sm:py-8"
+      className="border-b border-gray-200 bg-white py-8 sm:py-16"
     >
       <Container>
         <div className="grid items-start gap-14 lg:grid-cols-2">

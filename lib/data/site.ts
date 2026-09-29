@@ -15,26 +15,55 @@ import {
   Phone,
   Send,
   Mail,
+  BriefcaseBusiness,
+  GraduationCap,
+  ShoppingCart,
+  Megaphone,
+  Laptop,
+  LucideIcon,
+  Building2,
+  Smartphone,
+  Cloud,
+  Cpu,
+  MapPin,
+  Search,
+  Share2,
+  MessageCircle,
+  Store,
+  ShoppingBag,
+  School,
+  HeartPulse,
+  Factory,
+  House,
+  Calculator,
+  Truck,
+  Hotel,
 } from "lucide-react";
 export const services = [
   {
     image: "/images/card-1.png",
+    href: "/software-services",
     title: "Software Solution",
     description:
       "Teknovia develops intelligent software solutions including ERP, CRM, EdTech, IoT, and industry-specific applications for education, healthcare, retail, logistics, manufacturing, and more.",
   },
   {
     image: "/images/card-2.png",
+    href: "/digital-edge",
     title: "Digital Edge",
-    description: "Explore our Services offerings.",
+    description:
+      "Strategic digital marketing solutions including SEO, SMM, performance campaigns, and lead generation to increase brand visibility, attract customers, and business growth.",
   },
   {
     image: "/images/card-3.png",
+    href: "/ecommerce-solutions",
     title: "Marketplace & eCommerce",
-    description: "Explore our Marketplace Solutions offerings.",
+    description:
+      "e-Commerce development and marketplace solutions including online store setup, marketplace management, and product optimization to increase sales and business growth.",
   },
   {
     image: "/images/edutech.png",
+    href: "/edtech-solution",
     title: "EdTech Solution",
     description:
       "Build scalable EdTech platforms for schools, coaching institutes, startups, corporate training, and skill development with TEKNOVIA.",
@@ -90,54 +119,63 @@ export const industries = [
   {
     image: "/images/card-17.png",
     title: "Manufacturing",
+    href: "/industries#manufacturing",
     description: "Automation and digital systems to boost productivity.",
   },
   {
     image: "/images/card-19.png",
     title: "Hospitality & Travel",
+    href: "/industries#hospitality",
     description: "Smart platforms that enhance guest experience and bookings.",
   },
   {
     image: "/images/card-18.png",
     title: "Logistics & Supply Chain",
+    href: "/industries#logistics",
     description:
       "Intelligent digital solutions for tracking and supply chain management.",
   },
   {
     image: "/images/card-12.png",
     title: "Education",
+    href: "/industries#education",
     description:
       "Smart platforms for learning, administration and student engagement.",
   },
   {
     image: "/images/card-13.png",
     title: "Healthcare",
+    href: "/industries#healthcare",
     description:
       "Digital solutions to improve patient care, operations and health management.",
   },
   {
     image: "/images/card-14.png",
     title: "Retail & eCommerce",
+    href: "/industries#retail",
     description:
       "Scalable solutions that enhance customer experience and sales.",
   },
   {
     image: "/images/card-15.png",
     title: "Real Estate",
+    href: "/industries#real-estate",
     description:
       "Tools for property management, lead tracking and customer engagement.",
   },
   {
     image: "/images/card-16.png",
-    title: "Finance & Accounting",
+    title: "SMEs & Businesses",
+    href: "/industries#smes",
     description:
-      "Secure solutions for financial operations, taxation and compliance.",
+      "Scalable technology solutions that simplify operations, improve efficiency and support business growth.",
   },
-  {
-    image: "/images/card-20.png",
-    title: "Professional Services",
-    description: "Digital tools for projects, clients and business operations.",
-  },
+  // {
+  //   image: "/images/card-20.png",
+  //   title: "Professional Services",
+  //   href:"",
+  //   description: "Digital tools for projects, clients and business operations.",
+  // },
 ];
 
 export const testimonials = [
@@ -378,5 +416,295 @@ export const tabs = [
     id: "enquiry" as ContactTab,
     label: "Project enquiry",
     icon: Send,
+  },
+];
+
+interface ServiceCard {
+  title: string;
+  href: string;
+  description?: string;
+  image?: string;
+  txtColor: string;
+  iconColor: string;
+  bgColor: string;
+  borderColor: string;
+  icon: LucideIcon;
+}
+
+interface ServiceTopic {
+  title: string;
+  icon: React.ElementType;
+  description: string;
+  services: ServiceCard[];
+}
+
+export const serviceTopics: ServiceTopic[] = [
+  {
+    title: "Software Solution",
+    icon: Laptop,
+    description:
+      "Build scalable, secure and high-performance software solutions tailored to your business.",
+    services: [
+      {
+        title: "Enterprise Software Solution",
+        href: "/software-services/enterprise-software-solution",
+        description:
+          "Custom enterprise software designed around your business processes and goals.",
+        txtColor: "text-[#2563eb]",
+        iconColor: "bg-[#2563eb]/10",
+        bgColor: "bg-[#2563eb]/5",
+        borderColor: "border-[#2563eb]/20",
+        icon: Building2,
+      },
+      {
+        title: "Web Application Development",
+        href: "/software-services/web-application-development",
+        description:
+          "Modern and scalable web applications built for performance and growth.",
+        txtColor: "text-[#7c3aed]",
+        iconColor: "bg-[#7c3aed]/10",
+        bgColor: "bg-[#7c3aed]/5",
+        borderColor: "border-[#7c3aed]/20",
+        icon: Globe,
+      },
+      {
+        title: "Mobile Application Development",
+        href: "/software-services/mobile-application-development",
+        description:
+          "User-focused mobile applications for modern digital experiences.",
+        txtColor: "text-[#0891b2]",
+        iconColor: "bg-[#0891b2]/10",
+        bgColor: "bg-[#0891b2]/5",
+        borderColor: "border-[#0891b2]/20",
+        icon: Smartphone,
+      },
+      {
+        title: "SaaS & Software Product",
+        href: "/software-services/software-product",
+        description:
+          "Transform your product idea into a scalable and market-ready software solution.",
+        txtColor: "text-[#db2777]",
+        iconColor: "bg-[#db2777]/10",
+        bgColor: "bg-[#db2777]/5",
+        borderColor: "border-[#db2777]/20",
+        icon: Cloud,
+      },
+      {
+        title: "IoT Development",
+        href: "/software-services/iot-development",
+        description:
+          "Build connected IoT solutions that automate processes, monitor operations, and enable smarter decision-making.",
+        txtColor: "text-[#059669]",
+        iconColor: "bg-[#059669]/10",
+        bgColor: "bg-[#059669]/5",
+        borderColor: "border-[#059669]/20",
+        icon: Cpu,
+      },
+    ],
+  },
+
+  {
+    title: "Digital Services",
+    icon: Megaphone,
+    description:
+      "Grow your digital presence with strategies and services focused on visibility, engagement and conversions.",
+    services: [
+      {
+        title: "Google My Business - Local SEO",
+        href: "/digital-edge/local-seo",
+        description:
+          "Improve local visibility and help customers discover your business.",
+        txtColor: "text-[#ea580c]",
+        iconColor: "bg-[#ea580c]/10",
+        bgColor: "bg-[#ea580c]/5",
+        borderColor: "border-[#ea580c]/20",
+        icon: MapPin,
+      },
+      {
+        title: "Web SEO",
+        href: "/digital-edge/web-seo",
+        description:
+          "Increase search visibility and attract relevant organic traffic.",
+        txtColor: "text-[#16a34a]",
+        iconColor: "bg-[#16a34a]/10",
+        bgColor: "bg-[#16a34a]/5",
+        borderColor: "border-[#16a34a]/20",
+        icon: Search,
+      },
+      {
+        title: "Social Media Optimization",
+        href: "/digital-edge/social-media-optimization",
+        description:
+          "Build stronger social presence and engage your target audience.",
+        txtColor: "text-[#e11d48]",
+        iconColor: "bg-[#e11d48]/10",
+        bgColor: "bg-[#e11d48]/5",
+        borderColor: "border-[#e11d48]/20",
+        icon: Share2,
+      },
+      {
+        title: "WhatsApp Marketing",
+        href: "/digital-edge/whatsapp-marketing",
+        description:
+          "Connect with customers through targeted WhatsApp marketing campaigns.",
+        txtColor: "text-[#16a34a]",
+        iconColor: "bg-[#16a34a]/10",
+        bgColor: "bg-[#16a34a]/5",
+        borderColor: "border-[#16a34a]/20",
+        icon: MessageCircle,
+      },
+      {
+        title: "B2B Marketing",
+        href: "/digital-edge/b2b-marketing",
+        description:
+          "Generate qualified B2B leads and build stronger business relationships.",
+        txtColor: "text-[#4f46e5]",
+        iconColor: "bg-[#4f46e5]/10",
+        bgColor: "bg-[#4f46e5]/5",
+        borderColor: "border-[#4f46e5]/20",
+        icon: Users,
+      },
+    ],
+  },
+
+  {
+    title: "eCommerce Solution",
+    icon: ShoppingCart,
+    description:
+      "Create and optimize ecommerce experiences that help businesses sell and scale online.",
+    services: [
+      {
+        title: "JioMart",
+        href: "/ecommerce-solutions/jio-mart",
+        description:
+          "Ecommerce solutions and integrations for JioMart businesses.",
+        txtColor: "text-[#2563eb]",
+        iconColor: "bg-[#2563eb]/10",
+        bgColor: "bg-[#2563eb]/5",
+        borderColor: "border-[#2563eb]/20",
+        icon: Store,
+      },
+      {
+        title: "Shopify",
+        href: "/ecommerce-solutions/shopify",
+        description:
+          "Build, customize and optimize Shopify ecommerce experiences.",
+        txtColor: "text-[#16a34a]",
+        iconColor: "bg-[#16a34a]/10",
+        bgColor: "bg-[#16a34a]/5",
+        borderColor: "border-[#16a34a]/20",
+        icon: ShoppingBag,
+      },
+    ],
+  },
+
+  {
+    title: "EdTech Solution",
+    icon: GraduationCap,
+    description:
+      "Build modern digital learning solutions for educational institutions, organizations and learners.",
+    services: [
+      {
+        title: "EdTech Solution",
+        href: "/edtech-solution",
+        description:
+          "Digital learning platforms and technology solutions for modern education.",
+        txtColor: "text-[#9333ea]",
+        iconColor: "bg-[#9333ea]/10",
+        bgColor: "bg-[#9333ea]/5",
+        borderColor: "border-[#9333ea]/20",
+        icon: School,
+      },
+    ],
+  },
+
+  {
+    title: "Industries",
+    icon: BriefcaseBusiness,
+    description:
+      "Industry-focused technology solutions designed around specific business needs and workflows.",
+    services: [
+      {
+        title: "Manufacturing",
+        href: "/industries#manufacturing",
+        txtColor: "text-[#475569]",
+        iconColor: "bg-[#475569]/10",
+        bgColor: "bg-[#475569]/5",
+        borderColor: "border-[#475569]/20",
+        icon: Factory,
+      },
+      {
+        title: "Hospitality & Travel",
+        href: "/industries#hospitality",
+        txtColor: "text-[#db2777]",
+        iconColor: "bg-[#db2777]/10",
+        bgColor: "bg-[#db2777]/5",
+        borderColor: "border-[#db2777]/20",
+        icon: Hotel,
+      },
+      {
+        title: "Logistics & Supply Chain",
+        href: "/industries#logistics",
+        txtColor: "text-[#7c3aed]",
+        iconColor: "bg-[#7c3aed]/10",
+        bgColor: "bg-[#7c3aed]/5",
+        borderColor: "border-[#7c3aed]/20",
+        icon: Truck,
+      },
+      {
+        title: "Education",
+        href: "/industries#education",
+        txtColor: "text-[#2563eb]",
+        iconColor: "bg-[#2563eb]/10",
+        bgColor: "bg-[#2563eb]/5",
+        borderColor: "border-[#2563eb]/20",
+        icon: GraduationCap,
+      },
+      {
+        title: "Healthcare",
+        href: "/industries#healthcare",
+        txtColor: "text-[#dc2626]",
+        iconColor: "bg-[#dc2626]/10",
+        bgColor: "bg-[#dc2626]/5",
+        borderColor: "border-[#dc2626]/20",
+        icon: HeartPulse,
+      },
+      {
+        title: "Retail & Ecommerce",
+        href: "/industries#retail",
+        txtColor: "text-[#ea580c]",
+        iconColor: "bg-[#ea580c]/10",
+        bgColor: "bg-[#ea580c]/5",
+        borderColor: "border-[#ea580c]/20",
+        icon: ShoppingCart,
+      },
+      {
+        title: "Real Estate",
+        href: "/industries#real-estate",
+        txtColor: "text-[#0891b2]",
+        iconColor: "bg-[#0891b2]/10",
+        bgColor: "bg-[#0891b2]/5",
+        borderColor: "border-[#0891b2]/20",
+        icon: House,
+      },
+      {
+        title: "SMEs & Businesses",
+        href: "/industries#smes",
+        txtColor: "text-[#16a34a]",
+        iconColor: "bg-[#16a34a]/10",
+        bgColor: "bg-[#16a34a]/5",
+        borderColor: "border-[#16a34a]/20",
+        icon: Calculator,
+      },
+      // {
+      //   title: "Professional Services",
+      //   href: "/industries/professional-services",
+      //   txtColor: "text-[#4f46e5]",
+      //   iconColor: "bg-[#4f46e5]/10",
+      //   bgColor: "bg-[#4f46e5]/5",
+      //   borderColor: "border-[#4f46e5]/20",
+      //   icon: Briefcase,
+      // },
+    ],
   },
 ];

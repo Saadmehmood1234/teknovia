@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { TeknoviaBackground } from "@/components/home/TeknoviaBackground";
 import { Container } from "@/components/ui/Container";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -35,12 +36,12 @@ export function Hero() {
                 <ArrowRight size={17} />
               </a>
 
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:border-primary"
               >
                 Get Free Consultation
-              </a>
+              </Link>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -66,18 +67,6 @@ export function Hero() {
           <div className="relative mx-auto w-full max-w-2xl">
             <div className="absolute -inset-5 bg-primary/10 blur-3xl" />
             <div className="relative overflow-visible shadow-2xl">
-              {/* <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/hero-background.png"
-                  alt="Technology team collaborating in a modern office"
-                  fill
-                  priority
-                  className="-z-20 object-cover"
-                />
-
-                <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 via-transparent to-slate-950/10" />
-              </div> */}
-
               <div
                 className="
                   relative aspect-4/3 overflow-hidden
@@ -115,7 +104,6 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Bottom-right stat */}
               <div className="absolute -bottom-5 -right-8 z-99 sm:-bottom-6 sm:-right-4">
                 <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-slate-950/45 px-4 py-3 shadow-xl backdrop-blur-xl">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">

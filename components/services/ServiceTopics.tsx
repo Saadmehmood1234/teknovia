@@ -1,206 +1,17 @@
-import {
-  ArrowRight,
-  BriefcaseBusiness,
-  GraduationCap,
-  Laptop,
-  Megaphone,
-  ShoppingCart,
-} from "lucide-react";
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
-
-interface ServiceCard {
-  title: string;
-  href: string;
-  description?: string;
-  image?: string;
-}
-
-interface ServiceTopic {
-  title: string;
-  icon: React.ElementType;
-  description: string;
-  services: ServiceCard[];
-}
-
-const serviceTopics: ServiceTopic[] = [
-  {
-    title: "Software Solution",
-    icon: Laptop,
-    description:
-      "Build scalable, secure and high-performance software solutions tailored to your business.",
-    services: [
-      {
-        title: "Enterprise Software Solution",
-        href: "/software-services/enterprise-software-solution",
-        description:
-          "Custom enterprise software designed around your business processes and goals.",
-      },
-      {
-        title: "Web Application Development",
-        href: "/software-services/web-application-development",
-        description:
-          "Modern and scalable web applications built for performance and growth.",
-      },
-      {
-        title: "Mobile Application Development",
-        href: "/software-services/mobile-application-development",
-        description:
-          "User-focused mobile applications for modern digital experiences.",
-      },
-      {
-        title: "Software Product",
-        href: "/software-services/software-product",
-        description:
-          "Transform your product idea into a scalable and market-ready software solution.",
-      },
-    ],
-  },
-
-  {
-    title: "Digital Services",
-    icon: Megaphone,
-    description:
-      "Grow your digital presence with strategies and services focused on visibility, engagement and conversions.",
-    services: [
-      {
-        title: "Website Development",
-        href: "/digital-marketing/website-development",
-        description:
-          "Professional websites designed to establish and grow your online presence.",
-      },
-      {
-        title: "Local SEO",
-        href: "/digital-marketing/local-seo",
-        description:
-          "Improve local visibility and help customers discover your business.",
-      },
-      {
-        title: "Web SEO",
-        href: "/digital-marketing/web-seo",
-        description:
-          "Increase search visibility and attract relevant organic traffic.",
-      },
-      {
-        title: "Social Media Optimization",
-        href: "/digital-marketing/social-media-optimization",
-        description:
-          "Build stronger social presence and engage your target audience.",
-      },
-      {
-        title: "WhatsApp Marketing",
-        href: "/digital-marketing/whatsapp-marketing",
-        description:
-          "Connect with customers through targeted WhatsApp marketing campaigns.",
-      },
-      {
-        title: "B2B Marketing",
-        href: "/digital-marketing/b2b-marketing",
-        description:
-          "Generate qualified B2B leads and build stronger business relationships.",
-      },
-      {
-        title: "Influencer Marketing",
-        href: "/digital-marketing/influencer-marketing",
-        description:
-          "Reach relevant audiences through strategic influencer partnerships.",
-      },
-    ],
-  },
-
-  {
-    title: "eCommerce Solution",
-    icon: ShoppingCart,
-    description:
-      "Create and optimize ecommerce experiences that help businesses sell and scale online.",
-    services: [
-      {
-        title: "JioMart",
-        href: "/ecommerce-solutions/jio-mart",
-        description:
-          "Ecommerce solutions and integrations for JioMart businesses.",
-      },
-      {
-        title: "Shopify",
-        href: "/ecommerce-solutions/shopify",
-        description:
-          "Build, customize and optimize Shopify ecommerce experiences.",
-      },
-    ],
-  },
-
-  {
-    title: "EdTech Solution",
-    icon: GraduationCap,
-    description:
-      "Build modern digital learning solutions for educational institutions, organizations and learners.",
-    services: [
-      {
-        title: "EdTech Solution",
-        href: "/edtech-solution",
-        description:
-          "Digital learning platforms and technology solutions for modern education.",
-      },
-    ],
-  },
-
-  {
-    title: "Industries",
-    icon: BriefcaseBusiness,
-    description:
-      "Industry-focused technology solutions designed around specific business needs and workflows.",
-    services: [
-      {
-        title: "Education",
-        href: "/industries/education",
-      },
-      {
-        title: "Healthcare",
-        href: "/industries/healthcare",
-      },
-      {
-        title: "Retail & Ecommerce",
-        href: "/industries/retail-ecommerce",
-      },
-      {
-        title: "Real Estate",
-        href: "/industries/real-estate",
-      },
-      {
-        title: "Finance & Accounting",
-        href: "/industries/finance-accounting",
-      },
-      {
-        title: "Manufacturing",
-        href: "/industries/manufacturing",
-      },
-      {
-        title: "Logistics & Supply Chain",
-        href: "/industries/logistics-supply-chain",
-      },
-      {
-        title: "Hospitality & Travel",
-        href: "/industries/hospitality-travel",
-      },
-      {
-        title: "Professional Services",
-        href: "/industries/professional-services",
-      },
-    ],
-  },
-];
+import { TopBadge } from "../ui/Top-Badge";
+import { serviceTopics } from "@/lib/data/site";
 
 export function ServiceTopics() {
   return (
-    <section className="bg-white py-8 md:py-16">
+    <section className="bg-white py-8 sm:py-16">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-sm font-extrabold uppercase tracking-[0.2em] text-primary">
-            Our Services
-          </p>
+          <TopBadge data="Our Services" centerItem />
 
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
             Solutions Built Around Your Needs
           </h2>
 
@@ -216,53 +27,133 @@ export function ServiceTopics() {
 
             return (
               <div key={topic.title}>
-                {/* Topic heading */}
                 <div className="mb-7 flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary">
-                    <TopicIcon size={23} />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary">
+                    <TopicIcon size={20} />
                   </div>
 
-                  <div>
-                    <h3 className="text-2xl font-extrabold text-slate-950 sm:text-3xl">
+                  <div className="flex w-full flex-col items-start justify-start">
+                    <h3 className="text-2xl font-extrabold text-slate-950">
                       {topic.title}
                     </h3>
-
-                    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
-                      {topic.description}
-                    </p>
                   </div>
                 </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {topic.services.map((service, index) => {
+                    const ServiceIcon = service.icon;
 
-                {/* Service cards */}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {topic.services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className="group flex min-h-40 flex-col rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
-                    >
-                      <div className="flex items-start justify-between gap-4">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
-                          <TopicIcon size={18} />
+                    return (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className={`
+                          group relative grid min-h-40 overflow-hidden rounded-2xl
+                          border ${service.borderColor}
+                          ${service.bgColor}
+                          transition-all duration-300
+                          hover:-translate-y-1
+                          hover:bg-white
+                          hover:shadow-[0_18px_45px_rgba(0,150,137,0.08)]
+                          sm:grid-cols-[180px_1fr]
+                          xl:grid-cols-[220px_1fr]
+                        `}
+                      >
+                        <span
+                          className={`
+                            absolute right-4 top-3 z-20
+                            font-mono text-[10px] font-bold
+                            tracking-widest text-gray-300
+                            transition-colors
+                            group-hover:${service.txtColor.replace(
+                              "text-",
+                              "text-",
+                            )}
+                          `}
+                        >
+                          {String(index + 1).padStart(2, "0")}
                         </span>
+                        <div
+                          className={`
+                            relative flex min-h-48 items-center justify-center
+                            overflow-hidden
+                            ${service.iconColor}
+                            sm:min-h-full
+                          `}
+                        >
+                          <div
+                            className={`
+                              relative flex size-20 items-center justify-center
+                              rounded-2xl border
+                              bg-white
+                              ${service.borderColor}
+                              ${service.txtColor}
+                              shadow-sm
+                              transition-all duration-500
+                              group-hover:scale-110
+                              group-hover:shadow-md
+                            `}
+                          >
+                            <ServiceIcon
+                              className="
+                                size-10
+                                stroke-[1.7]
+                                transition-transform duration-500
+                                group-hover:scale-110
+                              "
+                            />
+                          </div>
+                          <div
+                            className={`
+                              pointer-events-none absolute
+                              -left-10 -top-10 size-28 rounded-full
+                              border ${service.borderColor}
+                            `}
+                          />
 
-                        <ArrowRight
-                          size={18}
-                          className="mt-1 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary"
+                          <div
+                            className={`
+                              pointer-events-none absolute
+                              -bottom-12 -right-12 size-32 rounded-full
+                              border ${service.borderColor}
+                              transition-transform duration-500
+                              group-hover:scale-125
+                            `}
+                          />
+                        </div>
+                        <div className="flex min-w-0 flex-col justify-center p-5 sm:p-6">
+                          <h4
+                            className={`
+                              font-heading text-base font-bold leading-6
+                              text-gray-950
+                              transition-colors
+                              sm:text-lg
+                              group-hover:${service.txtColor}
+                            `}
+                          >
+                            {service.title}
+                          </h4>
+
+                          {service.description && (
+                            <p className="mt-2 text-xs leading-5 text-gray-600 sm:text-sm sm:leading-6">
+                              {service.description}
+                            </p>
+                          )}
+                        </div>
+
+                        {/* Bottom Decorative Element */}
+                        <div
+                          className={`
+                            pointer-events-none absolute
+                            -bottom-8 -right-8 size-20 rounded-full
+                            ${service.iconColor}
+                            opacity-50
+                            transition-transform duration-500
+                            group-hover:scale-150
+                          `}
                         />
-                      </div>
-
-                      <h4 className="mt-5 text-base font-bold text-slate-950 transition-colors duration-300 group-hover:text-primary">
-                        {service.title}
-                      </h4>
-
-                      {service.description && (
-                        <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-500">
-                          {service.description}
-                        </p>
-                      )}
-                    </Link>
-                  ))}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             );

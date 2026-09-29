@@ -7,6 +7,7 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Metadata } from "next";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { VisionMissionValues } from "@/components/corporate/VisionMissionValues";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Corporate",
@@ -44,20 +45,20 @@ export default function CorporatePage() {
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href="#about"
+                <Link
+                  href="/services"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white transition hover:bg-primary-700"
                 >
                   Our Services
-                </a>
+                </Link>
 
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-6 py-3 text-sm transition hover:border-primary hover:text-primary"
                 >
                   Get in Touch
                   <ArrowRight className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="relative w-full">

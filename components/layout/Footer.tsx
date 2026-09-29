@@ -1,28 +1,9 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
-import { LiaLinkedin } from "react-icons/lia";
 import { BsLinkedin } from "react-icons/bs";
+import { company, industries, resources, solutions } from "@/lib/data/footer";
 
-const solutions = [
-  "Digital Growth Solutions",
-  "Custom Software Solutions",
-  "Marketplace & eCommerce Solutions",
-  "Talent Solutions",
-  "EduTech Solutions",
-];
-
-const company = ["About Us", "Our Process", "Case Studies", "Careers"];
-
-const resources = ["Whitepapers", "Ebooks", "FAQ's", "Insights", "Help Center"];
-
-const industries = [
-  "Education",
-  "Healthcare",
-  "Retail & eCommerce",
-  "Real Estate",
-  "Finance & Accounting",
-];
 
 export function Footer() {
   return (
@@ -185,7 +166,15 @@ export function Footer() {
   );
 }
 
-function FooterColumn({ title, items }: { title: string; items: string[] }) {
+type ItemsType = {
+  title: string;
+  href: string;
+};
+type FooterColumnProps = {
+  title: string;
+  items: ItemsType[];
+};
+function FooterColumn({ title, items }: FooterColumnProps) {
   return (
     <div>
       <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-primary">
@@ -195,15 +184,15 @@ function FooterColumn({ title, items }: { title: string; items: string[] }) {
       <div className="mt-5 space-y-3">
         {items.map((item) => (
           <a
-            key={item}
-            href="#"
+            key={item.title}
+            href={item.href}
             className="group flex items-center gap-1 text-sm text-slate-400 transition hover:text-white"
           >
             <span className="text-primary transition-transform duration-200 group-hover:translate-x-0.5">
               ›
             </span>
 
-            <span>{item}</span>
+            <span>{item.title}</span>
 
             <ArrowUpRight
               size={11}

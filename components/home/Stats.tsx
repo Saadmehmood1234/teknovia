@@ -3,7 +3,7 @@ import { stats } from "@/lib/data/site";
 
 export function Stats() {
   return (
-    <section className="border-b border-slate-100 bg-[#FAFAFA]">
+    <section className="pb-8 border-b border-slate-100 bg-[#FAFAFA]">
       <div className="mx-auto grid max-w-[1280px] grid-cols-2 divide-x divide-slate-100 px-4 sm:px-8 md:grid-cols-4 md:px-10">
         {stats.map((stat) => (
           <div

@@ -3,6 +3,7 @@ import {
   ArrowUpRight,
   ChevronRight,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function WebApplications() {
   return (
@@ -24,7 +25,7 @@ export default function WebApplications() {
               </span>
             </div>
 
-            <h2 className="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Web Applications
               <span className="block text-primary">We Develop</span>
             </h2>
@@ -86,13 +87,13 @@ export default function WebApplications() {
             </p>
           </div>
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="group inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary-dark hover:shadow-primary/30"
           >
             Discuss Your Project
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

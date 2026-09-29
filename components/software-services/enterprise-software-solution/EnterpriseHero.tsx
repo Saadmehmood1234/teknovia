@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ArrowRight } from "lucide-react";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import Link from "next/link";
 
 export function EnterpriseHero() {
   return (
@@ -44,20 +45,20 @@ export function EnterpriseHero() {
             support long-term business growth.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#services"
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_8px_20px_rgba(0,150,137,0.28)]"
             >
               Get a Free Consultation
               <ArrowRight size={17} />
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:border-primary"
             >
               Request a Demo
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

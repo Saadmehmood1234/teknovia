@@ -3,7 +3,6 @@ import { Star } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { testimonials } from "@/lib/data/site";
-import { CTA } from "./CTA";
 import { TopBadge } from "../ui/Top-Badge";
 
 export function Testimonials() {

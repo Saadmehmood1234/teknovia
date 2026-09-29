@@ -28,6 +28,7 @@ export function Services() {
               key={service.title}
               image={service.image}
               title={service.title}
+              href={service.href}
               description={service.description}
             />
           ))}

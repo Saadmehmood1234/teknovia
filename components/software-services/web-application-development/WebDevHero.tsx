@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { webAppFeatures } from "@/lib/data/software-services";
+import Link from "next/link";
 
 
 export function WebDevHero() {
@@ -49,20 +50,20 @@ export function WebDevHero() {
               ))}
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#services"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_8px_20px_rgba(0,150,137,0.28)]"
               >
                 Start Your Project
                 <ArrowRight size={17} />
-              </a>
+              </Link>
 
-              <a
-                href="#contact"
+              <Link
+                href="/software-services/web-application-development#web-services"
                 className="inline-flex items-center gap-2 rounded-lg border border-black/25 px-6 py-3.5 text-sm font-semibold text-primary transition hover:bg-white/10 hover:border-primary"
               >
                 Explore Services
-              </a>
+              </Link>
             </div>
           </div>
 

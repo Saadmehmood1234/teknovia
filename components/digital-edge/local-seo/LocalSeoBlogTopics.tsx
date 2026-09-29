@@ -28,7 +28,7 @@ export function LocalSeoBlogTopics() {
 
         <div className="mt-12 grid gap-4 sm:mt-14 sm:gap-5 lg:grid-cols-12">
           {featuredTopic && (
-            <article className="group relative flex min-h-95 flex-col justify-between overflow-hidden rounded-3xl bg-gray-950 p-6 text-white sm:p-8 lg:col-span-5 lg:min-h-full">
+            <article className="group cursor-pointer relative flex min-h-95 flex-col justify-between overflow-hidden rounded-3xl bg-[#284545] p-6 text-white sm:p-8 lg:col-span-5 lg:min-h-full">
               <div
                 className="absolute inset-0 opacity-[0.12]"
                 style={{
@@ -77,7 +77,7 @@ export function LocalSeoBlogTopics() {
             {remainingTopics.map((topic, index) => (
               <article
                 key={topic}
-                className="group relative flex min-h-47.5 flex-col justify-between overflow-hidden rounded-3xl border border-gray-200 bg-gray-50/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,150,137,0.10)] sm:p-6 sm:last:odd:col-span-2"
+                className="group cursor-pointer relative flex min-h-47.5 flex-col justify-between overflow-hidden rounded-3xl border border-gray-200 bg-gray-50/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,150,137,0.10)] sm:p-6 sm:last:odd:col-span-2"
               >
                 <span
                   className="pointer-events-none absolute -bottom-4 right-3 select-none font-mono text-[96px] font-black leading-none text-transparent transition-all duration-500 group-hover:-translate-y-1"
@@ -106,8 +106,6 @@ export function LocalSeoBlogTopics() {
                     {topic}
                   </h3>
                 </div>
-
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary transition-all duration-500 group-hover:w-full" />
               </article>
             ))}
           </div>

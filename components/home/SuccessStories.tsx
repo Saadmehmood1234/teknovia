@@ -125,7 +125,6 @@ export function SuccessStories() {
   return (
     <section className="bg-white mt-8 sm:mt-16">
       <Container>
-        {/* Header */}
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
           <div className="flex shrink-0 items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white shadow-sm">
@@ -154,8 +153,6 @@ export function SuccessStories() {
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </a>
         </div>
-
-        {/* Case Studies */}
         <div className="mt-7 grid gap-4 lg:grid-cols-3">
           {caseStudies.map((study) => (
             <CaseStudyCard key={study.title} study={study} />

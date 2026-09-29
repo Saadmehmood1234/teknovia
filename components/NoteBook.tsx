@@ -27,7 +27,6 @@ export function WhyTeknoviaReasons() {
 
   return (
     <div className="mt-16 flex w-full max-w-5xl min-w-0 gap-3 overflow-hidden rounded-2xl bg-linear-to-br from-[#1D3C5F] to-[#009689] p-4">
-      {/* Decorative dots */}
       <div className="flex shrink-0 flex-col items-center gap-2 py-6">
         {Array.from({ length: 14 }).map((_, index) => (
           <div
