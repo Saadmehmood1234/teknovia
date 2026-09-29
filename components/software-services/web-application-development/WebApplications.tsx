@@ -49,28 +49,26 @@ export default function WebApplications() {
               <a
                 key={application.number}
                 href="#contact"
-                className="group relative block border-b border-white/10 py-7 transition-colors duration-300 hover:bg-white/2 sm:py-8"
+                className="relative block border-b border-white/10 py-7 sm:py-8"
               >
-                <span className="absolute left-0 top-0 h-full w-px scale-y-0 bg-primary transition-transform duration-300 group-hover:scale-y-100" />
-
                 <div className="grid gap-5 px-1 sm:grid-cols-[56px_56px_minmax(0,0.8fr)_minmax(0,1fr)_auto] sm:items-center sm:gap-6">
-                  <span className="font-mono text-sm font-semibold text-gray-500 transition-colors group-hover:text-primary">
+                  <span className="font-mono text-sm font-semibold text-gray-500">
                     {application.number}
                   </span>
 
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary transition-all duration-300 group-hover:border-primary/40 group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_24px_-4px] group-hover:shadow-primary/60">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
                     <Icon className="h-5 w-5" strokeWidth={1.8} />
                   </div>
 
-                  <h3 className="text-lg font-bold text-white/90 transition-colors duration-300 group-hover:text-primary sm:text-xl">
+                  <h3 className="text-lg font-bold text-white/90 sm:text-xl">
                     {application.title}
                   </h3>
 
-                  <p className="max-w-xl text-sm leading-6 text-gray-400 transition-colors group-hover:text-gray-300">
+                  <p className="max-w-xl text-sm leading-6 text-gray-400">
                     {application.description}
                   </p>
 
-                  <ChevronRight className="hidden h-4 w-4 text-gray-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary sm:block" />
+                  <ChevronRight className="hidden h-4 w-4 text-gray-600 sm:block" />
                 </div>
               </a>
             );

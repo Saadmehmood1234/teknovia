@@ -155,7 +155,7 @@ export function SaaSWhyTeknovia() {
                       <Icon className="size-6" />
                     </div>
                     <div className="flex min-h-18.5 flex-1 items-center justify-between">
-                      <h3 className="pr-3 font-heading text-xl font-bold leading-5 text-white/70">
+                      <h3 className="pr-3 font-heading text-md font-bold leading-5 text-white/70">
                         {reason.title}
                       </h3>
 

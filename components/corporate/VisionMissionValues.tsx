@@ -33,8 +33,8 @@ export function VisionMissionValues() {
         <div className="grid gap-4 lg:grid-cols-[1fr_1fr_1.65fr]">
           <div className="rounded-xl border border-slate-200 bg-white p-8 shadow-[0_2px_12px_rgba(15,23,42,0.04)]">
             <div className="flex items-center gap-4">
-              <div className="flex h-17 w-17 shrink-0 items-center justify-center rounded-full bg-primary-100/50 text-primary border border-primary-200">
-                <Eye className="h-9 w-9" strokeWidth={1.6} />
+              <div className="flex sm:h-17 sm:w-17 w-13 h-13 shrink-0 items-center justify-center rounded-full bg-primary-100/50 text-primary border border-primary-200">
+                <Eye className="sm:h-9 sm:w-9 w-6 h-6" strokeWidth={1.6} />
               </div>
 
               <h2 className="text-xl font-extrabold tracking-tight text-primary-800">
@@ -50,8 +50,8 @@ export function VisionMissionValues() {
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-8 shadow-[0_2px_12px_rgba(15,23,42,0.04)]">
             <div className="flex items-center gap-4">
-              <div className="flex h-17 w-17 shrink-0 items-center justify-center rounded-full bg-primary-100/50 text-primary border border-primary-200">
-                <Rocket className="h-9 w-9" strokeWidth={1.6} />
+              <div className="flex sm:h-17 sm:w-17 w-13 h-13 shrink-0 items-center justify-center rounded-full bg-primary-100/50 text-primary border border-primary-200">
+                <Rocket className="sm:h-9 sm:w-9 w-6 h-6" strokeWidth={1.6} />
               </div>
 
               <h2 className="text-xl font-extrabold tracking-tight text-primary-800">
@@ -67,8 +67,8 @@ export function VisionMissionValues() {
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-7 shadow-[0_2px_12px_rgba(15,23,42,0.04)]">
             <div className="flex items-center gap-4">
-              <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-primary-100/50 text-primary border border-primary-200">
-                <Gem className="h-6 w-6" strokeWidth={1.8} />
+              <div className="flex sm:h-17 sm:w-17 w-13 h-13 shrink-0 items-center justify-center rounded-full bg-primary-100/50 text-primary border border-primary-200">
+                <Gem className="sm:h-9 sm:w-9 w-6 h-6" strokeWidth={1.8} />
               </div>
 
               <h2 className="text-xl font-extrabold tracking-tight text-primary-800">

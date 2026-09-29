@@ -34,7 +34,7 @@ export function LocalSeoServices() {
                 className="
                   relative grid min-h-40 overflow-hidden rounded-2xl
                   border border-gray-200 bg-[#FAFAFA]
-                  grid-cols-[160px_1fr]
+                  sm:grid-cols-[160px_1fr] grid-cols-[120px_1fr]
                 "
               >
                 <span

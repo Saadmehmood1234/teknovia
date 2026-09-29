@@ -17,9 +17,7 @@ export function LocalSeoBenefits() {
             business growth.
           </p>
         </div>
-        <div className="mx-auto mt-8 hidden max-w-6xl px-6 lg:grid [--orb:clamp(18rem,30vw,24.375rem)] grid-cols-[1fr_var(--orb)_1fr] items-stretch">
-          {/* Left column */}
-          <div className="flex flex-col justify-between py-[3%]">
+        <div className="mx-auto mt-8 hidden max-w-6xl px-6 lg:grid [--orb:clamp(18rem,30vw,24.375rem)] grid-cols-[1fr_var(--orb)_1fr] items-stretch">          <div className="flex flex-col justify-between py-[3%]">
             {localSeoBenefits.slice(0, 3).map((benefit, i, arr) => (
               <OrbitBenefit
                 key={benefit.title}
@@ -31,7 +29,6 @@ export function LocalSeoBenefits() {
             ))}
           </div>
 
-          {/* Orbit: every size is a % of --orb, so it scales cleanly */}
           <div className="relative aspect-square w-(--orb)">
             <div className="absolute inset-0 rounded-full border border-primary/30" />
             <div className="absolute inset-[9%] rounded-full border border-dashed border-primary/35" />
@@ -54,7 +51,6 @@ export function LocalSeoBenefits() {
             </div>
           </div>
 
-          {/* Right column */}
           <div className="flex flex-col justify-between py-[3%]">
             {localSeoBenefits.slice(3, 6).map((benefit, i, arr) => (
               <OrbitBenefit
@@ -91,12 +87,10 @@ export function LocalSeoBenefits() {
               return (
                 <article
                   key={benefit.title}
-                  className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-gray-200 bg-[#FAFAFA] p-4 transition-all duration-300 hover:border-primary/30 hover:bg-white hover:shadow-lg hover:shadow-primary/5"
+                  className="relative flex items-center gap-4 overflow-hidden rounded-2xl border border-gray-200 bg-[#FAFAFA] p-4"
                 >
-                  <span className="absolute inset-y-0 left-0 w-1 bg-primary/0 transition-colors duration-300 group-hover:bg-primary" />
-
                   <div className="relative shrink-0">
-                    <div className="flex size-12 items-center justify-center rounded-xl bg-primary-50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
+                    <div className="flex size-12 items-center justify-center rounded-xl bg-primary-50 text-primary">
                       <Icon className="size-5" />
                     </div>
                     <span className="absolute -right-2 -top-2 flex size-5 items-center justify-center rounded-full border border-white bg-primary font-mono text-[9px] font-bold text-white shadow-sm">

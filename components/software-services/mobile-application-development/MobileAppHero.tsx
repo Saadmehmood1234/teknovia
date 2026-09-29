@@ -53,22 +53,22 @@ export function MobileAppHero() {
               build secure, scalable, and user-friendly Android, iOS, and
               cross-platform applications that drive business growth.
             </p>
-            <div className="flex max-w-2xl max-sm:flex-wrap items-center gap-8 mt-6">
-              <div className="flex gap-3 justify-between mb-2 items-center">
+            <div className="flex max-w-2xl max-sm:flex-wrap items-center gap-4 sm:gap-8 mt-6">
+              <div className="flex gap-3 justify-between mb-0 sm:mb-2 items-center">
                 <Smartphone className="size-6 text-primary" />
                 <p className="text-sm font-semibold text-white">
                   Android & iOS
                 </p>
               </div>
 
-              <div className="flex gap-3 justify-between mb-2 items-center">
+              <div className="flex gap-3 justify-between mb-0 sm:mb-2 items-center">
                 <ShieldCheck className="size-6 text-primary" />
                 <p className="text-sm font-semibold text-white">
                   Secure by Design
                 </p>
               </div>
 
-              <div className="flex gap-3 justify-between mb-2 items-center">
+              <div className="flex gap-3 justify-between mb-0 sm:mb-2 items-center">
                 <Zap className="size-6 text-primary" />
                 <p className="text-sm font-semibold text-white">
                   Built for Scale

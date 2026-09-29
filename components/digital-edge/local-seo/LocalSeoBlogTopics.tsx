@@ -15,9 +15,9 @@ export function LocalSeoBlogTopics() {
       <Container className="relative">
         <div className="mx-auto max-w-2xl text-center">
           <div className="flex justify-center">
-            <TopBadge data="LOCAL SEO INSIGHTS" />
+            <TopBadge data="LOCAL SEO INSIGHTS" centerItem/>
           </div>
-          <h2 className="mt-4 font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl lg:text-5xl">
             Explore Our <span className="text-primary">Local SEO</span> Insights
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-gray-500 sm:text-base sm:leading-7">

@@ -38,13 +38,13 @@ export function WebDevHero() {
               transformation for growing businesses.
             </p>
 
-            <div className="flex max-w-2xl max-sm:flex-wrap sm:gap-0 gap-8 mt-6">
+            <div className="flex max-w-2xl max-sm:flex-wrap sm:gap-0 gap-4 mt-6">
               {webAppFeatures.map((feature) => (
                 <div
                   key={feature.id}
-                  className="flex gap-3 justify-between mb-2 items-center"
+                  className="flex gap-3 justify-between sm:mb-2 mb-0 items-center"
                 >
-                  <feature.icon className="text-primary h-9 w-9" />
+                  <feature.icon className="text-primary sm:h-9 sm:w-9 w-6 h-6" />
                   <p className="text-gray-600 text-sm">{feature.text}</p>
                 </div>
               ))}

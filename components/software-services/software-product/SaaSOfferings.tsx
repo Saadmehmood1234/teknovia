@@ -117,7 +117,7 @@ export function SaaSOfferings() {
           {offerings.map((item, index) => (
             <article
               key={item.title}
-              className={`relative flex h-full  flex-col overflow-hidden rounded-2xl border border-gray-100 shadow-lg shadow-gray-300 ${item.bgColor}`}
+              className={`relative flex h-full  flex-col overflow-hidden rounded-2xl border border-gray-100 shadow-sm shadow-gray-300 ${item.bgColor}`}
             >
               <div className="flex flex-1 flex-col p-4">
                 <div

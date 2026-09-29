@@ -38,7 +38,7 @@ export function B2BMarketingHero() {
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 bg-[#040506]/10" />
+      <div className="absolute inset-0 lg:bg-[#040506]/10 bg-[#040506]/80" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.14),transparent_55%)]" />
 
       <Container className="relative">
@@ -52,18 +52,19 @@ export function B2BMarketingHero() {
               label: "B2B Marketing",
             },
           ]}
+          textColor="text-gray-400"
         />
 
-        <div className="grid items-center gap-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="pt-8 ">
           <div>
             <TopBadge data="B2B MARKETING & LEAD GENERATION" />
 
-            <h1 className=" max-w-3xl font-heading text-4xl font-bold leading-[1.08] tracking-tight text-gray-950 sm:text-5xl">
-              B2B Marketing That Connects You With
-              <span className="text-primary">the Right Businesses.</span>
+            <h1 className="max-w-2xl font-heading text-4xl font-bold leading-[1.08] tracking-tight text-white/80 lg:text-gray-950 sm:text-5xl">
+              B2B Marketing That Connects You With{" "}
+              <span className="text-primary"> the Right Businesses.</span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-sm leading-7 text-gray-600 sm:text-base sm:leading-7">
+            <p className="mt-6 max-w-xl text-sm leading-7 text-gray-200 lg:text-gray-600 sm:text-base sm:leading-7">
               Build a stronger B2B presence, reach decision-makers, generate
               qualified leads, and turn business relationships into sustainable
               growth.
@@ -75,7 +76,7 @@ export function B2BMarketingHero() {
                 return (
                   <div
                     key={item.label}
-                    className="flex items-center gap-2 text-sm font-semibold text-gray-500"
+                    className="flex items-center gap-2 text-sm font-semibold text-gray-300 lg:text-gray-500"
                   >
                     <Icon className="size-4 text-primary" />
                     {item.label}

@@ -58,7 +58,7 @@ export function IoTEcosystem() {
             })}
           </div>
         </div>
-        <div className="relative mt-12 lg:hidden">
+        <div className="relative sm:mt-12 mt-4 lg:hidden">
           <div className="absolute bottom-8 left-12 top-8 w-px bg-primary/20" />
 
           <div className="space-y-5">

@@ -23,7 +23,7 @@ export default function TechnologyStack() {
             </div>
           </div>
 
-          <div className="mt-12 sm:mt-16">
+          <div className="mt-8 sm:mt-16">
             {webApptechnologies.map((tech) => (
               <div
                 key={tech.category}

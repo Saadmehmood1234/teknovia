@@ -79,7 +79,7 @@ export default function CorporatePage() {
 
       <section id="about" className="border-b border-gray-200 py-8 lg:py-16">
         <Container>
-          <div className="grid items-start gap-14 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
+          <div className="grid items-start gap-4 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
             <div className="relative pb-10 lg:pb-12">
               <div className="relative w-full overflow-hidden rounded-2xl">
                 <Image
@@ -91,8 +91,7 @@ export default function CorporatePage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-
-              {/* Purpose Card */}
+{/* 
               <div className="absolute bottom-0 left-5 right-5 flex items-center justify-start gap-4 rounded-2xl border border-white/10 bg-white px-6 py-6 shadow-xl">
                 <Target
                   className="shrink-0 rounded-lg border border-primary-100 bg-primary-50 p-2 text-primary"
@@ -108,7 +107,7 @@ export default function CorporatePage() {
                     To create value through technology, talent, and innovation.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div>
               <TopBadge data="About&nbsp;Teknovia" />
@@ -145,7 +144,7 @@ export default function CorporatePage() {
       </section>
       <VisionMissionValues />
 
-      <section className="bg-[#FAFAFA] py-16">
+      <section className="bg-[#FAFAFA] py-8 sm:py-16">
         <Container>
           <div className="flex flex-col w-full justify-between items-center text-center gap-6">
             <div className="max-w-2xl">
@@ -157,14 +156,14 @@ export default function CorporatePage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6">
+          <div className="sm:mt-10 mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6">
             {strengths.map((strength) => {
               const Icon = strength.icon;
 
               return (
                 <article
                   key={strength.title}
-                  className="flex flex-col justify-center items-center gap-4 rounded-2xl p-6"
+                  className="flex flex-col justify-center items-center gap-4 rounded-2xl p-3 sm:p-6"
                 >
                   <div className="flex p-3 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary-100">
                     <Icon />

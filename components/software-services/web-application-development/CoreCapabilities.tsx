@@ -29,7 +29,6 @@ export default function CoreCapabilities() {
             </div>
           </div>
 
-          {/* Capability layout */}
           <div className="mt-12 grid gap-4 sm:mt-14 lg:grid-cols-2">
             {WebDevCapabilities.map((capability, index) => {
               const Icon = capability.icon;
@@ -38,11 +37,10 @@ export default function CoreCapabilities() {
               return (
                 <div
                   key={capability.number}
-                  className={`group relative overflow-hidden border border-slate-200 bg-white transition-all duration-300 hover:border-primary/30 hover:shadow-[0_18px_50px_rgba(0,0,0,0.07)] ${
+                  className={`group cursor-pointer relative overflow-hidden border border-slate-200 bg-white transition-all duration-300 hover:border-primary/30 hover:shadow-[0_18px_50px_rgba(0,0,0,0.07)] ${
                     isFeatured ? "lg:row-span-2" : ""
                   }`}
                 >
-                  {/* Large background number */}
                   <span
                     aria-hidden="true"
                     className="pointer-events-none absolute -right-3 -top-8 font-mono text-[110px] font-black leading-none text-slate-100 transition-colors duration-300 group-hover:text-primary/10 sm:text-[130px]"
@@ -55,7 +53,6 @@ export default function CoreCapabilities() {
                       isFeatured ? "justify-between p-7 sm:p-9" : "p-6 sm:p-7"
                     }`}
                   >
-                    {/* Top */}
                     <div className="flex items-start justify-between gap-5">
                       <div
                         className={`flex items-center justify-center border border-primary/15 bg-primary/5 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white ${
@@ -75,7 +72,6 @@ export default function CoreCapabilities() {
                       </span>
                     </div>
 
-                    {/* Content */}
                     <div className={isFeatured ? "mt-20 sm:mt-28" : "mt-8"}>
                       <h3
                         className={`font-black tracking-tight text-slate-950 transition-colors duration-300 group-hover:text-primary ${
@@ -111,9 +107,6 @@ export default function CoreCapabilities() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Bottom hover line */}
-                  <div className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 bg-primary transition-transform duration-500 group-hover:scale-x-100" />
                 </div>
               );
             })}

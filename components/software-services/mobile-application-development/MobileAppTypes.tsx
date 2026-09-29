@@ -95,7 +95,7 @@ export function MobileAppTypes() {
               return (
                 <article
                   key={application.title}
-                  className="group relative min-h-52 border-b border-r border-gray-200 bg-white p-6 transition-all duration-300 hover:bg-primary-50/40 sm:p-7"
+                  className="group cursor-pointer relative min-h-52 border-b border-r border-gray-200 bg-white p-6 transition-all duration-300 hover:bg-primary-50/40 sm:p-7"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex size-11 items-center justify-center rounded-xl border border-primary/15 bg-primary-50 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
@@ -114,8 +114,6 @@ export function MobileAppTypes() {
                   <p className="mt-2 text-sm leading-6 text-gray-600">
                     {application.description}
                   </p>
-
-                  <div className="absolute bottom-0 left-7 right-7 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
                 </article>
               );
             })}

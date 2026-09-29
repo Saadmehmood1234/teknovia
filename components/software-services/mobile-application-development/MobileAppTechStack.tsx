@@ -8,7 +8,6 @@ export default function MobileAppTechStack() {
     <section className="relative overflow-hidden py-8 text-black sm:py-16">
       <Container>
         <div className="relative">
-          {/* Header */}
           <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
             <div className="max-w-2xl">
               <TopBadge data="Technology&nbsp;Stack" centerItem={true} />
@@ -23,16 +22,13 @@ export default function MobileAppTechStack() {
               </p>
             </div>
           </div>
-
-          {/* Technology Categories */}
-          <div className="mt-12 sm:mt-16">
+          <div className="mt-8 sm:mt-16">
             {mobileAppTechnologies.map((tech) => (
               <div
                 key={tech.category}
                 className="border-t border-slate-200 py-8 last:border-b sm:py-10"
               >
                 <div className="grid gap-6 lg:grid-cols-[220px_1fr] lg:gap-12">
-                  {/* Category */}
                   <div>
                     <p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-primary">
                       Technology

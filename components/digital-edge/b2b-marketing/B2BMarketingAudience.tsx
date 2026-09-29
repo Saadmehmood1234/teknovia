@@ -67,7 +67,7 @@ export function B2BMarketingAudience() {
             </div>
           </div>
 
-          <div className="px- sm:px-10 lg:px-12">
+          <div className="lg:mt-0 mt-8 sm:px-10 lg:px-12">
             <div className="flex items-center justify-between border-b border-gray-200 pb-5">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary">

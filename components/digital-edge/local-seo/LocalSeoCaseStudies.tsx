@@ -66,16 +66,16 @@ export function LocalSeoCaseStudies() {
                 return (
                   <article
                     key={item.title}
-                    className="group relative flex gap-5 py-6 transition-all duration-300 sm:py-7"
+                    className="relative flex gap-5 py-6 sm:py-7"
                   >
-                    <span className="w-7 shrink-0 pt-1 font-mono text-[10px] font-bold tracking-widest text-gray-300 transition-colors group-hover:text-primary">
+                    <span className="w-7 shrink-0 pt-1 font-mono text-[10px] font-bold tracking-widest text-gray-300">
                       {item.number}
                     </span>
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 text-gray-400 transition-all duration-300 group-hover:border-primary/20 group-hover:bg-primary-50 group-hover:text-primary sm:size-11">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 text-gray-400 sm:size-11">
                       <Icon className="size-4.5" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-heading text-base font-bold text-gray-950 transition-colors group-hover:text-primary sm:text-lg">
+                      <h3 className="font-heading text-base font-bold text-gray-950 sm:text-lg">
                         {item.title}
                       </h3>
 
@@ -83,14 +83,13 @@ export function LocalSeoCaseStudies() {
                         {item.description}
                       </p>
                     </div>
-                    <div className="absolute bottom-0 left-0 h-px w-0 bg-primary transition-all duration-500 group-hover:w-full" />
                   </article>
                 );
               })}
             </div>
           </div>
         </div>
-        <div className="mt-20 border-t border-gray-200 pt-8 sm:mt-16">
+        <div className="border-t border-gray-200 pt-8 sm:mt-16">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <TopBadge data="REAL GROWTH SNAPSHOT" />

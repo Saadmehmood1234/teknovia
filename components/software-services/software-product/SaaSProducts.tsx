@@ -84,10 +84,10 @@ export function SaaSProducts() {
             return (
               <article
                 key={product.title}
-                className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-[#FAFAFA] p-6 hover:border-primary/30 hover:shadow-[0_18px_50px_rgba(0,150,137,0.08)] sm:p-8"
+                className="relative overflow-hidden rounded-3xl border border-gray-200 bg-[#FAFAFA] p-6 sm:p-8"
               >
                 <div className="flex items-start justify-between">
-                  <div className="flex size-12 items-center justify-center rounded-xl border border-primary/15 bg-primary-50 text-primary transition-colors group-hover:bg-primary-100">
+                  <div className="flex size-12 items-center justify-center rounded-xl border border-primary/15 bg-primary-50 text-primary">
                     <Icon className="size-5" />
                   </div>
 
@@ -115,8 +115,6 @@ export function SaaSProducts() {
                     </div>
                   ))}
                 </div>
-
-                <div className="absolute bottom-0 left-8 right-8 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
               </article>
             );
           })}

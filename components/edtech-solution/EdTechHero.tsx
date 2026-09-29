@@ -43,6 +43,7 @@ export function EdTechHero() {
               label: "EduTech Solutions",
             },
           ]}
+          textColor="text-gray-400"
         />
 
         <div className="pt-8">

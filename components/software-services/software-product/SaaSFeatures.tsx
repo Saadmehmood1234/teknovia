@@ -256,8 +256,7 @@ function FeatureCard({
   const Icon = feature.icon;
 
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_12px_30px_rgba(0,150,137,0.1)] sm:p-6">
-      {/* Subtle corner glow */}
+    <article className="group cursor-pointer relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_12px_30px_rgba(0,150,137,0.1)] sm:p-6">
       <div className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-primary-50/60 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
 
       <div className="relative flex items-start justify-between">
@@ -277,9 +276,6 @@ function FeatureCard({
       <p className="relative mt-2 text-sm leading-6 text-gray-500">
         {feature.description}
       </p>
-
-      {/* Bottom accent bar */}
-      <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-500 group-hover:w-full" />
     </article>
   );
 }

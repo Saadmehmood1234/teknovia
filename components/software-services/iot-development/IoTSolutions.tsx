@@ -37,7 +37,7 @@ function SolutionCard({
         </span>
         <div
           className="
-            flex items-center justify-center text-[#005D66]
+            flex items-center size-16 bg-primary-100/60 rounded-full p-2 justify-center text-[#005D66]
           "
         >
           <Icon className="size-10" />

@@ -242,11 +242,10 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {open && (
-          <div className="border-t border-slate-100 py-5 xl:hidden">
+          <div
+            className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-slate-100 py-5 xl:hidden">
             <nav className="flex flex-col gap-1 pb-2">
-              {/* Home */}
               <MobileNavLink
                 href="/"
                 active={isActive("/")}
