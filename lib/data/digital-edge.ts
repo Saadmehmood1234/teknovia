@@ -32,84 +32,120 @@ export const localSeoServices = [
     description:
       "Set up and optimize your Google Business Profile for stronger visibility, trust, and local discoverability.",
     icon: Building2,
-    image: "/images/digital-edge/services/google-business.jpg",
+    txtColor: "text-[#f5544c]",
+    iconColor: "bg-[#f5544c]/10",
+    bgColor: "bg-[#f5544c]/5",
+    borderColor:"border-[#f5544c]/20",
   },
   {
     title: "Business Information Management",
     description:
       "Maintain accurate and consistent Name, Address, and Phone information across Google and local directories.",
     icon: Settings2,
-    image: "/images/digital-edge/services/business-information.jpg",
+    txtColor: "text-[#5952eb]",
+    iconColor: "bg-[#5952eb]/10",
+    bgColor: "bg-[#5952eb]/5",
+    borderColor:"border-[#5952eb]/20",
   },
   {
     title: "Local Keyword Research",
     description:
       "Identify high-intent local keywords and search terms customers use to find your business.",
     icon: Search,
-    image: "/images/digital-edge/services/keyword-research.jpg",
+    txtColor: "text-[#913a4b]",
+    iconColor: "bg-[#913a4b]/10",
+    bgColor: "bg-[#913a4b]/5",
+    borderColor:"border-[#913a4b]/20",
   },
   {
     title: "Google Maps Ranking Optimization",
     description:
       "Optimize your local presence to improve visibility in Google Maps and Map Pack searches.",
     icon: MapPin,
-    image: "/images/digital-edge/services/google-map.jpg",
+    txtColor: "text-[#19b093]",
+    iconColor: "bg-[#19b093]/10",
+    bgColor: "bg-[#19b093]/5",
+    borderColor:"border-[#19b093]/20",
   },
   {
     title: "Business Category & Service Optimization",
     description:
       "Optimize categories, services, and business attributes so Google understands your business correctly.",
     icon: Target,
-    image: "/images/digital-edge/services/business-category.jpg",
+    txtColor: "text-[#5f1c9e]",
+    iconColor: "bg-[#5f1c9e]/10",
+    bgColor: "bg-[#5f1c9e]/5",
+    borderColor:"border-[#5f1c9e]/20",
   },
   {
     title: "Review & Reputation Management",
     description:
       "Improve your online reputation through review monitoring, response management, and customer engagement.",
     icon: MessageSquareQuote,
-    image: "/images/digital-edge/services/online-reputation.jpg",
+    txtColor: "text-[#e02f85]",
+    iconColor: "bg-[#e02f85]/10",
+    bgColor: "bg-[#e02f85]/5",
+    borderColor:"border-[#e02f85]/20",
   },
   {
     title: "Local Citation Building",
     description:
       "Build accurate business citations across relevant local directories and industry platforms.",
     icon: Globe2,
-    image: "/images/digital-edge/services/local-citation.jpg",
+    txtColor: "text-[#db25b0]",
+    iconColor: "bg-[#db25b0]/10",
+    bgColor: "bg-[#db25b0]/5",
+    borderColor:"border-[#db25b0]/20",
   },
   {
     title: "Location-Based Content Optimization",
     description:
       "Create location-focused content targeting relevant cities, neighborhoods, and local search intent.",
     icon: FileSearch,
-    image: "/images/digital-edge/services/location-based-content.jpg",
+    txtColor: "text-[#7d1eeb]",
+    iconColor: "bg-[#7d1eeb]/10",
+    bgColor: "bg-[#7d1eeb]/5",
+    borderColor:"border-[#7d1eeb]/20",
   },
   {
     title: "Local Landing Page Creation",
     description:
       "Create high-converting landing pages tailored to specific locations and services.",
     icon: MousePointerClick,
-    image: "/images/digital-edge/services/landing-page.jpg",
+    txtColor: "text-[#148bd9]",
+    iconColor: "bg-[#148bd9]/10",
+    bgColor: "bg-[#148bd9]/5",
+    borderColor:"border-[#148bd9]/20",
   },
   {
     title: "Competitor Analysis",
     description:
       "Analyze local competitors to uncover ranking gaps, keyword opportunities, and growth opportunities.",
     icon: ChartNoAxesCombined,
-    image: "/images/digital-edge/services/competitor-analysis.jpg",
+    txtColor: "text-[#067d48]",
+    iconColor: "bg-[#067d48]/10",
+    bgColor: "bg-[#067d48]/5",
+    borderColor:"border-[#067d48]/20",
   },
   {
     title: "Monthly Performance Reporting",
     description:
       "Track calls, views, clicks, rankings, and traffic with clear monthly performance reports.",
     icon: BarChart3,
-    image: "/images/digital-edge/services/monthly-performance.jpg",
+    txtColor: "text-[#75b005]",
+    iconColor: "bg-[#75b005]/10",
+    bgColor: "bg-[#75b005]/5",
+    borderColor:"border-[#75b005]/20",
   },
   {
     title: "Multi-Location SEO Management",
     description:
       "Manage multiple business locations using location-specific strategies and consistent branding.",
     icon: Building2,
-    image: "/images/digital-edge/services/multi-location-seo.jpg",
+    txtColor: "text-[#e89607]",
+    iconColor: "bg-[#e89607]/10",
+    bgColor: "bg-[#e89607]/5",
+    borderColor:"border-[#e89607]/20",
   },
 ];
 
@@ -312,7 +348,6 @@ export const localSeoFaqs = [
   },
 ];
 
-
 export const b2bMarketingFaqs = [
   {
     question: "What is B2B marketing?",
@@ -446,7 +481,6 @@ export const b2bServices = [
   },
 ];
 
-
 export const b2bBenefits = [
   {
     number: "01",
@@ -458,8 +492,7 @@ export const b2bBenefits = [
   {
     number: "02",
     title: "Data-Driven Decisions",
-    description:
-      "Campaigns are measured using meaningful business metrics.",
+    description: "Campaigns are measured using meaningful business metrics.",
     icon: BarChart3,
   },
   {
@@ -484,7 +517,6 @@ export const b2bBenefits = [
     icon: TrendingUp,
   },
 ];
-
 
 export const b2bAudienceTypes = [
   {
