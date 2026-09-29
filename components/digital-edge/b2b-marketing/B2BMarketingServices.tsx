@@ -6,7 +6,7 @@ export function B2BMarketingServices() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16"
+      className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16"
     >
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-[0.12]" />
 
@@ -36,7 +36,7 @@ export function B2BMarketingServices() {
                 className={`relative overflow-hidden rounded-2xl border transition-all duration-500 ${
                   isFeatured
                     ? "border-primary/20 bg-[#022524]/85 text-white sm:col-span-2 lg:col-span-2"
-                    : "border-gray-200 bg-white"
+                    : "border-gray-200 bg-[#FAFAFA]"
                 }`}
               >
                 <div
