@@ -536,3 +536,65 @@ export const b2bAudienceTypes = [
     title: "Business buyers",
   },
 ];
+
+
+export const whatsappFaqs = [
+  {
+    question: "What is WhatsApp Business API?",
+    answer:
+      "It is an official solution that allows businesses to automate chats, manage leads, and scale communication.",
+  },
+  {
+    question: "How is it different from WhatsApp Business App?",
+    answer:
+      "The API supports automation, multiple users, and CRM integration, unlike the basic app.",
+  },
+  {
+    question: "How long does setup take?",
+    answer:
+      "Typically 2–5 working days, depending on verification.",
+  },
+  {
+    question: "Is it approved by Meta?",
+    answer:
+      "Yes, it is an official solution provided via Meta Platforms.",
+  },
+  {
+    question: "What are the messaging charges?",
+    answer:
+      "Meta charges per conversation within the applicable 24-hour window, based on message category such as marketing or utility.",
+  },
+  {
+    question: "Can I send bulk messages?",
+    answer:
+      "Yes, through approved templates and broadcast campaigns.",
+  },
+  {
+    question: "Do I need technical knowledge to use it?",
+    answer:
+      "No, Teknovia can manage setup, automation, and daily operations for you.",
+  },
+  {
+    question: "Can multiple team members use it?",
+    answer:
+      "Yes, it supports multi-agent access with a shared inbox.",
+  },
+  {
+    question: "Will it integrate with my CRM or website?",
+    answer:
+      "Yes, it can be integrated with CRM, website, and ad platforms.",
+  },
+  {
+    question: "Is it suitable for small businesses?",
+    answer:
+      "Yes, especially if you want to automate and grow customer communication efficiently.",
+  },
+];
+
+export const watsappBlogTopics = [
+  "WhatsApp Business API vs WhatsApp Business App – Which One is Right for You?",
+  "How to Generate Leads Using WhatsApp Marketing (Step-by-Step Guide)",
+  "Top 7 WhatsApp Automation Strategies to Increase Conversions",
+  "WhatsApp Marketing Pricing Explained (India) – Complete Cost Breakdown",
+  "How Small Businesses Can Scale Using WhatsApp CRM & Automation",
+];
