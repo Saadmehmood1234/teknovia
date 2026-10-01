@@ -12,7 +12,7 @@ export function B2BMarketingServices() {
 
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
-          <TopBadge data="OUR B2B MARKETING SERVICES" centerItem/>
+          <TopBadge data="OUR B2B MARKETING SERVICES" centerItem />
 
           <h2 className="mt-5 font-heading text-3xl font-black leading-[1.08] tracking-tight text-gray-950 sm:text-4xl">
             Everything you need to{" "}
@@ -50,6 +50,16 @@ export function B2BMarketingServices() {
                     isFeatured ? "lg:min-h-75" : "min-h-63.75"
                   }`}
                 >
+                  {isFeatured && (
+                    <div
+                      className="pointer-events-none absolute inset-0 opacity-[0.10]"
+                      style={{
+                        backgroundImage:
+                          "radial-gradient(circle, #fff 1px, transparent 1px)",
+                        backgroundSize: "20px 20px",
+                      }}
+                    />
+                  )}
                   <div className="flex items-start justify-between">
                     <div
                       className={`flex size-11 items-center justify-center rounded-xl ${
@@ -95,7 +105,6 @@ export function B2BMarketingServices() {
                     >
                       B2B Growth
                     </span>
-
                   </div>
                 </div>
               </article>

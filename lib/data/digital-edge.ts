@@ -689,11 +689,6 @@ export const watsAppFeatures = [
 ];
 
 
-
-
-
-
-
 export const seoOptimizationTypes = [
   {
     icon: Search,
@@ -1018,5 +1013,44 @@ export const seoFaqs = [
     question: "Can TEKNOVIA provide SEO, AEO, GEO and AIO together?",
     answer:
       "Yes. TEKNOVIA can combine SEO, AEO, GEO, and AIO into an integrated Search & AI Optimization strategy, helping your business build visibility across traditional search, answer-based experiences, and AI-powered discovery.",
+  },
+];
+
+
+export const smoFaqs = [
+  {
+    question: "What is Social Media Optimization (SMO)?",
+    answer:
+      "Social Media Optimization is the process of improving your social media profiles, content, publishing strategy, discoverability, and audience engagement to build a stronger online presence.",
+  },
+  {
+    question: "Which social media platforms do you optimize?",
+    answer:
+      "Our SMO service focuses primarily on Instagram and Facebook. The strategy can be adapted based on your audience, business goals, and the platforms that matter most to your brand.",
+  },
+  {
+    question: "What does your Instagram SMO service include?",
+    answer:
+      "Instagram optimization can include profile optimization, content strategy, feed planning, Reels and Stories strategy, captions, hashtags, engagement, content ideas, and performance analysis.",
+  },
+  {
+    question: "What does your Facebook SMO service include?",
+    answer:
+      "Facebook SMO can include page optimization, content planning, community engagement, campaign content, audience development, and performance reporting.",
+  },
+  {
+    question: "Can you create a social media content strategy for our business?",
+    answer:
+      "Yes. We can develop content pillars, topics, formats, campaign ideas, publishing schedules, and platform-specific content directions based on your business and target audience.",
+  },
+  {
+    question: "How long does it take to see results from SMO?",
+    answer:
+      "Social media growth is cumulative and depends on factors such as your starting presence, audience, content quality, consistency, industry, and engagement. We focus on building a sustainable system rather than promising a fixed result within a specific timeframe.",
+  },
+  {
+    question: "Do you provide social media reporting?",
+    answer:
+      "Yes. Reporting can include relevant metrics such as reach, engagement, content performance, audience growth, and other indicators aligned with your objectives.",
   },
 ];

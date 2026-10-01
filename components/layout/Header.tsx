@@ -70,12 +70,12 @@ export const navigation = [
     href: "/ecommerce-solutions",
     children: [
       {
-        label: "JioMart",
-        href: "/ecommerce-solutions/jio-mart",
+        label: "eCommerce Platforms",
+        href: "/ecommerce-solutions/ecommerce-platforms",
       },
       {
-        label: "Shopify",
-        href: "/ecommerce-solutions/shopify",
+        label: "Marketplace Solutions",
+        href: "/ecommerce-solutions/marketplace-solutions",
       },
     ],
   },
