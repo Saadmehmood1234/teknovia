@@ -1,60 +1,9 @@
 import {
-  BarChart3,
-  Bot,
-  Boxes,
   CheckCircle2,
-  Megaphone,
-  MessagesSquare,
-  Send,
-  UsersRound,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
-const features = [
-  {
-    title: "Team Inbox",
-    description:
-      "All customer messages come into one place so your team can reply together without confusion. No more missed chats or switching between phones.",
-    icon: MessagesSquare,
-  },
-  {
-    title: "Auto Replies & Follow-ups",
-    description:
-      "Customers get instant replies even when you’re busy. Follow-ups happen automatically so no lead is forgotten.",
-    icon: Bot,
-  },
-  {
-    title: "Customer Segmentation",
-    description:
-      "Group customers based on interest or stage—new, interested, or existing—so you can send the right message to the right people.",
-    icon: UsersRound,
-  },
-  {
-    title: "Lead Capture from Ads",
-    description:
-      "When someone clicks your ad, they can directly start a WhatsApp chat. Capture qualified leads without relying on lengthy forms.",
-    icon: Megaphone,
-  },
-  {
-    title: "Performance Tracking",
-    description:
-      "See how many people messaged, replied, and converted. Clear insights help you understand what is working.",
-    icon: BarChart3,
-  },
-  {
-    title: "Broadcast Messaging",
-    description:
-      "Send offers, updates, and reminders to many customers at once for promotions and repeat sales.",
-    icon: Send,
-  },
-  {
-    title: "Reliable & Scalable System",
-    description:
-      "Handle a large number of chats through a structured communication system and grow without worrying about fragmented operations.",
-    icon: Boxes,
-  },
-];
+import { watsAppFeatures } from "@/lib/data/digital-edge";
 
 export function WhatsAppFeatures() {
   return (
@@ -78,13 +27,13 @@ export function WhatsAppFeatures() {
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {features.map((feature, index) => {
+          {watsAppFeatures.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <article
                 key={feature.title}
                 className={`relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 ${
-                  index === features.length - 1
+                  index === watsAppFeatures.length - 1
                     ? "sm:col-span-2 lg:col-span-1"
                     : ""
                 }`}

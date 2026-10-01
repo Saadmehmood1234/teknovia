@@ -1,46 +1,11 @@
 import {
   CalendarClock,
   CheckCheck,
-  CheckCircle2,
-  ClipboardCheck,
-  MessageSquareText,
   UserRoundCheck,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
-const services = [
-  {
-    title: "Complete WhatsApp handling",
-    description:
-      "We manage your entire WhatsApp communication, from first inquiry to follow-up. Your team stops replying and tracking by hand.",
-    icon: MessageSquareText,
-  },
-  {
-    title: "Campaign execution and scheduling",
-    description:
-      "We plan, write and send broadcasts for you, so promotions and offers go out on time and customers stay engaged.",
-    icon: CalendarClock,
-  },
-  {
-    title: "Daily chat management",
-    description:
-      "We answer queries, share information and nurture leads, so no inquiry goes unanswered.",
-    icon: UserRoundCheck,
-  },
-  {
-    title: "Template and content management",
-    description:
-      "We create and maintain approved message templates, keeping every message professional and compliant.",
-    icon: ClipboardCheck,
-  },
-  {
-    title: "Lead tracking and follow-ups",
-    description:
-      "Every lead is tracked, categorized and followed up in a set routine, so fewer opportunities slip away.",
-    icon: CheckCircle2,
-  },
-];
+import { watsappServices } from "@/lib/data/digital-edge";
 
 const stages = [
   { name: "Setup", text: "Number, profile and templates approved" },
@@ -52,7 +17,7 @@ const stages = [
 function ChatPreview() {
   return (
     <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0B1C18] shadow-2xl shadow-black/40">
-      <div className="flex items-center gap-3 border-b border-white/10 bg-white/[0.04] px-4 py-3">
+      <div className="flex items-center gap-3 border-b border-white/10 bg-white/4 px-4 py-3">
         <span className="flex size-8 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary">
           A
         </span>
@@ -78,7 +43,7 @@ function ChatPreview() {
           <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs text-primary">
             <UserRoundCheck className="size-3.5" /> Tagged: hot lead
           </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.05] px-3 py-1 text-xs text-white/60">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/60">
             <CalendarClock className="size-3.5" /> Follow-up set for tomorrow, 10:00
           </span>
         </div>
@@ -91,7 +56,7 @@ export function WhatsAppManagement() {
   return (
     <section className="relative overflow-hidden bg-[#06100E] py-8 text-white sm:py-16">
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-10" />
-      <div className="pointer-events-none absolute -left-32 top-24 size-[480px] rounded-full bg-primary/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-24 size-120 rounded-full bg-primary/10 blur-3xl" />
 
       <Container className="relative">
         <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -116,7 +81,7 @@ export function WhatsAppManagement() {
             </div>
           </div>
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/3">
-            {services.map((service) => {
+            {watsappServices.map((service) => {
               const Icon = service.icon;
               return (
                 <article
@@ -140,15 +105,14 @@ export function WhatsAppManagement() {
           </div>
         </div>
 
-        {/* Journey: a real sequence, so a connected track fits */}
         <ol className="relative mt-16 grid gap-6 sm:mt-20 sm:grid-cols-4 sm:gap-4">
           <span
             aria-hidden
-            className="absolute left-[7px] top-2 hidden h-px w-[calc(100%-14px)] bg-gradient-to-r from-primary via-primary/40 to-primary/10 sm:block"
+            className="absolute left-1.75 top-2 hidden h-px w-[calc(100%-14px)] bg-linear-to-r from-primary via-primary/40 to-primary/10 sm:block"
           />
           <span
             aria-hidden
-            className="absolute left-[7px] top-2 h-[calc(100%-16px)] w-px bg-primary/30 sm:hidden"
+            className="absolute left-1.75 top-2 h-[calc(100%-16px)] w-px bg-primary/30 sm:hidden"
           />
           {stages.map((stage) => (
             <li key={stage.name} className="relative pl-8 sm:pl-0 sm:pt-8">

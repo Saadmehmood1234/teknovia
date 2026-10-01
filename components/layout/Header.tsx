@@ -43,7 +43,7 @@ export const navigation = [
         href: "/digital-edge/local-seo",
       },
       {
-        label: "Search Engine Optimization",
+        label: "Search and AI Optimization",
         href: "/digital-edge/web-seo",
       },
       {

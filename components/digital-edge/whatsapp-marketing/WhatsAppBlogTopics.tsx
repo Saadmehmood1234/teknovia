@@ -2,52 +2,6 @@ import { ArrowUpRight, Clock3, FileText, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 
-// export function WhatsAppBlogTopics() {
-//   return (
-//     <section className="border-b border-gray-100 bg-white py-12 sm:py-20">
-//       <Container>
-//         <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-//           <div>
-//             <TopBadge data="WHATSAPP MARKETING INSIGHTS" />
-//             <h2 className="mt-4 max-w-2xl font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-//               Learn how to turn conversations into growth
-//             </h2>
-//           </div>
-
-//           <Link
-//             href="/blog"
-//             className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-primary hover:text-primary-700"
-//           >
-//             View all insights
-//             <ArrowUpRight className="size-4" />
-//           </Link>
-//         </div>
-
-//         <div className="mt-10 divide-y divide-gray-200 border-y border-gray-200">
-//           {watsappBlogTopics.map((topic, index) => (
-//             <Link
-//               key={topic}
-//               href="/blog"
-//               className="group flex items-center gap-4 py-5 transition hover:px-2"
-//             >
-//               <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary">
-//                 <BookOpenText className="size-4" />
-//               </div>
-//               <span className="flex-1 font-heading text-sm font-bold leading-6 text-gray-800 transition group-hover:text-primary sm:text-base">
-//                 {topic}
-//               </span>
-//               <span className="hidden font-mono text-xs font-bold text-gray-300 sm:block">
-//                 {String(index + 1).padStart(2, "0")}
-//               </span>
-//               <ArrowUpRight className="size-4 shrink-0 text-gray-300 transition group-hover:text-primary" />
-//             </Link>
-//           ))}
-//         </div>
-//       </Container>
-//     </section>
-//   );
-// }
-
 import { watsappBlogTopics } from "@/lib/data/digital-edge";
 
 const readTime = (i: number) => 4 + (i % 3);
