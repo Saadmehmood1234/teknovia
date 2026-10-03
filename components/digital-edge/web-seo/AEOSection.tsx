@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { NumberedServiceCard } from "./NumberedServiceCard";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { MessageCircleQuestion } from "lucide-react";
-import { aeoServices } from "@/lib/data/digital-edge";
+import { aeoServices } from "@/lib/data/digital-edge/seo-data";
 
 const process = [
   "Research",

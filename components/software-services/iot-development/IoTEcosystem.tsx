@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { IotStages } from "@/lib/data/software-services";
+import { IotStages } from "@/lib/data/software-services/iot-development-data";
 import { ArrowRight, Target } from "lucide-react";
 
 export function IoTEcosystem() {
