@@ -626,6 +626,8 @@ export const serviceTopics: ServiceTopic[] = [
     services: [
       {
         title: "Manufacturing",
+        description:
+          "Digital solutions that streamline manufacturing operations, production workflows, and business processes.",
         href: "/industries#manufacturing",
         txtColor: "text-[#475569]",
         iconColor: "bg-[#475569]/10",
@@ -635,6 +637,8 @@ export const serviceTopics: ServiceTopic[] = [
       },
       {
         title: "Hospitality & Travel",
+        description:
+          "Technology solutions that improve guest experiences, travel operations, bookings, and customer engagement.",
         href: "/industries#hospitality",
         txtColor: "text-[#db2777]",
         iconColor: "bg-[#db2777]/10",
@@ -644,6 +648,8 @@ export const serviceTopics: ServiceTopic[] = [
       },
       {
         title: "Logistics & Supply Chain",
+        description:
+          "Connected digital tools for managing logistics, inventory, transportation, and supply chain operations.",
         href: "/industries#logistics",
         txtColor: "text-[#7c3aed]",
         iconColor: "bg-[#7c3aed]/10",
@@ -653,6 +659,8 @@ export const serviceTopics: ServiceTopic[] = [
       },
       {
         title: "Education",
+        description:
+          "Digital learning and education solutions that support institutions, educators, students, and training programs.",
         href: "/industries#education",
         txtColor: "text-[#2563eb]",
         iconColor: "bg-[#2563eb]/10",
@@ -662,6 +670,8 @@ export const serviceTopics: ServiceTopic[] = [
       },
       {
         title: "Healthcare",
+        description:
+          "Technology solutions that help healthcare businesses improve workflows, services, and digital experiences.",
         href: "/industries#healthcare",
         txtColor: "text-[#dc2626]",
         iconColor: "bg-[#dc2626]/10",
@@ -671,6 +681,8 @@ export const serviceTopics: ServiceTopic[] = [
       },
       {
         title: "Retail & Ecommerce",
+        description:
+          "Digital commerce solutions for online stores, customer experiences, sales operations, and retail growth.",
         href: "/industries#retail",
         txtColor: "text-[#ea580c]",
         iconColor: "bg-[#ea580c]/10",
@@ -680,6 +692,8 @@ export const serviceTopics: ServiceTopic[] = [
       },
       {
         title: "Real Estate",
+        description:
+          "Digital platforms and tools that simplify property management, listings, sales, and customer engagement.",
         href: "/industries#real-estate",
         txtColor: "text-[#0891b2]",
         iconColor: "bg-[#0891b2]/10",
@@ -689,6 +703,8 @@ export const serviceTopics: ServiceTopic[] = [
       },
       {
         title: "SMEs & Businesses",
+        description:
+          "Practical technology solutions that help small and medium businesses automate operations and grow efficiently.",
         href: "/industries#smes",
         txtColor: "text-[#16a34a]",
         iconColor: "bg-[#16a34a]/10",
@@ -696,15 +712,6 @@ export const serviceTopics: ServiceTopic[] = [
         borderColor: "border-[#16a34a]/20",
         icon: Calculator,
       },
-      // {
-      //   title: "Professional Services",
-      //   href: "/industries/professional-services",
-      //   txtColor: "text-[#4f46e5]",
-      //   iconColor: "bg-[#4f46e5]/10",
-      //   bgColor: "bg-[#4f46e5]/5",
-      //   borderColor: "border-[#4f46e5]/20",
-      //   icon: Briefcase,
-      // },
     ],
   },
 ];

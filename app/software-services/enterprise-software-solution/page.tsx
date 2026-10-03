@@ -7,8 +7,60 @@ import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { enterpriseFaqs } from "@/lib/data/software-services";
 import Image from "next/image";
+import type { Metadata } from "next";
 
-export default function IndustriesPage() {
+export const metadata: Metadata = {
+  title: "Enterprise Software Development Solutions",
+
+  description:
+    "Teknovia Technologies provides scalable enterprise software development solutions including ERP, CRM, HRMS, supply chain management and custom business applications.",
+
+  keywords: [
+    "enterprise software development",
+    "enterprise software development company",
+    "enterprise software solutions",
+    "enterprise application development",
+    "custom enterprise software",
+    "ERP software development",
+    "CRM software development",
+    "HRMS software development",
+    "business application development",
+    "supply chain management software",
+    "enterprise software company in Noida",
+    "enterprise software development company in Delhi NCR",
+    "digital transformation solutions",
+  ],
+
+  alternates: {
+    canonical: "/software-services/enterprise-software-solution",
+  },
+
+  openGraph: {
+    title: "Enterprise Software Development Solutions",
+    description:
+      "Scalable enterprise software solutions including ERP, CRM, HRMS, supply chain management and custom business applications from Teknovia Technologies.",
+    url: "/software-services/enterprise-software-solution",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Teknovia Enterprise Software Development Solutions",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Enterprise Software Development Solutions",
+    description:
+      "Custom enterprise software, ERP, CRM, HRMS and business application development by Teknovia Technologies.",
+    images: ["/og-image.jpg"],
+  },
+};
+
+export default function EnterpriseSoftwarePage() {
   return (
     <main>
       <EnterpriseHero />
@@ -20,7 +72,7 @@ export default function IndustriesPage() {
               <div className="relative w-full overflow-hidden rounded-2xl">
                 <Image
                   src="/images/about-enterprise-software.png"
-                  alt="Teknovia technology solutions"
+                  alt="Teknovia enterprise software development solutions"
                   width={1000}
                   height={750}
                   className="h-auto w-full object-contain"
@@ -31,7 +83,7 @@ export default function IndustriesPage() {
                 <div className="relative w-full overflow-hidden rounded-2xl">
                   <Image
                     src="/images/about-enterprise1.png"
-                    alt="Teknovia technology solutions"
+                    alt="Enterprise software solutions for business operations"
                     width={1000}
                     height={750}
                     className="h-auto w-full object-contain"
@@ -41,7 +93,7 @@ export default function IndustriesPage() {
                 <div className="relative w-full overflow-hidden rounded-2xl">
                   <Image
                     src="/images/about-enterprise2.png"
-                    alt="Teknovia technology solutions"
+                    alt="Custom enterprise application development"
                     width={1000}
                     height={750}
                     className="h-auto w-full object-contain"

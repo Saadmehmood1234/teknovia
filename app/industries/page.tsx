@@ -7,9 +7,61 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Industries",
+  title: "Industry-Specific Software & Technology Solutions",
+
   description:
-    "Explore the industries Teknovia serves with technology solutions designed to improve operations, efficiency, and business growth.",
+    "Teknovia Technologies delivers industry-specific software and technology solutions for manufacturing, healthcare, education, logistics, retail, real estate, hospitality and growing businesses.",
+
+  keywords: [
+    "industry specific software solutions",
+    "industry specific technology solutions",
+    "industry specific software development",
+    "business technology solutions",
+    "industry focused software development",
+    "digital transformation solutions",
+    "custom software solutions",
+    "enterprise software solutions",
+    "manufacturing software solutions",
+    "healthcare software solutions",
+    "education technology solutions",
+    "logistics software solutions",
+    "retail and ecommerce solutions",
+    "real estate software solutions",
+    "hospitality technology solutions",
+    "software solutions for SMEs",
+    "industrial software solutions",
+    "technology solutions in Noida",
+    "software development company in Noida",
+    "software development company in Delhi NCR",
+  ],
+
+  alternates: {
+    canonical: "/industries",
+  },
+
+  openGraph: {
+    title: "Industry-Specific Software & Technology Solutions",
+    description:
+      "Explore Teknovia's software and technology solutions for manufacturing, healthcare, education, logistics, retail, real estate, hospitality and SMEs.",
+    url: "/industries",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Teknovia Industry-Specific Software and Technology Solutions",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Industry-Specific Software & Technology Solutions",
+    description:
+      "Custom software and technology solutions for manufacturing, healthcare, education, logistics, retail, real estate, hospitality and businesses.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function IndustriesPage() {

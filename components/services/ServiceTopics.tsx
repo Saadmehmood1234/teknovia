@@ -1,163 +1,144 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "../ui/Top-Badge";
 import { serviceTopics } from "@/lib/data/site";
 
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
 export function ServiceTopics() {
   return (
-    <section className="bg-white py-8 sm:py-16">
+    <section className="border-t border-slate-100 bg-white py-8 sm:py-16">
       <Container>
-        <div className="mx-auto max-w-3xl text-center">
-          <TopBadge data="Our Services" centerItem />
+        {/* Intro */}
+        <div className="max-w-2xl">
+          <TopBadge data="Our Services" />
 
           <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
-            Solutions Built Around Your Needs
+            Explore our service areas
           </h2>
 
-          <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">
-            Explore our software, digital, ecommerce, education and
-            industry-specific solutions.
+          <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
+            Software, digital marketing, eCommerce, education and
+            industry-focused solutions, all in one place.
           </p>
         </div>
 
-        <div className="mt-14 space-y-16">
-          {serviceTopics.map((topic) => {
-            const TopicIcon = topic.icon;
+        <div className="mt-10 lg:mt-14 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-14 xl:gap-20">
+          <nav
+            aria-label="Service areas"
+            className="-mx-4 mb-8 flex gap-2 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:px-6 lg:hidden"
+          >
+            {serviceTopics.map((topic) => (
+              <a
+                key={topic.title}
+                href={`#${slugify(topic.title)}`}
+                className="inline-flex shrink-0 items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+              >
+                {topic.title}
+              </a>
+            ))}
+          </nav>
+          <aside className="hidden lg:block">
+            <nav aria-label="Service areas" className="sticky top-28">
+              <ul className="space-y-1">
+                {serviceTopics.map((topic) => {
+                  const TopicIcon = topic.icon;
 
-            return (
-              <div key={topic.title}>
-                <div className="mb-7 flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary">
-                    <TopicIcon size={20} />
-                  </div>
-
-                  <div className="flex w-full flex-col items-start justify-start">
-                    <h3 className="text-2xl font-extrabold text-slate-950">
-                      {topic.title}
-                    </h3>
-                  </div>
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {topic.services.map((service, index) => {
-                    const ServiceIcon = service.icon;
-
-                    return (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className={`
-                          group relative grid min-h-40 overflow-hidden rounded-2xl
-                          border ${service.borderColor}
-                          ${service.bgColor}
-                          transition-all duration-300
-                          hover:-translate-y-1
-                          hover:bg-white
-                          hover:shadow-[0_18px_45px_rgba(0,150,137,0.08)]
-                          sm:grid-cols-[180px_1fr]
-                          xl:grid-cols-[220px_1fr]
-                        `}
+                  return (
+                    <li key={topic.title}>
+                      <a
+                        href={`#${slugify(topic.title)}`}
+                        className="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                       >
-                        <span
-                          className={`
-                            absolute right-4 top-3 z-20
-                            font-mono text-[10px] font-bold
-                            tracking-widest text-gray-300
-                            transition-colors
-                            group-hover:${service.txtColor.replace(
-                              "text-",
-                              "text-",
-                            )}
-                          `}
-                        >
-                          {String(index + 1).padStart(2, "0")}
+                        <TopicIcon
+                          size={18}
+                          strokeWidth={1.8}
+                          className="shrink-0 text-slate-400 transition-colors group-hover:text-primary"
+                        />
+                        <span className="flex-1">{topic.title}</span>
+                        <span className="text-xs tabular-nums text-slate-400">
+                          {topic.services.length}
                         </span>
-                        <div
-                          className={`
-                            relative flex min-h-48 items-center justify-center
-                            overflow-hidden
-                            ${service.iconColor}
-                            sm:min-h-full
-                          `}
-                        >
-                          <div
-                            className={`
-                              relative flex size-20 items-center justify-center
-                              rounded-2xl border
-                              bg-white
-                              ${service.borderColor}
-                              ${service.txtColor}
-                              shadow-sm
-                              transition-all duration-500
-                              group-hover:scale-110
-                              group-hover:shadow-md
-                            `}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </aside>
+          <div>
+            {serviceTopics.map((topic) => {
+              const TopicIcon = topic.icon;
+
+              return (
+                <section
+                  key={topic.title}
+                  id={slugify(topic.title)}
+                  className="scroll-mt-28 border-t border-slate-200 pb-12 pt-8 first:border-t-0 first:pt-0 last:pb-0"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <TopicIcon size={21} strokeWidth={1.8} />
+                    </div>
+
+                    <div>
+                      <h3 className="font-heading text-xl font-extrabold tracking-tight text-slate-950 sm:text-2xl">
+                        {topic.title}
+                      </h3>
+                      <p className="mt-0.5 text-sm text-slate-500">
+                        {topic.services.length}{" "}
+                        {topic.services.length === 1 ? "service" : "services"}
+                      </p>
+                    </div>
+                  </div>
+
+                  <ul className="mt-6 divide-y divide-slate-100 border-y border-slate-100">
+                    {topic.services.map((service) => {
+                      const ServiceIcon = service.icon;
+
+                      return (
+                        <li key={service.href}>
+                          <Link
+                            href={service.href}
+                            className="group -mx-3 flex items-start gap-4 rounded-xl px-3 py-4 transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 sm:items-center"
                           >
                             <ServiceIcon
-                              className="
-                                size-10
-                                stroke-[1.7]
-                                transition-transform duration-500
-                                group-hover:scale-110
-                              "
+                              size={22}
+                              strokeWidth={1.7}
+                              className="mt-0.5 shrink-0 text-slate-400 transition-colors group-hover:text-primary sm:mt-0"
                             />
-                          </div>
-                          <div
-                            className={`
-                              pointer-events-none absolute
-                              -left-10 -top-10 size-28 rounded-full
-                              border ${service.borderColor}
-                            `}
-                          />
 
-                          <div
-                            className={`
-                              pointer-events-none absolute
-                              -bottom-12 -right-12 size-32 rounded-full
-                              border ${service.borderColor}
-                              transition-transform duration-500
-                              group-hover:scale-125
-                            `}
-                          />
-                        </div>
-                        <div className="flex min-w-0 flex-col justify-center p-5 sm:p-6">
-                          <h4
-                            className={`
-                              font-heading text-base font-bold leading-6
-                              text-gray-950
-                              transition-colors
-                              sm:text-lg
-                              group-hover:${service.txtColor}
-                            `}
-                          >
-                            {service.title}
-                          </h4>
+                            <div className="min-w-0 flex-1">
+                              <h4 className="font-heading text-base font-bold leading-6 text-slate-950 transition-colors group-hover:text-primary sm:text-lg">
+                                {service.title}
+                              </h4>
 
-                          {service.description && (
-                            <p className="mt-2 text-xs leading-5 text-gray-600 sm:text-sm sm:leading-6">
-                              {service.description}
-                            </p>
-                          )}
-                        </div>
+                              {service.description && (
+                                <p className="mt-1 max-w-xl text-sm leading-6 text-slate-500">
+                                  {service.description}
+                                </p>
+                              )}
+                            </div>
 
-                        {/* Bottom Decorative Element */}
-                        <div
-                          className={`
-                            pointer-events-none absolute
-                            -bottom-8 -right-8 size-20 rounded-full
-                            ${service.iconColor}
-                            opacity-50
-                            transition-transform duration-500
-                            group-hover:scale-150
-                          `}
-                        />
-                      </Link>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
+                            <ArrowUpRight
+                              size={18}
+                              className="mt-1 shrink-0 text-slate-300 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary sm:mt-0"
+                            />
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              );
+            })}
+          </div>
         </div>
       </Container>
     </section>

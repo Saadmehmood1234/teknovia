@@ -8,6 +8,59 @@ import WebApplications from "@/components/software-services/web-application-deve
 import CoreCapabilities from "@/components/software-services/web-application-development/CoreCapabilities";
 import TechnologyStack from "@/components/software-services/web-application-development/TechnologyStack";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Web Application Development Services",
+
+  description:
+    "Teknovia Technologies provides custom web application development services for SaaS products, enterprise platforms, customer portals, eCommerce, booking systems, LMS and business automation.",
+
+  keywords: [
+    "web application development services",
+    "web application development company",
+    "custom web application development",
+    "web application development company in Noida",
+    "web development company in Noida",
+    "custom web application development company",
+    "enterprise web application development",
+    "SaaS application development",
+    "eCommerce application development",
+    "business web application development",
+    "customer portal development",
+    "LMS development company",
+    "web application development company in Delhi NCR",
+    "business automation software development",
+  ],
+
+  alternates: {
+    canonical: "/software-services/web-application-development",
+  },
+
+  openGraph: {
+    title: "Web Application Development Services",
+    description:
+      "Custom web applications for SaaS, enterprise platforms, eCommerce, customer portals, booking systems, LMS and business automation.",
+    url: "/software-services/web-application-development",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Teknovia Web Application Development Services",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Application Development Services",
+    description:
+      "Custom, scalable and secure web application development services from Teknovia Technologies.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 export default function WebApplicationDevelopmentPage() {
   return (
@@ -20,7 +73,7 @@ export default function WebApplicationDevelopmentPage() {
               <div className="relative w-full overflow-hidden rounded-2xl">
                 <Image
                   src="/images/web-dev-about.png"
-                  alt="Teknovia technology solutions"
+                  alt="Teknovia custom web application development services"
                   width={1000}
                   height={750}
                   className="h-auto w-full object-contain"
@@ -30,7 +83,7 @@ export default function WebApplicationDevelopmentPage() {
               <div className="relative lg:block hidden w-full overflow-hidden rounded-2xl">
                 <Image
                   src="/images/web-background.png"
-                  alt="Teknovia technology solutions"
+                  alt="Web application development and digital solutions"
                   width={1000}
                   height={750}
                   className="h-auto w-full object-contain"

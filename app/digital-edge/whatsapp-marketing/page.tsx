@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import FAQ from "@/components/FAQ";
 import { WhatsAppMarketingHero } from "@/components/digital-edge/whatsapp-marketing/WhatsAppMarketingHero";
 import { WhatsAppWhy } from "@/components/digital-edge/whatsapp-marketing/WhatsAppWhy";
@@ -8,6 +10,61 @@ import { WhatsAppBlogTopics } from "@/components/digital-edge/whatsapp-marketing
 import { whatsappFaqs } from "@/lib/data/digital-edge";
 import ProblemSolution from "@/components/digital-edge/whatsapp-marketing/ProblemSolution";
 
+export const metadata: Metadata = {
+  title: "WhatsApp Marketing & Business API Services",
+
+  description:
+    "Teknovia Technologies provides WhatsApp marketing and WhatsApp Business API services for customer engagement, automated messaging, notifications, lead generation and business communication.",
+
+  keywords: [
+    "WhatsApp marketing services",
+    "WhatsApp marketing company",
+    "WhatsApp Business API services",
+    "WhatsApp Business API provider",
+    "WhatsApp API integration",
+    "WhatsApp automation services",
+    "WhatsApp marketing automation",
+    "WhatsApp business messaging",
+    "WhatsApp bulk messaging",
+    "WhatsApp notification services",
+    "WhatsApp customer engagement",
+    "WhatsApp lead generation",
+    "WhatsApp chatbot integration",
+    "WhatsApp API integration company",
+    "WhatsApp marketing services in Noida",
+    "WhatsApp marketing company in Noida",
+    "WhatsApp marketing company in Delhi NCR",
+    "WhatsApp Business solutions",
+  ],
+
+  alternates: {
+    canonical: "/digital-edge/whatsapp-marketing",
+  },
+
+  openGraph: {
+    title: "WhatsApp Marketing & Business API Services",
+    description:
+      "Engage customers and automate business communication with WhatsApp Business API, marketing automation, notifications and messaging solutions from Teknovia Technologies.",
+    url: "/digital-edge/whatsapp-marketing",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Teknovia WhatsApp Marketing and Business API Services",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "WhatsApp Marketing & Business API Services",
+    description:
+      "WhatsApp Business API, marketing automation, customer engagement and business messaging solutions from Teknovia Technologies.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 export default function WhatsAppMarketingPage() {
   return (
@@ -15,7 +72,7 @@ export default function WhatsAppMarketingPage() {
       <WhatsAppMarketingHero />
       <WhatsAppWhy />
       <WhatsAppEconomics />
-      <ProblemSolution/>
+      <ProblemSolution />
       <WhatsAppFeatures />
       <WhatsAppManagement />
       <WhatsAppBlogTopics />

@@ -22,11 +22,59 @@ import {
 
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Container } from "@/components/ui/Container";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Software Services",
+export const metadata: Metadata = {
+  title: "IoT Development & Automation Solutions",
+
   description:
-    "Custom software solutions, enterprise applications, web applications, mobile apps, SaaS products, and digital systems built for modern businesses.",
+    "Teknovia Technologies provides IoT development and automation solutions for connected devices, smart systems, industrial applications and real-time business operations.",
+
+  keywords: [
+    "IoT development services",
+    "IoT development company",
+    "IoT solutions company",
+    "Internet of Things development",
+    "custom IoT solutions",
+    "IoT application development",
+    "IoT device integration",
+    "IoT automation solutions",
+    "industrial IoT solutions",
+    "IoT software development",
+    "smart connected devices",
+    "IoT platform development",
+    "business automation solutions",
+    "IoT development company in Noida",
+    "IoT development company in Delhi NCR",
+  ],
+
+  alternates: {
+    canonical: "/software-services/iot-development",
+  },
+
+  openGraph: {
+    title: "IoT Development & Automation Solutions",
+    description:
+      "Build connected, intelligent and scalable IoT solutions for business automation, smart systems and industrial applications with Teknovia Technologies.",
+    url: "/software-services/iot-development",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Teknovia IoT Development and Automation Solutions",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "IoT Development & Automation Solutions",
+    description:
+      "Custom IoT development, connected systems and automation solutions from Teknovia Technologies.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 const expertise = [
@@ -214,9 +262,8 @@ export default function SoftwareServicesPage() {
 
                 <p className="mt-6 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg">
                   At Teknovia, we design and develop customized software
-                  solutions that help businesses streamline operations,
-                  automate processes, improve efficiency, and accelerate
-                  growth.
+                  solutions that help businesses streamline operations, automate
+                  processes, improve efficiency, and accelerate growth.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -244,7 +291,7 @@ export default function SoftwareServicesPage() {
                   <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-gray-100">
                     <Image
                       src="/images/software-services.jpg"
-                      alt="Software development and technology solutions"
+                      alt="Teknovia software development and digital solutions"
                       fill
                       priority
                       className="object-cover"
@@ -287,10 +334,10 @@ export default function SoftwareServicesPage() {
               </h2>
 
               <p className="mt-5 max-w-lg text-base leading-7 text-gray-600">
-                We understand that every organization has different
-                processes, challenges, and goals. Our software solutions are
-                designed around those realities rather than forcing your
-                business into a fixed system.
+                We understand that every organization has different processes,
+                challenges, and goals. Our software solutions are designed
+                around those realities rather than forcing your business into a
+                fixed system.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -326,7 +373,7 @@ export default function SoftwareServicesPage() {
               <div className="relative overflow-hidden rounded-4xl bg-gray-100">
                 <Image
                   src="/images/software-services-intro.jpg"
-                  alt="Teknovia software solutions"
+                  alt="Teknovia custom software development solutions"
                   width={900}
                   height={650}
                   className="h-auto w-full object-cover"
@@ -355,10 +402,7 @@ export default function SoftwareServicesPage() {
       </section>
 
       {/* Expertise */}
-      <section
-        id="solutions"
-        className="border-y border-gray-200 bg-gray-50"
-      >
+      <section id="solutions" className="border-y border-gray-200 bg-gray-50">
         <Container>
           <div className="py-16 sm:py-20 lg:py-24">
             <div className="max-w-2xl">
@@ -369,8 +413,8 @@ export default function SoftwareServicesPage() {
               </h2>
 
               <p className="mt-4 leading-7 text-gray-600">
-                From enterprise-grade systems to emerging technologies, we
-                help organizations improve efficiency, automate processes, and
+                From enterprise-grade systems to emerging technologies, we help
+                organizations improve efficiency, automate processes, and
                 accelerate growth.
               </p>
             </div>

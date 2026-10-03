@@ -1,4 +1,4 @@
-import { ArrowRight, Target } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { leaders, strengths } from "@/lib/data/site";
@@ -10,9 +10,45 @@ import { VisionMissionValues } from "@/components/corporate/VisionMissionValues"
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Corporate",
+  title: "About Teknovia Technologies | Software & Digital Solutions",
+
   description:
-    "Learn about Teknovia, our technology solutions, expertise, and commitment to helping modern businesses grow.",
+    "Learn about Teknovia Technologies, a technology company in Noida offering custom software development, digital marketing, EdTech, business automation, ERP and talent solutions.",
+
+  keywords: [
+    "Teknovia Technologies",
+    "about Teknovia Technologies",
+    "software development company in Noida",
+    "technology company in Noida",
+    "custom software development company",
+    "digital solutions company in Noida",
+    "digital marketing company in Noida",
+    "business automation company",
+    "ERP solutions company",
+    "EdTech solutions company",
+    "software development company in Delhi NCR",
+    "IT company in Noida",
+  ],
+
+  alternates: {
+    canonical: "/corporate",
+  },
+
+  openGraph: {
+    title: "About Teknovia Technologies | Software & Digital Solutions",
+    description:
+      "Learn about Teknovia Technologies and our custom software development, digital marketing, EdTech, business automation, ERP and talent solutions.",
+    url: "/corporate",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Teknovia Technologies - Software and Digital Solutions",
+      },
+    ],
+  },
 };
 
 export default function CorporatePage() {
@@ -91,7 +127,7 @@ export default function CorporatePage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-{/* 
+              {/* 
               <div className="absolute bottom-0 left-5 right-5 flex items-center justify-start gap-4 rounded-2xl border border-white/10 bg-white px-6 py-6 shadow-xl">
                 <Target
                   className="shrink-0 rounded-lg border border-primary-100 bg-primary-50 p-2 text-primary"
