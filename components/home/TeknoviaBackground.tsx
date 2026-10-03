@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const letters = ["T", "E", "K", "N", "O", "V", "I", "A"];
 
-const streams = [
+const desktopStreams = [
   { top: "4%", duration: 17, delay: -4, reverse: false },
   { top: "11%", duration: 21, delay: -13, reverse: true },
   { top: "18%", duration: 16, delay: -7, reverse: false },
@@ -22,7 +22,34 @@ const streams = [
   { top: "94%", duration: 25, delay: -20, reverse: true },
 ];
 
+const mobileStreams = [
+  { top: "6%", duration: 22, delay: -6, reverse: false },
+  { top: "18%", duration: 25, delay: -14, reverse: true },
+  { top: "30%", duration: 22, delay: -8, reverse: false },
+  { top: "42%", duration: 26, delay: -17, reverse: true },
+  { top: "55%", duration: 23, delay: -11, reverse: false },
+  { top: "68%", duration: 27, delay: -19, reverse: true },
+  { top: "80%", duration: 22, delay: -9, reverse: false },
+  { top: "92%", duration: 25, delay: -16, reverse: true },
+];
+
 export function TeknoviaBackground() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkScreen();
+
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  const streams = isMobile ? mobileStreams : desktopStreams;
+
   return (
     <div
       aria-hidden="true"
@@ -37,6 +64,7 @@ export function TeknoviaBackground() {
           duration={stream.duration}
           delay={stream.delay}
           reverse={stream.reverse}
+          isMobile={isMobile}
         />
       ))}
     </div>
@@ -48,21 +76,23 @@ function MovingStream({
   duration,
   delay,
   reverse,
+  isMobile,
 }: {
   top: string;
   duration: number;
   delay: number;
   reverse: boolean;
+  isMobile: boolean;
 }) {
   const [letterIndex, setLetterIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setLetterIndex((current) => (current + 1) % letters.length);
-    }, 600);
+    }, isMobile ? 1000 : 600);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile]);
 
   const letter = letters[letterIndex];
 
@@ -77,15 +107,24 @@ function MovingStream({
         x: reverse ? "-15vw" : "110vw",
       }}
       transition={{
-        duration,
+        duration: isMobile ? duration + 4 : duration,
         delay,
         repeat: Infinity,
         ease: "linear",
       }}
     >
-      <div className="relative h-12 w-64">
+      <div
+        className={`relative ${
+          isMobile ? "h-9 w-44" : "h-12 w-64"
+        }`}
+      >
+        {/* Trail */}
         <div
-          className={`absolute top-1/2 h-0.5 w-56 -translate-y-1/2 blur-[1px] ${
+          className={`absolute top-1/2 -translate-y-1/2 ${
+            isMobile
+              ? "h-px w-36 blur-[0.5px]"
+              : "h-0.5 w-56 blur-[1px]"
+          } ${
             reverse
               ? "right-3 bg-linear-to-l from-primary/60 via-primary/25 to-transparent"
               : "left-3 bg-linear-to-r from-primary/60 via-primary/25 to-transparent"
@@ -94,85 +133,94 @@ function MovingStream({
 
         {/* Glow */}
         <motion.div
-          className={`absolute top-1/2 h-7 w-44 -translate-y-1/2 rounded-full bg-primary/25 blur-xl ${
-            reverse ? "right-2" : "left-2"
-          }`}
+          className={`absolute top-1/2 -translate-y-1/2 rounded-full bg-primary ${
+            isMobile
+              ? "h-4 w-28 bg-primary/15 blur-lg"
+              : "h-7 w-44 bg-primary/25 blur-xl"
+          } ${reverse ? "right-2" : "left-2"}`}
           animate={{
-            opacity: [0.25, 0.65, 0.25],
-            scaleX: [0.85, 1.15, 0.85],
+            opacity: isMobile
+              ? [0.15, 0.35, 0.15]
+              : [0.25, 0.65, 0.25],
+            scaleX: isMobile
+              ? [0.9, 1.05, 0.9]
+              : [0.85, 1.15, 0.85],
           }}
           transition={{
-            duration: 1.6,
+            duration: isMobile ? 2.2 : 1.6,
             repeat: Infinity,
             ease: "easeInOut",
           }}
         />
 
         {/* Outer blurred letter */}
-        <motion.span
-          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/10 blur-xs ${
-            reverse ? "right-2" : "left-2"
-          }`}
-        >
-          {letter}
-        </motion.span>
+        {!isMobile && (
+          <motion.span
+            className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/10 blur-xs ${
+              reverse ? "right-2" : "left-2"
+            }`}
+          >
+            {letter}
+          </motion.span>
+        )}
 
         {/* Middle blurred letter */}
-        <motion.span
-          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/20 blur-[3px] ${
-            reverse ? "right-6" : "left-6"
-          }`}
+        <span
+          className={`absolute top-1/2 -translate-y-1/2 font-mono font-semibold ${
+            isMobile
+              ? "text-[16px] tracking-[0.15em] text-primary/15 blur-[2px]"
+              : "text-[20px] tracking-[0.2em] text-primary/20 blur-[3px]"
+          } ${reverse ? "right-6" : "left-6"}`}
         >
           {letter}
-        </motion.span>
+        </span>
 
-        {/* Inner blurred letter */}
-        <motion.span
-          className={`absolute top-1/2 -translate-y-1/2 font-mono text-[20px] font-semibold tracking-[0.2em] text-primary/35 blur-[1px] ${
-            reverse ? "right-10" : "left-10"
-          }`}
-        >
-          {letter}
-        </motion.span>
-
-        {/* Main animated letter */}
+        {/* Main letter */}
         <motion.span
           key={letterIndex}
           initial={{
             opacity: 0,
-            filter: "blur(5px)",
+            filter: `blur(${isMobile ? 3 : 5}px)`,
             scale: 0.85,
           }}
           animate={{
-            opacity: [0.45, 1, 0.8],
-            filter: ["blur(4px)", "blur(0px)", "blur(0.5px)"],
-            scale: [0.85, 1, 0.96],
+            opacity: isMobile
+              ? [0.3, 0.75, 0.55]
+              : [0.45, 1, 0.8],
+            filter: isMobile
+              ? ["blur(2px)", "blur(0px)", "blur(0.5px)"]
+              : ["blur(4px)", "blur(0px)", "blur(0.5px)"],
+            scale: [0.9, 1, 0.96],
           }}
           transition={{
-            duration: 0.6,
+            duration: isMobile ? 0.8 : 0.6,
             ease: "easeOut",
           }}
-          className={`absolute top-1/2 z-10 -translate-y-1/2 font-mono text-[20px] font-bold tracking-[0.2em] text-primary ${
-            reverse ? "right-0" : "left-0"
-          }`}
+          className={`absolute top-1/2 z-10 -translate-y-1/2 font-mono font-bold ${
+            isMobile
+              ? "text-[16px] tracking-[0.15em]"
+              : "text-[20px] tracking-[0.2em]"
+          } text-primary ${reverse ? "right-0" : "left-0"}`}
           style={{
-            textShadow:
-              "0 0 7px rgba(0,150,137,0.9), 0 0 16px rgba(0,150,137,0.65), 0 0 28px rgba(0,150,137,0.35)",
+            textShadow: isMobile
+              ? "0 0 5px rgba(0,150,137,0.5), 0 0 10px rgba(0,150,137,0.25)"
+              : "0 0 7px rgba(0,150,137,0.9), 0 0 16px rgba(0,150,137,0.65), 0 0 28px rgba(0,150,137,0.35)",
           }}
         >
           {letter}
         </motion.span>
 
+        {/* Dot */}
         <motion.span
-          className={`absolute top-1/2 z-20 h-1 w-1 -translate-y-1/2 rounded-full bg-primary ${
-            reverse ? "-right-0.5" : "-left-0.5"
-          }`}
+          className={`absolute top-1/2 z-20 -translate-y-1/2 rounded-full bg-primary ${
+            isMobile ? "h-0.5 w-0.5" : "h-1 w-1"
+          } ${reverse ? "-right-0.5" : "-left-0.5"}`}
           animate={{
-            opacity: [0.4, 1, 0.4],
-            scale: [0.8, 1.7, 0.8],
+            opacity: isMobile ? [0.25, 0.6, 0.25] : [0.4, 1, 0.4],
+            scale: isMobile ? [0.8, 1.2, 0.8] : [0.8, 1.7, 0.8],
           }}
           transition={{
-            duration: 0.9,
+            duration: isMobile ? 1.8 : 0.9,
             repeat: Infinity,
             ease: "easeInOut",
           }}
