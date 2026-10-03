@@ -1,4 +1,31 @@
-import { BarChart, BarChart3, Calendar, ChartNoAxesColumn, ChartPie, ClipboardCheck, Eye, FilterIcon, FlagIcon, Headset, Megaphone, MessageCircle, PlusCircle, Search, ShieldCheck, SquarePen, SquarePlay, Target, TargetIcon, TrendingUp, Trophy, UserCircle, UserGroup, UserRoundCheck, Users, UsersRound } from "lucide-react";
+import {
+  BarChart,
+  BarChart3,
+  Calendar,
+  ChartNoAxesColumn,
+  ChartPie,
+  ClipboardCheck,
+  Eye,
+  FilterIcon,
+  FlagIcon,
+  Headset,
+  Megaphone,
+  MessageCircle,
+  PlusCircle,
+  Search,
+  ShieldCheck,
+  SquarePen,
+  SquarePlay,
+  Target,
+  TargetIcon,
+  TrendingUp,
+  Trophy,
+  UserCircle,
+  UserGroup,
+  UserRoundCheck,
+  Users,
+  UsersRound,
+} from "lucide-react";
 import { CgCommunity, CgHashtag } from "react-icons/cg";
 
 export const smoFaqs = [
@@ -23,7 +50,8 @@ export const smoFaqs = [
       "Facebook SMO can include page optimization, content planning, community engagement, campaign content, audience development, and performance reporting.",
   },
   {
-    question: "Can you create a social media content strategy for our business?",
+    question:
+      "Can you create a social media content strategy for our business?",
     answer:
       "Yes. We can develop content pillars, topics, formats, campaign ideas, publishing schedules, and platform-specific content directions based on your business and target audience.",
   },
@@ -162,36 +190,31 @@ export const optimisationAreas = [
     icon: Users,
     number: "01",
     title: "Profile Optimization",
-    description:
-      "Create a strong and consistent brand identity.",
+    description: "Create a strong and consistent brand identity.",
   },
   {
     icon: SquarePen,
     number: "02",
     title: "Engaging Content",
-    description:
-      "High-quality content that connects with your audience.",
+    description: "High-quality content that connects with your audience.",
   },
   {
     icon: CgHashtag,
     number: "03",
     title: "Hashtag Strategy",
-    description:
-      "Target the risk keywords to increase your reach.",
+    description: "Target the risk keywords to increase your reach.",
   },
   {
     icon: BarChart,
     number: "04",
     title: "Audience Engagement",
-    description:
-      "Build meaningful connections and boost interactions.",
+    description: "Build meaningful connections and boost interactions.",
   },
   {
     icon: TrendingUp,
     number: "05",
     title: "",
-    description:
-      "Track performance and optimize for better results.",
+    description: "Track performance and optimize for better results.",
   },
 ];
 

@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Check,
-  LineChart,
-} from "lucide-react";
+import { ArrowRight, Check, LineChart } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { expertise, industries, offerings } from "@/lib/data/software-services";
+import { SoftwareServiceHero } from "@/components/software-services/SoftwareServiceHero";
 
 export const metadata = {
   title: "Software Services",
@@ -15,11 +12,10 @@ export const metadata = {
     "Custom software solutions, enterprise applications, web applications, mobile apps, SaaS products, and digital systems built for modern businesses.",
 };
 
-
 export default function SoftwareServicesPage() {
   return (
     <main>
-      <SoftwareServicesPage />
+      <SoftwareServiceHero />
 
       {/* Introduction */}
       <section className="bg-white">

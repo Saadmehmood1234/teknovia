@@ -1,4 +1,17 @@
-import { BarChart3, Bot, Code2, FileSearch, MapPin, MessageCircleQuestion, Network, Search, Settings2, Sparkles, Target, TrendingUp } from "lucide-react";
+import {
+  BarChart3,
+  Bot,
+  Code2,
+  FileSearch,
+  MapPin,
+  MessageCircleQuestion,
+  Network,
+  Search,
+  Settings2,
+  Sparkles,
+  Target,
+  TrendingUp,
+} from "lucide-react";
 
 export const seoFaqs = [
   {
