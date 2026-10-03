@@ -1,7 +1,7 @@
 import { ArrowUpRight, Clock3, FileText, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { localSeoBlogTopics } from "@/lib/data/digital-edge";
+import { localSeoBlogTopics } from "@/lib/data/digital-edge/local-seo-data";
 
 const readTime = (i: number) => 4 + (i % 3); 
 

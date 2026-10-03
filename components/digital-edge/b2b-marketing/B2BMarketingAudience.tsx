@@ -2,8 +2,8 @@ import {  Check } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { b2bAudienceTypes } from "@/lib/data/digital-edge";
 import Image from "next/image";
+import { b2bAudienceTypes } from "@/lib/data/digital-edge/b2b-marketing-data";
 
 const goals = [
   "Generate more qualified business enquiries",

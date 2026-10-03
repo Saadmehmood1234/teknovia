@@ -1,70 +1,7 @@
-import {
-  BriefcaseBusiness,
-  CalendarDays,
-  GraduationCap,
-  HeartPulse,
-  Home,
-  MessageCircle,
-  ShoppingBag,
-  Truck,
-  Utensils,
-  WalletCards,
-} from "lucide-react";
+
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
-const applications = [
-  {
-    title: "Business Apps",
-    description: "Workflow automation, CRM, ERP integration",
-    icon: BriefcaseBusiness,
-  },
-  {
-    title: "eCommerce Apps",
-    description: "Online stores, marketplaces, B2B portals",
-    icon: ShoppingBag,
-  },
-  {
-    title: "Educational Apps",
-    description: "LMS, eLearning, online training platforms",
-    icon: GraduationCap,
-  },
-  {
-    title: "Healthcare Apps",
-    description: "Telemedicine, patient management systems",
-    icon: HeartPulse,
-  },
-  {
-    title: "Logistics Apps",
-    description: "Fleet tracking, delivery management",
-    icon: Truck,
-  },
-  {
-    title: "FinTech Apps",
-    description: "Payments, wallets, financial management",
-    icon: WalletCards,
-  },
-  {
-    title: "Booking Apps",
-    description: "Appointment scheduling and reservations",
-    icon: CalendarDays,
-  },
-  {
-    title: "On-Demand Apps",
-    description: "Food delivery, service booking platforms",
-    icon: Utensils,
-  },
-  {
-    title: "Social Networking Apps",
-    description: "Community engagement platforms",
-    icon: MessageCircle,
-  },
-  {
-    title: "Real Estate Apps",
-    description: "Property listings and management",
-    icon: Home,
-  },
-];
+import { applications } from "@/lib/data/software-services/mobile-application-development-data";
 
 export function MobileAppTypes() {
   return (

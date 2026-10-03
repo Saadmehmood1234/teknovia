@@ -1,4 +1,4 @@
-import { ArrowDownRight, BarChart3, IndianRupee, Zap } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";

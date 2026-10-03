@@ -1,8 +1,5 @@
 import {
   ArrowRight,
-  Cloud,
-  Layers3,
-  ShieldCheck,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -10,21 +7,8 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
+import { highlights } from "@/lib/data/software-services/software-product-data";
 
-const highlights = [
-  {
-    icon: Cloud,
-    label: "Cloud Native",
-  },
-  {
-    icon: ShieldCheck,
-    label: "Secure by Design",
-  },
-  {
-    icon: Layers3,
-    label: "Built to Scale",
-  },
-];
 
 export function SaaSProductHero() {
   return (

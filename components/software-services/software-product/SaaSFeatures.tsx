@@ -3,81 +3,15 @@ import {
   Cloud,
   Code2,
   Database,
-  GitBranch,
-  KeyRound,
-  Layers3,
-  LockKeyhole,
-  PlugZap,
   Server,
   ShieldCheck,
   Smartphone,
-  UsersRound,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { features } from "@/lib/data/software-services/software-product-data";
 
-const features = [
-  {
-    title: "Multi-Tenant Architecture",
-    description:
-      "Serve multiple customers from a single SaaS platform while maintaining data isolation, security, and scalability.",
-    icon: Layers3,
-  },
-  {
-    title: "Subscription Management",
-    description:
-      "Manage recurring subscriptions, pricing plans, renewals, and customer billing through a streamlined system.",
-    icon: KeyRound,
-  },
-  {
-    title: "User Authentication & Authorization",
-    description:
-      "Protect your software with secure authentication and controlled access to sensitive business data.",
-    icon: LockKeyhole,
-  },
-  {
-    title: "Role-Based Access Control",
-    description:
-      "Assign roles and permissions so users can access only the features and information relevant to their responsibilities.",
-    icon: UsersRound,
-  },
-  {
-    title: "Cloud Deployment & Scalability",
-    description:
-      "Deploy applications on modern cloud infrastructure designed to scale as your users, data, and business grow.",
-    icon: Cloud,
-  },
-  {
-    title: "API-First Development",
-    description:
-      "Build flexible products with robust APIs that simplify integrations and support future expansion.",
-    icon: Code2,
-  },
-  {
-    title: "Analytics & Reporting",
-    description:
-      "Gain actionable insights through dashboards, performance metrics, and advanced reporting capabilities.",
-    icon: BarChart3,
-  },
-  {
-    title: "Third-Party Integrations",
-    description:
-      "Connect your product with CRM, ERP, payment gateways, accounting systems, and other applications.",
-    icon: PlugZap,
-  },
-  {
-    title: "High Security & Compliance",
-    description:
-      "Implement strong security measures, data protection practices, and compliance-ready development processes.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Automated Testing & CI/CD",
-    description:
-      "Accelerate delivery with automated testing and continuous integration and deployment pipelines.",
-    icon: GitBranch,
-  },
-];
+
 
 function FeatureItem({
   feature,

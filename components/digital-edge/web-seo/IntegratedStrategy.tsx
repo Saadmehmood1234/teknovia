@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "./SectionHeading";
-import { seoOptimizationTypes, seoTools } from "@/lib/data/digital-edge";
 import { ArrowRight, CheckCircle2, Plus } from "lucide-react";
+import { seoOptimizationTypes, seoTools } from "@/lib/data/digital-edge/seo-data";
 
 export function IntegratedStrategy() {
   return (

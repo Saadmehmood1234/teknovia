@@ -1,33 +1,7 @@
-import { BrainCircuit, Rocket, Sparkles, Target } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { philosophyPoints } from "@/lib/data/edutech-data";
 
-const philosophyPoints = [
-  {
-    icon: Target,
-    title: "Outcomes First",
-    description:
-      "We build around measurable learning and business outcomes, not technology for its own sake.",
-  },
-  {
-    icon: Sparkles,
-    title: "Simple Experiences",
-    description:
-      "Platforms should be intuitive for learners and simple for educators to manage.",
-  },
-  {
-    icon: BrainCircuit,
-    title: "Data-Driven",
-    description:
-      "Analytics help institutions understand performance, engagement, and opportunities for improvement.",
-  },
-  {
-    icon: Rocket,
-    title: "Built to Scale",
-    description:
-      "Solutions are designed to adapt as learners, institutions, and education businesses grow.",
-  },
-];
 
 export function OurPhilosophy() {
   return (

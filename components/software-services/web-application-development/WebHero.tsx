@@ -6,35 +6,11 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import {
   ArrowRight,
-  Layers3,
-  ShieldCheck,
-  Gauge,
-  Workflow,
 } from "lucide-react";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { features } from "@/lib/data/software-services/web-application-development-data";
 
-const features = [
-  {
-    id: 1,
-    icon: Layers3,
-    text: "Scalable Architecture",
-  },
-  {
-    id: 2,
-    icon: ShieldCheck,
-    text: "Secure & Reliable",
-  },
-  {
-    id: 3,
-    icon: Gauge,
-    text: "High Performance",
-  },
-  {
-    id: 4,
-    icon: Workflow,
-    text: "Seamless Experience",
-  },
-];
+
 export function WebHero() {
   return (
     <section id="home" className="relative isolate overflow-hidden py-8">

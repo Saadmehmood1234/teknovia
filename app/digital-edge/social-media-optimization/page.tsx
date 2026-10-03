@@ -8,8 +8,8 @@ import { SMOOptimisation } from "@/components/digital-edge/social-media-optimiza
 import { SMOProcess } from "@/components/digital-edge/social-media-optimization/SMOProcess";
 import { SMOServices } from "@/components/digital-edge/social-media-optimization/SMOServices";
 import FAQ from "@/components/FAQ";
+import { smoFaqs } from "@/lib/data/digital-edge/social-media-optimization-data";
 
-import { smoFaqs } from "@/lib/data/digital-edge";
 
 export const metadata: Metadata = {
   title: "Social Media Optimization Services | SMO Company",

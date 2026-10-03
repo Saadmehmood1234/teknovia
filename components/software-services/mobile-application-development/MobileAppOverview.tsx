@@ -2,15 +2,7 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
-const points = [
-  "Customer-facing mobile experiences",
-  "Enterprise mobility solutions",
-  "eCommerce and marketplace applications",
-  "On-demand and booking platforms",
-  "Education and healthcare applications",
-  "Scalable backend and API integrations",
-];
+import { points } from "@/lib/data/software-services/mobile-application-development-data";
 
 export function MobileAppOverview() {
   return (

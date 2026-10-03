@@ -1,4 +1,4 @@
-import { stats } from "@/lib/data/site";
+import { stats } from "@/lib/data/hero-data";
 
 
 export function Stats() {

@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { ServiceCard } from "../ui/Card";
-import { services } from "@/lib/data/site";
+import { services } from "@/lib/data/hero-data";
 import { TopBadge } from "../ui/Top-Badge";
 
 export function Services() {

@@ -3,7 +3,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { watsAppFeatures } from "@/lib/data/digital-edge";
+import { watsAppFeatures } from "@/lib/data/digital-edge/watsapp-marketing-data";
 
 export function WhatsAppFeatures() {
   return (

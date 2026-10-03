@@ -8,8 +8,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { webAppFeatures } from "@/lib/data/software-services";
 import Link from "next/link";
+import { webAppFeatures } from "@/lib/data/software-services/web-application-development-data";
 
 
 export function WebDevHero() {

@@ -5,7 +5,7 @@ import { principles } from "@/lib/data/industries";
 import Image from "next/image";
 import { TopBadge } from "../ui/Top-Badge";
 
-const industries = [
+export const industries = [
   "Educational Institutions",
   "SMEs",
   "Manufacturers",

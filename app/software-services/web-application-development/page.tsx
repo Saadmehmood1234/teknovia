@@ -1,6 +1,5 @@
 import FAQ from "@/components/FAQ";
 import { Container } from "@/components/ui/Container";
-import { webAppfaqs, webAppservices } from "@/lib/data/software-services";
 import { WebDevHero } from "@/components/software-services/web-application-development/WebDevHero";
 import Image from "next/image";
 import DevelopmentProcess from "@/components/software-services/web-application-development/DevelopmentProcess";
@@ -9,6 +8,7 @@ import CoreCapabilities from "@/components/software-services/web-application-dev
 import TechnologyStack from "@/components/software-services/web-application-development/TechnologyStack";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { Metadata } from "next";
+import { webAppfaqs, webAppservices } from "@/lib/data/software-services/web-application-development-data";
 
 export const metadata: Metadata = {
   title: "Web Application Development Services",

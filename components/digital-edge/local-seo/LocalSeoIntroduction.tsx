@@ -1,31 +1,8 @@
-import { ArrowUpRight, MapPin, PhoneCall, Search, Star } from "lucide-react";
-
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
+import { highlights } from "@/lib/data/digital-edge/local-seo-data";
 
-const highlights = [
-  {
-    text: "Appear in top 3 Google Map results (Map Pack)",
-    icon: MapPin,
-  },
-  {
-    text: "Get more calls and direction requests",
-    icon: PhoneCall,
-  },
-  {
-    text: "Improve visibility for “near me” searches",
-    icon: Search,
-  },
-  {
-    text: "Build credibility with 5-star reviews",
-    icon: Star,
-  },
-  {
-    text: "Increase local conversions and ROI",
-    icon: ArrowUpRight,
-  },
-];
 
 export function LocalSeoIntroduction() {
   return (

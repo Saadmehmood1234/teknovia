@@ -5,7 +5,7 @@ import SixDModel from "@/components/software-services/enterprise-software-soluti
 import ThreePModel from "@/components/software-services/enterprise-software-solution/ThreePModel";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { enterpriseFaqs } from "@/lib/data/software-services";
+import { enterpriseFaqs } from "@/lib/data/software-services/enterprise-data";
 import Image from "next/image";
 import type { Metadata } from "next";
 

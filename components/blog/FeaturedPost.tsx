@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export function FeaturedPost() {
   return (
-    <article className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50">
+    <article className="overflow-hidden rounded-4xl border border-slate-200 bg-slate-50">
       <div className="grid lg:grid-cols-2">
-        <div className="hero-grid flex min-h-[360px] items-end bg-primary-50 p-8 sm:p-12">
+        <div className="hero-grid flex min-h-90 items-end bg-primary-50 p-8 sm:p-12">
           <div className="w-full rounded-2xl border border-white/70 bg-white/80 p-6 backdrop-blur">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
               FEATURED ARTICLE

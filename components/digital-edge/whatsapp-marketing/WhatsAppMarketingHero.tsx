@@ -1,16 +1,10 @@
-import { ArrowRight, Bot, MessageCircle, UsersRound } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
-
-const highlights = [
-  { icon: MessageCircle, label: "Instant engagement" },
-  { icon: Bot, label: "Automation at scale" },
-  { icon: UsersRound, label: "Multi-agent support" },
-];
-
+import { highlights } from "@/lib/data/digital-edge/watsapp-marketing-data";
 export function WhatsAppMarketingHero() {
   return (
     <section className="relative isolate overflow-hidden bg-[#031823] pt-8 pb-8 sm:pb-16 text-white">

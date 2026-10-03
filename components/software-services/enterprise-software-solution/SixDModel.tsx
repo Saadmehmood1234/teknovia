@@ -2,105 +2,10 @@
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { metrics, steps } from "@/lib/data/software-services/enterprise-data";
 import {
-  Search,
-  ClipboardCheck,
-  PenTool,
-  Code2,
-  Rocket,
-  TrendingUp,
   Users,
-  Target,
-  Shield,
-  BrainCircuit,
-  ChartNoAxesCombined,
-  Handshake,
 } from "lucide-react";
-
-const steps = [
-  {
-    number: "01",
-    title: "DISCOVER",
-    shortTitle: "Discover",
-    color: "text-[#7d2ad1]",
-    description:
-      "Identify business needs, challenges, opportunities, and project objectives to establish a strong foundation.",
-    icon: Search,
-  },
-  {
-    number: "02",
-    title: "DEFINE",
-    shortTitle: "Define",
-    color: "text-[#2a4ed1]",
-    description:
-      "Establish project scope, success metrics, requirements, priorities, and implementation strategy.",
-    icon: ClipboardCheck,
-  },
-  {
-    number: "03",
-    title: "DESIGN",
-    shortTitle: "Design",
-    color: "text-[#0e959e]",
-    description:
-      "Create user-centric interfaces, workflows, system architecture, and solution blueprints.",
-    icon: PenTool,
-  },
-  {
-    number: "04",
-    title: "DEVELOP",
-    color: "text-[#0e9e3e]",
-    shortTitle: "Develop",
-    description:
-      "Develop scalable applications, integrations, and enterprise-grade software solutions.",
-    icon: Code2,
-  },
-  {
-    number: "05",
-    title: "DEPLOY",
-    shortTitle: "Deploy",
-    color: "text-[#f59425]",
-    description:
-      "Launch solutions efficiently while minimizing disruption and ensuring business continuity.",
-    icon: Rocket,
-  },
-  {
-    number: "06",
-    title: "DRIVE",
-    shortTitle: "Drive",
-    color: "text-[#941329]",
-    description:
-      "Enhance performance, support users, implement improvements, and scale for future growth.",
-    icon: TrendingUp,
-  },
-];
-
-const metrics = [
-  {
-    icon: Target,
-    title: "Client-Centric",
-    subtitle: "Your goals drive every decision.",
-  },
-  {
-    icon: Shield,
-    title: "Quality-First",
-    subtitle: "Built for reliability, security, and scale.",
-  },
-  {
-    icon: BrainCircuit,
-    title: "Agile & Iterative",
-    subtitle: "Adapt, evolve, and deliver value faster.",
-  },
-  {
-    icon: ChartNoAxesCombined,
-    title: "Transparent",
-    subtitle: "Clear communication at every step.",
-  },
-  {
-    icon: Handshake,
-    title: "Long-Term Partner",
-    subtitle: "We grow with you, beyond development.",
-  },
-];
 
 export default function SixDModel() {
   return (

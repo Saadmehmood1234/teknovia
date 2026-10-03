@@ -1,50 +1,13 @@
 import Image from "next/image";
 import {
-  Calendar,
   Play,
-  PlusCircle,
-  SquarePlay,
-  UserCircle,
-  UsersRound,
 } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { FaInstagram } from "react-icons/fa6";
-import { CgHashtag } from "react-icons/cg";
+import { instagramServices } from "@/lib/data/digital-edge/social-media-optimization-data";
 
-const instagramServices = [
-  {
-    icon: UserCircle,
-    title: "Profile Optimization",
-    description: "Create a professional and attractive Instagram Profile.",
-  },
-  {
-    icon: PlusCircle,
-    title: "Story Engagement",
-    description: "Creative stories to connect and engage your audience.",
-  },
-  {
-    icon: SquarePlay,
-    title: "Reels Strategy",
-    description: "Engaging reels to increase reach and followers.",
-  },
-  {
-    icon: UsersRound,
-    title: "Audience Growth",
-    description: "Organic strategies to grow real and active followers.",
-  },
-  {
-    icon: CgHashtag,
-    title: "Hashtag Research",
-    description: "Targeted hashtags to improve visibility and engagement.",
-  },
-  {
-    icon: Calendar,
-    title: "Content Planning",
-    description: "Consistent content calender for better engagement.",
-  },
-];
 
 export function SMOIntagram() {
   return (

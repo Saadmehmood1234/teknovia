@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { localSeoServices } from "@/lib/data/digital-edge";
+import { localSeoServices } from "@/lib/data/digital-edge/local-seo-data";
 
 export function LocalSeoServices() {
   return (

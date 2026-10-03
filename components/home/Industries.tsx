@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { industries } from "@/lib/data/site";
+import { industries } from "@/lib/data/hero-data";
 import { BottomImageCard } from "../ui/BottomImageCard";
 import { TopBadge } from "../ui/Top-Badge";
 import Link from "next/link";

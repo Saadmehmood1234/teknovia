@@ -1,85 +1,18 @@
 "use client";
 
+import { challenges } from "@/lib/data/software-services/enterprise-data";
 import {
   Activity,
   BarChart3,
   Building2,
-  Database,
   Gauge,
-  Maximize2,
-  Network,
   Settings,
-  ShieldAlert,
   Target,
-  TrendingUp,
-  Users,
-  UserX,
-  Workflow,
 } from "lucide-react";
 import Image from "next/image";
 
-const challenges = {
-  process: [
-    {
-      icon: Database,
-      title: "Data Silos",
-      description:
-        "Disparate systems and isolated data create duplication and delays.",
-    },
-    {
-      icon: Settings,
-      title: "Inefficient Workflows",
-      description:
-        "Complex approvals and broken processes slow down operations.",
-    },
-    {
-      icon: Network,
-      title: "Legacy Systems",
-      description:
-        "Outdated technology limits agility, integrations and innovation.",
-    },
-  ],
-  people: [
-    {
-      icon: Workflow,
-      title: "Manual Processes",
-      description: "Repetitive, time-consuming tasks reduce productivity.",
-    },
-    {
-      icon: UserX,
-      title: "Human Errors",
-      description: "Error-prone operations lead to mistakes and rework.",
-    },
-    {
-      icon: Users,
-      title: "Poor Collaboration",
-      description:
-        "Disconnected teams and lack of communication slow progress.",
-    },
-  ],
-  performance: [
-    {
-      icon: TrendingUp,
-      title: "Lack of Visibility",
-      description:
-        "Limited real-time insights hinder faster, data-driven decisions.",
-    },
-    {
-      icon: ShieldAlert,
-      title: "Security Risks",
-      description:
-        "Growing threats and vulnerabilities put critical data at risk.",
-    },
-    {
-      icon: Maximize2,
-      title: "Scalability Issues",
-      description:
-        "Systems struggle to scale with business growth and changing needs.",
-    },
-  ],
-};
 
-const metrics = [
+export const metrics = [
   { icon: Gauge, title: "Improved", subtitle: "Efficiency" },
   { icon: Settings, title: "Operational", subtitle: "Excellence" },
   { icon: BarChart3, title: "Better", subtitle: "Decisions" },

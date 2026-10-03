@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
-import { aioServices } from "@/lib/data/digital-edge";
 import { NumberedServiceCard } from "./NumberedServiceCard";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { aioServices } from "@/lib/data/digital-edge/seo-data";
 
 export function AIOSection() {
   return (

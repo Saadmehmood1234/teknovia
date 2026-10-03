@@ -1,61 +1,9 @@
 import Image from "next/image";
-import {
-  Calendar,
-  ChartPie,
-  FlagIcon,
-  Megaphone,
-  TargetIcon,
-  TrendingUp,
-  UserGroup,
-} from "lucide-react";
-
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { FaFacebook } from "react-icons/fa6";
-import { CgCommunity } from "react-icons/cg";
+import { facebookServices } from "@/lib/data/digital-edge/social-media-optimization-data";
 
-const facebookServices = [
-  {
-    icon: FlagIcon,
-    title: "Page Optimization",
-    description: "Professional page setup to build credibility and trust.",
-  },
-  {
-    icon: TargetIcon,
-    title: "Target Campaigns",
-    description: "Reach the right audience with result-driven campaigns.",
-  },
-  {
-    icon: UserGroup,
-    title: "Audience Engagement",
-    description: "Engage Your audience with meaningful content.",
-  },
-  {
-    icon: CgCommunity,
-    title: "Community Management",
-    description: "Build String relationships and loyal communities.",
-  },
-  {
-    icon: Megaphone,
-    title: "Content Creation",
-    description: "Eye-catching posts that inform, engage and convert.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Lead Generation",
-    description: "Generate quality leads and increase conversions.",
-  },
-  {
-    icon: Calendar,
-    title: "Content Scheduling",
-    description: "Consistent posting to keep your audience connected.",
-  },
-  {
-    icon: ChartPie,
-    title: "Performance Tracking",
-    description: "Track performance and optimize for better results.",
-  },
-];
 
 export function SMOFacebook() {
   return (

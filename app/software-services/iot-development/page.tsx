@@ -3,7 +3,7 @@ import { IoTEcosystem } from "@/components/software-services/iot-development/IoT
 import { IoTHero } from "@/components/software-services/iot-development/IoTHero";
 import { IoTIntroduction } from "@/components/software-services/iot-development/IoTIntroduction";
 import { IoTSolutions } from "@/components/software-services/iot-development/IoTSolutions";
-import { iotFaqs } from "@/lib/data/software-services";
+import { iotFaqs } from "@/lib/data/software-services/iot-development-data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

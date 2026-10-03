@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { WebDevCapabilities } from "@/lib/data/software-services";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { WebDevCapabilities } from "@/lib/data/software-services/web-application-development-data";
 
 export default function CoreCapabilities() {
   return (

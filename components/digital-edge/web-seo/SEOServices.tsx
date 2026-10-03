@@ -1,7 +1,7 @@
-import { seoServices } from "@/lib/data/digital-edge";
 import { ServiceCard } from "./ServiceCard";
 import { SectionHeading } from "./SectionHeading";
 import { Container } from "@/components/ui/Container";
+import { seoServices } from "@/lib/data/digital-edge/seo-data";
 
 export function SEOServices() {
   return (

@@ -1,86 +1,10 @@
-import {
-  BarChart3,
-  ChevronRight,
-  ClipboardCheck,
-  Megaphone,
-  Search,
-  ShieldCheck,
-  SquarePen,
-  Target,
-  TrendingUp,
-  Trophy,
-  Users,
-} from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-
-export const process = [
-  {
-    number: "01",
-    icon: Search,
-    title: "Discover",
-    description:
-      "We understand your business goals, target audience and current social media presence.",
-  },
-  {
-    number: "02",
-    icon: ClipboardCheck,
-    title: "Strategize",
-    description:
-      "We create a customized social media strategy tailored to your brand and objectives.",
-  },
-  {
-    number: "03",
-    icon: SquarePen,
-    title: "Plan & Create",
-    description:
-      "We plan content and create engaging posts, visuals and campaigns that connect.",
-  },
-  {
-    number: "04",
-    icon: Megaphone,
-    title: "Publish & Engage",
-    description:
-      "We publish content consistently and engage with your audience to build strong relationships.",
-  },
-  {
-    number: "05",
-    icon: BarChart3,
-    title: "Analyze",
-    description:
-      "We track performance using advanced analytics to measure results and identify opportunities.",
-  },
-  {
-    number: "06",
-    icon: Trophy,
-    title: "Optimize & Grow",
-    description:
-      "We optimize strategies continuously to maximize growth and deliver better results.",
-  },
-];
-
-const principles = [
-  {
-    icon: Target,
-    title: "Goal Focused",
-    description: "Every step is aligned with your business objectives.",
-  },
-  {
-    icon: Users,
-    title: "Transparent Process",
-    description: "You're informed at every stage of the journey.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Measurable Results",
-    description: "We focus on metrics that matter and drive real growth.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Long Term Growth",
-    description: "We build sustainable strategies for lasting brand success.",
-  },
-];
+import {
+  principles,
+  process,
+} from "@/lib/data/digital-edge/social-media-optimization-data";
 
 export function SMOProcess() {
   const lastIndex = process.length - 1;

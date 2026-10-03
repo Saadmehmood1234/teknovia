@@ -19,7 +19,7 @@ export function BlogCard({
       href={href}
       className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_20px_50px_rgba(0,80,70,0.08)]"
     >
-      <div className="hero-grid aspect-[16/9] bg-primary-50 p-5">
+      <div className="hero-grid aspect-video bg-primary-50 p-5">
         <div className="flex h-full items-end">
           <span className="rounded-full bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary shadow-sm">
             {category}

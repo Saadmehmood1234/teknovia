@@ -1,47 +1,7 @@
-import {
-  CloudCog,
-  Handshake,
-  Layers3,
-  LockKeyhole,
-  RefreshCw,
-  Sparkles,
-} from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
-const reasons = [
-  {
-    number: "01",
-    title: "Product Development Expertise",
-    icon: Sparkles,
-  },
-  {
-    number: "02",
-    title: "In-House Software Products",
-    icon: Layers3,
-  },
-  {
-    number: "03",
-    title: "Scalable Cloud Architecture",
-    icon: CloudCog,
-  },
-  {
-    number: "04",
-    title: "Agile Development Process",
-    icon: RefreshCw,
-  },
-  {
-    number: "05",
-    title: "Security-First Approach",
-    icon: LockKeyhole,
-  },
-  {
-    number: "06",
-    title: "Long-Term Technology Partner",
-    icon: Handshake,
-  },
-];
+import { reasons } from "@/lib/data/software-services/software-product-data";
 
 export function SaaSWhyTeknovia() {
   return (

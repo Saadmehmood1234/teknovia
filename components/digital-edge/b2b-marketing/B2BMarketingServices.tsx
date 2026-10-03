@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { b2bServices } from "@/lib/data/digital-edge";
+import { b2bServices } from "@/lib/data/digital-edge/b2b-marketing-data";
 
 export function B2BMarketingServices() {
   return (

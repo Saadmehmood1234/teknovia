@@ -7,7 +7,7 @@ import { WhatsAppEconomics } from "@/components/digital-edge/whatsapp-marketing/
 import { WhatsAppFeatures } from "@/components/digital-edge/whatsapp-marketing/WhatsAppFeatures";
 import { WhatsAppManagement } from "@/components/digital-edge/whatsapp-marketing/WhatsAppManagement";
 import { WhatsAppBlogTopics } from "@/components/digital-edge/whatsapp-marketing/WhatsAppBlogTopics";
-import { whatsappFaqs } from "@/lib/data/digital-edge";
+import { whatsappFaqs } from "@/lib/data/digital-edge/watsapp-marketing-data";
 import ProblemSolution from "@/components/digital-edge/whatsapp-marketing/ProblemSolution";
 
 export const metadata: Metadata = {

@@ -1,30 +1,7 @@
 import { Check, Gem, Eye, Rocket } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-const coreValues = [
-  {
-    title: "Integrity",
-    description: "We maintain transparency and honesty in everything we do.",
-  },
-  {
-    title: "Innovation",
-    description:
-      "We continuously evolve with technology to deliver better solutions.",
-  },
-  {
-    title: "Customer Focus",
-    description: "We prioritize client success and long-term relationships.",
-  },
-  {
-    title: "Excellence",
-    description: "We strive for quality and consistency in every project.",
-  },
-  {
-    title: "Growth Mindset",
-    description:
-      "We believe in continuous improvement for both clients and our team.",
-  },
-];
+import { coreValues } from "@/lib/data/corporate-data";
 
 export function VisionMissionValues() {
   return (

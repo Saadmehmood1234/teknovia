@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-import { leaders, strengths } from "@/lib/data/site";
+import { leaders,strengths } from "@/lib/data/corporate-data";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Metadata } from "next";

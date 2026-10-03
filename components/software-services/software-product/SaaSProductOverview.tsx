@@ -3,15 +3,8 @@ import { CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { points } from "@/lib/data/software-services/software-product-data";
 
-const points = [
-  "MVP and product development",
-  "Multi-tenant SaaS platforms",
-  "Custom business software",
-  "Cloud-native applications",
-  "Web and mobile products",
-  "API and microservices architecture",
-];
 
 export function SaaSProductOverview() {
   return (

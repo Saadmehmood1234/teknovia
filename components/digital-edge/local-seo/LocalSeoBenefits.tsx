@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { localSeoBenefits } from "@/lib/data/digital-edge";
+import { localSeoBenefits } from "@/lib/data/digital-edge/local-seo-data";
 
 export function LocalSeoBenefits() {
   return (

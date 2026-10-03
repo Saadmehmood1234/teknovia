@@ -1,29 +1,12 @@
-import { ArrowRight, ChartNoAxesColumn, Target, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
+import { channels } from "@/lib/data/digital-edge/b2b-marketing-data";
 
-const channels = [
-  {
-    icon: Target,
-    label: "Qualified Leads",
-  },
-  {
-    icon: Users,
-    label: "Reach Decision-Makers",
-  },
-  {
-    icon: ChartNoAxesColumn,
-    label: "Build Your Brand",
-  },
-  //   {
-  //     icon: Handshake,
-  //     label: "Long-Term Business Growth",
-  //   }
-];
 
 export function B2BMarketingHero() {
   return (

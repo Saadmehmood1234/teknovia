@@ -1,52 +1,11 @@
 import {
-  BarChart,
-  SquarePen,
   Target,
-  TrendingUp,
-  Users,
 } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { CgHashtag } from "react-icons/cg";
+import { optimisationAreas } from "@/lib/data/digital-edge/social-media-optimization-data";
 
-const optimisationAreas = [
-  {
-    icon: Users,
-    number: "01",
-    title: "Profile Optimization",
-    description:
-      "Create a strong and consistent brand identity.",
-  },
-  {
-    icon: SquarePen,
-    number: "02",
-    title: "Engaging Content",
-    description:
-      "High-quality content that connects with your audience.",
-  },
-  {
-    icon: CgHashtag,
-    number: "03",
-    title: "Hashtag Strategy",
-    description:
-      "Target the risk keywords to increase your reach.",
-  },
-  {
-    icon: BarChart,
-    number: "04",
-    title: "Audience Engagement",
-    description:
-      "Build meaningful connections and boost interactions.",
-  },
-  {
-    icon: TrendingUp,
-    number: "05",
-    title: "",
-    description:
-      "Track performance and optimize for better results.",
-  },
-];
 
 export function SMOOptimisation() {
   const lastIndex = optimisationAreas.length - 1;

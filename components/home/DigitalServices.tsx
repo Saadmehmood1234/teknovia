@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { Container } from "@/components/ui/Container";
 import { ServiceCard } from "../ui/Card";
-import { digitalServices } from "@/lib/data/site";
+import { digitalServices } from "@/lib/data/hero-data";
 
 export function DigitalServices() {
   const scrollRef = useRef<HTMLDivElement>(null);

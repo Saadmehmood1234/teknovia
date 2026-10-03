@@ -4,7 +4,6 @@ import Image from "next/image";
 import { BsLinkedin } from "react-icons/bs";
 import { company, industries, resources, solutions } from "@/lib/data/footer";
 
-
 export function Footer() {
   return (
     <footer className="relative overflow-hidden text-white">

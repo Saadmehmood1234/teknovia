@@ -1,57 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
-const services = [
-  {
-    title: "Android App Development",
-    description:
-      "Custom Android applications designed for performance, scalability, and compatibility across Android devices.",
-    image: "/images/services/android-app.png",
-  },
-  {
-    title: "iOS App Development",
-    description:
-      "Premium iPhone and iPad applications built with security, speed, and seamless user experience.",
-    image: "/images/services/ios-app.png",
-  },
-  {
-    title: "Cross-Platform App Development",
-    description:
-      "Develop once and deploy across Android and iOS using modern frameworks to reduce costs and accelerate time-to-market.",
-    image: "/images/services/cross-platform-app.png",
-  },
-  {
-    title: "Enterprise Mobile Applications",
-    description:
-      "Internal business applications that improve productivity, communication, and operational efficiency.",
-    image: "/images/services/enterprise-mobile-app.png",
-  },
-  {
-    title: "eCommerce Mobile Applications",
-    description:
-      "Feature-rich shopping applications with secure payments, product management, and customer engagement tools.",
-    image: "/images/services/ecommerce-mobiles-app.png",
-  },
-  {
-    title: "Progressive Web Apps",
-    description:
-      "Fast, installable web applications that deliver app-like experiences across devices.",
-    image: "/images/services/pwa-app.png",
-  },
-  {
-    title: "Mobile App UI/UX Design",
-    description:
-      "User-centered design focused on engagement, usability, accessibility, and conversion optimization.",
-    image: "/images/services/mobile-uiux-app.png",
-  },
-  {
-    title: "App Maintenance & Support",
-    description:
-      "Ongoing updates, performance optimization, security enhancements, and feature upgrades.",
-    image: "/images/services/mobile-maintenances-app.png",
-  },
-];
+import { services } from "@/lib/data/software-services/mobile-application-development-data";
 
 export function MobileAppServices() {
   return (

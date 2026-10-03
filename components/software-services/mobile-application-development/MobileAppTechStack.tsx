@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { mobileAppTechnologies } from "@/lib/data/software-services";
+import { mobileAppTechnologies } from "@/lib/data/software-services/mobile-application-development-data";
 import Image from "next/image";
 
 export default function MobileAppTechStack() {

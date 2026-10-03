@@ -8,40 +8,43 @@ import Image from "next/image";
 
 export function ServicesHero() {
   return (
-    <section
-      className="relative py-8 isolate overflow-hidden border-b border-white/10 bg-[#040506]">
-        <div className="absolute inset-0 -z-10">
-          <Image
-            src="/service-bg.png"
-            alt=""
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-        </div>
-  
-        <div className="absolute inset-0 bg-[#040506]/70" />
-  
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.16),transparent_55%)]" />
-  
-        <div className="hero-grid pointer-events-none absolute inset-0 opacity-20" />
-  
+    <section className="relative py-8 isolate overflow-hidden border-b border-white/10 bg-[#040506]">
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/service-bg.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
+
+      <div className="absolute inset-0 bg-[#040506]/70" />
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.16),transparent_55%)]" />
+
+      <div className="hero-grid pointer-events-none absolute inset-0 opacity-20" />
+
       <Container>
-        <Breadcrumb items={[{ label: "Services" }]} />
+        <Breadcrumb
+          items={[{ label: "Software Services" }]}
+          className="mb-10"
+        />
 
         <div className="relative flex items-center py-8">
           <div className="max-w-3xl">
             <TopBadge data="OUR SERVICES" />
 
             <h1 className="mt-5 max-w-4xl font-heading text-5xl font-semibold leading-[1.08] tracking-tight text-white">
-              Digital Solutions That Move <br/><span className="text-primary">Your Business Forward</span>
+              Digital Solutions Built
+              <span className="text-primary pl-2">Around Your Business</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-              We design, develop and optimize digital solutions that help
-              businesses operate better, reach more customers and grow with
-              confidence.
+              From software development to digital marketing and ecommerce, we
+              help businesses build, launch and grow digital products that
+              create measurable value.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link

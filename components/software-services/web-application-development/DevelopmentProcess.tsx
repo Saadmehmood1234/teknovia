@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { developmentProcess } from "@/lib/data/software-services";
+import { developmentProcess } from "@/lib/data/software-services/web-application-development-data";
 import Image from "next/image";
 
 export default function DevelopmentProcess() {

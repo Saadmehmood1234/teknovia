@@ -1,47 +1,11 @@
 import {
-  Bot,
   CheckCircle2,
-  MessageCircle,
-  MousePointerClick,
-  RefreshCw,
-  TrendingUp,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
+import { points } from "@/lib/data/digital-edge/watsapp-marketing-data";
 
-const points = [
-  {
-    icon: TrendingUp,
-    value: "90%+",
-    title: "Open rates",
-    text: "90%+ open rates for maximum visibility.",
-  },
-  {
-    icon: MessageCircle,
-    value: "Instant",
-    title: "Engagement",
-    text: "Instant engagement with faster replies and support.",
-  },
-  {
-    icon: Bot,
-    value: "24/7",
-    title: "Automation",
-    text: "Automation at scale using chatbots and workflows.",
-  },
-  {
-    icon: MousePointerClick,
-    value: "Higher",
-    title: "Conversions",
-    text: "Higher conversions through quick response and follow-ups.",
-  },
-  {
-    icon: RefreshCw,
-    value: "CRM",
-    title: "Integration",
-    text: "CRM integration to track and manage leads efficiently.",
-  },
-];
 
 export function WhatsAppWhy() {
   return (

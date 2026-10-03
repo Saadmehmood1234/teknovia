@@ -1,8 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
-import { IotBenefits } from "@/lib/data/software-services";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
+import { IotBenefits } from "@/lib/data/software-services/iot-development-data";
 export function IoTIntroduction() {
   return (
     <section className="border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16">

@@ -1,59 +1,6 @@
-import { Boxes, Calculator, ShoppingCart, Users } from "lucide-react";
-
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
-const products = [
-  {
-    title: "CRM Software",
-    description:
-      "Manage leads, sales pipelines, customer relationships, tasks, and follow-ups from one centralized platform.",
-    icon: Users,
-    features: [
-      "Lead Management",
-      "Sales Pipeline Tracking",
-      "Customer Relationship Management",
-      "Task & Follow-Up Management",
-    ],
-  },
-  {
-    title: "Accounting & Finance Software",
-    description:
-      "Streamline financial operations with structured accounting workflows and business reporting.",
-    icon: Calculator,
-    features: [
-      "General Ledger",
-      "Accounts Payable & Receivable",
-      "Financial Reporting",
-      "GST-Ready Accounting Workflows",
-    ],
-  },
-  {
-    title: "Inventory Management System",
-    description:
-      "Track stock, warehouses, purchases, sales, and inventory performance through a centralized system.",
-    icon: Boxes,
-    features: [
-      "Stock Tracking",
-      "Warehouse Management",
-      "Purchase & Sales Management",
-      "Inventory Analytics",
-    ],
-  },
-  {
-    title: "eCommerce Solution",
-    description:
-      "Build and manage digital commerce operations with integrated products, orders, customers, and payments.",
-    icon: ShoppingCart,
-    features: [
-      "Online Store Management",
-      "Product Catalog & Inventory Sync",
-      "Order & Customer Management",
-      "Payment Gateway Integration",
-    ],
-  },
-];
-
+import { products } from "@/lib/data/software-services/software-product-data";
 export function SaaSProducts() {
   return (
     <section

@@ -9,7 +9,7 @@ import {
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { localSeoComingSoon, localSeoEvidence } from "@/lib/data/digital-edge";
+import { localSeoComingSoon, localSeoEvidence } from "@/lib/data/digital-edge/local-seo-data";
 
 const evidenceIcons = [FileSearch, BarChart3, Clock3, Star, Search];
 

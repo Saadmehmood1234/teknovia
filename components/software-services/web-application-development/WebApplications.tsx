@@ -1,4 +1,4 @@
-import { webApplications } from "@/lib/data/software-services";
+import { webApplications } from "@/lib/data/software-services/web-application-development-data";
 import {
   ArrowUpRight,
   ChevronRight,

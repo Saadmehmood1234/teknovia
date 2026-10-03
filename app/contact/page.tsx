@@ -13,7 +13,7 @@ import {
 import { FaLinkedinIn } from "react-icons/fa6";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
-import { contactFeatures, contactFeatures2, tabs } from "@/lib/data/site";
+import { contactFeatures, contactFeatures2, tabs } from "@/lib/data/contact-data";
 import Image from "next/image";
 import Link from "next/link";
 

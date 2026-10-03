@@ -1,37 +1,12 @@
 import {
-  Eye,
-  MessageCircle,
-  Users,
-  TrendingUp,
   CheckCircle2,
 } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
+import { highlights } from "@/lib/data/digital-edge/social-media-optimization-data";
 
-const highlights = [
-  {
-    icon: Eye,
-    title: "Increase Visibility",
-    text: "Make your brand easier to discover across social platforms.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Drive Engagement",
-    text: "Create content that encourages conversations and interactions.",
-  },
-  {
-    icon: Users,
-    title: "Build Community",
-    text: "Turn followers into an active audience around your brand.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Support Growth",
-    text: "Connect social activity with meaningful business outcomes.",
-  },
-];
 
 export function SMOIntroduction() {
   return (

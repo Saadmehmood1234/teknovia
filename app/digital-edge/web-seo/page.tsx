@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { AEOSection } from "@/components/digital-edge/web-seo/AEOSection";
 import { AIOSection } from "@/components/digital-edge/web-seo/AIOSection";
-import { seoFaqs } from "@/lib/data/digital-edge";
+import { seoFaqs } from "@/lib/data/digital-edge/seo-data";
 import { GEOSection } from "@/components/digital-edge/web-seo/GEOSection";
 import { IntegratedStrategy } from "@/components/digital-edge/web-seo/IntegratedStrategy";
 import { SearchOptimizationHero } from "@/components/digital-edge/web-seo/SearchOptimizationHero";

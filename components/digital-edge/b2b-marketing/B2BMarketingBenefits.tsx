@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { b2bBenefits } from "@/lib/data/digital-edge";
+import { b2bBenefits } from "@/lib/data/digital-edge/b2b-marketing-data";
 
 const flowSteps = ["Marketing", "Pipeline", "Revenue"];
 

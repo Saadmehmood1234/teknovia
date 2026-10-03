@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-import { testimonials } from "@/lib/data/site";
+import { testimonials } from "@/lib/data/hero-data";
 import { TopBadge } from "../ui/Top-Badge";
 
 export function Testimonials() {

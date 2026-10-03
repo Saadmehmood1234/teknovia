@@ -3,7 +3,7 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { reasons } from "@/lib/data/site";
+import { reasons } from "@/lib/data/hero-data";
 import { ProgressBar } from "./home/ProgressBar";
 
 export function WhyTeknoviaReasons() {

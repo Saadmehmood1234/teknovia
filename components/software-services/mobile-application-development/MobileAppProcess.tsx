@@ -1,60 +1,11 @@
 import {
-  ClipboardCheck,
-  Code2,
   Lightbulb,
-  PenTool,
-  Rocket,
-  Search,
   ShieldCheck,
   Smartphone,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-
-const steps = [
-  {
-    number: "01",
-    title: "DISCOVER",
-    icon: Search,
-    description:
-      "Understand your business goals, users, market, technical requirements, and product vision.",
-  },
-  {
-    number: "02",
-    title: "DEFINE",
-    icon: ClipboardCheck,
-    description:
-      "Define features, user journeys, project scope, priorities, architecture, and success criteria.",
-  },
-  {
-    number: "03",
-    title: "DESIGN",
-    icon: PenTool,
-    description:
-      "Create intuitive interfaces, prototypes, design systems, and mobile-first user experiences.",
-  },
-  {
-    number: "04",
-    title: "DEVELOP",
-    icon: Code2,
-    description:
-      "Build secure, scalable mobile applications and integrate APIs, databases, payments, and services.",
-  },
-  {
-    number: "05",
-    title: "TEST",
-    icon: ShieldCheck,
-    description:
-      "Validate functionality, performance, security, responsiveness, and compatibility across devices.",
-  },
-  {
-    number: "06",
-    title: "LAUNCH & GROW",
-    icon: Rocket,
-    description:
-      "Deploy to production, monitor performance, release improvements, and scale the product over time.",
-  },
-];
+import { steps } from "@/lib/data/software-services/mobile-application-development-data";
 
 export function MobileAppProcess() {
   return (

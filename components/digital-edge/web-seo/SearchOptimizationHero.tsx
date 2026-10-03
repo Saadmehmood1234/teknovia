@@ -1,7 +1,7 @@
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { seoOptimizationTypes } from "@/lib/data/digital-edge";
+import { seoOptimizationTypes } from "@/lib/data/digital-edge/seo-data";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,8 +1,8 @@
 import { ArrowUpRight, Clock3, FileText, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
+import { watsappBlogTopics } from "@/lib/data/digital-edge/watsapp-marketing-data";
 
-import { watsappBlogTopics } from "@/lib/data/digital-edge";
 
 const readTime = (i: number) => 4 + (i % 3);
 

@@ -2,8 +2,8 @@ import { Factory } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { IotSolutions } from "@/lib/data/software-services";
 import Image from "next/image";
+import { IotSolutions } from "@/lib/data/software-services/iot-development-data";
 
 function SolutionCard({
   title,

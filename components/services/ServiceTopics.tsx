@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "../ui/Top-Badge";
-import { serviceTopics } from "@/lib/data/site";
+import { serviceTopics } from "@/lib/data/services-data";
 
 const slugify = (value: string) =>
   value

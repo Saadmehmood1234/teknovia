@@ -1,35 +1,15 @@
 import Image from "next/image";
 import {
   ArrowRight,
-  ChartNoAxesColumn,
-  Trophy,
-  UserRoundCheck,
-  Users,
 } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Link from "next/link";
+import { smoheroFeatures } from "@/lib/data/digital-edge/social-media-optimization-data";
 
-export const smoheroFeatures = [
-  {
-    icon: UserRoundCheck,
-    text: "Targeted Growth",
-  },
-  {
-    icon: Users,
-    text: "Engaging Content",
-  },
-  {
-    icon: ChartNoAxesColumn,
-    text: "Targeted Growth",
-  },
-  {
-    icon: Trophy,
-    text: "Measurable Results",
-  },
-];
+
 export function SMOHero() {
   return (
     <section className="relative isolate overflow-hidden border-b border-gray-100 bg-white pt-8 pb-8 sm:pb-16">

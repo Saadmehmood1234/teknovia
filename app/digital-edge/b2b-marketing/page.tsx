@@ -7,7 +7,7 @@ import { B2BMarketingHero } from "@/components/digital-edge/b2b-marketing/B2BMar
 import { B2BMarketingIntroduction } from "@/components/digital-edge/b2b-marketing/B2BMarketingIntroduction";
 import { B2BMarketingServices } from "@/components/digital-edge/b2b-marketing/B2BMarketingServices";
 import FAQ from "@/components/FAQ";
-import { b2bMarketingFaqs } from "@/lib/data/digital-edge";
+import { b2bMarketingFaqs } from "@/lib/data/digital-edge/b2b-marketing-data";
 
 export const metadata: Metadata = {
   title: "B2B Marketing Services | Lead Generation & Growth",

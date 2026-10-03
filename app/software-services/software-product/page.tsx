@@ -5,7 +5,7 @@ import { SaaSProductHero } from "@/components/software-services/software-product
 import { SaaSProductOverview } from "@/components/software-services/software-product/SaaSProductOverview";
 import { SaaSProducts } from "@/components/software-services/software-product/SaaSProducts";
 import { SaaSWhyTeknovia } from "@/components/software-services/software-product/SaaSWhyTeknovia";
-import { saasFaqs } from "@/lib/data/software-services";
+import { saasFaqs } from "@/lib/data/software-services/software-product-data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

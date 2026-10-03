@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { geoServices } from "@/lib/data/digital-edge";
+import { geoServices } from "@/lib/data/digital-edge/seo-data";
 import { BrainCircuit, Sparkles } from "lucide-react";
 
 export function GEOSection() {

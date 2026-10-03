@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { enterpriseSolutions } from "@/lib/data/software-services";
+import { enterpriseSolutions } from "@/lib/data/software-services/enterprise-data";
 
 export function EnterpriseSolutions() {
   return (

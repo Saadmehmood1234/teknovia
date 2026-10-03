@@ -5,14 +5,8 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { watsappServices } from "@/lib/data/digital-edge";
+import { watsappServices,stages } from "@/lib/data/digital-edge/watsapp-marketing-data";
 
-const stages = [
-  { name: "Setup", text: "Number, profile and templates approved" },
-  { name: "Automation", text: "Replies and workflows switched on" },
-  { name: "Management", text: "Our team runs chats and campaigns" },
-  { name: "Growth", text: "Follow-ups turn leads into orders" },
-];
 
 function ChatPreview() {
   return (

@@ -1,16 +1,10 @@
+import { problems, solutions } from "@/lib/data/digital-edge/watsapp-marketing-data";
 import type { LucideIcon } from "lucide-react";
 
 import {
-  Clock,
   MessageCircle,
-  User,
-  BarChart3,
   X,
   Check,
-  Zap,
-  Inbox,
-  Bot,
-  TrendingUp,
   Target,
   AlertCircle,
   Rocket,
@@ -47,62 +41,6 @@ type ChatMsgProps = {
   side?: "in" | "out";
   children: React.ReactNode;
 };
-
-const problems: FeatureItem[] = [
-  {
-    icon: Clock,
-    title: "Delayed Responses",
-    text: "Slow replies lead to lost leads and sales.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Scattered Conversations",
-    text: "Messages are everywhere, hard to track and manage.",
-  },
-  {
-    icon: User,
-    title: "No Automation",
-    text: "Manual handling is time consuming and inefficient.",
-  },
-  {
-    icon: BarChart3,
-    title: "No Data & Insights",
-    text: "No visibility, no tracking, no performance growth.",
-  },
-  {
-    icon: X,
-    title: "Missed Opportunities",
-    text: "Leads get lost, follow-ups are inconsistent.",
-  },
-];
-
-const solutions: FeatureItem[] = [
-  {
-    icon: Zap,
-    title: "Instant Responses",
-    text: "Automated replies & chatbots ensure real-time engagement.",
-  },
-  {
-    icon: Inbox,
-    title: "Centralized Inbox",
-    text: "All conversations in one place, easy to track and manage.",
-  },
-  {
-    icon: Bot,
-    title: "Automation at Scale",
-    text: "Smart workflows & chatbots handle more with less effort.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Data & Insights",
-    text: "Track performance, analyze conversations, improve ROI.",
-  },
-  {
-    icon: Target,
-    title: "More Conversions",
-    text: "Timely follow-ups & organized processes close more deals.",
-  },
-];
 
 function FeatureList({ items, tone }: FeatureListProps) {
   const badge =
