@@ -9,19 +9,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+
     {
       url: `${BASE_URL}/corporate`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
 
+    // Software Services
     {
       url: `${BASE_URL}/software-services`,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/software-services/enterprise-software-development`,
+      url: `${BASE_URL}/software-services/enterprise-software-solution`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -36,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/software-services/saas-software-products`,
+      url: `${BASE_URL}/software-services/software-product`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -46,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
+    // Digital Edge
     {
       url: `${BASE_URL}/digital-edge/web-seo`,
       changeFrequency: "monthly",
@@ -72,22 +75,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    {
-      url: `${BASE_URL}/ecommerce-solution`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/ecommerce-solution/shopify`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/ecommerce-solution/jiomart`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-
     // EdTech
     {
       url: `${BASE_URL}/edtech-solution`,
@@ -95,52 +82,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
+    // Industries
     {
       url: `${BASE_URL}/industries`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    {
-      url: `${BASE_URL}/industries/manufacturing`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/industries/hospitality-travel`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/industries/logistics-supply-chain`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/industries/education`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/industries/healthcare`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/industries/retail-ecommerce`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/industries/real-estate`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/industries/smes-businesses`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
 
+    // Blog
     {
       url: `${BASE_URL}/blog`,
       changeFrequency: "weekly",
