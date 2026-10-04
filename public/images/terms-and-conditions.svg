@@ -1,0 +1,67 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Card / Container -->
+  <rect x="50" y="40" width="500" height="420" rx="24" fill="#E6F7F5" stroke="#99DFD7" stroke-width="2"/>
+  
+  <!-- Decorative Background Grid Lines -->
+  <path d="M50 120H550M50 200H550M50 280H550M50 360H550" stroke="#CCEFEB" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M140 40V460M230 40V460M320 40V460M410 40V460" stroke="#CCEFEB" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Central Legal / Tech Document Illustration -->
+  <g transform="translate(150, 75)">
+    <!-- Document Base Shadow -->
+    <rect x="15" y="15" width="270" height="340" rx="16" fill="#00514B" opacity="0.15"/>
+    
+    <!-- Main Document Sheet -->
+    <rect x="0" y="0" width="270" height="340" rx="16" fill="#FFFFFF" stroke="#009689" stroke-width="3"/>
+    
+    <!-- Header bar of document -->
+    <path d="M 0 16 A 16 16 0 0 1 16 0 L 254 0 A 16 16 0 0 1 270 16 L 270 64 L 0 64 Z" fill="#009689"/>
+    
+    <!-- Shield / Law Icon Badge in Header -->
+    <circle cx="40" cy="32" r="18" fill="#00786F"/>
+    <path d="M40 21L47 24.5V31.5C47 36 44 39.5 40 41C36 39.5 33 36 33 31.5V24.5L40 21Z" fill="#CCEFEB" stroke="#00514B" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M37 32L39 34L44 29" stroke="#00514B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Document Title Text Lines in Header -->
+    <rect x="72" y="24" width="120" height="10" rx="5" fill="#FFFFFF"/>
+    <rect x="72" y="38" width="70" height="6" rx="3" fill="#CCEFEB" opacity="0.8"/>
+
+    <!-- Document Body Lines & Elements -->
+    <!-- Paragraph 1 -->
+    <rect x="25" y="90" width="160" height="8" rx="4" fill="#00514B" opacity="0.8"/>
+    <rect x="25" y="108" width="220" height="6" rx="3" fill="#66CEC3" opacity="0.6"/>
+    <rect x="25" y="122" width="190" height="6" rx="3" fill="#66CEC3" opacity="0.6"/>
+
+    <!-- Paragraph 2 / Checkbox agreement feature -->
+    <rect x="25" y="156" width="14" height="14" rx="4" fill="#009689"/>
+    <path d="M28.5 163L31 165.5L36 160" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="48" y="157" width="180" height="6" rx="3" fill="#00514B" opacity="0.8"/>
+    <rect x="48" y="171" width="140" height="6" rx="3" fill="#66CEC3" opacity="0.6"/>
+
+    <!-- Paragraph 3 -->
+    <rect x="25" y="205" width="200" height="8" rx="4" fill="#00514B" opacity="0.8"/>
+    <rect x="25" y="223" width="220" height="6" rx="3" fill="#66CEC3" opacity="0.6"/>
+    <rect x="25" y="237" width="170" height="6" rx="3" fill="#66CEC3" opacity="0.6"/>
+
+    <!-- Signature / Footer Section -->
+    <line x1="25" y1="285" x2="110" y2="285" stroke="#99DFD7" stroke-dasharray="2 2" stroke-width="2"/>
+    <circle cx="180" cy="280" r="18" fill="#CCEFEB" stroke="#009689" stroke-width="2"/>
+    <!-- Stamp / Verified Checkmark -->
+    <path d="M174 280L178 284L186 276" stroke="#00786F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Floating Tech Elements -->
+  <!-- Floating Pill 1 (Left) -->
+  <g transform="translate(30, 200)">
+    <rect x="0" y="0" width="80" height="32" rx="16" fill="#FFFFFF" stroke="#33BDB2" stroke-width="1.5" filter="drop-shadow(0px 4px 12px rgba(0, 150, 137, 0.15))"/>
+    <circle cx="16" cy="16" r="6" fill="#009689"/>
+    <rect x="30" y="13" width="36" height="6" rx="3" fill="#00514B" opacity="0.8"/>
+  </g>
+
+  <!-- Floating Pill 2 (Right) -->
+  <g transform="translate(485, 300)">
+    <rect x="0" y="0" width="90" height="32" rx="16" fill="#FFFFFF" stroke="#33BDB2" stroke-width="1.5" filter="drop-shadow(0px 4px 12px rgba(0, 150, 137, 0.15))"/>
+    <circle cx="16" cy="16" r="6" fill="#00786F"/>
+    <rect x="30" y="13" width="44" height="6" rx="3" fill="#00514B" opacity="0.8"/>
+  </g>
+</svg>

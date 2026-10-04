@@ -142,19 +142,22 @@ export function Footer() {
             <p>© 2026 Teknovia. All Rights Reserved.</p>
 
             <div className="flex flex-wrap gap-x-6 gap-y-2">
-              <a href="#" className="transition hover:text-white">
+              <a href="/terms-and-conditions" className="transition text-xs hover:text-white">
                 Terms & Conditions
               </a>
 
-              <a href="#" className="transition hover:text-white">
+              <a href="/privacy-policy" className="transition text-xs hover:text-white">
                 Privacy Policy
               </a>
 
-              <a href="#" className="transition hover:text-white">
-                Refund Policy
+              <a href="/cookie-policy" className="transition text-xs hover:text-white">
+                Cookie Policy
+              </a>
+              <a href="/disclaimer" className="transition text-xs hover:text-white">
+                Disclaimer
               </a>
 
-              <a href="#" className="transition hover:text-white">
+              <a href="/sitemap.xml" className="transition text-xs hover:text-white">
                 Sitemap
               </a>
             </div>
