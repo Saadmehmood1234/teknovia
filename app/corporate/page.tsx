@@ -58,9 +58,8 @@ export default function CorporatePage() {
         <Container>
           <Breadcrumb
             items={[{ label: "Corporate" }]}
-            className="mb-8 xl:mb-0"
           />
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+          <div className="flex pt-8 flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="w-full">
               <TopBadge data="About&nbsp;Teknovia" />
               <h1 className="max-w-4xl text-4xl font-black leading-[1.2] tracking-tight text-black sm:text-5xl">
@@ -98,7 +97,7 @@ export default function CorporatePage() {
               </div>
             </div>
             <div className="relative w-full">
-              <div className="relative aspect-5/4 overflow-hidden rounded-2xl">
+              <div className="relative aspect-5/3 overflow-hidden rounded-2xl">
                 <Image
                   src="/images/corporate-background.png"
                   alt="Teknovia technology and business solutions"

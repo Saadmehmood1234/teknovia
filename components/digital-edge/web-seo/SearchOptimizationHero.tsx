@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function SearchOptimizationHero() {
   return (
-    <section className="relative overflow-hidden py-8 text-white sm:py-16">
+    <section className="relative overflow-hidden pb-8 pt-8 text-white sm:pb-16">
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/digital-edge/webseobg.png"

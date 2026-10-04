@@ -20,7 +20,7 @@ export function ServicesHero() {
         />
       </div>
 
-      <div className="absolute inset-0 bg-[#040506]/70" />
+      <div className="absolute inset-0 bg-[#040506]/80" />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.16),transparent_55%)]" />
 
@@ -29,7 +29,8 @@ export function ServicesHero() {
       <Container>
         <Breadcrumb
           items={[{ label: "Software Services" }]}
-          className="mb-10"
+          textColor="text-gray-300/80"
+          className="relative"
         />
 
         <div className="relative flex items-center py-8">

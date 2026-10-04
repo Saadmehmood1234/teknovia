@@ -22,7 +22,7 @@ export function LocalSeoHero() {
             },
           ]}
         />
-        <div className="flex flex-col gap-8 mt-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+        <div className="flex flex-col gap-8 sm:mt-4 mt-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <div className="w-full">
             <TopBadge data="LOCAL SEO • GOOGLE BUSINESS PROFILE" />
             <h1 className="max-w-4xl text-4xl font-bold leading-[1.2] tracking-tight text-black sm:text-5xl">

@@ -11,7 +11,7 @@ export function SoftwareServiceHero() {
     <section className="relative py-8 isolate overflow-hidden border-b border-white/10 bg-[#040506]">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/service-bg.png"
+          src="/software-services-bg.png"
           alt=""
           fill
           priority
@@ -29,7 +29,8 @@ export function SoftwareServiceHero() {
       <Container>
         <Breadcrumb
           items={[{ label: "Software Services" }]}
-          className="mb-10"
+          className="relative"
+          textColor="text-gray-400"
         />
 
         <div className="relative flex items-center py-8">
@@ -39,7 +40,7 @@ export function SoftwareServiceHero() {
               Smart Software Solutions Built for Your Success
             </h1>
 
-            <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+            <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300">
               At Teknovia, we design and develop customized software
                   solutions that help businesses streamline operations, automate
                   processes, improve efficiency, and accelerate growth.

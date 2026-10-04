@@ -15,19 +15,18 @@ type BreadcrumbProps = {
 export function Breadcrumb({
   items,
   className = "",
-  textColor,
+  textColor = "text-gray-500",
 }: BreadcrumbProps) {
   return (
     <nav
       aria-label="Breadcrumb"
       className={`w-full overflow-hidden ${className}`}
     >
-      <ol className="flex min-w-0 items-center gap-1.5 overflow-x-auto whitespace-nowrap text-[11px] sm:gap-2 sm:text-[12px] scrollbar-hide">
-        {/* Home */}
+      <ol className="scrollbar-hide flex min-w-0 items-center gap-1.5 overflow-x-auto whitespace-nowrap text-[11px] sm:gap-2 sm:text-[12px]">
         <li className="shrink-0">
           <Link
             href="/"
-            className="font-mono font-medium tracking-wide text-gray-400 transition-colors hover:text-primary"
+            className={`font-mono font-medium tracking-wide ${textColor} transition-colors hover:text-primary`}
           >
             Home
           </Link>
@@ -41,12 +40,12 @@ export function Breadcrumb({
               key={`${item.label}-${index}`}
               className="flex min-w-0 shrink-0 items-center gap-1.5 sm:gap-2"
             >
-              <ChevronRight size={13} className="shrink-0 text-gray-300" />
+              <ChevronRight size={13} className={`shrink-0 ${textColor}`} />
 
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="max-w-30 truncate font-mono font-medium tracking-wide text-gray-500 transition-colors hover:text-primary sm:max-w-none"
+                  className={`max-w-30 truncate font-mono font-medium tracking-wide transition-colors hover:text-primary sm:max-w-none ${textColor}`}
                 >
                   {item.label}
                 </Link>
@@ -55,9 +54,7 @@ export function Breadcrumb({
                   aria-current={isLast ? "page" : undefined}
                   className={`max-w-37.5 truncate font-mono tracking-wide sm:max-w-none ${
                     isLast
-                      ? "font-semibold" + textColor
-                        ? textColor
-                        : "bg-gray-700"
+                      ? `font-semibold ${textColor}`
                       : "font-medium text-gray-500"
                   }`}
                 >

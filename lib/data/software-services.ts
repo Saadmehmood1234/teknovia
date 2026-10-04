@@ -13,8 +13,8 @@ import {
   Target,
   CloudCog,
   MonitorSmartphone,
+  RobotArm,
 } from "lucide-react";
-
 
 export const expertise = [
   {
@@ -101,26 +101,37 @@ export const offerings = [
   {
     icon: Layers3,
     title: "Enterprise Software Development",
+    href: "/software-services/enterprise-software-solution",
     description:
       "Custom enterprise software including ERP, CRM, HRMS, workflow automation, and scalable business applications.",
   },
   {
     icon: Code2,
     title: "Web Application Development",
+    href: "/software-services/web-application-development",
     description:
       "Custom web applications, SaaS platforms, customer portals, dashboards, and eCommerce applications.",
   },
   {
     icon: MonitorSmartphone,
     title: "Mobile Application Development",
+    href: "/software-services/mobile-application-development",
     description:
       "Secure and scalable Android, iOS, and cross-platform applications designed around your users.",
   },
   {
     icon: CloudCog,
     title: "SaaS & Software Products",
+    href: "/software-services/software-product",
     description:
       "Product-focused software solutions designed to turn ideas into scalable, maintainable digital products.",
+  },
+  {
+    icon: RobotArm,
+    title: "IoT Development",
+    href: "/software-services/iot-development",
+    description:
+      "Connected IoT solutions that integrate devices, data, and intelligent systems for smarter business operations.",
   },
 ];
 
