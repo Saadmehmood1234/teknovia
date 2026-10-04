@@ -8,9 +8,9 @@ export function EnterpriseSolutions() {
       <Container>
         <div className="flex justify-center items-center">
           <div className="max-w-3xl flex items-center justify-center text-center flex-col">
-            <TopBadge data="ENTERPRISE&nbsp;SOLUTIONS" />
+            <TopBadge data="ENTERPRISE&nbsp;SOLUTIONS" centerItem/>
 
-            <h2 className="mt-3 text-2xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
+            <h2 className="text-2xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
               Enterprise Software Solutions We Build
             </h2>
 
