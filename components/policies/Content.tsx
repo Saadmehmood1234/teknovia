@@ -21,7 +21,7 @@ type ContentProps = {
 
 export function Content({
   sections,
-  contactHref = "/contact-us",
+  contactHref = "/contact",
   contactLabel = "Contact Us",
   ctaTitle = "Have questions about these terms?",
   ctaDescription = "Our team is available to help clarify anything you need.",
