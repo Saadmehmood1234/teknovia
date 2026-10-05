@@ -1,3 +1,5 @@
+import { ArrowUpRight, ShoppingCart } from "lucide-react";
+
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { ecommerceIntegrations } from "@/lib/data/ecommerce-solutions-data";
@@ -6,9 +8,9 @@ export function EcommerceIntegrations() {
   return (
     <section
       id="integrations"
-      className="relative border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16"
+      className="relative overflow-hidden border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16"
     >
-      <Container>
+      <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
           <TopBadge data="Integrate Your Business" centerItem={true} />
 
@@ -23,42 +25,63 @@ export function EcommerceIntegrations() {
             already depends on.
           </p>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 mt-8 sm:mt-16">
-          {ecommerceIntegrations.map((item) => {
-            const Icon = item.icon;
+        <div className="mx-auto mt-10 grid overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.07)] sm:mt-14 lg:grid-cols-[20rem_1fr]">
+          <div className="relative flex min-h-64 flex-col items-center justify-center overflow-hidden bg-[#284545] px-8 py-12 text-center text-white">
+            <div
+              className="absolute inset-0 opacity-[0.12]"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle, #fff 1px, transparent 1px)",
+                backgroundSize: "22px 22px",
+              }}
+            />
+            <div
+              aria-hidden
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <div className="size-56 rounded-full border border-white/10" />
+              <div className="absolute left-1/2 top-1/2 size-80 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.07]" />
+              <div className="absolute left-1/2 top-1/2 size-108 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/5" />
+            </div>
 
-            return (
-              <article
-                key={item.number}
-                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white"
-              >
-                <div className="relative flex-1 p-6">
+            <div className="relative flex size-20 items-center justify-center rounded-full bg-primary shadow-[0_0_0_10px_rgba(255,255,255,0.07),0_16px_40px_rgba(0,0,0,0.3)]">
+              <ShoppingCart strokeWidth={1.6} className="size-9" />
+            </div>
+
+            <p className="relative mt-6 font-heading text-xl font-bold">
+              Your store
+            </p>
+            <p className="relative mt-2 max-w-56 text-sm leading-6 text-white/70">
+              One platform, connected to the tools your business runs on.
+            </p>
+          </div>
+
+          <ul className="grid gap-px bg-gray-200 sm:grid-cols-2">
+            {ecommerceIntegrations.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <li key={item.title} className="bg-white p-6 sm:p-8">
                   <div className="flex items-start justify-between">
-                    <div className="flex size-12 items-center justify-center rounded-xl bg-primary-50 text-primary ring-1 ring-primary/10">
-                      <Icon className="size-6" strokeWidth={1.7} />
+                    <div className="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <Icon strokeWidth={1.7} className="size-6" />
                     </div>
-
-                    <span className="font-mono text-3xl font-bold leading-none tracking-tight text-gray-200">
-                      {item.number}
-                    </span>
+                    <ArrowUpRight
+                      aria-hidden
+                      className="size-5 text-gray-300"
+                    />
                   </div>
 
                   <h3 className="mt-6 font-heading text-lg font-bold tracking-tight text-gray-950">
                     {item.title}
                   </h3>
-
                   <p className="mt-2 text-sm leading-6 text-gray-600">
                     {item.description}
                   </p>
-                </div>
-                <div className="relative border-t border-gray-100 bg-gray-50/70 px-6 py-4">
-                  <p className="text-xs leading-5 text-gray-500 sm:text-[13px]">
-                    {item.detail}
-                  </p>
-                </div>
-              </article>
-            );
-          })}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </Container>
     </section>

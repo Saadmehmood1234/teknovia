@@ -137,8 +137,7 @@ export const ecommerceIntegrations = [
     title: "Payment Gateways",
     description:
       "Integrate secure payment gateways to offer customers convenient payment options.",
-    detail:
-      "Support cards, UPI, wallets and other digital payment methods.",
+    detail: "Support cards, UPI, wallets and other digital payment methods.",
   },
   {
     number: "03",
@@ -238,6 +237,11 @@ export const ecommerceTechnologies = [
     title: "WooCommerce",
     description:
       "Flexible WordPress-based commerce for content-driven and growing businesses.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "Custom eCommerce",
+    description:"Purpose-built platfroms designed around your unique business model, products, and operational requirements.",
   },
   {
     icon: Layers3,
