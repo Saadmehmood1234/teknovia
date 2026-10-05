@@ -18,6 +18,8 @@ import {
   Box,
   ChartColumnIncreasing,
   ShieldLock,
+  Network,
+  ShieldCheck,
 } from "lucide-react";
 
 
@@ -251,5 +253,21 @@ export const IotSolutions = [
       "Monitor energy consumption, resource utilization, emissions-related parameters, and operational efficiency to support sustainability initiatives.",
     icon: Leaf,
     image: "/images/iot/sustainabilty-management.jpg",
+  },
+];
+
+
+export const iotHeroFeatures = [
+  {
+    icon: Network,
+    label: "Connected Systems",
+  },
+  {
+    icon: Activity,
+    label: "Real-Time Intelligence",
+  },
+  {
+    icon: ShieldCheck,
+    label: "Secure by Design",
   },
 ];

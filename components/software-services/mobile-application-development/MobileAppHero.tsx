@@ -141,3 +141,59 @@ export function MobileAppHero() {
     </section>
   );
 }
+
+
+// import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
+// import { ShieldCheck, Smartphone, Zap } from "lucide-react";
+
+// export function MobileAppHero() {
+//   return (
+//     <BackgroundHero
+//       id="mobile-app-home"
+//       image={{
+//         src: "/images/mobile-app-bg.png",
+//       }}
+//       breadcrumb={[
+//         {
+//           label: "Software Services",
+//           href: "/software-services",
+//         },
+//         {
+//           label: "Mobile App Development",
+//         },
+//       ]}
+//       badge="Secure • Scalable • User-Centric"
+//       title={
+//         <>
+//           Build Powerful Mobile Apps That{" "}
+//           <span className="text-primary">Drive Business Growth</span>
+//         </>
+//       }
+//       description="Transform your ideas into powerful mobile apps with TEKNOVIA. We build secure, scalable, and user-friendly Android, iOS, and cross-platform applications that drive business growth."
+//       features={[
+//         {
+//           icon: Smartphone,
+//           label: "Android & iOS",
+//         },
+//         {
+//           icon: ShieldCheck,
+//           label: "Secure by Design",
+//         },
+//         {
+//           icon: Zap,
+//           label: "Built for Scale",
+//         },
+//       ]}
+//       primaryButton={{
+//         label: "Request a Free Consultation",
+//         href: "/contact",
+//       }}
+//       secondaryButton={{
+//         label: "Get a Custom Quote",
+//         href: "/contact",
+//       }}
+//       overlay="bg-[#040706]/80"
+//       showGrid
+//     />
+//   );
+// }

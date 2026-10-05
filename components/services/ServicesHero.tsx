@@ -1,71 +1,36 @@
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-
-import { Breadcrumb } from "../ui/breadcrumb";
-import { Container } from "../ui/Container";
-import { TopBadge } from "../ui/Top-Badge";
-import Image from "next/image";
+import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
 
 export function ServicesHero() {
   return (
-    <section className="relative py-8 isolate overflow-hidden border-b border-white/10 bg-[#040506]">
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/service-bg.png"
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-      </div>
-
-      <div className="absolute inset-0 bg-[#040506]/80" />
-
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.16),transparent_55%)]" />
-
-      <div className="hero-grid pointer-events-none absolute inset-0 opacity-20" />
-
-      <Container>
-        <Breadcrumb
-          items={[{ label: "Software Services" }]}
-          textColor="text-gray-300/80"
-          className="relative"
-        />
-
-        <div className="relative flex items-center py-8">
-          <div className="max-w-3xl">
-            <TopBadge data="OUR SERVICES" />
-
-            <h1 className="mt-5 max-w-4xl font-heading text-5xl font-semibold leading-[1.08] tracking-tight text-white">
-              Digital Solutions Built
-              <span className="text-primary pl-2">Around Your Business</span>
-            </h1>
-
-            <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-              From software development to digital marketing and ecommerce, we
-              help businesses build, launch and grow digital products that
-              create measurable value.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_8px_20px_rgba(0,150,137,0.28)]"
-              >
-                Start a Project
-                <ArrowRight size={17} />
-              </Link>
-
-              <a
-                href="#services"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:border-primary"
-              >
-                Explore Services
-              </a>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
+    <BackgroundHero
+      image={{
+        src: "/service-bg.png",
+      }}
+      breadcrumb={[
+        {
+          label: "Software Services",
+        },
+      ]}
+      badge="OUR SERVICES"
+      title={
+        <>
+          Digital Solutions Built{" "}
+          <span className="text-primary">
+            Around Your Business
+          </span>
+        </>
+      }
+      description="From software development to digital marketing and ecommerce, we help businesses build, launch and grow digital products that create measurable value."
+      primaryButton={{
+        label: "Start a Project",
+        href: "/contact",
+      }}
+      secondaryButton={{
+        label: "Explore Services",
+        href: "#services",
+      }}
+      overlay="bg-[#040506]/80"
+      showGrid
+    />
   );
 }

@@ -58,21 +58,24 @@ export const navigation = [
     ],
   },
 
+  // {
+  //   label: "eCommerce Solution",
+  //   href: "/ecommerce-solutions",
+  //   children: [
+  //     {
+  //       label: "eCommerce Platforms",
+  //       href: "/ecommerce-solutions/ecommerce-platforms",
+  //     },
+  //     {
+  //       label: "Marketplace Solutions",
+  //       href: "/ecommerce-solutions/marketplace-solutions",
+  //     },
+  //   ],
+  // },
   {
     label: "eCommerce Solution",
     href: "/ecommerce-solutions",
-    children: [
-      {
-        label: "eCommerce Platforms",
-        href: "/ecommerce-solutions/ecommerce-platforms",
-      },
-      {
-        label: "Marketplace Solutions",
-        href: "/ecommerce-solutions/marketplace-solutions",
-      },
-    ],
   },
-
   {
     label: "EdTech Solution",
     href: "/edtech-solution",

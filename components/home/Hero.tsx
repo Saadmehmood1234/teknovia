@@ -75,7 +75,7 @@ export function Hero() {
                   [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%),linear-gradient(to_right,transparent_0%,black_8%,black_92%,transparent_100%)]
                   [-webkit-mask-composite:source-in]
                   "
-                  >
+              >
                 <Image
                   src="/images/hero-background.png"
                   alt="Technology team collaborating in a modern office"

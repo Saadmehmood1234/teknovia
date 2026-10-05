@@ -9,7 +9,7 @@ import { Industries } from "@/components/home/Industries";
 import { WhyTeknovia } from "@/components/home/WhyTeknovia";
 import { Testimonials } from "@/components/home/Testimonials";
 import { SuccessStories } from "@/components/home/SuccessStories";
-import { CTA } from "@/components/home/CTA";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Software Development Company",
@@ -75,7 +75,14 @@ export default function Home() {
       <WhyTeknovia />
       <Testimonials />
       <SuccessStories />
-      <CTA />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href : "mailto:info@teknovia.in",
+        }}
+      />
     </main>
   );
 }
