@@ -1,7 +1,6 @@
 import { BlogHero } from "@/components/blog/BlogHero";
 import { FeaturedPost } from "@/components/blog/FeaturedPost";
-import { BlogGrid } from "@/components/blog/BlogGrid";
-
+import { BlogGrid } from "@/components/ui/BlogGrid";
 export default function BlogPage() {
   return (
     <main className="overflow-hidden bg-white">
@@ -20,7 +19,15 @@ export default function BlogPage() {
               </h2>
             </div>
 
-            <BlogGrid />
+            {/* <BlogGrid />
+                    <BlogGrid
+                      featuredTopic={featuredTopic}
+                      remainingTopics={remainingTopics}
+                      category="LOCAL SEO"
+                      featuredDescription="Discover practical strategies and actionable insights designed to help your business perform better in local search."
+                      featuredReadTime={5}
+                      readTime={readTime}
+                    /> */}
           </div>
         </div>
       </section>
