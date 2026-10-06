@@ -6,6 +6,7 @@ import {
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { watsappServices,stages } from "@/lib/data/digital-edge/watsapp-marketing-data";
+import { BackgroundEffect } from "@/components/Background";
 
 
 function ChatPreview() {
@@ -48,10 +49,8 @@ function ChatPreview() {
 
 export function WhatsAppManagement() {
   return (
-    <section className="relative overflow-hidden bg-[#06100E] py-8 text-white sm:py-16">
-      <div className="pointer-events-none absolute inset-0 hero-grid opacity-10" />
-      <div className="pointer-events-none absolute -left-32 top-24 size-120 rounded-full bg-primary/10 blur-3xl" />
-
+    <section className="relative overflow-hidden bg-[#18342F] py-8 text-white sm:py-16">
+      <BackgroundEffect/>
       <Container className="relative">
         <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="">

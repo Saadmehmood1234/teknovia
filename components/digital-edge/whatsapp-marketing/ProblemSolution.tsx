@@ -1,3 +1,4 @@
+import { BackgroundEffect } from "@/components/Background";
 import { problems, solutions } from "@/lib/data/digital-edge/watsapp-marketing-data";
 import type { LucideIcon } from "lucide-react";
 
@@ -233,8 +234,9 @@ export default function ProblemSolution() {
         </div>
       </div>
 
-      {/* Footer banner */}
-      <footer className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl bg-slate-900 px-6 py-4 text-sm font-bold text-white sm:text-base">
+
+      <footer className="mt-6 relative flex flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl bg-[#18342F] px-6 py-4 text-sm font-bold text-white sm:text-base">
+        <BackgroundEffect/>
         <span className="flex items-center gap-2"><Target size={20} /> Problem Creates Loss.</span>
         <span className="hidden h-6 w-px bg-white/40 sm:block" />
         <span className="flex items-center gap-2">

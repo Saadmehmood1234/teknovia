@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { industries } from "@/lib/data/software-services";
+import { Card2 } from "../ui/Card2";
 
 export const metadata = {
   title: "Software Services",
@@ -26,28 +27,16 @@ export default function SoftwareIndusties() {
           </div>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {industries.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-gray-200 bg-white p-6 transition hover:border-primary/20 hover:shadow-lg hover:shadow-slate-900/5"
-                >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50 text-primary">
-                    <Icon className="h-5 w-5" />
-                  </div>
-
-                  <h3 className="mt-5 font-heading font-bold text-gray-950">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-gray-600">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
+            {industries.map((feature) => (
+              <Card2
+                key={feature.title}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                circle={feature.circle}
+                bar={feature.bar}
+              />
+            ))}
           </div>
         </div>
       </Container>

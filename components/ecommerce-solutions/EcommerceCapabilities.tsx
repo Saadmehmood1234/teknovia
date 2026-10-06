@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { ecommerceCapabilities } from "@/lib/data/ecommerce-solutions-data";
+import { FeatureListItem } from "../ui/ListItem";
 
 export function EcommerceCapabilities() {
   return (
@@ -30,39 +31,15 @@ export function EcommerceCapabilities() {
           </div>
 
           <ul className="border-t border-gray-200 lg:col-span-7">
-            {ecommerceCapabilities.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <li
-                  key={item.title}
-                  className="relative border-b border-gray-200"
-                >
-                  <span className="pointer-events-none absolute -bottom-px left-0 h-px w-0 bg-primary" />
-
-                  <div className="flex items-start gap-5 py-6 transition-transform duration-300 sm:gap-7 sm:py-8">
-                    <Icon
-                      strokeWidth={1.5}
-                      className="mt-0.5 size-7 shrink-0 text-gray-400"
-                    />
-
-                    <div className="min-w-0 flex-1">
-                      <h3 className="font-heading text-lg font-bold tracking-tight text-gray-950 sm:text-xl">
-                        {item.title}
-                      </h3>
-
-                      <p className="mt-2 max-w-xl text-sm leading-7 text-gray-600">
-                        {item.description}
-                      </p>
-                    </div>
-
-                    <span className="pt-1.5 font-mono text-[11px] font-bold tracking-[0.18em] text-gray-300">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                </li>
-              );
-            })}
+            {ecommerceCapabilities.map((item, index) => (
+              <FeatureListItem
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+                index={index}
+              />
+            ))}
           </ul>
         </div>
       </Container>

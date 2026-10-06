@@ -192,36 +192,48 @@ export const ecommerceGrowthPoints = [
     title: "Secure",
     description:
       "Protect your business and customer data with secure architecture, authentication and controlled access.",
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     icon: Rocket,
     title: "Scalable",
     description:
       "Handle growing products, customers, orders and traffic without limiting your business expansion.",
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     icon: Smartphone,
     title: "Mobile-Ready",
     description:
       "Deliver a seamless shopping experience across smartphones, tablets and desktop devices.",
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     icon: Code2,
     title: "API-First",
     description:
       "Connect your eCommerce platform easily with ERP, CRM, payments, logistics and other applications.",
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     icon: Search,
     title: "SEO-Friendly",
     description:
       "Build search-engine-friendly structures that help your products and pages become more discoverable online.",
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     icon: Settings2,
     title: "Customizable",
     description:
       "Adapt the platform to your unique products, workflows, business rules and customer requirements.",
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
 ];
 
@@ -241,7 +253,8 @@ export const ecommerceTechnologies = [
   {
     icon: ShoppingCart,
     title: "Custom eCommerce",
-    description:"Purpose-built platfroms designed around your unique business model, products, and operational requirements.",
+    description:
+      "Purpose-built platfroms designed around your unique business model, products, and operational requirements.",
   },
   {
     icon: Layers3,

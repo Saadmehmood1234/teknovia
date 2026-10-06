@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { BackgroundEffect } from "./Background";
 
 interface CTAProps {
   id?: string;
@@ -26,7 +27,7 @@ export function CTA({
   return (
     <section
       id={id}
-      className="relative mt-16 flex w-full items-center justify-center overflow-hidden"
+      className="relative flex w-full items-center justify-center overflow-hidden"
     >
       <Image
         src={image}
@@ -35,7 +36,8 @@ export function CTA({
         className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-[#0B7B74]/90" />
+      <div className="absolute inset-0 bg-[#18342F]/90" />
+      <BackgroundEffect/>
 
       <div className="relative flex w-full max-w-345 flex-col items-center justify-between gap-10 px-8 py-8 sm:py-16 lg:flex-row">
         <div>

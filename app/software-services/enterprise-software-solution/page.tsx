@@ -8,6 +8,7 @@ import { TopBadge } from "@/components/ui/Top-Badge";
 import { enterpriseFaqs } from "@/lib/data/software-services/enterprise-data";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Enterprise Software Development Solutions",
@@ -158,6 +159,14 @@ export default function EnterpriseSoftwarePage() {
         title="Frequently Asked Questions"
         description="Common questions about enterprise software development"
         faqs={enterpriseFaqs}
+      />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
       />
     </main>
   );

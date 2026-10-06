@@ -1,8 +1,6 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-
 import { Container } from "@/components/ui/Container";
 import { offerings } from "@/lib/data/software-services";
+import { Card3 } from "../ui/Card3";
 export const metadata = {
   title: "Software Services",
   description:
@@ -11,7 +9,7 @@ export const metadata = {
 
 export default function SoftwareOffering() {
   return (
-    <section className="bg-white sm:py-16 py-8">
+    <section className="bg-white sm:py-16 py-8" id="software-solutions">
       <Container>
         <div className="">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
@@ -29,36 +27,16 @@ export default function SoftwareOffering() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {offerings.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  className="group flex gap-5 rounded-3xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-slate-900/5 sm:p-7"
-                >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary">
-                    <Icon className="h-5 w-5" />
-                  </div>
-
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-heading text-lg font-bold text-gray-950">
-                        {item.title}
-                      </h3>
-
-                      <ArrowRight className="h-4 w-4 text-gray-300 transition group-hover:translate-x-1 group-hover:text-primary" />
-                    </div>
-
-                    <p className="mt-2 text-sm leading-6 text-gray-600">
-                      {item.description}
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {offerings.map((item) => (
+              <Card3
+                key={item.title}
+                title={item.title}
+                description={item.description}
+                href={item.href}
+                icon={item.icon}
+              />
+            ))}
           </div>
         </div>
       </Container>

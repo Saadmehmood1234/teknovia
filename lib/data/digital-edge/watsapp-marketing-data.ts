@@ -31,7 +31,6 @@ type FeatureItem = {
   text: string;
 };
 
-
 export const problems: FeatureItem[] = [
   {
     icon: Clock,
@@ -101,13 +100,11 @@ export const whatsappFaqs = [
   },
   {
     question: "How long does setup take?",
-    answer:
-      "Typically 2–5 working days, depending on verification.",
+    answer: "Typically 2–5 working days, depending on verification.",
   },
   {
     question: "Is it approved by Meta?",
-    answer:
-      "Yes, it is an official solution provided via Meta Platforms.",
+    answer: "Yes, it is an official solution provided via Meta Platforms.",
   },
   {
     question: "What are the messaging charges?",
@@ -116,8 +113,7 @@ export const whatsappFaqs = [
   },
   {
     question: "Can I send bulk messages?",
-    answer:
-      "Yes, through approved templates and broadcast campaigns.",
+    answer: "Yes, through approved templates and broadcast campaigns.",
   },
   {
     question: "Do I need technical knowledge to use it?",
@@ -126,13 +122,11 @@ export const whatsappFaqs = [
   },
   {
     question: "Can multiple team members use it?",
-    answer:
-      "Yes, it supports multi-agent access with a shared inbox.",
+    answer: "Yes, it supports multi-agent access with a shared inbox.",
   },
   {
     question: "Will it integrate with my CRM or website?",
-    answer:
-      "Yes, it can be integrated with CRM, website, and ad platforms.",
+    answer: "Yes, it can be integrated with CRM, website, and ad platforms.",
   },
   {
     question: "Is it suitable for small businesses?",
@@ -140,7 +134,6 @@ export const whatsappFaqs = [
       "Yes, especially if you want to automate and grow customer communication efficiently.",
   },
 ];
-
 
 export const watsappBlogTopics = [
   "WhatsApp Business API vs WhatsApp Business App – Which One is Right for You?",
@@ -190,45 +183,58 @@ export const watsAppFeatures = [
     description:
       "All customer messages come into one place so your team can reply together without confusion. No more missed chats or switching between phones.",
     icon: MessagesSquare,
+        circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     title: "Auto Replies & Follow-ups",
     description:
       "Customers get instant replies even when you’re busy. Follow-ups happen automatically so no lead is forgotten.",
     icon: Bot,
+        circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     title: "Customer Segmentation",
     description:
       "Group customers based on interest or stage—new, interested, or existing—so you can send the right message to the right people.",
     icon: UsersRound,
+        circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     title: "Lead Capture from Ads",
     description:
       "When someone clicks your ad, they can directly start a WhatsApp chat. Capture qualified leads without relying on lengthy forms.",
     icon: Megaphone,
+        circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     title: "Performance Tracking",
     description:
       "See how many people messaged, replied, and converted. Clear insights help you understand what is working.",
     icon: BarChart3,
+        circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     title: "Broadcast Messaging",
     description:
       "Send offers, updates, and reminders to many customers at once for promotions and repeat sales.",
     icon: Send,
+        circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
     title: "Reliable & Scalable System",
     description:
       "Handle a large number of chats through a structured communication system and grow without worrying about fragmented operations.",
     icon: Boxes,
+        circle: "bg-pink-100 text-pink-700",
+    bar: "bg-pink-500",
   },
 ];
-
 
 export const stages = [
   { name: "Setup", text: "Number, profile and templates approved" },
@@ -237,13 +243,11 @@ export const stages = [
   { name: "Growth", text: "Follow-ups turn leads into orders" },
 ];
 
-
 export const highlights = [
   { icon: MessageCircle, label: "Instant engagement" },
   { icon: Bot, label: "Automation at scale" },
   { icon: UsersRound, label: "Multi-agent support" },
 ];
-
 
 export const points = [
   {

@@ -11,7 +11,7 @@ import { caseStudies, CaseStudy, Metric } from "@/lib/data/hero-data";
 
 export function SuccessStories() {
   return (
-    <section className="bg-white mt-8 sm:mt-16">
+    <section className="bg-white my-8 sm:my-16">
       <Container>
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
           <div className="flex shrink-0 items-center gap-3">

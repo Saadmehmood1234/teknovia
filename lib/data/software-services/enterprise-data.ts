@@ -121,6 +121,8 @@ export const enterpriseSolutions = [
       "Integrate finance, inventory, procurement, sales, and operations into a unified platform that improves efficiency and business visibility.",
     icon: Boxes,
     link: "/software-services/erp-software",
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     id: 2,
@@ -129,6 +131,8 @@ export const enterpriseSolutions = [
       "Manage leads, sales pipelines, customer interactions, and service activities to strengthen relationships and drive revenue growth.",
     icon: Users,
     link: "/software-services/crm-software",
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     id: 3,
@@ -137,6 +141,8 @@ export const enterpriseSolutions = [
       "Simplify employee lifecycle management, payroll, attendance, leave tracking, and performance evaluation from a centralized platform.",
     icon: UserRoundCog,
     link: "/software-services/hrms-software",
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     id: 4,
@@ -145,6 +151,8 @@ export const enterpriseSolutions = [
       "Track inventory levels, warehouse operations, stock movements, and replenishment in real time to reduce costs and improve accuracy.",
     icon: Warehouse,
     link: "/software-services/inventory-warehouse-management",
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     id: 5,
@@ -153,6 +161,8 @@ export const enterpriseSolutions = [
       "Optimize procurement, logistics, supplier collaboration, and distribution processes to ensure seamless supply chain operations.",
     icon: Truck,
     link: "/software-services/supply-chain-management",
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     id: 6,
@@ -161,6 +171,8 @@ export const enterpriseSolutions = [
       "Automate purchasing workflows, vendor management, approvals, and contract tracking to improve control and reduce procurement costs.",
     icon: ShoppingCart,
     link: "/software-services/procurement-management",
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
     id: 7,
@@ -169,6 +181,8 @@ export const enterpriseSolutions = [
       "Plan, execute, and monitor projects with task management, resource allocation, collaboration tools, and real-time progress tracking.",
     icon: FolderKanban,
     link: "/software-services/project-management",
+    circle: "bg-indigo-100 text-indigo-700",
+    bar: "bg-indigo-500",
   },
   {
     id: 8,
@@ -177,6 +191,8 @@ export const enterpriseSolutions = [
       "Deliver, manage, and track employee training, certifications, assessments, and learning programs through a centralized digital platform.",
     icon: GraduationCap,
     link: "/software-services/learning-management-system",
+    circle: "bg-cyan-100 text-cyan-700",
+    bar: "bg-cyan-500",
   },
   {
     id: 9,
@@ -185,6 +201,8 @@ export const enterpriseSolutions = [
       "Transform business data into actionable insights with interactive dashboards, reports, KPIs, and advanced analytics.",
     icon: BarChart3,
     link: "/software-services/business-intelligence-analytics",
+    circle: "bg-amber-100 text-amber-700",
+    bar: "bg-amber-500",
   },
   {
     id: 10,
@@ -193,6 +211,8 @@ export const enterpriseSolutions = [
       "Automate repetitive tasks, approvals, notifications, and business processes to increase productivity and minimize manual effort.",
     icon: Workflow,
     link: "/software-services/workflow-automation",
+    circle: "bg-teal-100 text-teal-700",
+    bar: "bg-teal-500",
   },
   {
     id: 11,
@@ -201,6 +221,8 @@ export const enterpriseSolutions = [
       "Enable seamless communication, knowledge sharing, and teamwork across departments, locations, and business units.",
     icon: MessageSquare,
     link: "/software-services/enterprise-collaboration",
+    circle: "bg-violet-100 text-violet-700",
+    bar: "bg-violet-500",
   },
   {
     id: 12,
@@ -209,6 +231,8 @@ export const enterpriseSolutions = [
       "Streamline accounting, budgeting, cash flow management, financial reporting, and compliance with integrated finance solutions.",
     icon: Wallet,
     link: "/software-services/financial-management",
+    circle: "bg-fuchsia-100 text-fuchsia-700",
+    bar: "bg-fuchsia-500",
   },
   {
     id: 13,
@@ -217,6 +241,8 @@ export const enterpriseSolutions = [
       "Monitor production planning, shop floor operations, quality control, and resource utilization to improve manufacturing efficiency.",
     icon: Factory,
     link: "/software-services/manufacturing-management",
+    circle: "bg-red-100 text-red-700",
+    bar: "bg-red-500",
   },
   {
     id: 14,
@@ -225,6 +251,8 @@ export const enterpriseSolutions = [
       "Develop tailored software solutions designed around your unique business processes, goals, and operational requirements.",
     icon: Code2,
     link: "/software-services/custom-enterprise-applications",
+    circle: "bg-lime-100 text-lime-700",
+    bar: "bg-lime-500",
   },
 ];
 

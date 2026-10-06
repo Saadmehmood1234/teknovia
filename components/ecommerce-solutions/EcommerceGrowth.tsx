@@ -3,17 +3,9 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { ecommerceGrowthPoints } from "@/lib/data/ecommerce-solutions-data";
+import { Card2 } from "../ui/Card2";
 
 const HERO_IMAGE = "/images/ecommerce-growth.png";
-
-const accents = [
-  { circle: "bg-rose-100 text-rose-600", bar: "bg-rose-500" },
-  { circle: "bg-blue-100 text-blue-700", bar: "bg-blue-600" },
-  { circle: "bg-orange-100 text-orange-600", bar: "bg-orange-500" },
-  { circle: "bg-purple-100 text-purple-700", bar: "bg-purple-600" },
-  { circle: "bg-emerald-100 text-emerald-700", bar: "bg-emerald-500" },
-  { circle: "bg-sky-100 text-sky-700", bar: "bg-sky-500" },
-];
 
 export function EcommerceGrowth() {
   return (
@@ -49,37 +41,17 @@ export function EcommerceGrowth() {
           </div>
         </div>
 
-        <ul className="mt-8 sm:mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 ">
-          {ecommerceGrowthPoints.map((item, index) => {
-            const Icon = item.icon;
-            const accent = accents[index % accents.length];
-
-            return (
-              <li
-                key={item.title}
-                className="flex flex-col items-center rounded-3xl border border-gray-200/80 bg-white px-5 pb-8 pt-7 text-center shadow-[0_8px_28px_rgba(15,23,42,0.05)] transition-shadow hover:shadow-[0_14px_40px_rgba(15,23,42,0.10)]"
-              >
-                <div
-                  className={`flex size-20 items-center justify-center rounded-full ${accent.circle}`}
-                >
-                  <Icon strokeWidth={1.6} className="size-9" />
-                </div>
-
-                <h3 className="mt-5 font-heading text-lg font-black tracking-tight text-gray-950">
-                  {item.title}
-                </h3>
-
-                <span
-                  aria-hidden
-                  className={`mt-3 h-0.75 w-9 rounded-full ${accent.bar}`}
-                />
-
-                <p className="mt-4 text-sm leading-6 text-gray-600">
-                  {item.description}
-                </p>
-              </li>
-            );
-          })}
+        <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          {ecommerceGrowthPoints.map((item) => (
+            <Card2
+              key={item.title}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              circle={item.circle}
+              bar={item.bar}
+            />
+          ))}
         </ul>
       </Container>
     </section>

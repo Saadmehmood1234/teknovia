@@ -55,6 +55,12 @@ export function WhatsAppMarketingHero() {
       descriptionClass="text-white/65"
       featureTextClass="text-white/90"
       headingClass="font-heading text-4xl font-black leading-[1.03] tracking-[-0.045em] sm:text-5xl"
+      colors={
+        {
+          secondaryButtonText:"text-white",
+          secondaryButtonBorder:"border-white/25"
+        }
+      }
     />
   );
 }

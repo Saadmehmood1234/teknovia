@@ -12,6 +12,7 @@ import { StrengthsSection } from "@/components/sections/StrengthsSection";
 import { LeadershipSection } from "@/components/corporate/LeadershipSection";
 import { AboutTeknovia } from "@/components/corporate/AboutTeknovia";
 import { CorporateHero } from "@/components/corporate/CorporateHero";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "About Teknovia Technologies | Software & Digital Solutions",
@@ -70,6 +71,14 @@ export default function CorporatePage() {
       />
 
       <LeadershipSection />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
+      />
     </main>
   );
 }

@@ -12,19 +12,15 @@ export function SoftwareServiceHero() {
         },
       ]}
       badge="Intelligent Solutions. Measurable Impact."
-      title={
-        <>
-          Smart Software Solutions Built for Your Success
-        </>
-      }
+      title={<>Smart Software Solutions Built for Your Success</>}
       description="At Teknovia, we design and develop customized software solutions that help businesses streamline operations, automate processes, improve efficiency, and accelerate growth."
       primaryButton={{
-        label: "Explore Solutions",
+        label: "Talk to Our Experts",
         href: "/contact",
       }}
       secondaryButton={{
-        label: "Talk to Our Experts",
-        href: "#services",
+        label: "Explore Solutions",
+        href: "#software-solutions",
       }}
       overlay="bg-[#040506]/70"
       showGrid

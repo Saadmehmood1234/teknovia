@@ -24,10 +24,11 @@ export function CorporateHero() {
       }
       description="Integrated digital marketing, custom software, EduTech, and talent solutions designed to help businesses scale efficiently."
       image={{
-        src: "/images/corporate-background.png",
+        src: "/images/corporate/corporate1.png",
         alt: "Teknovia technology and business solutions",
         aspectClass: "aspect-5/3",
         objectClass: "object-contain object-center",
+        
       }}
       primaryButton={{
         label: "Our Services",
@@ -37,7 +38,7 @@ export function CorporateHero() {
         label: "Get in Touch",
         href: "/contact",
       }}
-      backgroundClass="bg-[#EEF7F9]"
+      backgroundClass="bg-[#E6E9EF]"
     />
   );
 }

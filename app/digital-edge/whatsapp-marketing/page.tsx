@@ -9,6 +9,7 @@ import { WhatsAppManagement } from "@/components/digital-edge/whatsapp-marketing
 import { WhatsAppBlogTopics } from "@/components/digital-edge/whatsapp-marketing/WhatsAppBlogTopics";
 import { whatsappFaqs } from "@/lib/data/digital-edge/watsapp-marketing-data";
 import ProblemSolution from "@/components/digital-edge/whatsapp-marketing/ProblemSolution";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "WhatsApp Marketing & Business API Services",
@@ -81,6 +82,14 @@ export default function WhatsAppMarketingPage() {
         title="Frequently Asked Questions"
         description="Common questions about WhatsApp Business API, automation and WhatsApp marketing."
         faqs={whatsappFaqs}
+      />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
       />
     </main>
   );

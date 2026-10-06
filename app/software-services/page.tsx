@@ -1,9 +1,8 @@
-import { Container } from "@/components/ui/Container";
-import { industries } from "@/lib/data/software-services";
 import { SoftwareServiceHero } from "@/components/software-services/SoftwareServiceHero";
 import Expertise from "@/components/software-services/Expertise";
 import SoftwareOffering from "@/components/software-services/SoftwareOfferings";
 import SoftwareIndusties from "@/components/software-services/SoftwareIndustries";
+import { CTA } from "@/components/CTA";
 
 export const metadata = {
   title: "Software Services",
@@ -17,7 +16,15 @@ export default function SoftwareServicesPage() {
       <SoftwareServiceHero />
       <Expertise />
       <SoftwareOffering />
-      <SoftwareIndusties/>
+      <SoftwareIndusties />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
+      />
     </main>
   );
 }

@@ -7,7 +7,7 @@ export function WhatsAppEconomics() {
   return (
     <section className="border-b border-gray-100 bg-white py-8 sm:py-16">
       <Container>
-        <div className="overflow-hidden rounded-4xl border border-primary/15 bg-[#162F30] text-white">
+        <div className="overflow-hidden rounded-4xl border border-primary/15 bg-[#18342F] text-white">
           <div className="grid lg:grid-cols-[1fr_0.9fr]">
             <div className="p-7 sm:p-10 lg:p-14">
               <TopBadge data="ECONOMIC ADVANTAGE" />
@@ -41,7 +41,7 @@ export function WhatsAppEconomics() {
               <div className="relative aspect-4/3">
                 <div className="relative h-full w-full overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/digital-edge/watsapp-economic-benefits.png"
+                    src="/images/digital-edge/watsapp2.png"
                     alt="Teknovia technology and business solutions"
                     fill
                     priority

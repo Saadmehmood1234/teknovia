@@ -141,47 +141,55 @@ export const industries = [
     title: "Academics & Education",
     description:
       "Technology solutions for schools, colleges, universities, coaching institutes, training centers, and EdTech organizations.",
+      circle: "bg-rose-100 text-rose-600", bar: "bg-rose-500"
   },
   {
     icon: ShoppingCart,
     title: "Retail & eCommerce",
     description:
       "Digital systems for retailers, wholesalers, distributors, D2C brands, online businesses, and marketplaces.",
+      circle: "bg-blue-100 text-blue-700", bar: "bg-blue-600"
   },
   {
     icon: Building2,
     title: "Real Estate & Construction",
     description:
       "Software for builders, developers, contractors, property managers, and infrastructure companies.",
+      circle: "bg-orange-100 text-orange-600", bar: "bg-orange-500"
   },
   {
     icon: Database,
     title: "Healthcare & Hospitals",
     description:
       "Secure technology solutions for hospitals, clinics, diagnostic centers, healthcare providers, and wellness organizations.",
+      circle: "bg-purple-100 text-purple-700", bar: "bg-purple-600"
   },
   {
     icon: Network,
     title: "Logistics & Supply Chain",
     description:
       "Systems that improve tracking, inventory management, transportation, warehouse operations, and supply-chain visibility.",
+      circle: "bg-emerald-100 text-emerald-700", bar: "bg-emerald-500"
   },
   {
     icon: Globe2,
     title: "Hospitality & Tourism",
     description:
       "Digital solutions for hotels, resorts, restaurants, travel agencies, tour operators, and hospitality businesses.",
+      circle: "bg-blue-100 text-blue-700", bar: "bg-blue-500"
   },
   {
     icon: Sparkles,
     title: "SMEs & Growing Businesses",
     description:
       "Practical software solutions that help startups and growing businesses automate operations and scale efficiently.",
+      circle: "bg-pink-100 text-pink-700", bar: "bg-pink-500"
   },
   {
     icon: Settings2,
     title: "Manufacturing & Industrial",
     description:
       "Technology systems that improve production processes, procurement, operational visibility, and delivery.",
+      circle: "bg-sky-100 text-sky-700", bar: "bg-sky-500"
   },
 ];

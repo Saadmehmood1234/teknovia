@@ -136,7 +136,7 @@ export function SplitHero({
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 href={primaryButton.href}
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_10px_30px_rgba(0,150,137,0.28)]"
+                className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_10px_30px_rgba(0,150,137,0.28)]"
               >
                 {primaryButton.label}
                 <ArrowRight className="size-4" />
@@ -145,7 +145,7 @@ export function SplitHero({
               {secondaryButton && (
                 <Link
                   href={secondaryButton.href}
-                  className={`inline-flex items-center gap-2 rounded-lg border ${colors.secondaryButtonBorder ?? "border-black/25"} ${colors.secondaryButtonBackground ?? ""} px-6 py-3.5 text-sm font-semibold transition ${
+                  className={`inline-flex cursor-pointer items-center gap-2 rounded-lg border ${colors.secondaryButtonBorder ?? "border-black/25"} ${colors.secondaryButtonBackground ?? ""} px-6 py-3.5 text-sm font-semibold transition ${
                     colors.secondaryButtonText ?? "text-black"
                   } hover:border-primary hover:text-primary hover:bg-white/5`}
                 >
