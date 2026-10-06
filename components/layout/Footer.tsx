@@ -110,7 +110,7 @@ export function Footer() {
             <FooterColumn title="Resources" items={resources} />
             <FooterColumn title="Industries" items={industries} />
           </div>
-          <div className="border-t border-white/10 py-8">
+          {/* <div className="border-t border-white/10 py-8">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <p className="text-sm font-semibold text-white">
@@ -137,7 +137,7 @@ export function Footer() {
                 </button>
               </form>
             </div>
-          </div>
+          </div> */}
           <div className="flex flex-col gap-4 border-t border-white/10 py-7 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
             <p>© 2026 Teknovia. All Rights Reserved.</p>
 

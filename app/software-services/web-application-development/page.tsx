@@ -5,10 +5,15 @@ import Image from "next/image";
 import DevelopmentProcess from "@/components/software-services/web-application-development/DevelopmentProcess";
 import WebApplications from "@/components/software-services/web-application-development/WebApplications";
 import CoreCapabilities from "@/components/software-services/web-application-development/CoreCapabilities";
-import TechnologyStack from "@/components/software-services/web-application-development/TechnologyStack";
+import { TechnologyStack } from "@/components/ui/TechnologyStack";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { Metadata } from "next";
-import { webAppfaqs, webAppservices } from "@/lib/data/software-services/web-application-development-data";
+import {
+  webAppfaqs,
+  webAppservices,
+  webApptechnologies,
+} from "@/lib/data/software-services/web-application-development-data";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Web Application Development Services",
@@ -184,12 +189,23 @@ export default function WebApplicationDevelopmentPage() {
       <CoreCapabilities />
       <WebApplications />
 
-      <TechnologyStack />
+      <TechnologyStack
+        technologies={webApptechnologies}
+        description="Modern, proven technologies for secure, scalable, and high-performance mobile applications."
+      />
 
       <FAQ
         title="Web Application Development FAQs"
         description="Common questions about custom web application development, technologies, integrations, scalability, and support."
         faqs={webAppfaqs}
+      />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
       />
     </main>
   );

@@ -81,6 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    // ecommerce
+    {
+      url: `${BASE_URL}/ecommerce-solutions`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
 
     // Industries
     {

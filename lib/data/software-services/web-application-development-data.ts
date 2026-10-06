@@ -20,7 +20,6 @@ import {
   PlugZap,
 } from "lucide-react";
 
-
 export const webAppfaqs = [
   {
     question: "What are custom web application development services?",
@@ -157,7 +156,6 @@ export const webAppservices = [
   },
 ];
 
-
 export const webApptechnologies = [
   {
     category: "Frontend",
@@ -194,7 +192,7 @@ export const webApptechnologies = [
       { title: "Docker", image: "/images/technologies/docker.png" },
       { title: "Kubernetes", image: "/images/technologies/kubernetes.webp" },
     ],
-  }
+  },
 ];
 
 export const webApplications = [
@@ -323,6 +321,8 @@ export const WebDevCapabilities = [
     description:
       "Optimized for desktops, tablets, and smartphones to provide a consistent experience across devices.",
     icon: Smartphone,
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     number: "02",
@@ -330,6 +330,8 @@ export const WebDevCapabilities = [
     description:
       "Authentication, authorization, permissions, and secure access controls help protect business and customer data.",
     icon: ShieldCheck,
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     number: "03",
@@ -337,6 +339,8 @@ export const WebDevCapabilities = [
     description:
       "Connect your application with APIs, payment gateways, CRM, ERP, communication platforms, cloud services, and other external systems.",
     icon: PlugZap,
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     number: "04",
@@ -344,6 +348,8 @@ export const WebDevCapabilities = [
     description:
       "Build applications ready for cloud environments with architectures designed to support growing traffic and workloads.",
     icon: Cloud,
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     number: "05",
@@ -351,6 +357,8 @@ export const WebDevCapabilities = [
     description:
       "Interactive dashboards and real-time data insights help teams monitor performance and make informed decisions.",
     icon: BarChart3,
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     number: "06",
@@ -358,6 +366,8 @@ export const WebDevCapabilities = [
     description:
       "Clean architecture, optimized code, caching, database optimization, and modern development practices deliver reliable applications.",
     icon: Gauge,
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
 ];
 

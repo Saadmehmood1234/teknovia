@@ -1,29 +1,51 @@
-import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
-import { mobileAppTechnologies } from "@/lib/data/software-services/mobile-application-development-data";
 import Image from "next/image";
 
-export default function MobileAppTechStack() {
+import { Container } from "@/components/ui/Container";
+import { TopBadge } from "@/components/ui/Top-Badge";
+
+interface TechnologyItem {
+  title: string;
+  image: string;
+}
+
+interface TechnologyCategory {
+  category: string;
+  items: TechnologyItem[];
+}
+
+interface TechnologyStackProps {
+  technologies: TechnologyCategory[];
+  description: string;
+  title?: string;
+  badge?: string;
+}
+
+export function TechnologyStack({
+  technologies,
+  description,
+  title = "Technologies We Use",
+  badge = "Technology Stack",
+}: TechnologyStackProps) {
   return (
     <section className="relative overflow-hidden py-8 text-black sm:py-16">
       <Container>
         <div className="relative">
           <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
             <div className="max-w-2xl">
-              <TopBadge data="Technology&nbsp;Stack" centerItem={true} />
+              <TopBadge data={badge} centerItem />
 
               <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                Technologies We Use
+                {title}
               </h2>
 
               <p className="mt-5 text-base leading-7 text-gray-600">
-                Modern, proven technologies for secure, scalable, and
-                high-performance mobile applications.
+                {description}
               </p>
             </div>
           </div>
+
           <div className="mt-8 sm:mt-16">
-            {mobileAppTechnologies.map((tech) => (
+            {technologies.map((tech) => (
               <div
                 key={tech.category}
                 className="border-t border-slate-200 py-8 last:border-b sm:py-10"
@@ -39,7 +61,6 @@ export default function MobileAppTechStack() {
                     </h3>
                   </div>
 
-                  {/* Technologies */}
                   <div className="grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                     {tech.items.map((item) => (
                       <div

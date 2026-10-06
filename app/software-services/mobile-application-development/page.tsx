@@ -1,12 +1,13 @@
+import { CTA } from "@/components/CTA";
 import FAQ from "@/components/FAQ";
 import { MobileAppBenefits } from "@/components/software-services/mobile-application-development/MobileAppBenefits";
 import { MobileAppHero } from "@/components/software-services/mobile-application-development/MobileAppHero";
 import { MobileAppOverview } from "@/components/software-services/mobile-application-development/MobileAppOverview";
 import { MobileAppProcess } from "@/components/software-services/mobile-application-development/MobileAppProcess";
 import { MobileAppServices } from "@/components/software-services/mobile-application-development/MobileAppServices";
-import MobileAppTechStack from "@/components/software-services/mobile-application-development/MobileAppTechStack";
 import { MobileAppTypes } from "@/components/software-services/mobile-application-development/MobileAppTypes";
-import { mobileAppFaqs } from "@/lib/data/software-services/mobile-application-development-data";
+import { TechnologyStack } from "@/components/ui/TechnologyStack";
+import { mobileAppFaqs, mobileAppTechnologies } from "@/lib/data/software-services/mobile-application-development-data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -72,14 +73,24 @@ export default function MobileAppDevelopmentPage() {
       <MobileAppBenefits />
       <MobileAppTypes />
 
-
       <MobileAppProcess />
 
-      <MobileAppTechStack />
+      <TechnologyStack
+        technologies={mobileAppTechnologies}
+        description="Modern, proven technologies for secure, scalable, and high-performance web applications."
+      />
       <FAQ
         title="Frequently Asked Questions"
         description="Common questions about mobile app development"
         faqs={mobileAppFaqs}
+      />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
       />
     </main>
   );
