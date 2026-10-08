@@ -1,3 +1,4 @@
+import { Card4 } from "@/components/ui/Card4";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { products } from "@/lib/data/software-services/software-product-data";
@@ -23,48 +24,8 @@ export function SaaSProducts() {
             challenges involved in creating practical, scalable products.
           </p>
         </div>
-
-        <div className="mt-12 grid gap-4 sm:grid-cols-2">
-          {products.map((product, index) => {
-            const Icon = product.icon;
-
-            return (
-              <article
-                key={product.title}
-                className="relative overflow-hidden rounded-3xl border border-gray-200 bg-[#FAFAFA] p-6 sm:p-8"
-              >
-                <div className="flex items-start justify-between">
-                  <div className="flex size-12 items-center justify-center rounded-xl border border-primary/15 bg-primary-50 text-primary">
-                    <Icon className="size-5" />
-                  </div>
-
-                  <span className="font-mono text-xs text-gray-300">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-
-                <h3 className="mt-7 text-xl font-bold text-gray-950">
-                  {product.title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-gray-600">
-                  {product.description}
-                </p>
-
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {product.features.map((feature) => (
-                    <div
-                      key={feature}
-                      className="flex items-start gap-2 text-sm text-gray-600"
-                    >
-                      <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-              </article>
-            );
-          })}
+        <div className="grid gap-5 lg:col-span-8">
+          <Card4 items={products} />
         </div>
       </Container>
     </section>

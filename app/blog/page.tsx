@@ -1,37 +1,69 @@
+import type { Metadata } from "next";
+
+import { CTA } from "@/components/CTA";
+import { BlogList } from "@/components/blog/Bloglist";
 import { BlogHero } from "@/components/blog/BlogHero";
-import { FeaturedPost } from "@/components/blog/FeaturedPost";
-import { BlogGrid } from "@/components/ui/BlogGrid";
+
+export const metadata: Metadata = {
+  title: "Blog | B2B Marketing, SEO & Technology Insights",
+
+  description:
+    "Practical articles from Teknovia Technologies on B2B marketing, lead generation, SEO, web development and technology solutions for growing businesses.",
+
+  keywords: [
+    "Teknovia blog",
+    "B2B marketing blog",
+    "lead generation tips",
+    "local SEO checklist",
+    "LinkedIn marketing for B2B",
+    "website speed optimisation",
+    "ERP for manufacturers",
+    "digital marketing insights",
+  ],
+
+  alternates: {
+    canonical: "/blog",
+  },
+
+  openGraph: {
+    title: "Blog | B2B Marketing, SEO & Technology Insights",
+    description:
+      "Practical articles on B2B marketing, SEO, web development and technology from Teknovia Technologies.",
+    url: "/blog",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Teknovia Technologies Blog",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | B2B Marketing, SEO & Technology Insights",
+    description:
+      "Practical articles on B2B marketing, SEO, web development and technology from Teknovia Technologies.",
+    images: ["/og-image.jpg"],
+  },
+};
+
 export default function BlogPage() {
   return (
-    <main className="overflow-hidden bg-white">
+    <main>
       <BlogHero />
+      <BlogList />
 
-      <section className="section-padding">
-        <div className="container-page">
-          <FeaturedPost />
-
-          <div className="mt-24">
-            <div className="mb-10">
-              <p className="eyebrow">LATEST ARTICLES</p>
-
-              <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-                Insights, Ideas & Digital Trends
-              </h2>
-            </div>
-
-            {/* <BlogGrid />
-                    <BlogGrid
-                      featuredTopic={featuredTopic}
-                      remainingTopics={remainingTopics}
-                      category="LOCAL SEO"
-                      featuredDescription="Discover practical strategies and actionable insights designed to help your business perform better in local search."
-                      featuredReadTime={5}
-                      readTime={readTime}
-                    /> */}
-          </div>
-        </div>
-      </section>
-
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
+      />
     </main>
   );
 }

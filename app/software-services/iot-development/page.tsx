@@ -1,3 +1,4 @@
+import { CTA } from "@/components/CTA";
 import FAQ from "@/components/FAQ";
 import { IoTEcosystem } from "@/components/software-services/iot-development/IoTEcosystem";
 import { IoTHero } from "@/components/software-services/iot-development/IoTHero";
@@ -71,6 +72,14 @@ export default function IoTDevelopmentPage() {
         title="Frequently Asked Questions"
         description="Common questions about IoT and automation solutions"
         faqs={iotFaqs}
+      />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
       />
     </main>
   );

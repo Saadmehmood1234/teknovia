@@ -1,4 +1,28 @@
-import { BarChart3, Boxes, Calculator, Cloud, CloudCog, Code2, GitBranch, Handshake, KeyRound, Layers3, LockKeyhole, PlugZap, RefreshCw, ShieldCheck, ShoppingCart, Sparkles, Users, UsersRound } from "lucide-react";
+import {
+  BarChart3,
+  Boxes,
+  Calculator,
+  Cloud,
+  CloudCog,
+  Code2,
+  CreditCard,
+  GitBranch,
+  Handshake,
+  KeyRound,
+  Layers3,
+  LifeBuoy,
+  LockKeyhole,
+  PlugZap,
+  RefreshCw,
+  Rocket,
+  Server,
+  ShieldCheck,
+  ShoppingCart,
+  Smartphone,
+  Sparkles,
+  Users,
+  UsersRound,
+} from "lucide-react";
 
 export const saasFaqs = [
   {
@@ -38,7 +62,8 @@ export const saasFaqs = [
       "Our SaaS development team works with modern technologies including React, Next.js, Node.js, .NET, Java, Python, cloud platforms, APIs, databases, and microservices architectures to build high-performance software products.",
   },
   {
-    question: "Can you integrate my SaaS platform with third-party applications?",
+    question:
+      "Can you integrate my SaaS platform with third-party applications?",
     answer:
       "Absolutely. We provide API development and third-party integrations for CRM systems, ERP software, accounting solutions, payment gateways, eCommerce platforms, marketing tools, and other business applications.",
   },
@@ -48,7 +73,8 @@ export const saasFaqs = [
       "We implement enterprise-grade security measures including secure authentication, role-based access control, data encryption, secure APIs, cloud security best practices, and compliance-focused development processes.",
   },
   {
-    question: "Do you provide SaaS product maintenance and support after launch?",
+    question:
+      "Do you provide SaaS product maintenance and support after launch?",
     answer:
       "Yes. Our software maintenance and support services include performance monitoring, security updates, bug fixes, feature enhancements, cloud optimization, and ongoing technical assistance.",
   },
@@ -63,7 +89,6 @@ export const saasFaqs = [
       "TEKNOVIA combines technical expertise with real-world product development experience. In addition to building custom solutions for clients, we have developed in-house CRM, Accounting, Inventory Management, and eCommerce software products, giving us practical insights into creating scalable software platforms.",
   },
 ];
-
 
 export const features = [
   {
@@ -128,96 +153,87 @@ export const features = [
   },
 ];
 
+
 export const offerings = [
   {
+    icon: CloudCog,
     title: "SaaS Product Development",
     description:
       "Design and build scalable Software-as-a-Service applications tailored to your business model.",
-    image: "/images/saas/saas-product.png",
-    txtColor: "text-[#4bebaa]",
-    numColor: "bg-[#4bebaa]/40",
-    bgColor: "bg-[#F7FDFE]",
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
+    icon: Code2,
     title: "Custom Software Product Development",
     description:
       "Develop unique software products around your specific business requirements and market needs.",
-    image: "/images/saas/custom-software.png",
-    txtColor: "text-[#2573e8]",
-    numColor: "bg-[#2573e8]/40",
-    bgColor: "bg-[#F7FBFE]",
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
+    icon: Rocket,
     title: "MVP Development",
     description:
       "Launch focused MVPs with core features to validate ideas, gather feedback, and reduce development risks.",
-    image: "/images/saas/mvp-development.png",
-    txtColor: "text-[#e88025]",
-    numColor: "bg-[#e88025]/40",
-    bgColor: "bg-[#FAFDFA]",
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
+    icon: Layers3,
     title: "Multi-Tenant SaaS Solutions",
     description:
       "Build SaaS platforms that serve multiple customers from a single application with scalable architecture.",
-    image: "/images/saas/multi-tenant.png",
-    txtColor: "text-[#8725e8]",
-    numColor: "bg-[#8725e8]/40",
-    bgColor: "bg-[#F9FAFE]",
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
+    icon: Server,
     title: "Cloud-Native Application Development",
     description:
       "Create applications optimized for cloud environments with modern architectures and technologies.",
-    image: "/images/saas/cloud-native.png",
-    txtColor: "text-[#179606]",
-    numColor: "bg-[#179606]/40",
-    bgColor: "bg-[#F7FEFC]",
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
+    icon: Smartphone,
     title: "Web & Mobile Product Development",
     description:
       "Develop feature-rich web and mobile products that provide consistent experiences across devices.",
-    image: "/images/saas/web-and-mobile.png",
-    txtColor: "text-[#cc1247]",
-    numColor: "bg-[#cc1247]/40",
-    bgColor: "bg-[#FDFBFC]",
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
+    icon: Boxes,
     title: "API & Microservices Development",
     description:
       "Design robust APIs and microservices that improve integration, flexibility, and future scalability.",
-    image: "/images/saas/api-and-microservices.png",
-    txtColor: "text-[#bdb111]",
-    numColor: "bg-[#bdb111]/40",
-    bgColor: "bg-[#F7FEFE]",
+    circle: "bg-amber-100 text-amber-700",
+    bar: "bg-amber-500",
   },
   {
+    icon: RefreshCw,
     title: "Product Modernization & Re-engineering",
     description:
       "Upgrade legacy software with modern technologies, architectures, security, and user experiences.",
-    image: "/images/saas/product-modernization.png",
-    txtColor: "text-[#3ED6CD]",
-    numColor: "bg-[#3ED6CD]/40",
-    bgColor: "bg-[#F7FBFE]",
+    circle: "bg-cyan-100 text-cyan-700",
+    bar: "bg-cyan-500",
   },
   {
+    icon: CreditCard,
     title: "Subscription & Billing Integration",
     description:
       "Implement subscription management, recurring billing, and secure payment processing systems.",
-    image: "/images/saas/subscription-and-billing.png",
-    txtColor: "text-[#a80a7e]",
-    numColor: "bg-[#a80a7e]/40",
-    bgColor: "bg-[#FEFDF9]",
+    circle: "bg-fuchsia-100 text-fuchsia-700",
+    bar: "bg-fuchsia-600",
   },
   {
+    icon: LifeBuoy,
     title: "Product Maintenance & Support",
     description:
       "Keep your software secure, stable, and up to date through monitoring, fixes, updates, and enhancements.",
-    image: "/images/saas/product-mentainance.png",
-    txtColor: "text-[#0a22a8]",
-    numColor: "bg-[#0a22a8]/40",
-    bgColor: "bg-[#FAF9FF]",
+    circle: "bg-indigo-100 text-indigo-700",
+    bar: "bg-indigo-600",
   },
 ];
 
@@ -236,7 +252,6 @@ export const highlights = [
   },
 ];
 
-
 export const points = [
   "MVP and product development",
   "Multi-tenant SaaS platforms",
@@ -246,14 +261,14 @@ export const points = [
   "API and microservices architecture",
 ];
 
-
 export const products = [
   {
+    number: "01",
     title: "CRM Software",
     description:
       "Manage leads, sales pipelines, customer relationships, tasks, and follow-ups from one centralized platform.",
     icon: Users,
-    features: [
+    points: [
       "Lead Management",
       "Sales Pipeline Tracking",
       "Customer Relationship Management",
@@ -261,11 +276,12 @@ export const products = [
     ],
   },
   {
+    number: "02",
     title: "Accounting & Finance Software",
     description:
       "Streamline financial operations with structured accounting workflows and business reporting.",
     icon: Calculator,
-    features: [
+    points: [
       "General Ledger",
       "Accounts Payable & Receivable",
       "Financial Reporting",
@@ -273,11 +289,12 @@ export const products = [
     ],
   },
   {
+    number: "03",
     title: "Inventory Management System",
     description:
       "Track stock, warehouses, purchases, sales, and inventory performance through a centralized system.",
     icon: Boxes,
-    features: [
+    points: [
       "Stock Tracking",
       "Warehouse Management",
       "Purchase & Sales Management",
@@ -285,11 +302,12 @@ export const products = [
     ],
   },
   {
+    number: "04",
     title: "eCommerce Solution",
     description:
       "Build and manage digital commerce operations with integrated products, orders, customers, and payments.",
     icon: ShoppingCart,
-    features: [
+    points: [
       "Online Store Management",
       "Product Catalog & Inventory Sync",
       "Order & Customer Management",
@@ -297,38 +315,47 @@ export const products = [
     ],
   },
 ];
-
-
 export const reasons = [
   {
     number: "01",
     title: "Product Development Expertise",
+    description:
+      "Strong product engineering expertise focused on building reliable and scalable software.",
     icon: Sparkles,
   },
   {
     number: "02",
     title: "In-House Software Products",
+    description:
+      "We build and maintain our own products, giving us practical experience beyond client projects.",
     icon: Layers3,
   },
   {
     number: "03",
     title: "Scalable Cloud Architecture",
+    description:
+      "Modern cloud-ready architectures designed to scale with your users, data, and business.",
     icon: CloudCog,
   },
   {
     number: "04",
     title: "Agile Development Process",
+    description:
+      "Iterative development with continuous feedback, testing, and improvement throughout the journey.",
     icon: RefreshCw,
   },
   {
     number: "05",
     title: "Security-First Approach",
+    description:
+      "Security considerations are built into our development process from architecture to deployment.",
     icon: LockKeyhole,
   },
   {
     number: "06",
     title: "Long-Term Technology Partner",
+    description:
+      "We stay involved beyond launch with ongoing support, optimization, and technology guidance.",
     icon: Handshake,
   },
 ];
-

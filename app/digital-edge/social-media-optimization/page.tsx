@@ -9,7 +9,7 @@ import { SMOProcess } from "@/components/digital-edge/social-media-optimization/
 import { SMOServices } from "@/components/digital-edge/social-media-optimization/SMOServices";
 import FAQ from "@/components/FAQ";
 import { smoFaqs } from "@/lib/data/digital-edge/social-media-optimization-data";
-
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Social Media Optimization Services | SMO Company",
@@ -86,6 +86,14 @@ export default function SocialMediaOptimisationPage() {
         title="Frequently Asked Questions"
         description="Common questions about social media optimization, Instagram, Facebook, content strategy, and audience engagement."
         faqs={smoFaqs}
+      />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
       />
     </main>
   );

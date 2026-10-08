@@ -1,3 +1,4 @@
+import { CTA } from "@/components/CTA";
 import FAQ from "@/components/FAQ";
 import { SaaSFeatures } from "@/components/software-services/software-product/SaaSFeatures";
 import { SaaSOfferings } from "@/components/software-services/software-product/SaaSOfferings";
@@ -81,6 +82,14 @@ export default function SaaSSoftwareProductPage() {
         title="Frequently Asked Questions"
         description="Common questions about SaaS and software product development"
         faqs={saasFaqs}
+      />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
       />
     </main>
   );

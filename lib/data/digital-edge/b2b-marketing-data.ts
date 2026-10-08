@@ -1,4 +1,21 @@
-import { BarChart3, Bot, Building2, ChartNoAxesColumn, FileText, Globe2, Handshake, Layers3, Mail, Megaphone, MousePointerClick, Network, Target, TrendingUp, Users, UsersRound } from "lucide-react";
+import {
+  BarChart3,
+  Bot,
+  Building2,
+  ChartNoAxesColumn,
+  FileText,
+  Globe2,
+  Handshake,
+  Layers3,
+  Mail,
+  Megaphone,
+  MousePointerClick,
+  Network,
+  Target,
+  TrendingUp,
+  Users,
+  UsersRound,
+} from "lucide-react";
 import { BsLinkedin } from "react-icons/bs";
 
 export const b2bMarketingFaqs = [
@@ -89,67 +106,88 @@ export const b2bServices = [
     description:
       "Identify and attract relevant businesses and decision-makers through targeted campaigns designed to generate qualified enquiries and sales opportunities.",
     icon: Target,
-    featured: true,
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     title: "LinkedIn Lead Generation",
     description:
       "Reach business owners, professionals, and decision-makers through targeted LinkedIn prospecting and outreach.",
     icon: BsLinkedin,
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     title: "Content Marketing",
     description:
       "Create case studies, industry insights, whitepapers, and business content that builds trust.",
     icon: FileText,
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     title: "Email Marketing & Lead Nurturing",
     description:
       "Keep prospects engaged through personalized campaigns that gradually move leads toward a business conversation.",
     icon: Mail,
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     title: "Account-Based Marketing",
     description:
       "Create focused campaigns for selected high-value companies with account-specific messaging and content.",
     icon: Building2,
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
     title: "B2B Paid Advertising",
     description:
       "Reach relevant industries, job roles, businesses, and decision-makers while tracking campaign performance.",
     icon: Megaphone,
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     title: "Landing Pages & Conversion",
     description:
       "Build focused landing experiences designed to turn visitors into enquiries, registrations, and demo requests.",
     icon: MousePointerClick,
+    circle: "bg-amber-100 text-amber-700",
+    bar: "bg-amber-500",
   },
   {
     title: "Marketing Automation",
     description:
       "Automate lead capture, follow-ups, email sequences, segmentation, and prospect engagement.",
     icon: Bot,
+    circle: "bg-cyan-100 text-cyan-700",
+    bar: "bg-cyan-500",
   },
   {
     title: "CRM & Lead Management",
     description:
       "Organize and track prospects throughout the marketing and sales journey.",
     icon: UsersRound,
+    circle: "bg-indigo-100 text-indigo-700",
+    bar: "bg-indigo-600",
   },
   {
     title: "Channel & Partner Marketing",
     description:
       "Find and engage distributors, resellers, strategic partners, and potential business collaborators.",
     icon: Network,
+    circle: "bg-lime-100 text-lime-700",
+    bar: "bg-lime-600",
   },
   {
     title: "B2B Analytics & Reporting",
     description:
       "Measure lead quality, conversions, engagement, campaign performance, and opportunities for improvement.",
     icon: BarChart3,
+    circle: "bg-pink-100 text-pink-700",
+    bar: "bg-pink-600",
   },
 ];
 
@@ -189,7 +227,6 @@ export const b2bBenefits = [
     icon: TrendingUp,
   },
 ];
-
 
 export const channels = [
   {

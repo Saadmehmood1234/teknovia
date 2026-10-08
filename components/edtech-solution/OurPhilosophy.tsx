@@ -1,7 +1,8 @@
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { philosophyPoints } from "@/lib/data/edutech-data";
-
+import { Card2 } from "../ui/Card2";
+import { BackgroundEffect } from "../Background";
 
 export function OurPhilosophy() {
   return (
@@ -23,32 +24,21 @@ export function OurPhilosophy() {
             learning ecosystems that are engaging, scalable, and results-driven.
           </p>
         </div>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gray-200 bg-gray-200 sm:grid-cols-2 lg:grid-cols-4">
-          {philosophyPoints.map((item) => {
-            const Icon = item.icon;
+        <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
+          {philosophyPoints.map((item) => (
+            <Card2
+              key={item.title}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              circle={item.circle}
+              bar={item.bar}
+            />
+          ))}
+        </ul>
 
-            return (
-              <article
-                key={item.title}
-                className="bg-[#FAFAFA] p-6 sm:p-7"
-              >
-                <div className="flex size-11 items-center justify-center rounded-xl bg-primary-50 text-primary">
-                  <Icon className="size-5" />
-                </div>
-
-                <h3 className="mt-5 font-heading text-base font-bold text-gray-950">
-                  {item.title}
-                </h3>
-
-                <p className="mt-2 text-xs leading-6 text-gray-500 sm:text-sm">
-                  {item.description}
-                </p>
-              </article>
-            );
-          })}
-        </div>
-
-        <div className="mt-6 rounded-2xl bg-[#274444] px-6 py-6 text-center sm:px-8">
+        <div className="mt-8 relative rounded-2xl bg-[#274444] px-6 py-6 text-center sm:px-8">
+          <BackgroundEffect/>
           <p className="font-heading text-lg font-bold text-white sm:text-xl">
             For us, EduTech is not a product — it&apos;s a{" "}
             <span className="text-primary-300">

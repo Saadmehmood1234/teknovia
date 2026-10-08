@@ -10,6 +10,7 @@ import { TopBadge } from "@/components/ui/Top-Badge";
 export interface HeroFeature {
   icon: LucideIcon;
   text: string;
+  desc?: string;
 }
 
 export interface HeroButton {
@@ -66,6 +67,7 @@ export interface SplitHeroProps {
   textClass?: string;
   descriptionClass?: string;
   featureTextClass?: string;
+  featureDescClass?:string;
   headingClass?: string;
 
   id?: string;
@@ -86,6 +88,7 @@ export function SplitHero({
   textClass = "text-slate-950",
   descriptionClass = "text-gray-600",
   featureTextClass = "text-gray-600",
+  featureDescClass="text-gray-500",
   headingClass = "font-heading text-4xl font-bold leading-[1.2] tracking-tight sm:text-5xl",
   id,
   colors = {},
@@ -127,6 +130,8 @@ export function SplitHero({
                       >
                         {feature.text}
                       </span>
+
+                      <p className={`text-xs ${featureDescClass}`}>{feature.desc}</p>
                     </div>
                   );
                 })}

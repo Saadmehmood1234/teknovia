@@ -44,23 +44,31 @@ export const philosophyPoints = [
     title: "Outcomes First",
     description:
       "We build around measurable learning and business outcomes, not technology for its own sake.",
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     icon: Sparkles,
     title: "Simple Experiences",
     description:
       "Platforms should be intuitive for learners and simple for educators to manage.",
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     icon: BrainCircuit,
     title: "Data-Driven",
     description:
       "Analytics help institutions understand performance, engagement, and opportunities for improvement.",
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     icon: Rocket,
     title: "Built to Scale",
     description:
       "Solutions are designed to adapt as learners, institutions, and education businesses grow.",
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
 ];

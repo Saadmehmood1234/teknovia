@@ -1,6 +1,11 @@
 import { Mail, Phone, Send, ShieldCheck, Signal, Zap } from "lucide-react";
 
-type ContactTab = "message" | "callback" | "enquiry";
+export type ContactFormType = "message" | "callback" | "enquiry";
+
+export type ContactActionState = {
+  success: boolean;
+  message: string;
+};
 
 export const tabs = [
   {
@@ -61,3 +66,29 @@ export const contactFeatures2 = [
     description: "We deliver measurable business impact.",
   },
 ];
+
+type ContactTab = "message" | "callback" | "enquiry";
+
+export const services = [
+  "Custom Software Development",
+  "Web Application Development",
+  "Mobile Application Development",
+  "SaaS Development",
+  "ERP & Business Solutions",
+  "eCommerce Development",
+  "Other",
+];
+
+export const callbackTimes = [
+  "9:00 AM – 11:00 AM",
+  "11:00 AM – 1:00 PM",
+  "1:00 PM – 3:00 PM",
+  "3:00 PM – 6:00 PM",
+];
+
+export const initialContactState: ContactActionState = {
+  success: false,
+  message: "",
+};
+
+

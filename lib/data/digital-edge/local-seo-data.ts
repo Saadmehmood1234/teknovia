@@ -1,4 +1,22 @@
-import { ArrowUpRight, BarChart3, Building2, ChartNoAxesCombined, CheckCircle2, FileSearch, Globe2, MapPin, MessageSquareQuote, MousePointerClick, PhoneCall, Search, Settings2, Star, Target, TrendingUp, Users } from "lucide-react";
+import {
+  ArrowUpRight,
+  BarChart3,
+  Building2,
+  ChartNoAxesCombined,
+  CheckCircle2,
+  FileSearch,
+  Globe2,
+  MapPin,
+  MessageSquareQuote,
+  MousePointerClick,
+  PhoneCall,
+  Search,
+  Settings2,
+  Star,
+  Target,
+  TrendingUp,
+  Users,
+} from "lucide-react";
 import { BsGoogle } from "react-icons/bs";
 
 export const localSeoFaqs = [
@@ -64,130 +82,104 @@ export const localSeoFaqs = [
   },
 ];
 
-
 export const localSeoServices = [
   {
     title: "Google Business Profile Setup & Optimization",
     description:
       "Set up and optimize your Google Business Profile for stronger visibility, trust, and local discoverability.",
     icon: Building2,
-    txtColor: "text-[#f5544c]",
-    iconColor: "bg-[#f5544c]/10",
-    bgColor: "bg-[#f5544c]/5",
-    borderColor:"border-[#f5544c]/20",
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     title: "Business Information Management",
     description:
       "Maintain accurate and consistent Name, Address, and Phone information across Google and local directories.",
     icon: Settings2,
-    txtColor: "text-[#5952eb]",
-    iconColor: "bg-[#5952eb]/10",
-    bgColor: "bg-[#5952eb]/5",
-    borderColor:"border-[#5952eb]/20",
+    circle: "bg-indigo-100 text-indigo-700",
+    bar: "bg-indigo-600",
   },
   {
     title: "Local Keyword Research",
     description:
       "Identify high-intent local keywords and search terms customers use to find your business.",
     icon: Search,
-    txtColor: "text-[#913a4b]",
-    iconColor: "bg-[#913a4b]/10",
-    bgColor: "bg-[#913a4b]/5",
-    borderColor:"border-[#913a4b]/20",
+    circle: "bg-pink-100 text-pink-700",
+    bar: "bg-pink-600",
   },
   {
     title: "Google Maps Ranking Optimization",
     description:
       "Optimize your local presence to improve visibility in Google Maps and Map Pack searches.",
     icon: MapPin,
-    txtColor: "text-[#19b093]",
-    iconColor: "bg-[#19b093]/10",
-    bgColor: "bg-[#19b093]/5",
-    borderColor:"border-[#19b093]/20",
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     title: "Business Category & Service Optimization",
     description:
       "Optimize categories, services, and business attributes so Google understands your business correctly.",
     icon: Target,
-    txtColor: "text-[#5f1c9e]",
-    iconColor: "bg-[#5f1c9e]/10",
-    bgColor: "bg-[#5f1c9e]/5",
-    borderColor:"border-[#5f1c9e]/20",
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     title: "Review & Reputation Management",
     description:
       "Improve your online reputation through review monitoring, response management, and customer engagement.",
     icon: MessageSquareQuote,
-    txtColor: "text-[#e02f85]",
-    iconColor: "bg-[#e02f85]/10",
-    bgColor: "bg-[#e02f85]/5",
-    borderColor:"border-[#e02f85]/20",
+    circle: "bg-fuchsia-100 text-fuchsia-700",
+    bar: "bg-fuchsia-600",
   },
   {
     title: "Local Citation Building",
     description:
       "Build accurate business citations across relevant local directories and industry platforms.",
     icon: Globe2,
-    txtColor: "text-[#db25b0]",
-    iconColor: "bg-[#db25b0]/10",
-    bgColor: "bg-[#db25b0]/5",
-    borderColor:"border-[#db25b0]/20",
+    circle: "bg-violet-100 text-violet-700",
+    bar: "bg-violet-600",
   },
   {
     title: "Location-Based Content Optimization",
     description:
       "Create location-focused content targeting relevant cities, neighborhoods, and local search intent.",
     icon: FileSearch,
-    txtColor: "text-[#7d1eeb]",
-    iconColor: "bg-[#7d1eeb]/10",
-    bgColor: "bg-[#7d1eeb]/5",
-    borderColor:"border-[#7d1eeb]/20",
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     title: "Local Landing Page Creation",
     description:
       "Create high-converting landing pages tailored to specific locations and services.",
     icon: MousePointerClick,
-    txtColor: "text-[#148bd9]",
-    iconColor: "bg-[#148bd9]/10",
-    bgColor: "bg-[#148bd9]/5",
-    borderColor:"border-[#148bd9]/20",
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
     title: "Competitor Analysis",
     description:
       "Analyze local competitors to uncover ranking gaps, keyword opportunities, and growth opportunities.",
     icon: ChartNoAxesCombined,
-    txtColor: "text-[#067d48]",
-    iconColor: "bg-[#067d48]/10",
-    bgColor: "bg-[#067d48]/5",
-    borderColor:"border-[#067d48]/20",
+    circle: "bg-green-100 text-green-700",
+    bar: "bg-green-600",
   },
   {
     title: "Monthly Performance Reporting",
     description:
       "Track calls, views, clicks, rankings, and traffic with clear monthly performance reports.",
     icon: BarChart3,
-    txtColor: "text-[#75b005]",
-    iconColor: "bg-[#75b005]/10",
-    bgColor: "bg-[#75b005]/5",
-    borderColor:"border-[#75b005]/20",
+    circle: "bg-lime-100 text-lime-700",
+    bar: "bg-lime-600",
   },
   {
     title: "Multi-Location SEO Management",
     description:
       "Manage multiple business locations using location-specific strategies and consistent branding.",
     icon: Building2,
-    txtColor: "text-[#e89607]",
-    iconColor: "bg-[#e89607]/10",
-    bgColor: "bg-[#e89607]/5",
-    borderColor:"border-[#e89607]/20",
+    circle: "bg-amber-100 text-amber-700",
+    bar: "bg-amber-500",
   },
 ];
-
 export const localSeoBenefits = [
   {
     title: "Higher Local Visibility",

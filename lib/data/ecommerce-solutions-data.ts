@@ -120,7 +120,6 @@ export const ecommerceCapabilities = [
       "Track sales, customers, products and overall performance. Turn commerce data into insights for better business decisions.",
   },
 ];
-
 export const ecommerceIntegrations = [
   {
     number: "01",
@@ -130,6 +129,8 @@ export const ecommerceIntegrations = [
       "Connect your eCommerce platform with ERP, CRM, accounting and other business systems.",
     detail:
       "Synchronize products, customers, orders, inventory and business data across platforms.",
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     number: "02",
@@ -138,6 +139,8 @@ export const ecommerceIntegrations = [
     description:
       "Integrate secure payment gateways to offer customers convenient payment options.",
     detail: "Support cards, UPI, wallets and other digital payment methods.",
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     number: "03",
@@ -147,6 +150,8 @@ export const ecommerceIntegrations = [
       "Connect with shipping and logistics providers to streamline order fulfillment.",
     detail:
       "Manage shipping, tracking and delivery information from your eCommerce platform.",
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     number: "04",
@@ -156,6 +161,8 @@ export const ecommerceIntegrations = [
       "Connect your eCommerce platform with multiple online marketplaces and sales channels.",
     detail:
       "Manage products, orders and inventory across connected marketplaces.",
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     number: "05",
@@ -165,6 +172,8 @@ export const ecommerceIntegrations = [
       "Connect with marketing, automation and customer engagement platforms.",
     detail:
       "Support campaigns, promotions, customer communication and conversion activities.",
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     number: "06",
@@ -174,6 +183,8 @@ export const ecommerceIntegrations = [
       "Access dashboards for sales, customers, products, orders and overall business performance.",
     detail:
       "Use AI-assisted insights to identify trends, opportunities and areas that need attention.",
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
     number: "07",
@@ -183,9 +194,10 @@ export const ecommerceIntegrations = [
       "Connect your eCommerce platform with third-party applications and custom business systems.",
     detail:
       "Build flexible integrations around your specific operational and business requirements.",
+    circle: "bg-pink-100 text-pink-700",
+    bar: "bg-pink-600",
   },
 ];
-
 export const ecommerceGrowthPoints = [
   {
     icon: Server,

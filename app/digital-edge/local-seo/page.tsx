@@ -9,6 +9,7 @@ import { LocalSeoIntroduction } from "@/components/digital-edge/local-seo/LocalS
 import { LocalSeoServices } from "@/components/digital-edge/local-seo/LocalSeoServices";
 import FAQ from "@/components/FAQ";
 import { localSeoFaqs } from "@/lib/data/digital-edge/local-seo-data";
+import { LocalProofAndReporting } from "@/components/digital-edge/local-seo/LocalProofAndReporting";
 
 export const metadata: Metadata = {
   title: "Local SEO Services | Google Business Profile",
@@ -67,15 +68,11 @@ export default function LocalSeoPage() {
   return (
     <main>
       <LocalSeoHero />
-
       <LocalSeoIntroduction />
-
       <LocalSeoServices />
-
       <LocalSeoBenefits />
-
+      <LocalProofAndReporting />
       <LocalSeoCaseStudies />
-
       <LocalSeoBlogTopics />
 
       <FAQ

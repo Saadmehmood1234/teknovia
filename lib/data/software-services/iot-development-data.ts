@@ -22,7 +22,6 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-
 export const iotFaqs = [
   {
     question: "What are IoT and automation solutions?",
@@ -189,74 +188,82 @@ export const IotSolutions = [
     description:
       "Connect machines, sensors, people, and operational systems to create a more visible and responsive manufacturing environment.",
     icon: Factory,
-    image: "/images/iot/smart-factory.webp",
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     title: "Industrial Automation",
     description:
       "Automate production and operational processes using connected devices, controllers, robotics, workflows, and intelligent systems.",
     icon: ChartNoAxesCombined,
-    image: "/images/iot/industrial-automation.jpg",
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     title: "Predictive Maintenance",
     description:
       "Monitor equipment conditions and identify potential failures before they result in unexpected downtime.",
     icon: Settings,
-    image: "/images/iot/predictive-maintenance1.jpg",
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     title: "Manufacturing Operations Management",
     description:
       "Digitize production processes, monitor shop-floor performance, and provide real-time operational visibility.",
     icon: RobotArm,
-    image: "/images/iot/manufacturing-operation1.jpg",
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     title: "Digital Twin & Simulation",
     description:
       "Create virtual representations of processes, assets, or systems to support simulation, what-if analysis, and optimization.",
     icon: Box,
-    image: "/images/iot/digital-twin.jpg",
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
     title: "Advanced Analytics & AI",
     description:
       "Transform operational data into actionable insights through real-time analytics, machine learning, forecasting, anomaly detection, and optimization.",
     icon: ChartColumnIncreasing,
-    image: "/images/iot/smart-analytics.jpg",
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     title: "Edge & Cloud IoT",
     description:
       "Combine edge computing and cloud platforms to support responsive, scalable, and resilient IoT environments.",
     icon: Cloud,
-    image: "/images/iot/cloud-solution.jpg",
+    circle: "bg-cyan-100 text-cyan-700",
+    bar: "bg-cyan-500",
   },
   {
     title: "Mobility & Workforce Enablement",
     description:
       "Give teams access to operational information, alerts, workflows, and collaboration tools through mobile and web applications.",
     icon: Smartphone,
-    image: "/images/iot/mobility-workforce.jpg",
+    circle: "bg-amber-100 text-amber-700",
+    bar: "bg-amber-500",
   },
   {
     title: "Industrial Cybersecurity",
     description:
       "Protect connected devices, industrial networks, operational data, and critical systems through security controls and monitoring.",
     icon: ShieldLock,
-    image: "/images/iot/industrial-cybersecurity1.jpg",
+    circle: "bg-indigo-100 text-indigo-700",
+    bar: "bg-indigo-600",
   },
   {
     title: "Energy & Sustainability Monitoring",
     description:
       "Monitor energy consumption, resource utilization, emissions-related parameters, and operational efficiency to support sustainability initiatives.",
     icon: Leaf,
-    image: "/images/iot/sustainabilty-management.jpg",
+    circle: "bg-lime-100 text-lime-700",
+    bar: "bg-lime-600",
   },
 ];
-
-
 export const iotHeroFeatures = [
   {
     icon: Network,

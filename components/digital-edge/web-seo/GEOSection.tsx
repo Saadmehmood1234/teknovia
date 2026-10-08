@@ -1,22 +1,23 @@
+import { BackgroundEffect } from "@/components/Background";
 import { Container } from "@/components/ui/Container";
+import { FeatureListItem } from "@/components/ui/ListItem";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { geoServices } from "@/lib/data/digital-edge/seo-data";
-import { BrainCircuit, Sparkles } from "lucide-react";
+import { BrainCircuit } from "lucide-react";
 
 export function GEOSection() {
   return (
-    <section className="relative overflow-hidden bg-[#050807] py-8 text-white sm:py-16">
-      <div className="absolute inset-0 z-0">
-        <div className="hero-grid absolute inset-0 opacity-10" />
-        <div className="absolute left-1/2 top-0 size-150 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
-      </div>
-
-      <Container className="relative z-10">
-        <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
-          <div>
+    <section
+      aria-labelledby="geo-heading"
+      className="border-b relative border-gray-100 bg-[#18342F] py-8 sm:py-16"
+    >
+      <BackgroundEffect />
+      <Container>
+        <div className="grid gap-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
+          <div className="lg:sticky lg:top-16 lg:self-start">
             <TopBadge data="GENERATIVE ENGINE OPTIMIZATION" />
 
-            <h2 className="mt-4 font-heading text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-4 font-heading text-3xl font-black leading-tight tracking-tight text-white/80 sm:text-4xl">
               Get Discovered in{" "}
               <span className="text-primary">AI-Powered Search</span>
             </h2>
@@ -58,7 +59,6 @@ export function GEOSection() {
                 </strong>
               </p>
             </div>
-
             <div className="mt-8 flex items-center gap-3">
               <div className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <BrainCircuit className="size-5" />
@@ -69,36 +69,28 @@ export function GEOSection() {
               </p>
             </div>
           </div>
-
           <div>
-            <p className="mb-6 font-mono text-xs font-bold uppercase tracking-[0.18em] text-primary">
+            <p className="mb-8 font-mono text-xs font-bold uppercase tracking-[0.18em] text-primary">
               GEO SERVICES
             </p>
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <ul className="border-t border-primary/50 lg:col-span-7">
               {geoServices.map((item, index) => (
-                <article
+                <FeatureListItem
                   key={item.title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.035] p-5"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-primary/70">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-
-                    <Sparkles className="size-4 text-primary/60" />
-                  </div>
-
-                  <h3 className="mt-5 font-heading text-base font-bold text-white">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-gray-400">
-                    {item.description}
-                  </p>
-                </article>
+                  icon={item.icon}
+                  title={item.title}
+                  description={item.description}
+                  index={index}
+                  titleColor="text-white/80"
+                  descriptionColor="text-gray-300"
+                  iconColor="text-primary"
+                  borderColor="border-primary/50"
+                  accentColor="bg-primary"
+                  numberColor="text-gray-400"
+                />
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </Container>

@@ -41,7 +41,7 @@ export function EcommerceGrowth() {
           </div>
         </div>
 
-        <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {ecommerceGrowthPoints.map((item) => (
             <Card2
               key={item.title}

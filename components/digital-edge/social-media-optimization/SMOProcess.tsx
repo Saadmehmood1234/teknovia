@@ -1,14 +1,12 @@
-import { ChevronRight } from "lucide-react";
-
 import { Container } from "@/components/ui/Container";
 import {
   principles,
   process,
 } from "@/lib/data/digital-edge/social-media-optimization-data";
+import { BackgroundEffect } from "@/components/Background";
+import { ProcessSteps } from "@/components/ui/ProcessSteps";
 
 export function SMOProcess() {
-  const lastIndex = process.length - 1;
-
   return (
     <section
       aria-labelledby="process-heading"
@@ -29,72 +27,23 @@ export function SMOProcess() {
             on social media.
           </p>
         </div>
-
-        <div className="relative mt-16">
-          <span
-            aria-hidden
-            className="absolute bottom-1.25 left-[calc(100%/12-10px)] right-[calc(100%/12-10px)] hidden border-t border-dashed border-primary/50 lg:block"
-          />
-
-          <ol className="relative grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-6">
-            {process.map((item, index) => {
-              const Icon = item.icon;
-              const isLast = index === lastIndex;
-
-              return (
-                <li key={item.number} className="relative flex flex-col">
-                  <div className="relative flex-1 rounded-2xl border border-gray-200 bg-white px-4 pb-6 pt-8 text-center shadow-sm">
-                    <span className="absolute -top-5 left-1/2 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-primary font-heading text-sm font-bold text-white shadow-md ring-4 ring-[#FAFAFA]">
-                      {item.number}
-                    </span>
-
-                    <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0D5C56] text-white shadow-lg shadow-primary/20">
-                      <Icon className="size-7" aria-hidden />
-                    </div>
-
-                    <h3 className="mt-5 font-heading text-sm font-bold uppercase tracking-wide text-primary">
-                      {item.title}
-                    </h3>
-
-                    <span
-                      aria-hidden
-                      className="mx-auto mt-2 block h-0.5 w-5 rounded-full bg-primary"
-                    />
-
-                    <p className="mt-3 text-sm leading-6 text-gray-700">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div
-                    aria-hidden
-                    className="hidden flex-col items-center lg:flex"
-                  >
-                    <span className="h-8 border-l border-dashed border-primary/50" />
-                    <span className="size-3 rounded-full border-2 border-primary bg-white" />
-                  </div>
-                  {!isLast && (
-                    <span
-                      aria-hidden
-                      className="absolute -right-6 top-46 hidden w-6 justify-center text-primary lg:flex"
-                    >
-                      <ChevronRight className="size-5" strokeWidth={3} />
-                    </span>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
-        </div>
+        <ProcessSteps
+          steps={process}
+          lineColor="border-primary/40"
+          arrowColor="border-l-primary"
+          circleBorderColor="border-primary/40"
+          circleBgColor="bg-white"
+          circleShadowColor="shadow-[0_0_25px_rgba(0,150,137,0.12)]"
+          iconColor="text-primary"
+          numberBorderColor="border-primary"
+          numberBgColor="bg-primary"
+          numberTextColor="text-white"
+          titleColor="text-gray-950"
+          descriptionColor="text-gray-600"
+        />
 
         <div className="mx-auto mt-14 max-w-6xl overflow-hidden rounded-3xl bg-[#0D5C56] text-white shadow-xl shadow-primary/20">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.10]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, #fff 1px, transparent 1px)",
-              backgroundSize: "20px 20px",
-            }}
-          />
+          <BackgroundEffect />
           <ul className="grid divide-y divide-white/15 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
             {principles.map((item) => {
               const Icon = item.icon;

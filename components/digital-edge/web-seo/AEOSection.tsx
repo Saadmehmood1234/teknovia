@@ -1,8 +1,9 @@
 import { Container } from "@/components/ui/Container";
-import { NumberedServiceCard } from "./NumberedServiceCard";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { MessageCircleQuestion } from "lucide-react";
 import { aeoServices } from "@/lib/data/digital-edge/seo-data";
+import { FeatureListItem } from "@/components/ui/ListItem";
+import { BackgroundEffect } from "@/components/Background";
 
 const process = [
   "Research",
@@ -67,56 +68,64 @@ export function AEOSection() {
                 </strong>
               </p>
             </div>
-            <div className="mt-10 rounded-2xl border border-gray-200 bg-[#FAFAFA] p-6">
-              <div className="flex items-center gap-3">
-                <div className="flex size-10 items-center justify-center rounded-lg bg-primary text-white">
-                  <MessageCircleQuestion className="size-5" aria-hidden />
+            <div className="mt-8 relative overflow-hidden rounded-2xl border border-primary-200 bg-[#18342F]">
+              <BackgroundEffect />
+              <div className="border-b border-primary-700 px-6 py-5">
+                <div className="flex items-center gap-3">
+                  <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary text-white">
+                    <MessageCircleQuestion className="size-5" aria-hidden />
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                      Our Approach
+                    </p>
+
+                    <h3 className="mt-0.5 font-heading text-base font-bold text-gray-300">
+                      Our seven-step process
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="font-heading text-base font-bold text-gray-950">
-                  Our seven-step process
-                </h3>
               </div>
 
-              <ol className="mt-6">
+              <ol className="px-6 py-6">
                 {process.map((step, i) => (
-                  <li key={step} className="relative flex gap-4 pb-4 last:pb-0">
+                  <li key={step} className="relative flex gap-4 pb-5 last:pb-0">
                     {i < process.length - 1 && (
                       <span
                         aria-hidden
-                        className="absolute left-3.25 top-7 h-[calc(100%-1.75rem)] w-px bg-primary/20"
+                        className="absolute left-3.5 top-8 h-[calc(100%-1.75rem)] w-px bg-primary/20"
                       />
                     )}
-                    <span className="relative z-10 flex size-7 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-white text-xs font-bold text-primary">
-                      {i + 1}
+                    <span className="relative z-10 flex size-7 shrink-0 items-center justify-center rounded-full border border-primary/25 bg-primary/5 text-xs font-bold text-primary">
+                      {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="pt-0.5 text-sm font-semibold text-gray-900">
-                      {step}
-                    </span>
+                    <div className="flex min-h-7 items-center">
+                      <span className="text-sm font-medium leading-6 text-gray-200">
+                        {step}
+                      </span>
+                    </div>
                   </li>
                 ))}
               </ol>
             </div>
           </div>
           <div>
-            <div className="mb-6 flex flex-col gap-1 border-b border-gray-200 pb-5">
-              <h3 className="font-heading text-xl font-bold text-gray-950">
-                What we deliver
-              </h3>
-              <p className="text-sm text-gray-600">
-                Everything your content needs to be found, understood, and
-                quoted as the answer.
-              </p>
-            </div>
+            <p className="mb-8 font-mono text-xs font-bold uppercase tracking-[0.18em] text-primary">
+              AEO SERVICES
+            </p>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <ul className="border-t border-gray-200 lg:col-span-7">
               {aeoServices.map((item, index) => (
-                <NumberedServiceCard
+                <FeatureListItem
                   key={item.title}
-                  item={item}
+                  icon={item.icon}
+                  title={item.title}
+                  description={item.description}
                   index={index}
                 />
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </Container>

@@ -4,6 +4,7 @@ import { EdTechHero } from "@/components/edtech-solution/EdTechHero";
 import { EdTechIndustries } from "@/components/edtech-solution/EdTechIndustries";
 import { EdTechIntroduction } from "@/components/edtech-solution/EdTechIntroduction";
 import { OurPhilosophy } from "@/components/edtech-solution/OurPhilosophy";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "EdTech Solutions & Education Technology Services",
@@ -69,6 +70,14 @@ export default function EdTechPage() {
       <EdTechIntroduction />
       <OurPhilosophy />
       <EdTechIndustries />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
+      />
     </main>
   );
 }

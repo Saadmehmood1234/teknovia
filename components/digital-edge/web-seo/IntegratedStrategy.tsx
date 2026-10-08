@@ -61,7 +61,7 @@ export function IntegratedStrategy() {
 
           <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
             <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="group relative flex min-h-80 flex-col justify-center overflow-hidden bg-[#284545] p-7 text-white sm:p-9 lg:min-h-full lg:border-r lg:border-white/10">
+              <div className="group relative flex min-h-80 flex-col justify-center overflow-hidden bg-[#18342F] p-7 text-white sm:p-9 lg:min-h-full lg:border-r lg:border-white/10">
                 <div
                   className="absolute inset-0 opacity-[0.12]"
                   style={{
@@ -70,7 +70,6 @@ export function IntegratedStrategy() {
                     backgroundSize: "22px 22px",
                   }}
                 />
-                <div className="absolute -bottom-24 -right-24 size-72 rounded-full bg-primary/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-primary/50" />
                 <div className="relative z-10">
                   <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-bold tracking-wide text-primary">
                     TOOLS & PLATFORMS

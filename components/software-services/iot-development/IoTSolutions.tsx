@@ -1,70 +1,7 @@
-import { Factory } from "lucide-react";
-
+import { Card2 } from "@/components/ui/Card2";
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import Image from "next/image";
 import { IotSolutions } from "@/lib/data/software-services/iot-development-data";
-
-function SolutionCard({
-  title,
-  description,
-  icon: Icon,
-  index,
-  image,
-}: {
-  title: string;
-  description: string;
-  icon: typeof Factory;
-  index: number;
-  image: string;
-}) {
-  return (
-    <article
-      className="
-        relative flex h-full flex-col overflow-hidden
-        rounded-3xl border border-gray-200 bg-[#FAFAFA]
-      "
-    >
-      <div className="flex flex-1 flex-col p-4 text-center items-center">
-        <span
-          className="
-            absolute left-6 top-6
-            font-mono text-xs font-bold tracking-wider
-            text-gray-500
-          "
-        >
-          {String(index + 1).padStart(2, "0")}
-        </span>
-        <div
-          className="
-            flex items-center size-16 bg-primary-100/60 rounded-full p-2 justify-center text-[#005D66]
-          "
-        >
-          <Icon className="size-10" />
-        </div>
-        <h3
-          className="
-            mt-2 max-w-[85%]
-            font-heading text-lg font-bold leading-7
-            text-[#005D66]
-          "
-        >
-          {title}
-        </h3>
-        <p className="mt-3 text-sm leading-6 text-gray-600">{description}</p>
-      </div>
-      <div className="relative mt-0 h-40 w-full overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-      </div>
-    </article>
-  );
-}
 
 export function IoTSolutions() {
   return (
@@ -78,7 +15,7 @@ export function IoTSolutions() {
             data="IOT&nbsp;&&nbsp;AUTOMATION&nbsp;SOLUTIONS"
             centerItem={true}
           />
-          <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
             Solutions Designed Around{" "}
             <span className="text-primary">Your Operations</span>
           </h2>
@@ -88,19 +25,18 @@ export function IoTSolutions() {
             environment.
           </p>
         </div>
-
-        <div className="mt-12 grid items-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-          {IotSolutions.map((solution, index) => (
-            <SolutionCard
-              key={solution.title}
-              title={solution.title}
-              description={solution.description}
-              icon={solution.icon}
-              index={index}
-              image={solution.image}
+        <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+          {IotSolutions.map((item) => (
+            <Card2
+              key={item.title}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              circle={item.circle}
+              bar={item.bar}
             />
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

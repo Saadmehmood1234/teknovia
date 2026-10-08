@@ -24,7 +24,7 @@ export function IoTIntroduction() {
                   <Icon className="size-6" />
                 </div>
 
-                <p className="text-sm font-semibold leading-6 text-gray-800 xl:text-base">
+                <p className="text-sm font-semibold leading-6 text-gray-600">
                   {benefit.text}
                 </p>
               </div>

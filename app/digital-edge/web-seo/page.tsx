@@ -9,6 +9,7 @@ import { SearchOptimizationHero } from "@/components/digital-edge/web-seo/Search
 import { SEOOverview } from "@/components/digital-edge/web-seo/SEOOverview";
 import { SEOServices } from "@/components/digital-edge/web-seo/SEOServices";
 import FAQ from "@/components/FAQ";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "SEO Services & Search Engine Optimization Company",
@@ -89,6 +90,14 @@ export default function SearchEngineOptimizationPage() {
         title="Frequently Asked Questions"
         description="Find answers to common questions about our SEO services, strategies, and approach to improving search visibility."
         faqs={seoFaqs}
+      />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
       />
     </main>
   );

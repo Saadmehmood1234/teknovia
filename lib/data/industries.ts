@@ -7,7 +7,7 @@ import {
   ShoppingCart,
   Truck,
   Users,
-    BarChart3,
+  BarChart3,
   Boxes,
   Code2,
   Cog,
@@ -349,55 +349,69 @@ export const industries: Industry[] = [
   },
 ];
 
-
 export const principles = [
   {
     title: "Business-Centric Development",
     description:
       "Solutions aligned with operational goals, business processes, and real-world workflows.",
     icon: Boxes,
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     title: "Customization & Flexibility",
     description:
       "Software designed around your requirements instead of forcing your business into generic templates.",
     icon: Code2,
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     title: "Scalable Architecture",
     description:
       "Systems built to support long-term growth, increasing users, data, and business demands.",
     icon: Expand,
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     title: "Security & Reliability",
     description:
       "Secure, stable, and performance-driven applications designed for dependable operations.",
     icon: Lock,
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     title: "Integration Capability",
     description:
       "Seamless integration with third-party platforms, APIs, services, and existing systems.",
     icon: Puzzle,
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     title: "Analytics & Insights",
     description:
       "Dashboards, reports, and meaningful data insights to support informed decision-making.",
     icon: BarChart3,
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
     title: "Automation & Efficiency",
     description:
       "Reducing repetitive manual work, streamlining processes, and improving productivity.",
     icon: Cog,
+    circle: "bg-pink-100 text-pink-700",
+    bar: "bg-pink-600",
   },
   {
     title: "Continuous Support & Enhancement",
     description:
       "Ongoing maintenance, optimization, improvements, and upgrades as your needs evolve.",
     icon: Headphones,
+    circle: "bg-amber-100 text-amber-700",
+    bar: "bg-amber-500",
   },
 ];
-

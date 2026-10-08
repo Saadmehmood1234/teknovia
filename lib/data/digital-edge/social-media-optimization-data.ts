@@ -8,6 +8,7 @@ import {
   Eye,
   FilterIcon,
   FlagIcon,
+  Hash,
   Headset,
   Megaphone,
   MessageCircle,
@@ -293,6 +294,8 @@ export const smoServices = [
     title: "Strategy Development",
     description:
       "We create customized social media strategies aligned with your business goals.",
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     icon: SquarePen,
@@ -300,6 +303,8 @@ export const smoServices = [
     title: "Content Creation",
     description:
       "Engaging and creative content that connects, informs, and converts your audience.",
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     icon: Users,
@@ -307,6 +312,8 @@ export const smoServices = [
     title: "Community Management",
     description:
       "We engage with your audience, answer queries, and build strong relationships.",
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     icon: Megaphone,
@@ -314,6 +321,8 @@ export const smoServices = [
     title: "Social Media Marketing",
     description:
       "Targeted campaigns to increase visbility, engagement, and brand awareness.",
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     icon: ChartNoAxesColumn,
@@ -321,13 +330,17 @@ export const smoServices = [
     title: "Page Optimisation",
     description:
       "We optimise your social media profiles to attract more visitors and build trust.",
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
-    icon: CgHashtag,
+    icon: Hash,
     number: "06",
     title: "Hashtag Research",
     description:
       "We find the best trending and relevant hashtags to maximize your content reach.",
+    circle: "bg-pink-100 text-pink-700",
+    bar: "bg-pink-600",
   },
   {
     icon: ChartPie,
@@ -335,6 +348,8 @@ export const smoServices = [
     title: "Analytics & Reporting",
     description:
       "Detailed reports and insights to track performance and measure success.",
+    circle: "bg-amber-100 text-amber-700",
+    bar: "bg-amber-500",
   },
   {
     icon: ShieldCheck,
@@ -342,9 +357,10 @@ export const smoServices = [
     title: "Reputation Management",
     description:
       "We monitor your brand image and manage feedback to build a positive reputation.",
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
 ];
-
 export const smoServiceFeatures = [
   {
     icon: Users,

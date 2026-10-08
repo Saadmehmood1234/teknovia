@@ -1,3 +1,4 @@
+import { CTA } from "@/components/CTA";
 import { IndustriesGrid } from "@/components/industries/IndustriesGrid";
 import { IndustriesHero } from "@/components/industries/IndustriesHero";
 import { IndustriesIntroduction } from "@/components/industries/IndustriesIntroduction";
@@ -67,9 +68,17 @@ export default function IndustriesPage() {
     <main>
       <IndustriesHero />
 
-     <IndustriesIntroduction/>
+      <IndustriesIntroduction />
       <IndustriesGrid />
       <IndustriesOverview />
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
+      />
     </main>
   );
 }

@@ -1,15 +1,31 @@
 import {
+  Award,
   BarChart3,
+  BookOpen,
   Bot,
+  Brain,
+  Building2,
   Code2,
+  Database,
+  Eye,
   FileSearch,
+  FileText,
+  Globe2,
+  ListChecks,
+  ListTree,
   MapPin,
+  MessageCircle,
   MessageCircleQuestion,
+  Mic,
   Network,
+  PackageSearch,
+  Quote,
+  ScanSearch,
   Search,
   Settings2,
   Sparkles,
   Target,
+  ThumbsUp,
   TrendingUp,
 } from "lucide-react";
 
@@ -113,60 +129,80 @@ export const seoServices = [
     description:
       "In-depth website audit to identify technical issues, content gaps & growth opportunities.",
     icon: FileSearch,
+    circle: "bg-rose-100 text-rose-600",
+    bar: "bg-rose-500",
   },
   {
     title: "Keyword Research",
     description:
       "Find the right keywords your customers search for and target them strategically.",
     icon: Search,
+    circle: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-600",
   },
   {
     title: "On-Page SEO",
     description:
       "Optimize titles, meta tags, content, headings, images and internal links for better rankings.",
     icon: Target,
+    circle: "bg-purple-100 text-purple-700",
+    bar: "bg-purple-600",
   },
   {
     title: "Technical SEO",
     description:
       "Improve website speed, mobile-friendliness, indexing, crawlability & overall performance.",
     icon: Settings2,
+    circle: "bg-emerald-100 text-emerald-700",
+    bar: "bg-emerald-500",
   },
   {
     title: "Content SEO",
     description:
       "Create and optimize high-quality content that ranks and engages.",
     icon: FileSearch,
+    circle: "bg-orange-100 text-orange-600",
+    bar: "bg-orange-500",
   },
   {
     title: "Off-Page SEO",
     description:
       "Build high-authority backlinks to increase your website's authority and trust.",
     icon: Network,
+    circle: "bg-indigo-100 text-indigo-700",
+    bar: "bg-indigo-600",
   },
   {
     title: "Local SEO",
     description:
       "Optimize Google Business Profile and local citations to rank higher in local search results.",
     icon: MapPin,
+    circle: "bg-cyan-100 text-cyan-700",
+    bar: "bg-cyan-500",
   },
   {
     title: "Schema & Structured Data",
     description:
       "Implement schema markup to help search engines understand your content better.",
     icon: Code2,
+    circle: "bg-sky-100 text-sky-700",
+    bar: "bg-sky-500",
   },
   {
     title: "E-Commerce SEO",
     description:
       "Optimize product pages, categories & site structure to boost sales and visibility.",
     icon: TrendingUp,
+    circle: "bg-pink-100 text-pink-700",
+    bar: "bg-pink-600",
   },
   {
     title: "SEO Reporting",
     description:
       "Monthly performance reports with key metrics, insights & actionable strategies.",
     icon: BarChart3,
+    circle: "bg-amber-100 text-amber-700",
+    bar: "bg-amber-500",
   },
 ];
 
@@ -175,51 +211,61 @@ export const aeoServices = [
     title: "Question & Search Intent Research",
     description:
       "We identify the questions your customers are asking across search engines and answer platforms. This helps us target the right search intent, conversational queries, and customer needs.",
+    icon: Search,
   },
   {
     title: "Answer-Focused Content",
     description:
       "We create clear, useful content that directly answers the questions your audience is searching for. The content is structured to make important information easy for search and answer engines to understand.",
+    icon: FileText,
   },
   {
     title: "FAQ Optimization",
     description:
       "We develop relevant FAQs based on real customer questions, search behaviour, and industry topics.",
+    icon: ListChecks,
   },
   {
     title: "Featured Snippet Optimization",
     description:
       "We optimize suitable content to provide concise and well-structured answers to specific search queries.",
+    icon: Award,
   },
   {
     title: "Conversational Search Optimization",
     description:
       "We optimize content for the way people naturally ask questions, including longer and conversational searches.",
+    icon: MessageCircle,
   },
   {
     title: "Voice Search Optimization",
     description:
       "We create content that answers common questions in a clear, concise, and conversational format.",
+    icon: Mic,
   },
   {
     title: "Structured Content & Schema",
     description:
       "We organize your website content with clear headings, logical sections, lists, FAQs, and relevant structured data.",
+    icon: Code2,
   },
   {
     title: "Knowledge & Entity Optimization",
     description:
       "We strengthen how your business, products, services, and expertise are represented across your website and digital presence.",
+    icon: Network,
   },
   {
     title: "AI & Answer Platform Optimization",
     description:
       "We prepare your content to be clear, factual, useful, and easy for modern AI-powered search and answer systems to interpret.",
+    icon: Sparkles,
   },
   {
     title: "AEO Performance & Monitoring",
     description:
       "We monitor how your content performs across search and answer experiences and identify opportunities for improvement.",
+    icon: BarChart3,
   },
 ];
 
@@ -228,51 +274,61 @@ export const geoServices = [
     title: "AI Search Visibility Optimization",
     description:
       "Improve your business presence across AI-powered search and generative answer platforms.",
+    icon: Sparkles,
   },
   {
     title: "AI Content Optimization",
     description:
       "Create clear, authoritative and well-structured content that AI systems can understand and reference.",
+    icon: FileText,
   },
   {
     title: "Entity & Brand Optimization",
     description:
       "Strengthen how your business, products, services and expertise are understood as entities across the web.",
+    icon: Network,
   },
   {
     title: "Citation & Reference Optimization",
     description:
       "Build credible sources, mentions and references that can support your brand's inclusion in AI-generated answers.",
+    icon: Quote,
   },
   {
     title: "Topical Authority Building",
     description:
       "Develop comprehensive content around important topics to establish depth and expertise in your industry.",
+    icon: Brain,
   },
   {
     title: "AI-Friendly Content Structure",
     description:
       "Organize information using clear headings, definitions, facts, FAQs, comparisons and structured content.",
+    icon: ListTree,
   },
   {
     title: "Original Data & Research Content",
     description:
       "Develop original insights, statistics, studies and resources that provide information AI systems can reference.",
+    icon: Database,
   },
   {
     title: "Digital Brand Presence",
     description:
       "Strengthen consistent business information across websites, directories, publications and relevant online platforms.",
+    icon: Globe2,
   },
   {
     title: "AI Recommendation Optimization",
     description:
       "Optimize business information and content to improve discoverability when users ask AI platforms for products, services or recommendations.",
+    icon: ThumbsUp,
   },
   {
     title: "GEO Monitoring & Reporting",
     description:
       "Monitor AI visibility, mentions, citations and referenced content to identify opportunities for continuous improvement.",
+    icon: BarChart3,
   },
 ];
 
@@ -281,51 +337,61 @@ export const aioServices = [
     title: "AI Readiness Audit",
     description:
       "Analyze your website and digital presence to identify how easily AI systems can understand your business, services, products, and content.",
+    icon: ScanSearch,
   },
   {
     title: "AI-Friendly Content Optimization",
     description:
       "Optimize website content so information is clear, accurate, structured, and easy for AI systems to interpret.",
+    icon: FileText,
   },
   {
     title: "Brand & Entity Optimization",
     description:
       "Improve the consistency and clarity of your business identity, services, expertise, and brand information across digital platforms.",
+    icon: Network,
   },
   {
     title: "Business Information Optimization",
     description:
       "Organize important business information such as services, locations, products, expertise, contact details, and company information.",
+    icon: Building2,
   },
   {
     title: "Knowledge Base Optimization",
     description:
       "Structure FAQs, guides, documentation, product information, and other knowledge resources so AI systems can understand and retrieve them effectively.",
+    icon: BookOpen,
   },
   {
     title: "Structured Data & AI-Readable Content",
     description:
       "Implement appropriate structured data and clear content structures to help machines better interpret important information.",
+    icon: Code2,
   },
   {
     title: "AI Assistant Optimization",
     description:
       "Prepare business information and content for discovery through AI assistants and AI-powered search experiences.",
+    icon: Bot,
   },
   {
     title: "Product & Service AI Optimization",
     description:
       "Structure product and service information clearly so AI systems can better understand what you offer and who it is relevant to.",
+    icon: PackageSearch,
   },
   {
     title: "AI Visibility & Mention Monitoring",
     description:
       "Track how your brand, products, and services appear across relevant AI-powered search and answer experiences.",
+    icon: Eye,
   },
   {
     title: "AI Optimization Strategy & Reporting",
     description:
       "Analyze findings, identify gaps, and continuously improve your digital presence for changing AI-driven discovery.",
+    icon: BarChart3,
   },
 ];
 

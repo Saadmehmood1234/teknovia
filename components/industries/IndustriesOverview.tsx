@@ -1,9 +1,7 @@
-import { CheckCircle2 } from "lucide-react";
-
 import { Container } from "../ui/Container";
 import { principles } from "@/lib/data/industries";
-import Image from "next/image";
 import { TopBadge } from "../ui/Top-Badge";
+import { Card2 } from "../ui/Card2";
 
 export const industries = [
   "Educational Institutions",
@@ -35,38 +33,20 @@ export function IndustriesOverview() {
           </div>
         </div>
 
-        <div className="mt-8 mb-16 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {principles.map((principle, index) => {
-            const Icon = principle.icon;
-
-            return (
-              <div
-                key={principle.title}
-                className="group relative rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[0_10px_30px_rgba(15,23,42,0.06)]"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-200 group-hover:bg-primary group-hover:text-white">
-                    <Icon className="h-5 w-5" />
-                  </div>
-
-                  <span className="font-mono text-[10px] font-bold text-slate-300">
-                    0{index + 1}
-                  </span>
-                </div>
-
-                <h4 className="mt-5 text-sm font-extrabold leading-5 text-slate-900">
-                  {principle.title}
-                </h4>
-
-                <p className="mt-2 text-xs leading-5 text-slate-500">
-                  {principle.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+        <ul className="my-8 grid gap-4 sm:my-16 sm:grid-cols-2 lg:grid-cols-4">
+          {principles.map((item) => (
+            <Card2
+              key={item.title}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              circle={item.circle}
+              bar={item.bar}
+            />
+          ))}
+        </ul>
       </Container>
-      <div className="relative overflow-hidden border">
+      {/* <div className="relative overflow-hidden border">
         <Image
           src="/images/industries-bg.png"
           alt=""
@@ -108,7 +88,7 @@ export function IndustriesOverview() {
             </div>
           </Container>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

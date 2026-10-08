@@ -1,7 +1,7 @@
-import { ServiceCard } from "./ServiceCard";
 import { SectionHeading } from "./SectionHeading";
 import { Container } from "@/components/ui/Container";
 import { seoServices } from "@/lib/data/digital-edge/seo-data";
+import { Card2 } from "@/components/ui/Card2";
 
 export function SEOServices() {
   return (
@@ -21,11 +21,18 @@ export function SEOServices() {
           description="From technical foundations to content, authority and reporting, we cover the key areas that influence search visibility."
         />
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {seoServices.map((item, index) => (
-            <ServiceCard key={item.title} item={item} index={index} />
+        <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          {seoServices.map((item) => (
+            <Card2
+              key={item.title}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              circle={item.circle}
+              bar={item.bar}
+            />
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

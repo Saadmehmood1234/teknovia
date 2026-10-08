@@ -1,8 +1,10 @@
-import { ArrowUpRight, ShoppingCart } from "lucide-react";
+import {  ShoppingCart } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { ecommerceIntegrations } from "@/lib/data/ecommerce-solutions-data";
+import { BackgroundEffect } from "../Background";
+import { Card2 } from "../ui/Card2";
 
 export function EcommerceIntegrations() {
   return (
@@ -27,14 +29,7 @@ export function EcommerceIntegrations() {
         </div>
         <div className="mx-auto mt-10 grid overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.07)] sm:mt-14 lg:grid-cols-[20rem_1fr]">
           <div className="relative flex min-h-64 flex-col items-center justify-center overflow-hidden bg-[#284545] px-8 py-12 text-center text-white">
-            <div
-              className="absolute inset-0 opacity-[0.12]"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle, #fff 1px, transparent 1px)",
-                backgroundSize: "22px 22px",
-              }}
-            />
+            <BackgroundEffect />
             <div
               aria-hidden
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -56,31 +51,17 @@ export function EcommerceIntegrations() {
             </p>
           </div>
 
-          <ul className="grid gap-px bg-gray-200 sm:grid-cols-2">
-            {ecommerceIntegrations.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <li key={item.title} className="bg-white p-6 sm:p-8">
-                  <div className="flex items-start justify-between">
-                    <div className="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                      <Icon strokeWidth={1.7} className="size-6" />
-                    </div>
-                    <ArrowUpRight
-                      aria-hidden
-                      className="size-5 text-gray-300"
-                    />
-                  </div>
-
-                  <h3 className="mt-6 font-heading text-lg font-bold tracking-tight text-gray-950">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-gray-600">
-                    {item.description}
-                  </p>
-                </li>
-              );
-            })}
+          <ul className="grid gap-4 lg:m-0 m-2 sm:grid-cols-2">
+            {ecommerceIntegrations.map((item) => (
+              <Card2
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+                circle={item.circle}
+                bar={item.bar}
+              />
+            ))}
           </ul>
         </div>
       </Container>

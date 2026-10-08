@@ -8,6 +8,7 @@ import { B2BMarketingIntroduction } from "@/components/digital-edge/b2b-marketin
 import { B2BMarketingServices } from "@/components/digital-edge/b2b-marketing/B2BMarketingServices";
 import FAQ from "@/components/FAQ";
 import { b2bMarketingFaqs } from "@/lib/data/digital-edge/b2b-marketing-data";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "B2B Marketing Services | Lead Generation & Growth",
@@ -80,7 +81,14 @@ export default function B2BMarketingPage() {
         faqs={b2bMarketingFaqs}
       />
 
-      {/* <B2BMarketingCTA /> */}
+      <CTA
+        title="Let's Build Smart Solutions Together"
+        description="Partner with Teknovia to innovate, grow and lead in your industry."
+        button={{
+          label: "Get Free Consultation",
+          href: "mailto:info@teknovia.in",
+        }}
+      />
     </main>
   );
 }
