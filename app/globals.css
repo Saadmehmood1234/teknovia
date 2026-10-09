@@ -152,3 +152,191 @@ img {
 
   background-size: 40px 40px;
 }
+
+
+
+
+
+.teknovia-stream {
+  position: absolute;
+  left: 0;
+  width: 16rem;
+  height: 3rem;
+  opacity: 0;
+  animation:
+    teknovia-stream-travel var(--stream-duration) linear
+    var(--stream-delay) infinite,
+    teknovia-stream-fade 5s ease-in-out
+    var(--stream-delay) infinite;
+  will-change: transform, opacity;
+}
+
+.teknovia-stream--reverse {
+  animation-name:
+    teknovia-stream-travel-reverse,
+    teknovia-stream-fade;
+}
+
+.teknovia-stream__trail {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  width: 13rem;
+  height: 1px;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 150, 137, 0.5),
+    rgba(0, 150, 137, 0.16),
+    transparent
+  );
+}
+
+.teknovia-stream__trail--reverse {
+  left: auto;
+  right: 0.75rem;
+  background: linear-gradient(
+    to left,
+    rgba(0, 150, 137, 0.5),
+    rgba(0, 150, 137, 0.16),
+    transparent
+  );
+}
+
+.teknovia-stream__glow {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  width: 7rem;
+  height: 0.75rem;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  background: rgba(0, 150, 137, 0.22);
+  filter: blur(10px);
+  animation: teknovia-glow 3s ease-in-out infinite;
+}
+
+.teknovia-stream__glow--reverse {
+  left: auto;
+  right: 0.5rem;
+}
+
+.teknovia-stream__letter {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: #009689;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-shadow:
+    0 0 7px rgba(0, 150, 137, 0.65),
+    0 0 16px rgba(0, 150, 137, 0.3);
+}
+
+.teknovia-stream__letter--reverse {
+  left: auto;
+  right: 0;
+}
+
+.teknovia-stream__dot {
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #009689;
+  box-shadow: 0 0 8px rgba(0, 150, 137, 0.7);
+}
+
+.teknovia-stream__dot--reverse {
+  left: auto;
+  right: -1px;
+}
+
+@keyframes teknovia-stream-travel {
+  from {
+    transform: translate3d(-30vw, 0, 0);
+  }
+  to {
+    transform: translate3d(110vw, 0, 0);
+  }
+}
+
+@keyframes teknovia-stream-travel-reverse {
+  from {
+    transform: translate3d(110vw, 0, 0);
+  }
+  to {
+    transform: translate3d(-35vw, 0, 0);
+  }
+}
+
+@keyframes teknovia-stream-fade {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes teknovia-glow {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Reduce the number of visible streams on mobile. */
+@media (max-width: 639px) {
+  .teknovia-stream {
+    width: 11rem;
+    height: 2.25rem;
+  }
+
+  .teknovia-stream--desktop-only {
+    display: none;
+  }
+
+  .teknovia-stream__trail {
+    width: 9rem;
+  }
+
+  .teknovia-stream__glow {
+    width: 5rem;
+    height: 0.5rem;
+    filter: blur(7px);
+  }
+
+  .teknovia-stream__letter {
+    font-size: 16px;
+    text-shadow: 0 0 7px rgba(0, 150, 137, 0.5);
+  }
+
+  .teknovia-stream__dot {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+/* Accessibility: stop continuous motion when requested. */
+@media (prefers-reduced-motion: reduce) {
+  .teknovia-stream,
+  .teknovia-stream__glow {
+    animation: none !important;
+  }
+
+  .teknovia-stream {
+    opacity: 0.35;
+    transform: none;
+  }
+}
