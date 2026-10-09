@@ -1,8 +1,7 @@
-
 "use client";
 
 import type { ReactNode } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 
 import {
   animationConfig,
@@ -15,10 +14,7 @@ interface AnimationProps {
   className?: string;
 }
 
-export function RevealGroup({
-  children,
-  className,
-}: AnimationProps) {
+export function RevealGroup({ children, className }: AnimationProps) {
   return (
     <motion.div
       initial="hidden"
@@ -40,13 +36,7 @@ interface AnimatedCardProps extends AnimationProps {
   vertical?: boolean;
 }
 
-export function AnimatedCard({
-  children,
-  className,
-  vertical = false,
-}: AnimatedCardProps) {
-  const shouldReduceMotion = useReducedMotion();
-
+export function AnimatedCard({ children, className }: AnimatedCardProps) {
   return (
     <motion.div
       initial="hidden"
@@ -55,11 +45,7 @@ export function AnimatedCard({
         once: true,
         amount: animationConfig.viewportAmount,
       }}
-      variants={
-        vertical || shouldReduceMotion
-          ? revealVariants
-          : revealVariants
-      }
+      variants={revealVariants}
       className={`min-w-0 w-full ${className ?? ""}`}
     >
       {children}
