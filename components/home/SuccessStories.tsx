@@ -99,12 +99,9 @@ export function SuccessStories() {
         </motion.div>
 
         <RevealGroup className="mt-7 grid gap-4 lg:grid-cols-3">
-          {caseStudies.map((study, index) => (
-            <AnimatedCard
-              key={study.title}
-              direction={index % 2 === 0 ? -1 : 1}
-            >
-              <CaseStudyCard key={study.title} study={study} />
+          {caseStudies.map((study) => (
+            <AnimatedCard key={study.title}>
+              <CaseStudyCard study={study} />
             </AnimatedCard>
           ))}
         </RevealGroup>

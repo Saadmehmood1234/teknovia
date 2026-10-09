@@ -17,13 +17,9 @@ export function Industries() {
         />
 
         <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {industries.map((industry, index) => (
-            <AnimatedCard
-              key={industry.title}
-              direction={index % 2 === 0 ? -1 : 1}
-            >
+          {industries.map((industry) => (
+            <AnimatedCard key={industry.title} vertical>
               <BottomImageCard
-                key={industry.title}
                 image={industry.image}
                 title={industry.title}
                 description={industry.description}

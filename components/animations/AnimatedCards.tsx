@@ -1,11 +1,11 @@
+
 "use client";
 
 import type { ReactNode } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 
 import {
   animationConfig,
-  cardVariants,
   revealVariants,
   staggerContainerVariants,
 } from "@/lib/animations";
@@ -43,23 +43,24 @@ interface AnimatedCardProps extends AnimationProps {
 export function AnimatedCard({
   children,
   className,
-  direction = 1,
   vertical = false,
 }: AnimatedCardProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{
-        once: false,
+        once: true,
         amount: animationConfig.viewportAmount,
       }}
       variants={
-        vertical
+        vertical || shouldReduceMotion
           ? revealVariants
-          : cardVariants(direction)
+          : revealVariants
       }
-      className={className}
+      className={`min-w-0 w-full ${className ?? ""}`}
     >
       {children}
     </motion.div>

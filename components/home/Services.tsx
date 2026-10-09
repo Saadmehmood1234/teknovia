@@ -17,7 +17,7 @@ export function Services() {
 
         <RevealGroup className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <AnimatedCard key={service.title}>
+            <AnimatedCard key={service.title} vertical>
               <ServiceCard
                 image={service.image}
                 title={service.title}
