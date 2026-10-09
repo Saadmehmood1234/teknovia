@@ -1,7 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { WhyTeknoviaReasons } from "../NoteBook";
 import { SectionHeading } from "../ui/SectionHeading";
-import { AnimatedCard } from "../animations/AnimatedCards";
 
 export function WhyTeknovia() {
   return (
@@ -13,9 +12,7 @@ export function WhyTeknovia() {
           title="our Growth is Our Commitment."
         />
 
-        <AnimatedCard vertical>
           <WhyTeknoviaReasons />
-        </AnimatedCard>
       </Container>
     </section>
   );
