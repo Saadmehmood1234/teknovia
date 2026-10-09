@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "../ui/Top-Badge";
+import { SectionHeading } from "../ui/SectionHeading";
 
 export function Ecosystem() {
   return (
@@ -18,25 +18,14 @@ export function Ecosystem() {
       />
       <div className="absolute inset-0 bg-[#040706]/80" />
       <Container className="relative flex flex-col items-center justify-center text-center">
-        <div className="max-w-3xl">
-          <TopBadge
-            data="Domains&nbsp;Integrated&nbsp;Service&nbsp;Ecosystem"
-            centerItem={true}
-          />
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight">
-            One framework. End-to-end growth.
-          </h2>
-
-          <p className="mt-6 sm:text-lg text-sm leading-8 text-center text-white/60">
-            Integrated Service Ecosystem unifies digital marketing, custom
-            software development, eCommerce solutions, EduTech platforms,
-            Academic ERP, and talent services into one scalable growth
-            framework. We help businesses improve efficiency, accelerate digital
-            transformation, strengthen online presence, and drive measurable
-            results through end-to-end technology solutions. Build, scale, and
-            grow with future-ready systems designed for long-term success.
-          </p>
-        </div>
+        <SectionHeading
+          variant="centered"
+          badge="Domains&nbsp;Integrated&nbsp;Service&nbsp;Ecosystem"
+          title="One framework. End-to-end growth."
+          description="Integrated Service Ecosystem unifies digital marketing, custom software development, eCommerce solutions, EduTech platforms, Academic ERP, and talent services into one scalable growth framework. We help businesses improve efficiency, accelerate digital transformation, strengthen online presence, and drive measurable results through end-to-end technology solutions. Build, scale, and grow with future-ready systems designed for long-term success."
+          titleClassName="text-white"
+          descriptionClassName="text-lg text-white/60"
+        />
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           {[

@@ -3,7 +3,8 @@ import { Star } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { testimonials } from "@/lib/data/hero-data";
-import { TopBadge } from "../ui/Top-Badge";
+import { AnimatedCard, RevealGroup } from "../animations/AnimatedCards";
+import { SectionHeading } from "../ui/SectionHeading";
 
 export function Testimonials() {
   return (
@@ -20,43 +21,39 @@ export function Testimonials() {
       <div className="absolute inset-0 bg-white/90" />
 
       <Container className="relative">
-        <div className="text-center">
-          <TopBadge data="Testimonials&nbsp;&&nbsp;Success&nbsp;Stories" centerItem={true} />
+        <SectionHeading
+          variant="centered"
+          badge="Testimonials&nbsp;&&nbsp;Success&nbsp;Stories"
+          title="What Our Clients Say."
+          description="Real results from businesses that partnered with Teknovia to scale smarter."
+        />
 
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
-            What Our Clients Say
-          </h2>
+        <RevealGroup className="mt-12 grid gap-5 lg:grid-cols-3">
+          {testimonials.map((item, index) => (
+            <AnimatedCard key={item.name} direction={index % 2 === 0 ? -1 : 1}>
+              <article
+                key={item.name}
+                className="rounded-3xl border border-slate-200 bg-white/95 p-7 shadow-[0_4px_20px_rgba(0,0,0,0.08)] backdrop-blur-sm"
+              >
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <Star key={index} size={17} className="text-[#FFB900]" />
+                  ))}
+                </div>
 
-          <p className="mx-auto mt-5 max-w-2xl text-sm text-center sm:text-lg text-gray-500">
-            Real results from businesses that partnered with Teknovia to scale
-            smarter.
-          </p>
-        </div>
+                <p className="mt-6 text-[15px] leading-7 text-slate-600">
+                  “{item.quote}”
+                </p>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
-          {testimonials.map((item) => (
-            <article
-              key={item.name}
-              className="rounded-3xl border border-slate-200 bg-white/95 p-7 shadow-[0_4px_20px_rgba(0,0,0,0.08)] backdrop-blur-sm"
-            >
-              <div className="flex items-center gap-1">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <Star key={index} size={17} className="text-[#FFB900]" />
-                ))}
-              </div>
+                <div className="mt-7 border-t border-slate-100 pt-5">
+                  <p className="font-bold text-slate-950">{item.name}</p>
 
-              <p className="mt-6 text-[15px] leading-7 text-slate-600">
-                “{item.quote}”
-              </p>
-
-              <div className="mt-7 border-t border-slate-100 pt-5">
-                <p className="font-bold text-slate-950">{item.name}</p>
-
-                <p className="mt-1 text-sm text-slate-500">{item.role}</p>
-              </div>
-            </article>
+                  <p className="mt-1 text-sm text-slate-500">{item.role}</p>
+                </div>
+              </article>
+            </AnimatedCard>
           ))}
-        </div>
+        </RevealGroup>
       </Container>
     </section>
   );

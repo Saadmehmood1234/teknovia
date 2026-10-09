@@ -1,37 +1,37 @@
 import { Container } from "@/components/ui/Container";
 import { industries } from "@/lib/data/hero-data";
 import { BottomImageCard } from "../ui/BottomImageCard";
-import { TopBadge } from "../ui/Top-Badge";
 import Link from "next/link";
+import { AnimatedCard, RevealGroup } from "../animations/AnimatedCards";
+import { SectionHeading } from "../ui/SectionHeading";
 
 export function Industries() {
   return (
     <section id="industries" className="sm:py-16 py-8 bg-surface bg-[#FAFAFA]">
       <Container>
-        <div className="text-center">
-          <TopBadge data="Industries&nbsp;We&nbsp;Serve" centerItem={true} />
+        <SectionHeading
+          variant="centered"
+          badge="Industries&nbsp;We&nbsp;Serve"
+          title="Multi-Industry Expertise."
+          description="Technology solutions tailored to the unique needs of every sector we serve."
+        />
 
-          <h2 className="mt-4 sm:text-4xl text-3xl font-extrabold tracking-tight text-[#040506]">
-            Multi-Industry Expertise
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-md leading-8 text-slate-600">
-            Technology solutions tailored to the unique needs of every sector we
-            serve.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {industries.map((industry) => (
-            <BottomImageCard
+        <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {industries.map((industry, index) => (
+            <AnimatedCard
               key={industry.title}
-              image={industry.image}
-              title={industry.title}
-              description={industry.description}
-              href={industry.href}
-            />
+              direction={index % 2 === 0 ? -1 : 1}
+            >
+              <BottomImageCard
+                key={industry.title}
+                image={industry.image}
+                title={industry.title}
+                description={industry.description}
+                href={industry.href}
+              />
+            </AnimatedCard>
           ))}
-        </div>
+        </RevealGroup>
 
         <div className="w-full flex justify-center mt-8 items-center">
           <Link

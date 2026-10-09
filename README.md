@@ -35,3 +35,86 @@ Other supported URLs:
 - /contact?tab=message
 - /contact?tab=callback
 - /contact?tab=enquiry -->
+
+
+```tsx
+<RevealGroup className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+  {services.map((service, index) => (
+    <AnimatedCard
+      key={service.title}
+      direction={index % 2 === 0 ? -1 : 1}
+    >
+      <ServiceCard
+        image={service.image}
+        title={service.title}
+        href={service.href}
+        description={service.description}
+      />
+    </AnimatedCard>
+  ))}
+</RevealGroup>
+```
+
+
+### Variant 1: Centered heading
+CORE SERVICE DOMAINS
+Built to Help Businesses Grow, Scale, and Succeed
+Comprehensive technology, digital marketing, eCommerce, EduTech, and business development solutions designed to improve efficiency, accelerate growth, and help businesses build scalable, future-ready operations.
+
+```tsx
+<SectionHeading
+  variant="centered"
+  badge="Core Service Domains"
+  title="Built to Help Businesses Grow, Scale, and Succeed"
+  description="Comprehensive technology, digital marketing, eCommerce, EduTech, and business development solutions designed to improve efficiency, accelerate growth, and help businesses build scalable, future-ready operations."
+/>
+```
+
+### Variant 2: Left-aligned heading
+
+```tsx
+<SectionHeading
+  variant="left"
+  badge="Our Services"
+  title="Explore our service areas"
+  description="Software, digital marketing, eCommerce, education and industry-focused solutions, all in one place."
+/>
+```
+
+### Variant 3: Split heading
+
+SOFTWARE OFFERINGS
+Explore Our Software Solutions
+
+Flexible technology solutions designed to support businesses from early-stage growth to enterprise scale.
+
+```tsx
+<SectionHeading
+  variant="split"
+  badge="Software Offerings"
+  eyebrow
+  title="Explore Our Software Solutions"
+  description="Flexible technology solutions designed to support businesses from early-stage growth to enterprise scale."
+/>
+```
+
+
+### Variant 4: sticky heading
+
+```tsx
+<SectionHeading
+  variant="sticky"
+  badge="What We Build"
+  title={
+    <>
+      Web Applications{" "}
+      <span className="text-primary">We Develop</span>
+    </>
+  }
+  subtitle="Powerful Applications. Built for Real Business Impact."
+  description="From customer-facing platforms to complex enterprise systems, we develop web applications designed to solve real business challenges and create measurable value."
+  titleClassName="text-white"
+  subtitleClassName="text-white/85"
+  divider
+/>
+```

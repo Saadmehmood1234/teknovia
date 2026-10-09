@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import {
   animationConfig,
   cardVariants,
+  revealVariants,
   staggerContainerVariants,
 } from "@/lib/animations";
 
@@ -34,23 +35,30 @@ export function RevealGroup({
   );
 }
 
-
 interface AnimatedCardProps extends AnimationProps {
-  hover?: boolean;
   direction?: -1 | 1;
+  vertical?: boolean;
 }
 
 export function AnimatedCard({
   children,
   className,
-  hover = true,
   direction = 1,
+  vertical = false,
 }: AnimatedCardProps) {
   return (
     <motion.div
-      variants={cardVariants(direction)}
-      whileHover={hover ? { y: -5 } : undefined}
-      transition={{ duration: 0.25 }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        once: false,
+        amount: animationConfig.viewportAmount,
+      }}
+      variants={
+        vertical
+          ? revealVariants
+          : cardVariants(direction)
+      }
       className={className}
     >
       {children}

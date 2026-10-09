@@ -1,3 +1,4 @@
+"use client";
 import { CheckCircle2 } from "lucide-react";
 
 import { ContentOverview } from "@/components/ui/ContentOverview";

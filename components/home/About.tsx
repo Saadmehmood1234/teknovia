@@ -1,5 +1,5 @@
 import { ContentOverview } from "@/components/ui/ContentOverview";
-
+import { Fragment } from "react";
 export function About() {
   return (
     <ContentOverview
@@ -17,21 +17,21 @@ export function About() {
       backgroundClass="bg-white"
       gridClassName="lg:grid-cols-2"
       paragraphs={[
-        <>
-          TEKNOVIA Technologies Private Limited is a technology-driven
-          company delivering digital marketing, software development,
-          eCommerce, EduTech, and talent acquisition solutions designed to
-          help businesses scale efficiently.
-        </>,
-        <>
+        <Fragment key="about-intro">
+          TEKNOVIA Technologies Private Limited is a technology-driven company
+          delivering digital marketing, software development, eCommerce,
+          EduTech, and talent acquisition solutions designed to help businesses
+          scale efficiently.
+        </Fragment>,
+        <Fragment key="about-approach">
           We combine strategy, technology, and execution to build secure
-          systems, improve operations, increase visibility, and drive
-          measurable business growth.
-        </>,
-        <>
-          Integrated digital marketing, custom software, EduTech, and
-          talent solutions designed to help businesses scale efficiently.
-        </>,
+          systems, improve operations, increase visibility, and drive measurable
+          business growth.
+        </Fragment>,
+        <Fragment key="about-solutions">
+          Integrated digital marketing, custom software, EduTech, and talent
+          solutions designed to help businesses scale efficiently.
+        </Fragment>,
       ]}
     >
       <div className="mt-7">

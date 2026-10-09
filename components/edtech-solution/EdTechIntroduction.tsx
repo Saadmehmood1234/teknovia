@@ -1,3 +1,4 @@
+"use client"
 import { BarChart3, Layers3, Rocket } from "lucide-react";
 
 import { ContentOverview } from "@/components/ui/ContentOverview";

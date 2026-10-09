@@ -1,3 +1,4 @@
+
 import type { Variants } from "motion/react";
 
 export const animationConfig = {
@@ -49,3 +50,54 @@ export const cardVariants = (direction: number): Variants => ({
     },
   },
 });
+
+// For the main reason panel.
+export const panelRevealVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -35,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+// For the reason selector.
+export const selectorRevealVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 25,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      delay: 0.12,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+// For content inside the active reason.
+export const reasonContentVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.35,
+      ease: "easeOut",
+    },
+  },
+};
+
+

@@ -1,3 +1,4 @@
+"use client";
 import { ContentOverview } from "@/components/ui/ContentOverview";
 import { highlights } from "@/lib/data/digital-edge/local-seo-data";
 

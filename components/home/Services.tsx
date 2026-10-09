@@ -1,40 +1,32 @@
 import { Container } from "@/components/ui/Container";
 import { ServiceCard } from "../ui/Card";
 import { services } from "@/lib/data/hero-data";
-import { TopBadge } from "../ui/Top-Badge";
 import { AnimatedCard, RevealGroup } from "../animations/AnimatedCards";
+import { SectionHeading } from "../ui/SectionHeading";
 
 export function Services() {
   return (
     <section id="services" className="bg-surface py-8 sm:py-16">
       <Container className="flex flex-col items-center justify-center">
-        <div className="w-full max-w-3xl text-center">
-          <TopBadge data="Core&nbsp;Service&nbsp;Domains" centerItem={true} />
+        <SectionHeading
+          variant="centered"
+          badge="Core Service Domains"
+          title="Built to Help Businesses Grow, Scale, and Succeed"
+          description="Comprehensive technology, digital marketing, eCommerce, EduTech, and business development solutions designed to improve efficiency, accelerate growth, and help businesses build scalable, future-ready operations."
+        />
 
-          <h2 className="mt-4 text-center text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
-            Built to Help Businesses Grow, Scale, and Succeed
-          </h2>
-
-          <p className="mt-5 text-center text-md leading-8 text-gray-500">
-            Comprehensive technology, digital marketing, eCommerce, EduTech, and
-            business development solutions designed to improve efficiency,
-            accelerate growth, and help businesses build scalable, future-ready
-            operations
-          </p>
-        </div>
-
-          <RevealGroup className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <AnimatedCard key={service.title}>
-                <ServiceCard
-                  image={service.image}
-                  title={service.title}
-                  href={service.href}
-                  description={service.description}
-                />
-              </AnimatedCard>
-            ))}
-          </RevealGroup>
+        <RevealGroup className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {services.map((service) => (
+            <AnimatedCard key={service.title}>
+              <ServiceCard
+                image={service.image}
+                title={service.title}
+                href={service.href}
+                description={service.description}
+              />
+            </AnimatedCard>
+          ))}
+        </RevealGroup>
       </Container>
     </section>
   );
