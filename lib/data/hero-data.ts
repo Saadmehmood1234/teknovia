@@ -93,7 +93,7 @@ export const digitalServices = [
 
 export const industries = [
   {
-    image: "/images/home/industry/card-17.png",
+    image: "/images/home/industry/card-1.webp",
     title: "Manufacturing",
     href: "/industries#manufacturing",
     description: "Automation and digital systems to boost productivity.",
