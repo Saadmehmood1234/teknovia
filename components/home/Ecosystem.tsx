@@ -13,7 +13,7 @@ export function Ecosystem() {
         src="/images/home/service-back.webp"
         alt="Teknovia Service Ecosystem"
         fill
-        priority
+        preload
         className="object-cover"
       />
       <div className="absolute inset-0 bg-[#040706]/80" />

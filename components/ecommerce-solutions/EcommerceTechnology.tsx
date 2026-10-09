@@ -109,7 +109,7 @@ export function EcommerceTechnology() {
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-contain"
-              priority={false}
+              preload={false}
             />
           </div>
         </div>

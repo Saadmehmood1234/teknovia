@@ -51,7 +51,7 @@ export function IndustriesOverview() {
           src="/images/industries-bg.png"
           alt=""
           fill
-          priority
+          preload
           className="object-cover"
         />
         <div className="absolute inset-0 bg-[#0B7B74]/70" />

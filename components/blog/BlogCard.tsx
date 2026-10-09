@@ -49,7 +49,7 @@ export function BlogCard({
             src={post.image}
             alt={post.imageAlt}
             fill
-            priority
+            preload
             sizes="(max-width: 1024px) 100vw, 40vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />

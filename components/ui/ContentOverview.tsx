@@ -32,7 +32,7 @@ export interface ContentOverviewProps {
     alt: string;
     width?: number;
     height?: number;
-    priority?: boolean;
+    preload?: boolean;
     className?: string;
     sizes?: string;
   };
@@ -121,7 +121,7 @@ export function ContentOverview({
                 alt={image.alt}
                 width={image.width ?? 1000}
                 height={image.height ?? 750}
-                priority={image.priority}
+                preload={image.preload}
                 className={
                   image.className ??
                   "h-auto w-full rounded-2xl object-cover"

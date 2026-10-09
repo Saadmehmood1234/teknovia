@@ -173,7 +173,7 @@ export function SplitHero({
                   src={image.src}
                   alt={image.alt}
                   fill
-                  priority
+                  preload
                   className={image.objectClass ?? "object-cover"}
                   sizes="(max-width: 1024px) 100vw, 38vw"
                 />

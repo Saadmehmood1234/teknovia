@@ -16,7 +16,7 @@ export function MobileAppHero() {
           src="/images/mobile-app-bg.png"
           alt=""
           fill
-          priority
+          preload
           className="object-cover object-center"
           sizes="100vw"
         />

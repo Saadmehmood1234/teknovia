@@ -12,7 +12,7 @@ export function Footer() {
           src="/images/footer-bg.png"
           alt=""
           fill
-          priority
+          preload
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#040506]/30" />
@@ -29,7 +29,7 @@ export function Footer() {
                   alt="Teknovia"
                   width={120}
                   height={40}
-                  priority
+                  preload
                   className="h-7 w-auto object-contain"
                 />
               </a>

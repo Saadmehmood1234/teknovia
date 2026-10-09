@@ -11,7 +11,7 @@ export function About() {
         alt: "Modern workspace with professionals planning strategy",
         width: 900,
         height: 700,
-        priority: true,
+        preload: true,
         className: "h-auto w-full object-contain",
       }}
       backgroundClass="bg-white"

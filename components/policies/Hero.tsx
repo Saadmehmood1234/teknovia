@@ -37,7 +37,7 @@ export function Hero({
               src={image}
               alt={imageAlt}
               fill
-              priority
+              preload
               className="object-cover object-center"
               sizes="100vw"
             />

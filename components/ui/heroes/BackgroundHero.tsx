@@ -99,7 +99,7 @@ export function BackgroundHero({
           src={image.src}
           alt={image.alt ?? ""}
           fill
-          priority
+          preload
           className={`${image.imageObject??"object-cover"} object-center`}
           sizes="100vw"
         />

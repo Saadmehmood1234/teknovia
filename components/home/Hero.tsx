@@ -131,7 +131,7 @@ export function Hero() {
                   src="/images/home/hero-background.webp"
                   alt="Technology team collaborating in a modern office"
                   fill
-                  priority
+                  preload
                   sizes="(max-width: 1023px) 100vw, 50vw"
                   className="object-cover"
                 />

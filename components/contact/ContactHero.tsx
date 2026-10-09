@@ -48,7 +48,7 @@ export default function ContactHero() {
     //             src="/images/contact-background.png"
     //             alt="Teknovia technology and business solutions"
     //             fill
-    //             priority
+    //             preload
     //             className="object-cover rounded-3xl"
     //             sizes="(max-width: 1024px) 100vw, 38vw"
     //           />

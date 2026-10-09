@@ -44,7 +44,7 @@ export function WhatsAppEconomics() {
                     src="/images/digital-edge/watsapp2.png"
                     alt="Teknovia technology and business solutions"
                     fill
-                    priority
+                    preload
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 38vw"
                   />

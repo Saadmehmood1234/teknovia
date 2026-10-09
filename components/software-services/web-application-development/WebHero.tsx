@@ -19,7 +19,7 @@ export function WebHero() {
           src="/images/web-background.png"
           alt=""
           fill
-          priority
+          preload
           className="object-cover object-center"
           sizes="100vw"
         />

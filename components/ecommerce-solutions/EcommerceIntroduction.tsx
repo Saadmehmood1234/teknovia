@@ -11,7 +11,7 @@ export function EcommerceIntroduction() {
         alt: "More than a store. A commerce platform built for growth.",
         width: 900,
         height: 700,
-        priority: true,
+        preload: true,
         className: "h-auto w-full object-contain",
       }}
       backgroundClass="bg-white"

@@ -51,7 +51,7 @@ export function Header() {
               alt="Teknovia"
               width={120}
               height={40}
-              priority
+              preload
               className="h-8 w-auto object-contain"
             />
           </Link>

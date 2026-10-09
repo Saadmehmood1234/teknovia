@@ -126,7 +126,7 @@ export default function ThreePModel() {
           src="/images/3d-bg.png"
           alt=""
           fill
-          priority
+          preload
           sizes="100vw"
           className="object-cover object-center"
         />

@@ -9,7 +9,7 @@ export function MobileAppBenefits() {
         src="/images/mobile-app-benefits.png"
         alt=""
         fill
-        priority
+        preload
         className="object-cover"
       />
       <div className="absolute inset-0 bg-[#040706]/80" />

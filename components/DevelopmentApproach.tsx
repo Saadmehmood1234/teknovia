@@ -132,7 +132,7 @@ export function DevelopmentApproach({
                   src={activeStep.image}
                   alt={activeStep.title}
                   fill
-                  priority={activeIndex === 0}
+                  preload={activeIndex === 0}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700"
                 />
