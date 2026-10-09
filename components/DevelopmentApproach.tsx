@@ -2,14 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import {
-  LucideIcon,
-  Check,
-  ChevronRight,
-  ChevronLeft,
-} from "lucide-react";
+import { LucideIcon, Check, ChevronRight, ChevronLeft } from "lucide-react";
 
-import { Container } from "./ui/Container";
 
 interface DevelopmentStep {
   number: string;
@@ -27,9 +21,7 @@ interface DevelopmentApproachProps {
   steps: DevelopmentStep[];
 }
 
-export function DevelopmentApproach({
-  steps,
-}: DevelopmentApproachProps) {
+export function DevelopmentApproach({ steps }: DevelopmentApproachProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -49,35 +41,34 @@ export function DevelopmentApproach({
   const ActiveIcon = activeStep.icon;
 
   return (
-    <section className="pt-8 sm:pt-16">
-      <Container>
-        <div className="flex flex-col rounded-3xl border border-gray-100 bg-white p-4 shadow-sm shadow-gray-200 md:p-10">
-          <div className="relative flex items-start justify-between">
-            <div className="absolute left-1 right-0 top-5 z-0 h-0.5 bg-gray-200 md:left-0 md:top-6 md:h-1">
-              <div
-                className={`h-full bg-linear-to-r ${
-                  activeStep.bgColor || "from-primary to-primary"
-                } transition-all duration-500`}
-                style={{
-                  width: `${(activeIndex / (steps.length - 1)) * 100}%`,
-                }}
-              />
-            </div>
+    
+    <div className="flex flex-col rounded-3xl border border-gray-100 bg-white p-4 shadow-sm shadow-gray-200 md:p-10">
+      <div className="relative flex items-start justify-between">
+        <div className="absolute left-1 right-0 top-5 z-0 h-0.5 bg-gray-200 md:left-0 md:top-6 md:h-1">
+          <div
+            className={`h-full bg-linear-to-r ${
+              activeStep.bgColor || "from-primary to-primary"
+            } transition-all duration-500`}
+            style={{
+              width: `${(activeIndex / (steps.length - 1)) * 100}%`,
+            }}
+          />
+        </div>
 
-            {steps.map((step, index) => {
-              const isActive = index === activeIndex;
+        {steps.map((step, index) => {
+          const isActive = index === activeIndex;
 
-              return (
-                <div
-                  key={step.number}
-                  className="relative z-10 flex flex-col items-center gap-1"
-                >
-                  <button
-                    type="button"
-                    onClick={() => setActiveIndex(index)}
-                    aria-label={`Show ${step.title} step`}
-                    aria-current={isActive ? "step" : undefined}
-                    className={`
+          return (
+            <div
+              key={step.number}
+              className="relative z-10 flex flex-col items-center gap-1"
+            >
+              <button
+                type="button"
+                onClick={() => setActiveIndex(index)}
+                aria-label={`Show ${step.title} step`}
+                aria-current={isActive ? "step" : undefined}
+                className={`
                       flex h-10 w-10 items-center justify-center
                       rounded-full border-2 bg-white
                       font-mono text-xs font-semibold
@@ -87,126 +78,123 @@ export function DevelopmentApproach({
                         isActive
                           ? `scale-110 ${
                               step.borderColor || "border-primary"
-                            } ${
-                              step.txtColor || "text-primary"
-                            } shadow-lg`
+                            } ${step.txtColor || "text-primary"} shadow-lg`
                           : "border-primary text-primary hover:bg-primary-50"
                       }
                     `}
-                  >
-                    {step.number}
-                  </button>
+              >
+                {step.number}
+              </button>
 
-                  <p
-                    className={`
+              <p
+                className={`
                       text-xs transition-colors
                       ${
                         isActive
-                          ? `font-semibold ${
-                              step.txtColor || "text-primary"
-                            }`
+                          ? `font-semibold ${step.txtColor || "text-primary"}`
                           : "text-gray-500"
                       }
                     `}
-                  >
-                    {step.title}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-          <div
-            key={activeStep.number}
-            className="mt-6 flex w-full flex-col overflow-hidden rounded-3xl border border-gray-100 md:mt-12 md:flex-row"
-          >
-            <div
-              className={`
+              >
+                {step.title}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+      <div
+        key={activeStep.number}
+        className="mt-6 flex w-full flex-col overflow-hidden rounded-3xl border border-gray-100 md:mt-12 md:flex-row"
+      >
+        <div
+          className={`
                 relative min-h-64 w-full overflow-hidden
                 bg-linear-to-br
                 ${activeStep.bgColor}
                 md:min-h-75 md:w-1/2
               `}
-            >
-              {activeStep.image && (
-                <Image
-                  src={activeStep.image}
-                  alt={activeStep.title}
-                  fill
-                  preload={activeIndex === 0}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700"
-                />
-              )}
+        >
+          {activeStep.image && (
+            <Image
+              src={activeStep.image}
+              alt={activeStep.title}
+              fill
+              preload={activeIndex === 0}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700"
+            />
+          )}
 
-              <div className="absolute left-4 top-4 z-10 flex flex-col gap-4 md:left-8 md:top-8">
-                {ActiveIcon && (
-                  <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 ${activeStep.txtColor} shadow-lg backdrop-blur-sm`}>
-                    <ActiveIcon size={26} strokeWidth={1.8} />
-                  </div>
-                )}
-
-                <span className={`text-xs font-semibold tracking-wider ${activeStep.txtColor}`}>
-                  STEP {activeStep.number}
-                </span>
-              </div>
-
-              <p className="absolute -bottom-10 -right-2 select-none text-[150px] font-black leading-none text-white/20">
-                {activeStep.number}
-              </p>
-            </div>
-
-            <div className="flex w-full flex-col justify-center gap-2 bg-white p-4 md:w-1/2 md:gap-5 md:p-8 lg:p-10">
-              <span
-                className={`text-xs font-extrabold tracking-wider ${
-                  activeStep.txtColor || "text-primary"
-                }`}
+          <div className="absolute left-4 top-4 z-10 flex flex-col gap-4 md:left-8 md:top-8">
+            {ActiveIcon && (
+              <div
+                className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 ${activeStep.txtColor} shadow-lg backdrop-blur-sm`}
               >
-                PHASE {activeStep.number}
-              </span>
+                <ActiveIcon size={26} strokeWidth={1.8} />
+              </div>
+            )}
 
-              <h2 className="font-heading text-3xl font-bold text-slate-900">
-                {activeStep.title}
-              </h2>
+            <span
+              className={`text-xs font-semibold tracking-wider ${activeStep.txtColor}`}
+            >
+              STEP {activeStep.number}
+            </span>
+          </div>
 
-              <p className="text-sm leading-7 text-slate-600">
-                {activeStep.description}
-              </p>
+          <p className="absolute -bottom-10 -right-2 select-none text-[150px] font-black leading-none text-white/20">
+            {activeStep.number}
+          </p>
+        </div>
 
-              {activeStep.detail && (
-                <div className="flex items-start gap-3">
-                  <div
-                    className={`
+        <div className="flex w-full flex-col justify-center gap-2 bg-white p-4 md:w-1/2 md:gap-5 md:p-8 lg:p-10">
+          <span
+            className={`text-xs font-extrabold tracking-wider ${
+              activeStep.txtColor || "text-primary"
+            }`}
+          >
+            PHASE {activeStep.number}
+          </span>
+
+          <h2 className="font-heading text-3xl font-bold text-slate-900">
+            {activeStep.title}
+          </h2>
+
+          <p className="text-sm leading-7 text-slate-600">
+            {activeStep.description}
+          </p>
+
+          {activeStep.detail && (
+            <div className="flex items-start gap-3">
+              <div
+                className={`
                       mt-0.5 flex h-6 w-6 shrink-0
                       items-center justify-center
                       rounded-full
-                      ${activeStep.txtColor
-                        ?.replace("text-", "bg-")
-                        .replace(
-                          /(\w+)$/,
-                          "$1/10",
-                        ) || "bg-primary-100"}
+                      ${
+                        activeStep.txtColor
+                          ?.replace("text-", "bg-")
+                          .replace(/(\w+)$/, "$1/10") || "bg-primary-100"
+                      }
                       ${activeStep.txtColor || "text-primary"}
                     `}
-                  >
-                    <Check size={14} strokeWidth={3} />
-                  </div>
+              >
+                <Check size={14} strokeWidth={3} />
+              </div>
 
-                  <p className="text-sm leading-6 text-slate-600">
-                    {activeStep.detail}
-                  </p>
-                </div>
-              )}
+              <p className="text-sm leading-6 text-slate-600">
+                {activeStep.detail}
+              </p>
             </div>
-          </div>
+          )}
+        </div>
+      </div>
 
-          <div className="mt-8 flex items-center gap-4">
-            <button
-              type="button"
-              onClick={() =>
-                setActiveIndex((prev) => Math.max(prev - 1, 0))
-              }
-              disabled={activeIndex === 0}
-              className="
+      <div className="mt-8 flex items-center gap-4">
+        <button
+          type="button"
+          onClick={() => setActiveIndex((prev) => Math.max(prev - 1, 0))}
+          disabled={activeIndex === 0}
+          className="
                 flex h-10 w-10 shrink-0 items-center justify-center
                 rounded-full border border-gray-200 bg-white
                 text-gray-600 transition-all
@@ -215,16 +203,16 @@ export function DevelopmentApproach({
                 disabled:hover:border-gray-200
                 disabled:hover:text-gray-600
               "
-              aria-label="Previous step"
-            >
-              <ChevronLeft size={18} />
-            </button>
+          aria-label="Previous step"
+        >
+          <ChevronLeft size={18} />
+        </button>
 
-            <div className="flex flex-1 items-center gap-2">
-              {steps.map((step, index) => (
-                <div
-                  key={step.number}
-                  className={`
+        <div className="flex flex-1 items-center gap-2">
+          {steps.map((step, index) => (
+            <div
+              key={step.number}
+              className={`
                     h-1.5 flex-1 rounded-full
                     transition-all duration-500
                     ${
@@ -235,19 +223,17 @@ export function DevelopmentApproach({
                         : "bg-gray-200"
                     }
                   `}
-                />
-              ))}
-            </div>
+            />
+          ))}
+        </div>
 
-            <button
-              type="button"
-              onClick={() =>
-                setActiveIndex((prev) =>
-                  Math.min(prev + 1, steps.length - 1),
-                )
-              }
-              disabled={activeIndex === steps.length - 1}
-              className="
+        <button
+          type="button"
+          onClick={() =>
+            setActiveIndex((prev) => Math.min(prev + 1, steps.length - 1))
+          }
+          disabled={activeIndex === steps.length - 1}
+          className="
                 flex h-10 w-10 shrink-0 items-center justify-center
                 rounded-full border border-gray-200 bg-white
                 text-gray-600 transition-all
@@ -256,13 +242,11 @@ export function DevelopmentApproach({
                 disabled:hover:border-gray-200
                 disabled:hover:text-gray-600
               "
-              aria-label="Next step"
-            >
-              <ChevronRight size={18} />
-            </button>
-          </div>
-        </div>
-      </Container>
-    </section>
+          aria-label="Next step"
+        >
+          <ChevronRight size={18} />
+        </button>
+      </div>
+    </div>
   );
 }

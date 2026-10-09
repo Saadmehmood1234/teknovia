@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, type LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
-
+import { Reveal } from "@/components/animations/Reveal";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
@@ -47,7 +47,7 @@ export interface BackgroundHeroProps {
   image: {
     src: string;
     alt?: string;
-    imageObject?:string;
+    imageObject?: string;
   };
 
   primaryButton?: {
@@ -100,124 +100,127 @@ export function BackgroundHero({
           alt={image.alt ?? ""}
           fill
           preload
-          className={`${image.imageObject??"object-cover"} object-center`}
+          className={`${image.imageObject ?? "object-cover"} object-center`}
           sizes="100vw"
         />
       </div>
 
       <div className={`absolute inset-0 -z-10 ${overlay}`} />
 
-      {/* Primary glow */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.14),transparent_55%)]" />
 
-      {/* Optional grid */}
       {showGrid && (
         <div className="hero-grid pointer-events-none absolute inset-0 -z-10 opacity-20" />
       )}
 
       <Container className="relative z-10">
-        <Breadcrumb
-          items={breadcrumb}
-          textColor={colors.breadcrumb ?? "text-gray-400"}
-        />
+        <Reveal>
+          <Breadcrumb
+            items={breadcrumb}
+            textColor={colors.breadcrumb ?? "text-gray-400"}
+          />
+        </Reveal>
 
         <div className="pt-8">
-          {/* Badge */}
           {badge && (
-            <div className={colors.badge}>
+            <Reveal delay={0.08} className={colors.badge}>
               <TopBadge data={badge} />
-            </div>
+            </Reveal>
           )}
 
-          {/* Title */}
-          <h1
-            className={`mt-5 max-w-2xl text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] sm:text-5xl ${
-              colors.title ?? "text-white"
-            }`}
-          >
-            {title}
-          </h1>
-
-          {/* Description */}
-          {description && (
-            <p
-              className={`mt-6 max-w-2xl text-base leading-7 sm:leading-8 ${
-                colors.description ?? "text-white/65"
+          <Reveal delay={0.16}>
+            <h1
+              className={`mt-5 max-w-2xl text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] sm:text-5xl ${
+                colors.title ?? "text-white"
               }`}
             >
-              {description}
-            </p>
+              {title}
+            </h1>
+          </Reveal>
+
+          {description && (
+            <Reveal delay={0.26}>
+              <p
+                className={`mt-6 max-w-2xl text-base leading-7 sm:leading-8 ${
+                  colors.description ?? "text-white/65"
+                }`}
+              >
+                {description}
+              </p>
+            </Reveal>
           )}
 
           {features && features.length > 0 && (
             <div className="mt-8 flex max-w-3xl flex-wrap gap-x-7 gap-y-4">
-              {features.map((feature) => {
+              {features.map((feature, index) => {
                 const Icon = feature.icon;
 
                 return (
-                  <div
-                    key={feature.label}
-                    className="flex items-center gap-2.5"
-                  >
-                    {Icon && (
-                      <Icon
-                        className={`size-5 shrink-0 ${
-                          colors.featureIcon ?? "text-primary"
-                        }`}
-                      />
-                    )}
+                  <Reveal key={feature.label} delay={0.34 + index * 0.08}>
+                    <div className="flex items-center gap-2.5">
+                      {Icon && (
+                        <Icon
+                          className={`size-5 shrink-0 ${
+                            colors.featureIcon ?? "text-primary"
+                          }`}
+                        />
+                      )}
 
-                    <div>
-                      <span
-                        className={`text-sm font-semibold ${
-                          colors.featureLabel ?? "text-white/85"
-                        }`}
-                      >
-                        {feature.label}
-                      </span>
-
-                      {feature.description && (
-                        <p
-                          className={`text-xs ${
-                            colors.featureDescription ?? "text-white/60"
+                      <div>
+                        <span
+                          className={`text-sm font-semibold ${
+                            colors.featureLabel ?? "text-white/85"
                           }`}
                         >
-                          {feature.description}
-                        </p>
-                      )}
+                          {feature.label}
+                        </span>
+
+                        {feature.description && (
+                          <p
+                            className={`text-xs ${
+                              colors.featureDescription ?? "text-white/60"
+                            }`}
+                          >
+                            {feature.description}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  </div>
+                  </Reveal>
                 );
               })}
             </div>
           )}
 
-          {/* Buttons */}
           {(primaryButton || secondaryButton) && (
-            <div className="mt-8 flex flex-wrap gap-4">
-              {primaryButton && (
-                <Link
-                  href={primaryButton.href}
-                  className={`inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_8px_20px_rgba(0,150,137,0.28)] ${
-                    colors.primaryButtonText ?? "text-white"
-                  }`}
-                >
-                  {primaryButton.label}
-                  <ArrowRight className="size-4" />
-                </Link>
-              )}
+            <Reveal delay={0.5}>
+              <div className="mt-8 flex flex-wrap gap-4">
+                {primaryButton && (
+                  <Link
+                    href={primaryButton.href}
+                    className={`group inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_8px_20px_rgba(0,150,137,0.28)] ${
+                      colors.primaryButtonText ?? "text-white"
+                    }`}
+                  >
+                    {primaryButton.label}
+                    <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  </Link>
+                )}
 
-              {secondaryButton && (
-                <Link
-                  href={secondaryButton.href}
-                  className={`inline-flex items-center gap-2 rounded-lg border ${colors.secondaryButtonBorder??"border-white/25"} ${colors.secondaryButtonBackground??""} px-6 py-3.5 text-sm font-semibold transition ${
-                    colors.secondaryButtonText ?? "text-white"
-                  } hover:border-primary hover:text-primary hover:bg-white/5`}
-                >
-                  {secondaryButton.label}
-                </Link>
-              )}
-            </div>
+                {secondaryButton && (
+                  <Link
+                    href={secondaryButton.href}
+                    className={`inline-flex items-center gap-2 rounded-lg border ${
+                      colors.secondaryButtonBorder ?? "border-white/25"
+                    } ${colors.secondaryButtonBackground ?? ""} px-6 py-3.5 text-sm font-semibold transition ${
+                      colors.secondaryButtonText ?? "text-white"
+                    } hover:border-primary hover:bg-white/5 hover:text-primary`}
+                  >
+                    {secondaryButton.label}
+                  </Link>
+                )}
+              </div>
+            </Reveal>
           )}
         </div>
       </Container>

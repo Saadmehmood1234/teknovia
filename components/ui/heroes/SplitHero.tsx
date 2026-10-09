@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, type LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
-
+import { Reveal } from "@/components/animations/Reveal";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
@@ -67,7 +67,7 @@ export interface SplitHeroProps {
   textClass?: string;
   descriptionClass?: string;
   featureTextClass?: string;
-  featureDescClass?:string;
+  featureDescClass?: string;
   headingClass?: string;
 
   id?: string;
@@ -88,7 +88,7 @@ export function SplitHero({
   textClass = "text-slate-950",
   descriptionClass = "text-gray-600",
   featureTextClass = "text-gray-600",
-  featureDescClass="text-gray-500",
+  featureDescClass = "text-gray-500",
   headingClass = "font-heading text-4xl font-bold leading-[1.2] tracking-tight sm:text-5xl",
   id,
   colors = {},
@@ -103,62 +103,73 @@ export function SplitHero({
 
         <div className="grid items-center gap-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <TopBadge data={badge} />
+            <Reveal delay={0.05}>
+              <TopBadge data={badge} />
+            </Reveal>
 
-            <h1 className={`mt-5 max-w-4xl ${headingClass}`}>{title}</h1>
+            <Reveal delay={0.12}>
+              <h1 className={`mt-5 max-w-4xl ${headingClass}`}>{title}</h1>
+            </Reveal>
 
-            <p
-              className={`mt-6 max-w-2xl text-base leading-7 sm:leading-8 ${descriptionClass}`}
-            >
-              {description}
-            </p>
+            <Reveal delay={0.2}>
+              <p
+                className={`mt-6 max-w-2xl text-base leading-7 sm:leading-8 ${descriptionClass}`}
+              >
+                {description}
+              </p>
+            </Reveal>
 
             {features && features.length > 0 && (
               <div className="mt-7 flex max-w-2xl flex-wrap gap-x-7 gap-y-4">
-                {features.map((feature) => {
+                {features.map((feature, index) => {
                   const Icon = feature.icon;
 
                   return (
-                    <div
-                      key={feature.text}
-                      className="flex items-center gap-2.5"
-                    >
-                      <Icon className="size-5 shrink-0 text-primary" />
+                    <Reveal key={feature.text} delay={0.28 + index * 0.07}>
+                      <div className="flex items-center gap-2.5">
+                        <Icon className="size-5 shrink-0 text-primary" />
 
-                      <span
-                        className={`text-sm font-semibold ${featureTextClass}`}
-                      >
-                        {feature.text}
-                      </span>
+                        <div>
+                          <span
+                            className={`text-sm font-semibold ${featureTextClass}`}
+                          >
+                            {feature.text}
+                          </span>
 
-                      <p className={`text-xs ${featureDescClass}`}>{feature.desc}</p>
-                    </div>
+                          {feature.desc && (
+                            <p className={`text-xs ${featureDescClass}`}>
+                              {feature.desc}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </Reveal>
                   );
                 })}
               </div>
             )}
-
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link
-                href={primaryButton.href}
-                className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_10px_30px_rgba(0,150,137,0.28)]"
-              >
-                {primaryButton.label}
-                <ArrowRight className="size-4" />
-              </Link>
-
-              {secondaryButton && (
+            <Reveal delay={0.4}>
+              <div className="mt-9 flex flex-wrap gap-3">
                 <Link
-                  href={secondaryButton.href}
-                  className={`inline-flex cursor-pointer items-center gap-2 rounded-lg border ${colors.secondaryButtonBorder ?? "border-black/25"} ${colors.secondaryButtonBackground ?? ""} px-6 py-3.5 text-sm font-semibold transition ${
-                    colors.secondaryButtonText ?? "text-black"
-                  } hover:border-primary hover:text-primary hover:bg-white/5`}
+                  href={primaryButton.href}
+                  className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_10px_30px_rgba(0,150,137,0.28)]"
                 >
-                  {secondaryButton.label}
+                  {primaryButton.label}
+                  <ArrowRight className="size-4" />
                 </Link>
-              )}
-            </div>
 
+                {secondaryButton && (
+                  <Link
+                    href={secondaryButton.href}
+                    className={`inline-flex cursor-pointer items-center gap-2 rounded-lg border ${colors.secondaryButtonBorder ?? "border-black/25"} ${colors.secondaryButtonBackground ?? ""} px-6 py-3.5 text-sm font-semibold transition ${
+                      colors.secondaryButtonText ?? "text-black"
+                    } hover:border-primary hover:text-primary hover:bg-white/5`}
+                  >
+                    {secondaryButton.label}
+                  </Link>
+                )}
+              </div>
+            </Reveal>
             {meta && (
               <div className="mt-8 flex flex-wrap items-center gap-3 text-xs text-white/40">
                 {meta}
@@ -166,7 +177,7 @@ export function SplitHero({
             )}
           </div>
 
-          <div className="relative w-full pb-8 sm:pb-10">
+          <Reveal delay={0.18} className="relative w-full min-w-0 pb-8 sm:pb-10">
             <div className={`relative ${image.aspectClass ?? "aspect-3/2"}`}>
               <div className="relative h-full w-full overflow-hidden rounded-3xl">
                 <Image
@@ -183,7 +194,7 @@ export function SplitHero({
                 <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_center,transparent_45%,#031823_88%,#031823_100%)]" />
               )}
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
     </section>

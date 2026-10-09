@@ -1,5 +1,5 @@
 import { ContentOverview } from "@/components/ui/ContentOverview";
-
+import { Fragment } from "react";
 export function AboutTeknovia() {
   return (
     <ContentOverview
@@ -13,24 +13,22 @@ export function AboutTeknovia() {
       }}
       backgroundClass="bg-white"
       paragraphs={[
-        <>
-          Teknovia Technologies Private Limited is a technology-driven
-          company delivering custom software development, digital
-          marketing, EduTech solutions, business automation, and talent
-          services. We help startups, SMEs, educational institutions,
-          and enterprises improve efficiency, strengthen digital
-          presence, and accelerate business growth through innovative
-          technology solutions.
-        </>,
-        <>
-          Our expertise spans software development, ERP systems, web and
-          mobile applications, marketplace platforms, and digital
-          transformation services designed to solve real business
-          challenges. By combining technology, automation, and strategic
-          execution, we deliver scalable, secure, and results-driven
-          solutions that help organizations innovate, grow smarter, and
-          scale with confidence.
-        </>,
+        <Fragment key="about-teknovia">
+          Teknovia Technologies Private Limited is a technology-driven company
+          delivering custom software development, digital marketing, EduTech
+          solutions, business automation, and talent services. We help startups,
+          SMEs, educational institutions, and enterprises improve efficiency,
+          strengthen digital presence, and accelerate business growth through
+          innovative technology solutions.
+        </Fragment>,
+        <Fragment key="our-expertise">
+          Our expertise spans software development, ERP systems, web and mobile
+          applications, marketplace platforms, and digital transformation
+          services designed to solve real business challenges. By combining
+          technology, automation, and strategic execution, we deliver scalable,
+          secure, and results-driven solutions that help organizations innovate,
+          grow smarter, and scale with confidence.
+        </Fragment>,
       ]}
     />
   );
