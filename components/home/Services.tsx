@@ -2,13 +2,14 @@ import { Container } from "@/components/ui/Container";
 import { ServiceCard } from "../ui/Card";
 import { services } from "@/lib/data/hero-data";
 import { TopBadge } from "../ui/Top-Badge";
+import { AnimatedCard, RevealGroup } from "../animations/AnimatedCards";
 
 export function Services() {
   return (
     <section id="services" className="bg-surface py-8 sm:py-16">
       <Container className="flex flex-col items-center justify-center">
         <div className="w-full max-w-3xl text-center">
-            <TopBadge data="Core&nbsp;Service&nbsp;Domains" centerItem={true}/>
+          <TopBadge data="Core&nbsp;Service&nbsp;Domains" centerItem={true} />
 
           <h2 className="mt-4 text-center text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
             Built to Help Businesses Grow, Scale, and Succeed
@@ -22,17 +23,18 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <ServiceCard
-              key={service.title}
-              image={service.image}
-              title={service.title}
-              href={service.href}
-              description={service.description}
-            />
-          ))}
-        </div>
+          <RevealGroup className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => (
+              <AnimatedCard key={service.title}>
+                <ServiceCard
+                  image={service.image}
+                  title={service.title}
+                  href={service.href}
+                  description={service.description}
+                />
+              </AnimatedCard>
+            ))}
+          </RevealGroup>
       </Container>
     </section>
   );

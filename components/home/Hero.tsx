@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { TeknoviaBackground } from "@/components/home/TeknoviaBackground";
+// import { TeknoviaBackground } from "@/components/home/TeknoviaBackground";
 import { Container } from "@/components/ui/Container";
 import Link from "next/link";
 
@@ -10,8 +10,8 @@ export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-[#040506]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(0,150,137,0.22),transparent_35%),radial-gradient(circle_at_20%_75%,rgba(0,150,137,0.10),transparent_32%)]" />
-
-      <TeknoviaBackground />
+{/* 
+      <TeknoviaBackground /> */}
 
       <Container className="relative z-10">
         <div className="grid min-h-142 items-center gap-10 py-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-12 lg:py-10">
