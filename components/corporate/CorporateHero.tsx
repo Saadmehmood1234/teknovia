@@ -24,7 +24,7 @@ export function CorporateHero() {
       }
       description="Integrated digital marketing, custom software, EduTech, and talent solutions designed to help businesses scale efficiently."
       image={{
-        src: "/images/corporate/corporate1.png",
+        src: "/images/corporate/corporate1.webp",
         alt: "Teknovia technology and business solutions",
         aspectClass: "aspect-5/3",
         objectClass: "object-contain object-center",

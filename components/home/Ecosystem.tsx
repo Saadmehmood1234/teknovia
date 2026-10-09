@@ -10,8 +10,8 @@ export function Ecosystem() {
       className="relative overflow-hidden py-16 text-white"
     >
       <Image
-        src="/images/service-back.jpg"
-        alt=""
+        src="/images/home/service-back.webp"
+        alt="Teknovia Service Ecosystem"
         fill
         priority
         className="object-cover"

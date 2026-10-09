@@ -7,7 +7,7 @@ export function About() {
       badge="About TEKNOVIA"
       title="Technology-driven growth for modern businesses"
       image={{
-        src: "/images/teknovia-about.png",
+        src: "/images/home/teknovia-about.webp",
         alt: "Modern workspace with professionals planning strategy",
         width: 900,
         height: 700,

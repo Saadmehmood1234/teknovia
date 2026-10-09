@@ -128,7 +128,7 @@ export function Hero() {
                   "
               >
                 <Image
-                  src="/images/hero-background.png"
+                  src="/images/home/hero-background.webp"
                   alt="Technology team collaborating in a modern office"
                   fill
                   priority

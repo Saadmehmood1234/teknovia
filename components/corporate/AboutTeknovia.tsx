@@ -7,7 +7,7 @@ export function AboutTeknovia() {
       badge="About Teknovia"
       title="Transforming ideas into scalable digital solutions that drive real business growth."
       image={{
-        src: "/images/corporate/corporate-text.png",
+        src: "/images/corporate/corporate-text.webp",
         alt: "Teknovia technology solutions",
         className: "h-auto w-full object-contain",
       }}

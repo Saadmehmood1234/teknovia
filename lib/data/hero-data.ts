@@ -17,28 +17,28 @@ import {
 } from "lucide-react";
 export const services = [
   {
-    image: "/images/card-1.png",
+    image: "/images/home/card-1.webp",
     href: "/software-services",
     title: "Software Solution",
     description:
       "Teknovia develops intelligent software solutions including ERP, CRM, EdTech, IoT, and industry-specific applications for education, healthcare, retail, logistics, manufacturing, and more.",
   },
   {
-    image: "/images/card-2.png",
+    image: "/images/home/card-2.webp",
     href: "/digital-edge",
     title: "Digital Edge",
     description:
       "Strategic digital marketing solutions including SEO, SMM, performance campaigns, and lead generation to increase brand visibility, attract customers, and business growth.",
   },
   {
-    image: "/images/card-3.png",
+    image: "/images/home/card-3.webp",
     href: "/ecommerce-solutions",
     title: "Marketplace & eCommerce",
     description:
       "e-Commerce development and marketplace solutions including online store setup, marketplace management, and product optimization to increase sales and business growth.",
   },
   {
-    image: "/images/edutech.png",
+    image: "/images/home/card-4.webp",
     href: "/edtech-solution",
     title: "EdTech Solution",
     description:
@@ -93,61 +93,61 @@ export const digitalServices = [
 
 export const industries = [
   {
-    image: "/images/card-17.png",
+    image: "/images/home/industry/card-17.png",
     title: "Manufacturing",
     href: "/industries#manufacturing",
     description: "Automation and digital systems to boost productivity.",
   },
   {
-    image: "/images/card-19.png",
+    image: "/images/home/industry/card-19.png",
     title: "Hospitality & Travel",
     href: "/industries#hospitality",
     description: "Smart platforms that enhance guest experience and bookings.",
   },
   {
-    image: "/images/card-18.png",
+    image: "/images/home/industry/card-18.png",
     title: "Logistics & Supply Chain",
     href: "/industries#logistics",
     description:
       "Intelligent digital solutions for tracking and supply chain management.",
   },
   {
-    image: "/images/card-12.png",
+    image: "/images/home/industry/card-12.png",
     title: "Education",
     href: "/industries#education",
     description:
       "Smart platforms for learning, administration and student engagement.",
   },
   {
-    image: "/images/card-13.png",
+    image: "/images/home/industry/card-13.png",
     title: "Healthcare",
     href: "/industries#healthcare",
     description:
       "Digital solutions to improve patient care, operations and health management.",
   },
   {
-    image: "/images/card-14.png",
+    image: "/images/home/industry/card-14.png",
     title: "Retail & eCommerce",
     href: "/industries#retail",
     description:
       "Scalable solutions that enhance customer experience and sales.",
   },
   {
-    image: "/images/card-15.png",
+    image: "/images/home/industry/card-15.png",
     title: "Real Estate",
     href: "/industries#real-estate",
     description:
       "Tools for property management, lead tracking and customer engagement.",
   },
   {
-    image: "/images/card-16.png",
+    image: "/images/home/industry/card-16.png",
     title: "SMEs & Businesses",
     href: "/industries#smes",
     description:
       "Scalable technology solutions that simplify operations, improve efficiency and support business growth.",
   },
   // {
-  //   image: "/images/card-20.png",
+  //   image: "/images/home/industry/card-20.png",
   //   title: "Professional Services",
   //   href:"",
   //   description: "Digital tools for projects, clients and business operations.",
