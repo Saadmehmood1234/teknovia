@@ -99,7 +99,7 @@ export default function RootLayout({
 
         {children}
 
-        {GA_ID && (
+        {/* {GA_ID && (
           <>
             <Script id="google-analytics-init" strategy="afterInteractive">
               {`
@@ -116,7 +116,7 @@ export default function RootLayout({
               strategy="lazyOnload"
             />
           </>
-        )}
+        )} */}
 
         <Footer />
       </body>
