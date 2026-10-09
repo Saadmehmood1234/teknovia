@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-[#040506]">
+    <section id="home" className="relative overflow-hidden sm:bg-[#040506] bg-[#022123]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(0,150,137,0.22),transparent_35%),radial-gradient(circle_at_20%_75%,rgba(0,150,137,0.10),transparent_32%)]" />
       
       <TeknoviaBackground />
