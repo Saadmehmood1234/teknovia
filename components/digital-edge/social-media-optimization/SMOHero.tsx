@@ -35,11 +35,11 @@ export function SMOHero() {
       }))}
       primaryButton={{
         label: "Get Free Consultation",
-        href: "/contact",
+        href: "/contact?tab=callback#contact-form",
       }}
       secondaryButton={{
-        label: "View Our Work",
-        href: "#key-features",
+        label: "Explore Our Solutions",
+        href: "#smo-services",
       }}
       backgroundClass="bg-white"
       textClass="text-black/90"

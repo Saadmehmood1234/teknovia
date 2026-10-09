@@ -36,7 +36,7 @@ export function CorporateHero() {
       }}
       secondaryButton={{
         label: "Get in Touch",
-        href: "/contact",
+        href: "/contact?tab=message#contact-form",
       }}
       backgroundClass="bg-[#E6E9EF]"
     />

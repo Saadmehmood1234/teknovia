@@ -10,7 +10,7 @@ import {
 export function SMOServices() {
   return (
     <section
-      id="optimisation"
+      id="smo-services"
       className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16"
     >
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-20" />

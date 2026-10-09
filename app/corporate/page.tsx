@@ -1,13 +1,6 @@
-import { ArrowRight } from "lucide-react";
-
-import { Container } from "@/components/ui/Container";
-import { leaders, strengths } from "@/lib/data/corporate-data";
-import Image from "next/image";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { strengths } from "@/lib/data/corporate-data";
 import { Metadata } from "next";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { VisionMissionValues } from "@/components/corporate/VisionMissionValues";
-import Link from "next/link";
 import { StrengthsSection } from "@/components/sections/StrengthsSection";
 import { LeadershipSection } from "@/components/corporate/LeadershipSection";
 import { AboutTeknovia } from "@/components/corporate/AboutTeknovia";

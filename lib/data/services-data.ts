@@ -26,7 +26,6 @@ import {
   ShoppingBag,
   ShoppingCart,
   Smartphone,
-  Store,
   Truck,
   Users,
   Zap,
@@ -188,21 +187,10 @@ export const serviceTopics: ServiceTopic[] = [
       "Create and optimize ecommerce experiences that help businesses sell and scale online.",
     services: [
       {
-        title: "JioMart",
-        href: "/ecommerce-solutions/jio-mart",
+        title: "eCommerce Solution",
+        href: "/ecommerce-solutions",
         description:
-          "Ecommerce solutions and integrations for JioMart businesses.",
-        txtColor: "text-[#2563eb]",
-        iconColor: "bg-[#2563eb]/10",
-        bgColor: "bg-[#2563eb]/5",
-        borderColor: "border-[#2563eb]/20",
-        icon: Store,
-      },
-      {
-        title: "Shopify",
-        href: "/ecommerce-solutions/shopify",
-        description:
-          "Build, customize and optimize Shopify ecommerce experiences.",
+          "Build scalable online stores with seamless shopping experiences, secure payments, and efficient order management.",
         txtColor: "text-[#16a34a]",
         iconColor: "bg-[#16a34a]/10",
         bgColor: "bg-[#16a34a]/5",
@@ -422,10 +410,10 @@ export const services = [
   },
   {
     image: "/images/digital-marketing.png",
-    title: "Digital Marketing",
+    title: "Digital Edge",
     description:
       "Grow your online presence through SEO, social media, B2B marketing, influencer marketing and more.",
-    href: "/digital-marketing",
+    href: "/digital-edge",
   },
   {
     image: "/images/e-commerce-solutions.jpg",

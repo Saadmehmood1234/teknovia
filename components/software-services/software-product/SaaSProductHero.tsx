@@ -33,7 +33,7 @@ export function SaaSProductHero() {
       }))}
       primaryButton={{
         label: "Let's Build Your SaaS Product",
-        href: "/contact",
+        href: "/contact?tab=enquiry#contact-form",
       }}
       secondaryButton={{
         label: "Explore Our Products",

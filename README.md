@@ -26,3 +26,12 @@ https://teknovia.deva3s.xyz/industries/manufacturing
 https://teknovia.deva3s.xyz/industries/logistics-supply-chain
 https://teknovia.deva3s.xyz/industries/hospitality-travel
 https://teknovia.deva3s.xyz/industries/professional-services
+
+<!-- <Link href="/contact?tab=enquiry#contact-form">
+  Discuss Your Project
+</Link>
+
+Other supported URLs:
+- /contact?tab=message
+- /contact?tab=callback
+- /contact?tab=enquiry -->

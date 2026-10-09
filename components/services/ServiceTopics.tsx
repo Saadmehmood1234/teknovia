@@ -15,7 +15,6 @@ export function ServiceTopics() {
   return (
     <section className="border-t border-slate-100 bg-white py-8 sm:py-16">
       <Container>
-        {/* Intro */}
         <div className="max-w-2xl">
           <TopBadge data="Our Services" />
 

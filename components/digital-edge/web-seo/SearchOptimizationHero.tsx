@@ -34,7 +34,7 @@ export function SearchOptimizationHero() {
       }))}
       primaryButton={{
         label: "Get a Free Consultation",
-        href: "/contact",
+        href: "/contact?tab=callback#contact-form",
       }}
       secondaryButton={{
         label: "Explore SEO Services",

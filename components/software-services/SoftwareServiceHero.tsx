@@ -16,7 +16,7 @@ export function SoftwareServiceHero() {
       description="At Teknovia, we design and develop customized software solutions that help businesses streamline operations, automate processes, improve efficiency, and accelerate growth."
       primaryButton={{
         label: "Talk to Our Experts",
-        href: "/contact",
+        href: "contact?tab=callback#contact-form",
       }}
       secondaryButton={{
         label: "Explore Solutions",

@@ -29,7 +29,7 @@ export function IoTHero() {
       features={iotHeroFeatures}
       primaryButton={{
         label: "Build Your IoT Solution",
-        href: "/contact",
+        href: "/contact?tab=enquiry#contact-form",
       }}
       secondaryButton={{
         label: "Explore Solutions",

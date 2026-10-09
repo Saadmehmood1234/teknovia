@@ -30,11 +30,11 @@ export function B2BMarketingHero() {
       }))}
       primaryButton={{
         label: "Get a B2B Marketing Strategy",
-        href: "/contact",
+        href: "/contact?tab=callback#contact-form",
       }}
       secondaryButton={{
         label: "Explore Services",
-        href: "#services",
+        href: "#b2b-services",
       }}
       overlay="lg:bg-[#040506]/10 bg-[#040506]/80"
       colors={{

@@ -21,11 +21,11 @@ export function EnterpriseHero() {
       description="We design and develop scalable, secure, and intelligent enterprise applications that automate processes, improve productivity, and support long-term business growth."
       primaryButton={{
         label: "Get a Free Consultation",
-        href: "/contact",
+        href: "/contact?tab=callback#contact-form",
       }}
       secondaryButton={{
         label: "Request a Demo",
-        href: "/contact",
+        href: "/contact?tab=enquiry#contact-form",
       }}
       overlay="bg-[#040506]/60"
     />

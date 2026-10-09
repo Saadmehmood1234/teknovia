@@ -78,7 +78,7 @@ export function MobileAppHero() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/contact"
+                href="/contact?tab=callback#contact-form"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-600 hover:shadow-[0_8px_20px_rgba(0,150,137,0.28)]"
               >
                 Request a Free Consultation
@@ -86,7 +86,7 @@ export function MobileAppHero() {
               </Link>
 
               <Link
-                href="/contact"
+                href="/contact?tab=message#contact-form"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-primary hover:bg-white/5"
               >
                 Get a Custom Quote

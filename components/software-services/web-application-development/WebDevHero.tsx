@@ -33,7 +33,7 @@ export function WebDevHero() {
       }}
       primaryButton={{
         label: "Start Your Project",
-        href: "/contact",
+        href: "/contact?tab=enquiry#contact-form",
       }}
       secondaryButton={{
         label: "Explore Services",

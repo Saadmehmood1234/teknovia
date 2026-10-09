@@ -71,11 +71,18 @@ type ContactTab = "message" | "callback" | "enquiry";
 
 export const services = [
   "Custom Software Development",
+  "Enterprise Software Development",
   "Web Application Development",
   "Mobile Application Development",
   "SaaS Development",
-  "ERP & Business Solutions",
-  "eCommerce Development",
+  "IOT Development",
+  "Google My Business - Local SEO",
+  "Search and AI Optimization",
+  "Social Media Optimization",
+  "WhatsApp Marketing",
+  "B2B Marketing",
+  "eCommerce Solution",
+  "EdTech Solution",
   "Other",
 ];
 

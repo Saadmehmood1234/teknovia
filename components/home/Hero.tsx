@@ -37,7 +37,7 @@ export function Hero() {
               </a>
 
               <Link
-                href="/contact"
+                href="/contact?tab=message#contact-form"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:border-primary"
               >
                 Get Free Consultation

@@ -34,7 +34,7 @@ export function WhatsAppMarketingHero() {
       }))}
       primaryButton={{
         label: "Start WhatsApp Growth",
-        href: "/contact",
+        href: "/contact?tab=message#contact-form",
       }}
       secondaryButton={{
         label: "Explore Features",

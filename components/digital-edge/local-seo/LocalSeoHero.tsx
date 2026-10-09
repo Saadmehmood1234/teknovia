@@ -32,11 +32,11 @@ export function LocalSeoHero() {
       }}
       primaryButton={{
         label: "Start Your Project",
-        href: "#services",
+        href: "/contact?tab=enquiry#contact-form",
       }}
       secondaryButton={{
         label: "Explore Services",
-        href: "#contact",
+        href: "#local-seo-services",
       }}
       backgroundClass="bg-[#FFFFFF]"
       textClass="text-slate-950"

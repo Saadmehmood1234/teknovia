@@ -46,7 +46,7 @@ export function EdTechHero() {
       ]}
       primaryButton={{
         label: "Book a Free Demo",
-        href: "/contact",
+        href: "/contact?tab=enquiry#contact-form",
       }}
       secondaryButton={{
         label: "Explore Solutions",

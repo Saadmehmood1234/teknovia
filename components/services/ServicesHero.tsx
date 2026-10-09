@@ -15,15 +15,13 @@ export function ServicesHero() {
       title={
         <>
           Digital Solutions Built{" "}
-          <span className="text-primary">
-            Around Your Business
-          </span>
+          <span className="text-primary">Around Your Business</span>
         </>
       }
       description="From software development to digital marketing and ecommerce, we help businesses build, launch and grow digital products that create measurable value."
       primaryButton={{
         label: "Start a Project",
-        href: "/contact",
+        href: "/contact?tab=enquiry#contact-form",
       }}
       secondaryButton={{
         label: "Explore Services",

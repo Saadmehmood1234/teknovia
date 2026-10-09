@@ -2,24 +2,29 @@
 
 import { useState } from "react";
 
-
 import { Container } from "@/components/ui/Container";
 import { contactFeatures2, tabs } from "@/lib/data/contact-data";
 import { MessageForm } from "./contact-from/MessageForm";
 import { CallbackForm } from "./contact-from/CallbackForm";
 import { EnquiryForm } from "./contact-from/EnquiryForm";
 import { ContactInformation } from "./contact-from/ContactInformation";
+import { useSearchParams } from "next/navigation";
 
 export type ContactTab = "message" | "callback" | "enquiry";
 
-export default function ContactFrom() {
-  const [activeTab, setActiveTab] = useState<ContactTab>("message");
+const validTabs: ContactTab[] = ["message", "callback", "enquiry"];
 
+export default function ContactFrom() {
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab");
+
+  const [activeTab, setActiveTab] = useState<ContactTab>(() =>
+    validTabs.includes(tabParam as ContactTab)
+      ? (tabParam as ContactTab)
+      : "message",
+  );
   return (
-    <section
-      id="contact-form"
-      className="bg-[#FAFAFA] py-8 lg:py-16"
-    >
+    <section id="contact-form" className="bg-[#FAFAFA] py-8 lg:py-16">
       <Container>
         <div className="grid grid-cols-1 gap-4 overflow-hidden py-2 md:grid-cols-3">
           {contactFeatures2.map((contact) => (
@@ -36,16 +41,13 @@ export default function ContactFrom() {
                   {contact.title}
                 </h3>
 
-                <p className="text-sm text-gray-400">
-                  {contact.description}
-                </p>
+                <p className="text-sm text-gray-400">{contact.description}</p>
               </div>
             </div>
           ))}
         </div>
         <div className="mt-8 flex w-full flex-col items-center justify-center gap-12 lg:flex-row lg:items-start">
           <div className="flex w-full flex-col gap-1 rounded-2xl border border-gray-100 bg-[#FBFBFB] p-1 shadow-md shadow-gray-300 lg:flex-1">
-
             <div className="overflow-x-auto p-1.5">
               <div className="flex min-w-max flex-col gap-1 md:flex-row">
                 {tabs.map((tab) => {
@@ -56,9 +58,7 @@ export default function ContactFrom() {
                     <button
                       key={tab.id}
                       type="button"
-                      onClick={() =>
-                        setActiveTab(tab.id as ContactTab)
-                      }
+                      onClick={() => setActiveTab(tab.id as ContactTab)}
                       aria-pressed={active}
                       className={`relative flex items-center gap-2 rounded-2xl px-8 py-3 text-sm font-semibold transition ${
                         active
