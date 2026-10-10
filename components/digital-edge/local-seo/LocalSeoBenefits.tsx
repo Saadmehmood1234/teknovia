@@ -1,23 +1,21 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { localSeoBenefits } from "@/lib/data/digital-edge/local-seo-data";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function LocalSeoBenefits() {
   return (
     <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
       <Container>
-        <div className="mx-auto max-w-3xl text-center">
-          <TopBadge data="KEY BENEFITS" centerItem />
-          <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl ">
-            Benefits of <span className="text-primary">Local SEO</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-gray-500 sm:text-base">
-            Turn local searches into visibility, engagement, and measurable
-            business growth.
-          </p>
-        </div>
-        <div className="mx-auto mt-8 hidden max-w-6xl px-6 lg:grid [--orb:clamp(18rem,30vw,24.375rem)] grid-cols-[1fr_var(--orb)_1fr] items-stretch">          <div className="flex flex-col justify-between py-[3%]">
+        <SectionHeading
+          variant="centered"
+          badge="KEY BENEFITS"
+          title="Benefits of Local SEO."
+          description="Turn local searches into visibility, engagement, and measurable business growth."
+        />
+        <div className="mx-auto mt-8 sm:mt-16 hidden max-w-6xl px-6 lg:grid [--orb:clamp(18rem,30vw,24.375rem)] grid-cols-[1fr_var(--orb)_1fr] items-stretch">
+          {" "}
+          <div className="flex flex-col justify-between py-[3%]">
             {localSeoBenefits.slice(0, 3).map((benefit, i, arr) => (
               <OrbitBenefit
                 key={benefit.title}
@@ -28,7 +26,6 @@ export function LocalSeoBenefits() {
               />
             ))}
           </div>
-
           <div className="relative aspect-square w-(--orb)">
             <div className="absolute inset-0 rounded-full border border-primary/30" />
             <div className="absolute inset-[9%] rounded-full border border-dashed border-primary/35" />
@@ -50,7 +47,6 @@ export function LocalSeoBenefits() {
               </div>
             </div>
           </div>
-
           <div className="flex flex-col justify-between py-[3%]">
             {localSeoBenefits.slice(3, 6).map((benefit, i, arr) => (
               <OrbitBenefit
@@ -110,7 +106,6 @@ export function LocalSeoBenefits() {
     </section>
   );
 }
-
 
 type LocalSeoBenefit = (typeof localSeoBenefits)[number];
 

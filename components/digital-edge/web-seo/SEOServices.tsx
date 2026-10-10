@@ -1,7 +1,7 @@
-import { SectionHeading } from "./SectionHeading";
 import { Container } from "@/components/ui/Container";
 import { seoServices } from "@/lib/data/digital-edge/seo-data";
 import { Card2 } from "@/components/ui/Card2";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function SEOServices() {
   return (
@@ -11,13 +11,9 @@ export function SEOServices() {
     >
       <Container>
         <SectionHeading
+          variant="centered"
           badge="OUR SERVICES"
-          title={
-            <>
-              A Complete SEO Foundation for{" "}
-              <span className="text-primary">Sustainable Growth</span>
-            </>
-          }
+          title="A Complete SEO Foundation for Sustainable Growth."
           description="From technical foundations to content, authority and reporting, we cover the key areas that influence search visibility."
         />
 

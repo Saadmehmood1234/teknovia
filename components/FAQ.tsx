@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Container } from "./ui/Container";
-import { TopBadge } from "./ui/Top-Badge";
+import { SectionHeading } from "./ui/SectionHeading";
 
 export type FAQItem = {
   question: string;
@@ -31,19 +31,12 @@ export default function FAQ({
     <section className="py-8 sm:py-16 bg-[#FAFAFA]">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
-          <div className="lg:sticky lg:top-28 lg:self-start">
-            <TopBadge data="FAQ" />
-
-            <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-tight text-gray-950 sm:text-4xl lg:text-5xl">
-              {title}
-            </h2>
-
-            <p className="mt-5 max-w-md text-base leading-7 text-gray-600 sm:text-lg">
-              {description}
-            </p>
-
-            <div className="mt-8 hidden h-px w-20 bg-primary lg:block" />
-          </div>
+          <SectionHeading
+            variant="sticky"
+            badge="FAQ"
+            title={title}
+            description={description}
+          />
 
           <div className="divide-y divide-gray-200 border-y border-gray-200">
             {faqs.map((faq, index) => {

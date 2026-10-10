@@ -6,7 +6,7 @@ import type { KeyboardEvent } from "react";
 
 import { Container } from "@/components/ui/Container";
 import { industries } from "@/lib/data/industries";
-import { TopBadge } from "../ui/Top-Badge";
+import { SectionHeading } from "../ui/SectionHeading";
 
 const INDUSTRY_ALIASES: Record<string, string> = {
   "retail-ecommerce": "retail",
@@ -90,14 +90,20 @@ export function IndustriesGrid() {
     };
   }, []);
 
-
   const selectIndustry = (id: string) => {
     setActiveIndustry(id);
     window.history.replaceState(null, "", `#${id}`);
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-    const navKeys = ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"];
+    const navKeys = [
+      "ArrowRight",
+      "ArrowDown",
+      "ArrowLeft",
+      "ArrowUp",
+      "Home",
+      "End",
+    ];
     if (!navKeys.includes(event.key)) return;
     event.preventDefault();
 
@@ -132,22 +138,17 @@ export function IndustriesGrid() {
       className="scroll-mt-20 border-b border-gray-100 bg-white py-10 sm:py-16 lg:py-20"
     >
       <Container>
-        <div className="flex items-center justify-center">
-          <div className="flex max-w-3xl flex-col items-center justify-center">
-            <TopBadge data="Industries&nbsp;We&nbsp;Serve" centerItem={true} />
-
-            <h2 className="mt-3 text-center text-2xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
+        <SectionHeading
+          variant="centered"
+          badge="Industries&nbsp;We&nbsp;Serve"
+          title={[
+            <>
               Domains and Industry
-              <span className="text-primary"> we serve</span>
-            </h2>
-
-            <p className="mt-5 max-w-2xl text-center text-sm leading-7 text-slate-600 sm:text-base">
-              Technology solutions designed around the operational needs,
-              challenges, and growth goals of organizations across diverse
-              industries.
-            </p>
-          </div>
-        </div>
+              <span className="text-primary"> we serve.</span>
+            </>,
+          ]}
+          description="Technology solutions designed around the operational needs, challenges, and growth goals of organizations across diverse industries."
+        />
 
         <div className="mt-10 grid gap-6 sm:mt-12 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[300px_minmax(0,1fr)]">
           <aside className="min-w-0 lg:sticky lg:top-24 lg:self-start">

@@ -1,5 +1,5 @@
 import { ContentOverview } from "../ui/ContentOverview";
-
+import { Fragment } from "react";
 export function EcommerceIntroduction() {
   return (
     <ContentOverview
@@ -17,12 +17,12 @@ export function EcommerceIntroduction() {
       backgroundClass="bg-white"
       gridClassName="lg:grid-cols-2"
       paragraphs={[
-        <>
+        <Fragment key="ecommerce-intro">
           Your online store should be more than just a place to display
           products. It should deliver a seamless shopping experience while
           supporting your business operations and future growth.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="teknovia-ecommerce">
           TEKNOVIA builds modern{" "}
           <strong className="font-semibold text-gray-900">
             eCommerce platforms
@@ -37,15 +37,15 @@ export function EcommerceIntroduction() {
           </strong>
           , we create flexible digital storefronts that are easy to manage,
           scalable and ready for growth.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="ecommerce-business">
           Whether you are launching a new online business or taking an existing
           business into digital commerce, we help you build the right{" "}
           <strong className="font-semibold text-gray-900">
             eCommerce platform
           </strong>{" "}
           from the ground up.
-        </>,
+        </Fragment>,
       ]}
     ></ContentOverview>
   );

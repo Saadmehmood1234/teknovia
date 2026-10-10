@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { FaFacebook } from "react-icons/fa6";
 import { facebookServices } from "@/lib/data/digital-edge/social-media-optimization-data";
-
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function SMOFacebook() {
   return (
@@ -32,18 +31,12 @@ export function SMOFacebook() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <TopBadge data="Facebook Marketing" />
-
-            <h2 className="mt-4 max-w-3xl font-heading text-3xl font-black leading-[1.1] tracking-tight text-gray-950 sm:text-4xl">
-              Build <span className="text-primary">Connections</span>. Increase{" "}
-              <span className="text-primary">Engagement</span>. Grow Your{" "}
-              <span className="text-primary">Business.</span>
-            </h2>
-
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
-              Strategic Facebook marketing to build your brand awareness, engage
-              your audience, and generate quality leads.
-            </p>
+            <SectionHeading
+              variant="left"
+              badge="Facebook Marketing"
+              title="Build Connections. Increase Engagement. Grow Your Business."
+              description="Strategic Facebook marketing to build your brand awareness, engage your audience, and generate quality leads."
+            />
 
             <div className="mt-9 grid border-y border-gray-200 sm:grid-cols-2">
               {facebookServices.map((item, index) => {

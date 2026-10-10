@@ -1,7 +1,7 @@
 import { BackgroundEffect } from "@/components/Background";
 import { Container } from "@/components/ui/Container";
 import { ProcessSteps } from "@/components/ui/ProcessSteps";
-import { TopBadge } from "@/components/ui/Top-Badge";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { IotStages } from "@/lib/data/software-services/iot-development-data";
 import { ArrowRight, Target } from "lucide-react";
 
@@ -13,20 +13,12 @@ export function IoTEcosystem() {
       <div className="pointer-events-none absolute left-1/2 top-20 size-100 -translate-x-1/2 rounded-full bg-primary-50/60 blur-3xl" />
 
       <Container className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <TopBadge data="WHAT&nbsp;WE&nbsp;DELIVER" centerItem={true} />
-
-          <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-            End-to-End IoT &{" "}
-            <span className="text-primary">Automation Ecosystem</span>
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
-            From connected devices at the edge to intelligent applications at
-            the enterprise level, TEKNOVIA provides solutions across the
-            complete IoT lifecycle.
-          </p>
-        </div>
+        <SectionHeading
+          variant="centered"
+          badge="WHAT&nbsp;WE&nbsp;DELIVER"
+          title="End-to-End IoT & Automation Ecosystem."
+          description="From connected devices at the edge to intelligent applications at the enterprise level, TEKNOVIA provides solutions across the complete IoT lifecycle."
+        />
         <ProcessSteps
           steps={IotStages}
           lineColor="border-primary/40"
@@ -42,12 +34,12 @@ export function IoTEcosystem() {
           descriptionColor="text-gray-600"
         />
         <div className="pt-12 relative justify-center w-full lg:flex hidden">
-          <div className="relative flex gap-6 max-w-4xl items-center justify-between text-white/80 px-6 py-3 rounded-full bg-linear-to-bl from-primary-600 to-[#0c4a45]">
+          <div className="relative flex gap-6 max-w-4xl items-center justify-between text-white/80 px-6 py-3 rounded-full bg-[#022526]/80">
             <BackgroundEffect />
-            <div className="h-0.5 -left-32 w-32 top-8 absolute bg-primary" />
-            <div className="h-0.5 -right-32 w-32 top-8 absolute bg-primary" />
-            <div className="h-4 w-4 bg-primary rounded-full absolute -left-33 top-6" />
-            <div className="h-4 w-4 bg-primary rounded-full absolute -right-33 top-6" />
+            <div className="h-0.5 -left-32 w-32 top-8 absolute bg-[#022526]" />
+            <div className="h-0.5 -right-32 w-32 top-8 absolute bg-[#022526]" />
+            <div className="h-4 w-4 bg-[#022526] rounded-full absolute -left-33 top-6" />
+            <div className="h-4 w-4 bg-[#022526] rounded-full absolute -right-33 top-6" />
             <Target className="size-10" />
             <p className="inline-flex text-lg gap-4 items-center">
               <span>Connected Data</span>
@@ -62,7 +54,7 @@ export function IoTEcosystem() {
         </div>
 
         <div className="pt-8 relative lg:hidden flex justify-center w-full p-5">
-          <div className="relative  flex gap-6 items-center max-w-4xl justify-between text-white/80 px-6 py-3 rounded-xl md:rounded-full bg-linear-to-bl from-primary-600 to-[#0c4a45]">
+          <div className="relative  flex gap-6 items-center max-w-4xl justify-between text-white/80 px-6 py-3 rounded-xl md:rounded-full bg-[#022526]">
             <BackgroundEffect />
             <Target className="size-8 md:block hidden" />
             <p className="inline-flex gap-4 items-center text-xs sm:text-sm">

@@ -1,5 +1,5 @@
 import { ContentOverview } from "@/components/ui/ContentOverview";
-
+import { Fragment } from "react";
 export function B2BMarketingIntroduction() {
   return (
     <ContentOverview
@@ -17,7 +17,7 @@ export function B2BMarketingIntroduction() {
         alt: "B2B marketing solutions",
       }}
       paragraphs={[
-        <>
+        <Fragment key="b2b-marketing-intro">
           <strong className="font-semibold text-gray-900">
             B2B marketing (business-to-business marketing)
           </strong>{" "}
@@ -29,8 +29,8 @@ export function B2BMarketingIntroduction() {
           multiple decision-makers. A well-planned B2B marketing strategy
           helps businesses stay visible, build credibility, and create
           consistent opportunities for growth.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="teknovia-b2b-marketing">
           At{" "}
           <strong className="font-semibold text-gray-900">
             TEKNOVIA
@@ -44,7 +44,7 @@ export function B2BMarketingIntroduction() {
           focuses on understanding your industry, target market, and
           business goals so your marketing efforts generate meaningful
           engagement and support long-term business growth.
-        </>,
+        </Fragment>,
       ]}
     />
   );

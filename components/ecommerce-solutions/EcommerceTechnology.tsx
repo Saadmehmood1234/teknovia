@@ -2,11 +2,10 @@ import Image from "next/image";
 import { Lightbulb, Puzzle, Settings2, TrendingUp } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { ecommerceTechnologies } from "@/lib/data/ecommerce-solutions-data";
+import { SectionHeading } from "../ui/SectionHeading";
 
 const HERO_IMAGE = "/images/ecommerce2.png";
-
 
 const accents = [
   {
@@ -79,27 +78,27 @@ export function EcommerceTechnology() {
       <Container className="relative">
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
           <div>
-            <TopBadge data="eCommerce Technology Landscape" />
-
-            <h2 className="mt-4 font-heading text-3xl font-black leading-[1.05] tracking-tight text-gray-950 sm:text-4xl">
-              eCommerce
-              <br />
-              <span className="bg-primary bg-clip-text text-transparent">
-                Technology Landscape
-              </span>
-            </h2>
-
-            <p className="mt-6 max-w-2xl text-base font-semibold leading-7 text-gray-900 sm:text-lg">
-              Custom-built commerce for businesses that need more than
-              off-the-shelf platforms.
-            </p>
-
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
-              TEKNOVIA focuses on building custom eCommerce platforms around
-              your business processes, products and growth objectives. Where
-              required, we can also work with established commerce ecosystems
-              and integrate with existing platforms.
-            </p>
+            <SectionHeading
+              variant="left"
+              badge="eCommerce Technology Landscape"
+              title={[
+                <>
+                eCommerce <span className="text-primary">Technology Landscape.</span>
+                </>
+              ]}
+              description={[
+                <>
+                  <span className="text-lg font-semibold">Custom-built commerce for businesses that need more than
+                  off-the-shelf platforms.</span>
+                  <span className="mt-4 block">
+                  TEKNOVIA focuses on building custom eCommerce platforms around
+                  your business processes, products and growth objectives. Where
+                  required, we can also work with established commerce
+                  ecosystems and integrate with existing platforms.
+                  </span>
+                </>,
+              ]}
+            />
           </div>
 
           <div className="relative mx-auto aspect-4/3 w-full max-w-xl">
@@ -154,7 +153,10 @@ export function EcommerceTechnology() {
                     </p>
                   </article>
                   <div className="relative hidden h-6 items-end justify-center lg:flex">
-                    <span aria-hidden className="absolute bottom-3 h-3 w-px bg-gray-300" />
+                    <span
+                      aria-hidden
+                      className="absolute bottom-3 h-3 w-px bg-gray-300"
+                    />
                     <span
                       aria-hidden
                       className={`relative size-5.5 rounded-full border-[3px] border-white shadow-lg ${accent.dot}`}

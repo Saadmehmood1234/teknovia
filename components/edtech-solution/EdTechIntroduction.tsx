@@ -1,6 +1,6 @@
 "use client"
 import { BarChart3, Layers3, Rocket } from "lucide-react";
-
+import { Fragment } from "react";
 import { ContentOverview } from "@/components/ui/ContentOverview";
 
 export function EdTechIntroduction() {
@@ -29,19 +29,19 @@ export function EdTechIntroduction() {
         icon: Layers3,
       }}
       paragraphs={[
-        <>
+        <Fragment key="edutech-intro">
           EduTech refers to the integration of technology into education
           to enhance how people learn, teach, and manage academic
           processes. It enables institutions to deliver learning through
           digital platforms like LMS, mobile apps, and virtual
           classrooms.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="edutech-content-delivery">
           EduTech goes beyond content delivery by incorporating
           analytics, automation, and personalized learning experiences.
           It helps educators track performance, improve engagement, and
           optimize outcomes.
-        </>,
+        </Fragment>,
       ]}
     >
       <div className="mt-8 grid gap-4 sm:grid-cols-2">

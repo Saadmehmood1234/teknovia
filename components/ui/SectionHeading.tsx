@@ -60,10 +60,8 @@ export function SectionHeading({
   const titleClasses: Record<HeadingVariant, string> = {
     centered:
       "mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl",
-    left:
-      "mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl",
-    split:
-      "mt-3 font-heading text-3xl font-bold text-gray-950 sm:text-4xl",
+    left: "mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl",
+    split: "mt-3 font-heading text-3xl font-bold text-gray-950 sm:text-4xl",
     sticky:
       "mt-4 font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl lg:leading-[1.1]",
   };
@@ -90,9 +88,7 @@ export function SectionHeading({
 
   const badgeContent = badge ? (
     eyebrow ? (
-      <span className={`eyebrow ${badgeClassName}`}>
-        {badge}
-      </span>
+      <span className={`eyebrow ${badgeClassName}`}>{badge}</span>
     ) : (
       <TopBadge data={badge} centerItem={isCentered} />
     )
@@ -115,9 +111,7 @@ export function SectionHeading({
         viewport={viewport}
         transition={transition(0.08)}
       >
-        <TitleTag
-          className={`${titleClasses[variant]} ${titleClassName}`}
-        >
+        <TitleTag className={`${titleClasses[variant]} ${titleClassName}`}>
           {title}
         </TitleTag>
       </motion.div>
@@ -179,9 +173,7 @@ export function SectionHeading({
             viewport={viewport}
             transition={transition(0.08)}
           >
-            <TitleTag
-              className={`${titleClasses.split} ${titleClassName}`}
-            >
+            <TitleTag className={`${titleClasses.split} ${titleClassName}`}>
               {title}
             </TitleTag>
           </motion.div>
@@ -222,6 +214,9 @@ export function SectionHeading({
       }`}
     >
       {headingContent}
+      {isSticky && (
+        <div className="mt-8 hidden h-px w-20 bg-primary lg:block" />
+      )}
     </div>
   );
 }

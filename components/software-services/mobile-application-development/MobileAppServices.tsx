@@ -1,29 +1,20 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { services } from "@/lib/data/software-services/mobile-application-development-data";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function MobileAppServices() {
   return (
     <section id="mobile-app-services" className="py-8 sm:py-16">
       <Container>
-        <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
-          <div className="max-w-2xl">
-            <TopBadge data="Our&nbsp;Services" centerItem={true} />
+        <SectionHeading
+          variant="centered"
+          badge="Our&nbsp;Services"
+          title="Complete Mobile App Development Services."
+          description="From product strategy and UI/UX design to development, deployment, and long-term support, we provide everything required to build and scale your mobile product."
+        />
 
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-              Complete Mobile App Development Services
-            </h2>
-
-            <p className="mt-5 text-base leading-7 text-gray-600 sm:text-lg">
-              From product strategy and UI/UX design to development, deployment,
-              and long-term support, we provide everything required to build and
-              scale your mobile product.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-12 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-16 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <article
               key={service.title}

@@ -1,7 +1,7 @@
 import { BackgroundEffect } from "@/components/Background";
 import { Card2 } from "@/components/ui/Card2";
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   smoServiceFeatures,
   smoServices,
@@ -16,18 +16,12 @@ export function SMOServices() {
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-20" />
 
       <Container className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <TopBadge data="OUR SMO Services" centerItem />
-
-          <h2 className="mt-4 font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-            Complete Social Media Solutions
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
-            We help businesses build their brand, engage their audiences, and
-            achieve remarkable growth on social media platforms.
-          </p>
-        </div>
+        <SectionHeading
+          variant="centered"
+          badge="OUR SMO Services"
+          title="Complete Social Media Solutions."
+          description="We help businesses build their brand, engage their audiences, and achieve remarkable growth on social media platforms."
+        />
         <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
           {smoServices.map((item) => (
             <Card2

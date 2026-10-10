@@ -1,11 +1,9 @@
-import {
-  GraduationCap,
-} from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import Image from "next/image";
 
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { edTechIndustries } from "@/lib/data/edutech-data";
+import { SectionHeading } from "../ui/SectionHeading";
 
 function IndustryCard({
   title,
@@ -46,9 +44,7 @@ function IndustryCard({
           {title}
         </h3>
 
-        <p className="mt-3 text-sm leading-6 text-gray-600">
-          {description}
-        </p>
+        <p className="mt-3 text-sm leading-6 text-gray-600">{description}</p>
 
         <div className="mt-auto pt-6">
           <div className="h-px w-full bg-gray-200 " />
@@ -75,20 +71,19 @@ export function EdTechIndustries() {
       className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16"
     >
       <Container className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <TopBadge data="CASE USE / INDUSTRIES" centerItem />
-
-          <h2 className="mt-4 font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-            EduTech Built for{" "}
-            <span className="text-primary">Different Learning Ecosystems</span>
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
-            From traditional institutions to digital-first education
-            businesses, TEKNOVIA creates technology that adapts to different
-            learning models, operational needs, and growth goals.
-          </p>
-        </div>
+        <SectionHeading
+          variant="centered"
+          badge="CASE USE / INDUSTRIES"
+          title={[
+            <>
+              EduTech Built for{" "}
+              <span className="text-primary">
+                Different Learning Ecosystems
+              </span>
+            </>,
+          ]}
+          description="From traditional institutions to digital-first education businesses, TEKNOVIA creates technology that adapts to different learning models, operational needs, and growth goals."
+        />
 
         <div className="mt-12 grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {edTechIndustries.map((industry, index) => (

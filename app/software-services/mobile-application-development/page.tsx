@@ -7,7 +7,10 @@ import { MobileAppProcess } from "@/components/software-services/mobile-applicat
 import { MobileAppServices } from "@/components/software-services/mobile-application-development/MobileAppServices";
 import { MobileAppTypes } from "@/components/software-services/mobile-application-development/MobileAppTypes";
 import { TechnologyStack } from "@/components/ui/TechnologyStack";
-import { mobileAppFaqs, mobileAppTechnologies } from "@/lib/data/software-services/mobile-application-development-data";
+import {
+  mobileAppFaqs,
+  mobileAppTechnologies,
+} from "@/lib/data/software-services/mobile-application-development-data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

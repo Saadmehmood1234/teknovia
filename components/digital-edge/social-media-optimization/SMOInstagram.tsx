@@ -1,13 +1,10 @@
 import Image from "next/image";
-import {
-  Play,
-} from "lucide-react";
+import { Play } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { FaInstagram } from "react-icons/fa6";
 import { instagramServices } from "@/lib/data/digital-edge/social-media-optimization-data";
-
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function SMOIntagram() {
   return (
@@ -51,19 +48,12 @@ export function SMOIntagram() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <TopBadge data="INSTAGRAM Marketing" />
-
-            <h2 className="mt-4 max-w-3xl font-heading text-3xl font-black leading-[1.1] tracking-tight text-gray-950 sm:text-4xl">
-              Grow Your{" "}
-              <span className="text-primary">Brand</span>. Engage Your{" "}
-              <span className="text-primary">Audience</span>. Increase Your{" "}
-              <span className="text-primary">Reach.</span>
-            </h2>
-
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
-              Strategic Instagram marketing to build your brand presence, boost
-              engagement, and drive real results.
-            </p>
+            <SectionHeading
+              variant="left"
+              badge="INSTAGRAM Marketing"
+              title="Grow Your Brand. Engage Your Audience. Increase Your Reach."
+              description="Strategic Instagram marketing to build your brand presence, boost engagement, and drive real results."
+            />
 
             <div className="mt-9 grid border-y border-gray-200 sm:grid-cols-2">
               {instagramServices.map((item, index) => {
@@ -76,11 +66,7 @@ export function SMOIntagram() {
                       index % 2 === 0
                         ? "sm:border-r sm:border-gray-200 sm:pr-6"
                         : "sm:pl-6"
-                    } ${
-                      index < 4
-                        ? "border-b border-gray-200"
-                        : ""
-                    }`}
+                    } ${index < 4 ? "border-b border-gray-200" : ""}`}
                   >
                     <span className="pt-1 font-mono text-[10px] font-bold tracking-widest text-gray-300">
                       0{index + 1}

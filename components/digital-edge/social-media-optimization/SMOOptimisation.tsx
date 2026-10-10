@@ -1,11 +1,8 @@
-import {
-  Target,
-} from "lucide-react";
+import { Target } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { optimisationAreas } from "@/lib/data/digital-edge/social-media-optimization-data";
-
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function SMOOptimisation() {
   const lastIndex = optimisationAreas.length - 1;
@@ -19,16 +16,11 @@ export function SMOOptimisation() {
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-20" />
 
       <Container className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <TopBadge data="Optimize. Engage. Grow." centerItem />
-
-          <h2
-            id="optimisation-heading"
-            className="mt-4 font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl"
-          >
-            Stronger Presence. Better Results.
-          </h2>
-        </div>
+        <SectionHeading
+          variant="centered"
+          badge="Optimize. Engage. Grow."
+          title="Stronger Presence. Better Results."
+        />
         <ol className="relative mx-auto mt-16 grid max-w-6xl gap-10 lg:grid-cols-5 lg:gap-6">
           <span
             aria-hidden

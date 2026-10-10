@@ -1,6 +1,6 @@
 import { ContentOverview } from "@/components/ui/ContentOverview";
 import { points } from "@/lib/data/software-services/mobile-application-development-data";
-
+import { Fragment } from "react";
 export function MobileAppOverview() {
   return (
     <ContentOverview
@@ -11,21 +11,21 @@ export function MobileAppOverview() {
         alt: "Mobile application development",
       }}
       paragraphs={[
-        <>
+        <Fragment key="about-mobile-device">
           Mobile devices have become a primary touchpoint between
           businesses and customers. A well-designed mobile application can
           improve customer engagement, strengthen brand visibility,
           enhance user experience, and create new digital revenue
           opportunities.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="about-teknovia-mobile-app-development">
           At TEKNOVIA, we build custom mobile applications tailored to
           your business objectives. Whether you need a customer-facing
           app, enterprise mobility solution, eCommerce application,
           educational platform, healthcare app, or on-demand service
           platform, we design and develop solutions around your users and
           workflows.
-        </>,
+        </Fragment>,
       ]}
       points={points.map((point) => ({
         text: point,

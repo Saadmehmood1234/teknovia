@@ -67,7 +67,6 @@ export default function IndustriesPage() {
   return (
     <main>
       <IndustriesHero />
-
       <IndustriesIntroduction />
       <IndustriesGrid />
       <IndustriesOverview />

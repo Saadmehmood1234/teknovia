@@ -5,6 +5,7 @@ import {
 } from "@/lib/data/digital-edge/social-media-optimization-data";
 import { BackgroundEffect } from "@/components/Background";
 import { ProcessSteps } from "@/components/ui/ProcessSteps";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function SMOProcess() {
   return (
@@ -13,20 +14,11 @@ export function SMOProcess() {
       className="relative overflow-hidden border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16"
     >
       <Container className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2
-            id="process-heading"
-            className="font-heading text-4xl font-black uppercase tracking-tight text-gray-950 "
-          >
-            How we <span className="text-primary">work</span>
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-gray-800">
-            A simple, transparent and result-driven process to{" "}
-            <span className="font-semibold text-primary">grow your brand</span>{" "}
-            on social media.
-          </p>
-        </div>
+        <SectionHeading
+          variant="centered"
+          title="How we work"
+          description="A simple, transparent and result-driven process to grow your brand on social media."
+        />
         <ProcessSteps
           steps={process}
           lineColor="border-primary/40"

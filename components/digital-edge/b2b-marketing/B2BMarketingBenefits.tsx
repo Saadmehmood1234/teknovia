@@ -1,7 +1,7 @@
 import { BackgroundEffect } from "@/components/Background";
 import { Container } from "@/components/ui/Container";
 import { FeatureListItem } from "@/components/ui/ListItem";
-import { TopBadge } from "@/components/ui/Top-Badge";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { b2bBenefits } from "@/lib/data/digital-edge/b2b-marketing-data";
 
 const flowSteps = ["Marketing", "Pipeline", "Revenue"];
@@ -16,18 +16,12 @@ export function B2BMarketingBenefits() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-28 ">
-              <TopBadge data="WHY TEKNOVIA?" />
-
-              <h2 className="mt-4 font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl lg:leading-[1.1]">
-                Strategy that connects{" "}
-                <span className="text-primary">marketing to revenue.</span>
-              </h2>
-
-              <p className="text-md  mt-4 font-semibold leading-8 text-black/65">
-                B2B marketing needs more than visibility. We build strategies
-                around your audience, sales cycle, business goals, and
-                measurable opportunities.
-              </p>
+              <SectionHeading
+                variant="left"
+                badge="WHY TEKNOVIA?"
+                title="Strategy that connects marketing to revenue."
+                description="B2B marketing needs more than visibility. We build strategies around your audience, sales cycle, business goals, and measurable opportunities."
+              />
               <div className="relative mt-8 overflow-hidden rounded-md bg-[#18342F] p-6 text-white lg:mx-0">
                 <BackgroundEffect />
                 <p className="relative text-left text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">

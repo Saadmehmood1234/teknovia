@@ -4,7 +4,7 @@ import { BottomImageCard } from "../ui/BottomImageCard";
 import Link from "next/link";
 import { AnimatedCard, RevealGroup } from "../animations/AnimatedCards";
 import { SectionHeading } from "../ui/SectionHeading";
-
+import { Fragment } from "react";
 export function Industries() {
   return (
     <section id="industries" className="sm:py-16 py-8 bg-surface bg-[#FAFAFA]">
@@ -12,11 +12,16 @@ export function Industries() {
         <SectionHeading
           variant="centered"
           badge="Industries&nbsp;We&nbsp;Serve"
-          title="Multi-Industry Expertise."
+          title={[
+            <Fragment key="industry-we-serve">
+            Multi-Industry <span className="text-primary">Expertise.</span>
+            </Fragment>
+          ]}
+
           description="Technology solutions tailored to the unique needs of every sector we serve."
         />
 
-        <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((industry) => (
             <AnimatedCard key={industry.title} vertical>
               <BottomImageCard

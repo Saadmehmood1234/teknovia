@@ -1,13 +1,11 @@
-import {
-  CalendarClock,
-  CheckCheck,
-  UserRoundCheck,
-} from "lucide-react";
+import { CalendarClock, CheckCheck, UserRoundCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
-import { watsappServices,stages } from "@/lib/data/digital-edge/watsapp-marketing-data";
+import {
+  watsappServices,
+  stages,
+} from "@/lib/data/digital-edge/watsapp-marketing-data";
 import { BackgroundEffect } from "@/components/Background";
-
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 function ChatPreview() {
   return (
@@ -27,7 +25,8 @@ function ChatPreview() {
           Do you have the 12 kg pack in stock?
         </p>
         <p className="max-w-[78%] self-end rounded-xl rounded-tr-sm bg-primary/90 px-3 py-2 text-[#04120E]">
-          Yes, it&apos;s in stock. Delivery takes 2 days. Shall I share the price list?
+          Yes, it&apos;s in stock. Delivery takes 2 days. Shall I share the
+          price list?
           <CheckCheck className="ml-1 inline size-3.5 align-text-bottom" />
         </p>
         <p className="max-w-[78%] self-start rounded-xl rounded-tl-sm bg-white/[0.07] px-3 py-2 text-white/80">
@@ -39,7 +38,8 @@ function ChatPreview() {
             <UserRoundCheck className="size-3.5" /> Tagged: hot lead
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/60">
-            <CalendarClock className="size-3.5" /> Follow-up set for tomorrow, 10:00
+            <CalendarClock className="size-3.5" /> Follow-up set for tomorrow,
+            10:00
           </span>
         </div>
       </div>
@@ -50,21 +50,18 @@ function ChatPreview() {
 export function WhatsAppManagement() {
   return (
     <section className="relative overflow-hidden bg-[#18342F] py-8 text-white sm:py-16">
-      <BackgroundEffect/>
+      <BackgroundEffect />
       <Container className="relative">
         <div className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="">
-            <TopBadge data="DEDICATED ACCOUNT MANAGEMENT" />
-
-            <h2 className="mt-4 font-heading text-3xl font-black tracking-tight sm:leading-[1.05]">
-              Your WhatsApp, run end to end by our team.
-            </h2>
-
-            <p className="mt-5 max-w-lg text-sm leading-7 text-white/60 sm:text-base">
-              We don&apos;t stop at the technology. We also run the
-              communication around it: campaigns, chats, templates, tracking
-              and follow-ups. You focus on the business.
-            </p>
+            <SectionHeading
+              variant="left"
+              titleClassName="text-white/80"
+              descriptionClassName="text-white/70"
+              badge="DEDICATED ACCOUNT MANAGEMENT"
+              title="Your WhatsApp, run end to end by our team."
+              description="We don't stop at the technology. We also run the communication around it: campaigns, chats, templates, tracking and follow-ups. You focus on the business."
+            />
 
             <div className="mt-8 max-w-md">
               <ChatPreview />

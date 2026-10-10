@@ -23,7 +23,7 @@ export function Card4({ items }: Card4Props) {
         return (
           <article
             key={item.number}
-            className="relative overflow-hidden rounded-3xl bg-[#18342F] ring-1 ring-white/10"
+            className="relative overflow-hidden rounded-3xl bg-[#022729] ring-1 ring-white/10"
           >
             <BackgroundEffect />
 

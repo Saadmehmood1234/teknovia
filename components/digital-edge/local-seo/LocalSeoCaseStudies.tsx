@@ -1,26 +1,17 @@
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { localSeoComingSoon } from "@/lib/data/digital-edge/local-seo-data";
 
 export function LocalSeoCaseStudies() {
   return (
     <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
       <Container>
-        <div>
-          <div className="mx-auto max-w-3xl text-center">
-            <TopBadge data="REAL GROWTH SNAPSHOT" centerItem />
-
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-              Results worth <span className="text-primary">showing.</span>
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-600 sm:text-base">
-              We are currently documenting our first client campaigns. This
-              space will soon feature verified performance data and detailed
-              growth stories.
-            </p>
-          </div>
-        </div>
+        <SectionHeading
+          variant="centered"
+          badge="REAL GROWTH SNAPSHOT"
+          title="Results worth showing."
+          description="We are currently documenting our first client campaigns. This space will soon feature verified performance data and detailed growth stories."
+        />
         <div className="sm:mt-16 mt-8 grid gap-4 lg:grid-cols-3">
           {localSeoComingSoon.map((item, index) => {
             const Icon = item.icon;

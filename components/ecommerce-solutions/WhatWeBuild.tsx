@@ -11,12 +11,23 @@ import {
 } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { ecommerceModels } from "@/lib/data/ecommerce-solutions-data";
+import { SectionHeading } from "../ui/SectionHeading";
 
-
-const sidebarItems = ["Products", "Orders", "Customers", "Inventory", "Marketing", "Reports"];
-const productTints = ["bg-stone-200", "bg-emerald-200", "bg-slate-300", "bg-zinc-300"];
+const sidebarItems = [
+  "Products",
+  "Orders",
+  "Customers",
+  "Inventory",
+  "Marketing",
+  "Reports",
+];
+const productTints = [
+  "bg-stone-200",
+  "bg-emerald-200",
+  "bg-slate-300",
+  "bg-zinc-300",
+];
 const categories = ["Electronics", "Fashion", "Home"];
 function DeviceStage() {
   return (
@@ -86,7 +97,10 @@ function DeviceStage() {
               </p>
               <div className="mt-1 grid grid-cols-4 gap-1.5">
                 {productTints.map((tint, i) => (
-                  <div key={i} className="rounded-md border border-gray-100 p-1">
+                  <div
+                    key={i}
+                    className="rounded-md border border-gray-100 p-1"
+                  >
                     <div className={`aspect-square rounded ${tint}`} />
                     <div className="mt-1 h-1 w-3/4 rounded bg-gray-200" />
                   </div>
@@ -105,7 +119,9 @@ function DeviceStage() {
         <div className="rounded-[1.4rem] border-4 border-gray-900 bg-white p-1.5 shadow-[0_25px_50px_rgba(0,60,55,0.25)] sm:rounded-[1.8rem] sm:border-[5px] sm:p-2">
           <div className="mx-auto mb-1.5 h-1 w-8 rounded-full bg-gray-900" />
           <div className="flex items-center justify-between">
-            <span className="text-[8px] font-bold text-gray-900 sm:text-[10px]">Your Brand</span>
+            <span className="text-[8px] font-bold text-gray-900 sm:text-[10px]">
+              Your Brand
+            </span>
             <ShoppingCart className="size-2.5 text-gray-500" />
           </div>
           <div className="mt-1.5 rounded-lg bg-gray-100 p-2">
@@ -122,7 +138,9 @@ function DeviceStage() {
             {categories.map((c) => (
               <div key={c} className="text-center">
                 <div className="mx-auto size-5 rounded-full bg-primary/15 sm:size-7" />
-                <p className="mt-0.5 text-[5px] text-gray-500 sm:text-[6px]">{c}</p>
+                <p className="mt-0.5 text-[5px] text-gray-500 sm:text-[6px]">
+                  {c}
+                </p>
               </div>
             ))}
           </div>
@@ -152,7 +170,11 @@ export function WhatWeBuild() {
   };
   const row = {
     hidden: reduce ? { opacity: 1 } : { opacity: 0, x: 24 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.45, ease: "easeOut" as const } },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.45, ease: "easeOut" as const },
+    },
   };
 
   return (
@@ -163,13 +185,16 @@ export function WhatWeBuild() {
       />
 
       <Container className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <TopBadge data="What We Build" centerItem={true} />
-          <h2 className="mt-4 font-heading text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-            E-commerce solutions built for modern businesses
-          </h2>
-        </div>
-
+        <SectionHeading
+          variant="centered"
+          badge="What We Build"
+          title={[
+            <>
+              E-commerce solutions built for{" "}
+              <span className="text-primary">modern businesses.</span>
+            </>,
+          ]}
+        />
         <div className="mx-auto mt-12 grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-6">
           <DeviceStage />
 
@@ -219,8 +244,6 @@ export function WhatWeBuild() {
             })}
           </motion.ul>
         </div>
-
-        
       </Container>
     </section>
   );

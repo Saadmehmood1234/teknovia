@@ -14,6 +14,7 @@ import {
   webApptechnologies,
 } from "@/lib/data/software-services/web-application-development-data";
 import { CTA } from "@/components/CTA";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Web Application Development Services",
@@ -139,19 +140,12 @@ export default function WebApplicationDevelopmentPage() {
 
       <section id="web-services" className=" py-8 sm:py-16">
         <Container>
-          <div className="flex flex-col w-full justify-between items-center text-center gap-6">
-            <div className="max-w-2xl">
-              <TopBadge data="Our&nbsp;Services" centerItem={true} />
-
-              <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                Web Application Development Services
-              </h2>
-              <p className="mt-5 text-base leading-7 text-gray-600 sm:text-lg">
-                From custom applications to enterprise platforms, we provide
-                complete development services tailored to your business needs.
-              </p>
-            </div>
-          </div>
+          <SectionHeading
+            variant="centered"
+            badge="Our&nbsp;Services"
+            title="Web Application Development Services."
+            description="From custom applications to enterprise platforms, we provide complete development services tailored to your business needs."
+          />
 
           <div className="mt-12 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {webAppservices.map((strength) => {

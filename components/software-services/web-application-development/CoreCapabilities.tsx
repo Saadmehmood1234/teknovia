@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
 import { WebDevCapabilities } from "@/lib/data/software-services/web-application-development-data";
 import { Card2 } from "@/components/ui/Card2";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export default function CoreCapabilities() {
   return (
@@ -13,35 +13,25 @@ export default function CoreCapabilities() {
       </div>
 
       <Container>
-        <div className="relative">
-          <div className="flex w-full flex-col items-center justify-between gap-6 text-center">
-            <div className="max-w-2xl">
-              <TopBadge data="Core&nbsp;Capabilities" centerItem={true} />
+        <SectionHeading
+          variant="centered"
+          badge="Core&nbsp;Capabilities"
+          title="Built to Perform. Designed to Scale."
+          description="Our applications are built with the capabilities businesses need to operate, scale, and adapt."
+        />
 
-              <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                Built to Perform. Designed to Scale.
-              </h2>
-
-              <p className="mt-5 text-base leading-7 text-gray-600 sm:text-lg">
-                Our applications are built with the capabilities businesses need
-                to operate, scale, and adapt.
-              </p>
-            </div>
-          </div>
-
-          <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
-            {WebDevCapabilities.map((item) => (
-              <Card2
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-                circle={item.circle}
-                bar={item.bar}
-              />
-            ))}
-          </ul>
-        </div>
+        <ul className="mt-8 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+          {WebDevCapabilities.map((item) => (
+            <Card2
+              key={item.title}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              circle={item.circle}
+              bar={item.bar}
+            />
+          ))}
+        </ul>
       </Container>
     </section>
   );

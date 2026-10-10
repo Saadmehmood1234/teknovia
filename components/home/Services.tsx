@@ -3,6 +3,7 @@ import { ServiceCard } from "../ui/Card";
 import { services } from "@/lib/data/hero-data";
 import { AnimatedCard, RevealGroup } from "../animations/AnimatedCards";
 import { SectionHeading } from "../ui/SectionHeading";
+import { Fragment } from "react";
 
 export function Services() {
   return (
@@ -11,7 +12,14 @@ export function Services() {
         <SectionHeading
           variant="centered"
           badge="Core Service Domains"
-          title="Built to Help Businesses Grow, Scale, and Succeed"
+          title={[
+            <Fragment key="core-service-title">
+              Built to Help Businesses{" "}
+              <span className="text-primary">Grow</span>,{" "}
+              <span className="text-primary">Scale</span>, and{" "}
+              <span className="text-primary">Succeed</span>
+            </Fragment>,
+          ]}
           description="Comprehensive technology, digital marketing, eCommerce, EduTech, and business development solutions designed to improve efficiency, accelerate growth, and help businesses build scalable, future-ready operations."
         />
 

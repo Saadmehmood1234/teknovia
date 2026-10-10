@@ -1,7 +1,10 @@
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "./SectionHeading";
 import { ArrowRight, CheckCircle2, Plus } from "lucide-react";
-import { seoOptimizationTypes, seoTools } from "@/lib/data/digital-edge/seo-data";
+import {
+  seoOptimizationTypes,
+  seoTools,
+} from "@/lib/data/digital-edge/seo-data";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function IntegratedStrategy() {
   return (
@@ -11,6 +14,7 @@ export function IntegratedStrategy() {
     >
       <Container>
         <SectionHeading
+          variant="centered"
           badge="ONE INTEGRATED STRATEGY"
           title="SEO + AEO + GEO + AIO"
           description="Different discovery experiences require different optimization approaches. We bring them together with the right data, tools, and insights to build a broader search and AI visibility strategy."
@@ -23,7 +27,10 @@ export function IntegratedStrategy() {
                 const isLast = index === seoOptimizationTypes.length - 1;
 
                 return (
-                  <li key={item.short} className="relative flex gap-4 bg-white p-6 sm:p-7">
+                  <li
+                    key={item.short}
+                    className="relative flex gap-4 bg-white p-6 sm:p-7"
+                  >
                     <div className="flex size-12 items-center justify-center rounded-xl bg-primary-50 text-primary ring-1 ring-primary/15">
                       <Icon className="size-6" aria-hidden />
                     </div>

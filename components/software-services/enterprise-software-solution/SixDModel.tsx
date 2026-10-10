@@ -1,11 +1,9 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
-import { TopBadge } from "@/components/ui/Top-Badge";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { metrics, steps } from "@/lib/data/software-services/enterprise-data";
-import {
-  Users,
-} from "lucide-react";
+import { Users } from "lucide-react";
 
 export default function SixDModel() {
   return (
@@ -25,18 +23,12 @@ export default function SixDModel() {
         </div>
 
         <div className="relative">
-          <div className="mx-auto max-w-3xl text-center">
-             <TopBadge data="Our&nbsp;Development&nbsp;Approach" centerItem={true}/>
-
-            <h2 className="mt-4 font-heading text-3xl font-semibold tracking-tight text-gray-950 sm:text-4xl ">
-              6D SOLUTION FRAMEWORK
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">
-              A proven, iterative approach that transforms ideas into scalable,
-              high-impact enterprise solutions.
-            </p>
-          </div>
+          <SectionHeading
+            variant="centered"
+            badge="Our&nbsp;Development&nbsp;Approach"
+            title="6D SOLUTION FRAMEWORK."
+            description="A proven, iterative approach that transforms ideas into scalable, high-impact enterprise solutions."
+          />
           <div className="relative mx-auto md:mt-16 max-w-6xl lg:mt-20">
             <div className="pointer-events-none absolute left-1/2 top-1/2 hidden lg:h-100 h-72 lg:w-100 w-72 -translate-x-1/2 -translate-y-1/2 md:block">
               <div className="absolute inset-0 rounded-full border border-primary/40" />

@@ -1,7 +1,7 @@
 import { BackgroundEffect } from "@/components/Background";
 import { Container } from "@/components/ui/Container";
 import { ProcessSteps } from "@/components/ui/ProcessSteps";
-import { TopBadge } from "@/components/ui/Top-Badge";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { steps } from "@/lib/data/software-services/mobile-application-development-data";
 import { Lightbulb, ShieldCheck, Smartphone } from "lucide-react";
 
@@ -10,23 +10,12 @@ export function MobileAppProcess() {
     <section className="relative overflow-hidden bg-white text-black sm:py-16 py-8">
       <Container>
         <div className="relative px-5 sm:px-6 lg:px-8">
-          <div className="flex flex-col w-full justify-between items-center text-center gap-6">
-            <div className="max-w-2xl">
-              <TopBadge
-                data="OUR&nbsp;DEVELOPMENT&nbsp;APPROACH"
-                centerItem={true}
-              />
-
-              <h2 className="mt-3 text-3xl font-black tracking-tight text-black sm:text-4xl">
-                From Idea to App Store.
-              </h2>
-              <p className="mt-5 text-base leading-7 text-gray-700 sm:text-lg">
-                A structured development process designed to reduce risk,
-                maintain quality, and turn your product idea into a reliable
-                mobile application.
-              </p>
-            </div>
-          </div>
+          <SectionHeading
+            variant="centered"
+            badge="OUR&nbsp;DEVELOPMENT&nbsp;APPROACH"
+            title="From Idea to App Store."
+            description="A structured development process designed to reduce risk, maintain quality, and turn your product idea into a reliable mobile application."
+          />
           <ProcessSteps
             steps={steps}
             lineColor="border-primary/40"
@@ -44,7 +33,7 @@ export function MobileAppProcess() {
         </div>
 
         <div className="mt-12 relative bg-[#284545] grid gap-4 rounded-3xl border border-primary/20 p-5 sm:grid-cols-3 sm:p-7">
-          <BackgroundEffect/>
+          <BackgroundEffect />
           <div className="flex items-center gap-4">
             <Lightbulb className="size-8 shrink-0 text-primary-300" />
             <div>

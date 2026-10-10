@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
-import { TopBadge } from "@/components/ui/Top-Badge";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const auditPoints = [
   "Google Business Profile health check",
@@ -24,20 +24,14 @@ export function LocalSeoCTA() {
       <Container className="relative">
         <div className="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div className="">
-            <TopBadge data="Local growth starts here" />
-
-            <h2 className=" font-heading text-3xl font-black leading-[1.1] tracking-tight sm:text-4xl">
-              Ready to Improve Your{" "}
-              <span className="bg-linear-to-r from-primary to-primary-300 bg-clip-text text-transparent">
-                Local Visibility?
-              </span>
-            </h2>
-
-            <p className="mx-auto mt-5 lg:max-w-xl text-sm leading-7 text-white/60 sm:text-base lg:mx-0">
-              Get a free GMB audit and discover opportunities to improve your
-              Google Maps visibility, local search presence, and customer
-              acquisition.
-            </p>
+            <SectionHeading
+              variant="left"
+              badge="Local growth starts here"
+              titleClassName="text-white/80"
+              descriptionClassName="text-white/70"
+              title="Ready to Improve Your Local Visibility?"
+              description="Get a free GMB audit and discover opportunities to improve your Google Maps visibility, local search presence, and customer acquisition."
+            />
 
             <ul className="mx-auto mt-8 grid lg:max-w-md gap-3 text-left lg:mx-0">
               {auditPoints.map((point) => (

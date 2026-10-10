@@ -1,5 +1,5 @@
 import { ContentOverview } from "@/components/ui/ContentOverview";
-
+import { Fragment } from "react";
 export function IndustriesIntroduction() {
   return (
     <ContentOverview
@@ -13,7 +13,7 @@ export function IndustriesIntroduction() {
       backgroundClass="bg-gray-50/50"
       gridClassName="lg:grid-cols-[1fr_1.05fr] lg:gap-12"
       paragraphs={[
-        <>
+        <Fragment key="industries-intro">
           At{" "}
           <strong className="font-semibold text-slate-900">
             TEKNOVIA Technologies Private Limited
@@ -26,8 +26,8 @@ export function IndustriesIntroduction() {
           </strong>
           , we help organizations streamline operations, automate
           processes, improve efficiency, and accelerate digital growth.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="teknovia-team">
           Our team combines expertise in{" "}
           <strong className="font-semibold text-slate-900">
             software engineering, business process analysis, cloud
@@ -37,13 +37,13 @@ export function IndustriesIntroduction() {
           to build scalable and future-ready solutions. We focus on
           understanding business challenges first, then delivering
           technology that creates measurable impact.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="what-we-develop">
           Whether developing a customized ERP, an educational platform,
           an automation system, or an industry-specific application, we
           focus on technology that is practical, scalable, and aligned
           with your business objectives.
-        </>,
+        </Fragment>,
       ]}
     />
   );
