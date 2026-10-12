@@ -35,8 +35,7 @@ export function Footer() {
               </a>
 
               <p className="mt-5 max-w-xs text-sm leading-7 text-slate-400">
-                Innovative software, marketing & marketplace solutions designed
-                for modern businesses.
+                Teknovia Technologies Private Limited.
               </p>
               <div className="mt-7">
                 <div className="flex items-start justify-start gap-2">
