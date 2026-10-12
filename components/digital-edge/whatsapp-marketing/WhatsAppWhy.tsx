@@ -1,6 +1,6 @@
 "use client";
 import { CheckCircle2 } from "lucide-react";
-
+import {Fragment} from "react"
 import { ContentOverview } from "@/components/ui/ContentOverview";
 import { points } from "@/lib/data/digital-edge/watsapp-marketing-data";
 
@@ -20,18 +20,18 @@ export function WhatsAppWhy() {
         icon: CheckCircle2,
       }}
       paragraphs={[
-        <>
+        <Fragment key="why-whatsapp-business-api-desc1">
           WhatsApp Business API helps businesses scale communication with
           automation, CRM integration, and real-time engagement. It
           enables companies to manage high volumes of conversations
           efficiently and improve customer experience.
-        </>,
-        <>
+        </Fragment>,
+        <Fragment key="why-whatsapp-business-api-desc2">
           It&apos;s not just messaging—it&apos;s a complete{" "}
           <strong className="font-bold text-gray-950">
             WhatsApp marketing and sales system.
           </strong>
-        </>,
+        </Fragment>,
       ]}
     >
       <div className="mt-8 grid gap-3 sm:grid-cols-2">

@@ -1,5 +1,5 @@
 import { SplitHero } from "@/components/ui/heroes/SplitHero";
-
+import {Fragment} from "react"
 export function CorporateHero() {
   return (
     <SplitHero
@@ -10,7 +10,7 @@ export function CorporateHero() {
       ]}
       badge="About Teknovia"
       title={
-        <>
+        <Fragment key="about-teknovia-corporate">
           Technology, Software &{" "}
           <span className="lg:block">
             Growth Solutions{" "}
@@ -20,7 +20,7 @@ export function CorporateHero() {
               Modern Businesses
             </span>
           </span>
-        </>
+        </Fragment>
       }
       description="Integrated digital marketing, custom software, EduTech, and talent solutions designed to help businesses scale efficiently."
       image={{

@@ -1,7 +1,7 @@
 
 import { contactFeatures } from "@/lib/data/contact-data";
 import { SplitHero } from "../ui/heroes/SplitHero";
-
+import {Fragment} from "react"
 export default function ContactHero() {
   return (
     // <section className="relative pt-8 border-b border-gray-200 pb-12 isolate overflow-hidden bg-linear-to-r from-primary/5 via-white to-primary/10 gap-10">
@@ -96,11 +96,11 @@ export default function ContactHero() {
       breadcrumb={[{ label: "Contact Us" }]}
       badge="Contact Us"
       title={
-        <>
+        <Fragment key="contact-hero-title">
           Let&apos;s Build Smart
           <br />
           <span className="text-primary">Solutions Together.</span>
-        </>
+        </Fragment>
       }
       description="Partner with Teknovia for software development, digital marketing, and scalable technology solutions tailored to your business goals."
       image={{

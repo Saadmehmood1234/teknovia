@@ -306,7 +306,7 @@ const sections = [
         </p>
 
         <div className="mt-6 rounded-xl border border-primary-100 bg-primary-50 p-5 sm:p-6">
-          <p className="!mt-0 font-heading text-lg font-semibold text-gray-900">
+          <p className="mt-0! font-heading text-lg font-semibold text-gray-900">
             TEKNOVIA Technologies Private Limited
           </p>
 
@@ -341,7 +341,7 @@ const sections = [
         </div>
 
         <div className="mt-5 rounded-xl border border-gray-200 bg-gray-50 p-5 sm:p-6">
-          <p className="!mt-0 font-heading text-base font-semibold text-gray-900">
+          <p className="mt-0! font-heading text-base font-semibold text-gray-900">
             Privacy-related Requests or Complaints
           </p>
 

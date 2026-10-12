@@ -1,6 +1,6 @@
 import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
 import { channels } from "@/lib/data/digital-edge/b2b-marketing-data";
-
+import {Fragment} from "react"
 export function B2BMarketingHero() {
   return (
     <BackgroundHero
@@ -18,10 +18,10 @@ export function B2BMarketingHero() {
       ]}
       badge="B2B MARKETING & LEAD GENERATION"
       title={
-        <>
+        <Fragment key="b2b-marketing-lead-generation">
           B2B Marketing That Connects You With{" "}
           <span className="text-primary">the Right<br className="lg:block hidden"/> Businesses.</span>
-        </>
+        </Fragment>
       }
       description="Build a stronger B2B presence, reach decision-makers, generate qualified leads, and turn business relationships into sustainable growth."
       features={channels.map((item) => ({

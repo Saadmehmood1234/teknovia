@@ -1,5 +1,5 @@
 import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
-
+import {Fragment} from "react"
 export function EcommerceHero() {
   return (
     <BackgroundHero
@@ -14,9 +14,9 @@ export function EcommerceHero() {
       ]}
       badge="eCommerce Platforms"
       title={
-        <>
+        <Fragment key="ecommerce-hero-title">
           Build. Sell. <span className="text-primary">Scale.</span>
-        </>
+        </Fragment>
       }
       description="Build powerful, flexible and scalable eCommerce platforms for B2B, B2C and D2C businesses. Designed around your products, customers and business needs."
       primaryButton={{

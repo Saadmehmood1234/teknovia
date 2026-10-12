@@ -2,7 +2,7 @@ import { Container } from "../ui/Container";
 import { principles } from "@/lib/data/industries";
 import { Card2 } from "../ui/Card2";
 import { SectionHeading } from "../ui/SectionHeading";
-
+import {Fragment} from "react"
 export const industries = [
   "Educational Institutions",
   "SMEs",
@@ -21,10 +21,10 @@ export function IndustriesOverview() {
           variant="centered"
           badge="How&nbsp;We&nbsp;Build"
           title={[
-            <>
+            <Fragment key="how-we-build-industries-title">
               Designed for real-world
               <span className="text-primary">business needs.</span>
-            </>,
+            </Fragment>,
           ]}
           description="Every solution is developed with a focus on usability, scalability, reliability, and long-term business value."
         />

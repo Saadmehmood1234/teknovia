@@ -1,5 +1,5 @@
 import { BackgroundHero } from "../ui/heroes/BackgroundHero";
-
+import {Fragment} from "react"
 export function BlogHero() {
   return (
     <BackgroundHero
@@ -14,10 +14,10 @@ export function BlogHero() {
       ]}
       badge="Scalable • Secure • Product-Focused"
       title={
-        <>
+        <Fragment>
           Insights on marketing, technology {" "}
           <span className="text-primary">and business growth</span>
-        </>
+        </Fragment>
       }
       description="Practical guides on B2B marketing, SEO, websites and technology, written for teams that want better results online."
 

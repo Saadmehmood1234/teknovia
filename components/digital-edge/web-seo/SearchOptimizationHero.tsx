@@ -1,6 +1,6 @@
 import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
 import { seoOptimizationTypes } from "@/lib/data/digital-edge/seo-data";
-
+import {Fragment} from "react"
 export function SearchOptimizationHero() {
   return (
     <BackgroundHero
@@ -19,12 +19,12 @@ export function SearchOptimizationHero() {
       ]}
       badge="SEO • AEO • GEO • AIO"
       title={
-        <>
+        <Fragment key="seo-aeo-geo-aio-title">
           Be Found. Be Answered.{" "}
           <span className="text-primary">
             Be Discovered by AI.
           </span>
-        </>
+        </Fragment>
       }
       description="We help businesses improve their visibility across search engines, answer engines, and AI-powered platforms—bringing more relevant traffic, leads, and opportunities for sustainable growth."
       features={seoOptimizationTypes.map((item) => ({

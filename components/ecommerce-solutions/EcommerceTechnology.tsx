@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Lightbulb, Puzzle, Settings2, TrendingUp } from "lucide-react";
-
+import {Fragment} from "react"
 import { Container } from "@/components/ui/Container";
 import { ecommerceTechnologies } from "@/lib/data/ecommerce-solutions-data";
 import { SectionHeading } from "../ui/SectionHeading";
@@ -82,12 +82,12 @@ export function EcommerceTechnology() {
               variant="left"
               badge="eCommerce Technology Landscape"
               title={[
-                <>
+                <Fragment key="ecommerce-technologies-title">
                 eCommerce <span className="text-primary">Technology Landscape.</span>
-                </>
+                </Fragment>
               ]}
               description={[
-                <>
+                <Fragment key="ecommerce-technologies-description">
                   <span className="text-lg font-semibold">Custom-built commerce for businesses that need more than
                   off-the-shelf platforms.</span>
                   <span className="mt-4 block">
@@ -96,7 +96,7 @@ export function EcommerceTechnology() {
                   required, we can also work with established commerce
                   ecosystems and integrate with existing platforms.
                   </span>
-                </>,
+                </Fragment>,
               ]}
             />
           </div>

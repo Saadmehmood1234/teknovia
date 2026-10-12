@@ -9,7 +9,7 @@ import {
   ShoppingCart,
   User,
 } from "lucide-react";
-
+import {Fragment} from "react"
 import { Container } from "@/components/ui/Container";
 import { ecommerceModels } from "@/lib/data/ecommerce-solutions-data";
 import { SectionHeading } from "../ui/SectionHeading";
@@ -189,10 +189,10 @@ export function WhatWeBuild() {
           variant="centered"
           badge="What We Build"
           title={[
-            <>
+            <Fragment key="what-we-build-title">
               E-commerce solutions built for{" "}
               <span className="text-primary">modern businesses.</span>
-            </>,
+            </Fragment>,
           ]}
         />
         <div className="mx-auto mt-12 grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-6">

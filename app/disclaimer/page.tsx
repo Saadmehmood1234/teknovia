@@ -427,7 +427,7 @@ const sections = [
         <p>If you have questions regarding this Disclaimer, please contact:</p>
 
         <div className="mt-6 rounded-xl border border-primary-100 bg-primary-50 p-5 sm:p-6">
-          <p className="!mt-0 font-heading text-lg font-semibold text-gray-900">
+          <p className="mt-0! font-heading text-lg font-semibold text-gray-900">
             TEKNOVIA Technologies Private Limited
           </p>
 

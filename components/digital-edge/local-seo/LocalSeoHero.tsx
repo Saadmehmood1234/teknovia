@@ -1,5 +1,5 @@
 import { SplitHero } from "@/components/ui/heroes/SplitHero";
-
+import {Fragment} from "react"
 export function LocalSeoHero() {
   return (
     <SplitHero
@@ -15,13 +15,13 @@ export function LocalSeoHero() {
       ]}
       badge="LOCAL SEO • GOOGLE BUSINESS PROFILE"
       title={
-        <>
+        <Fragment key="loacal-seo-title">
           Get Found Locally.
           <br />
           <span className="text-primary">
             Turn Searches Into Customers.
           </span>
-        </>
+        </Fragment>
       }
       description="Optimize your Google Business Profile, improve your Google Maps visibility, and connect with high-intent customers searching for your services locally."
       image={{

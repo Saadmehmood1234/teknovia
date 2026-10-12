@@ -1,5 +1,5 @@
 import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
-
+import {Fragment} from "react"
 export function ServicesHero() {
   return (
     <BackgroundHero
@@ -13,10 +13,10 @@ export function ServicesHero() {
       ]}
       badge="OUR SERVICES"
       title={
-        <>
+        <Fragment key="our-services-title">
           Digital Solutions Built{" "}
           <span className="text-primary">Around Your Business</span>
-        </>
+        </Fragment>
       }
       description="From software development to digital marketing and ecommerce, we help businesses build, launch and grow digital products that create measurable value."
       primaryButton={{

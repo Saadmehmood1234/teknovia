@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { ecommerceCapabilities } from "@/lib/data/ecommerce-solutions-data";
 import { FeatureListItem } from "../ui/ListItem";
 import { SectionHeading } from "../ui/SectionHeading";
+import { Fragment } from "react";
 
 export function EcommerceCapabilities() {
   return (
@@ -16,10 +17,10 @@ export function EcommerceCapabilities() {
               variant="sticky"
               badge="Platform Capabilities"
               title={[
-                <>
+                <Fragment key="ecommerce-capabilities-title">
                   Everything your{" "}
                   <span className="text-primary">commerce platform needs.</span>
-                </>
+                </Fragment>
               ]}
               description="Build a complete commerce ecosystem with the tools required to manage products, customers, orders, payments and business performance from one platform."
             />

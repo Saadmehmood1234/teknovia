@@ -1,6 +1,6 @@
 import { SplitHero } from "@/components/ui/heroes/SplitHero";
 import { highlights } from "@/lib/data/digital-edge/watsapp-marketing-data";
-
+import {Fragment} from "react"
 export function WhatsAppMarketingHero() {
   return (
     <SplitHero
@@ -15,10 +15,10 @@ export function WhatsAppMarketingHero() {
       ]}
       badge="WHATSAPP MARKETING • BUSINESS API"
       title={
-        <>
+        <Fragment key="whatsapp-marketing-title">
           Turn WhatsApp Conversations Into{" "}
           <span className="text-primary">Measurable Growth</span>
-        </>
+        </Fragment>
       }
       description="Build a smarter WhatsApp communication system with automation, CRM integration, lead capture, follow-ups and hands-on account management—all in one place."
       image={{

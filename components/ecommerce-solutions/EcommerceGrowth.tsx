@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { ecommerceGrowthPoints } from "@/lib/data/ecommerce-solutions-data";
 import { Card2 } from "../ui/Card2";
 import { SectionHeading } from "../ui/SectionHeading";
-
+import {Fragment} from "react"
 const HERO_IMAGE = "/images/ecommerce-growth.png";
 
 export function EcommerceGrowth() {
@@ -16,9 +16,9 @@ export function EcommerceGrowth() {
             variant="left"
             badge="Built for Growth"
             title={[
-              <>
+              <Fragment key="ecommerce-growth-title">
               Built for <span className="text-primary">Growth.</span>
-              </>
+              </Fragment>
             ]}
             description="Your eCommerce platform should grow as your business grows. TEKNOVIA builds flexible and scalable platforms that adapt to changing products, customers, sales channels and business needs. With a secure, mobile-ready and integration-friendly architecture, your platform is designed to support growth today and tomorrow."
           />

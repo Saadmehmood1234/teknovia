@@ -3,7 +3,7 @@ import { philosophyPoints } from "@/lib/data/edutech-data";
 import { Card2 } from "../ui/Card2";
 import { BackgroundEffect } from "../Background";
 import { SectionHeading } from "../ui/SectionHeading";
-
+import {Fragment} from "react"
 export function OurPhilosophy() {
   return (
     <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
@@ -12,12 +12,12 @@ export function OurPhilosophy() {
           variant="centered"
           badge="OUR PHILOSOPHY"
           title={[
-            <>
+            <Fragment key="our-philosophy-title">
               Technology should not just digitize education it should{" "}
               <span className="text-primary">
                 enhance how people learn and grow.
               </span>
-            </>,
+            </Fragment>,
           ]}
           description="At TEKNOVIA, EduTech is built around outcomes, not just platforms. We combine technology, content, and growth strategy to create learning ecosystems that are engaging, scalable, and results-driven."
         />

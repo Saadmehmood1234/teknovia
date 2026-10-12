@@ -1,6 +1,6 @@
 import { SplitHero } from "@/components/ui/heroes/SplitHero";
 import { webAppFeatures } from "@/lib/data/software-services/web-application-development-data";
-
+import {Fragment} from "react"
 export function WebDevHero() {
   return (
     <SplitHero
@@ -16,9 +16,9 @@ export function WebDevHero() {
       ]}
       badge="Scalable Secure Future-Ready"
       title={
-        <>
+        <Fragment key="scalable-secure-future-ready">
           Powerful Web Applications That Drive Business Growth
-        </>
+        </Fragment>
       }
       description="We design and develop custom web applications that streamline operations, enhance user experiences, and accelerate digital transformation for growing businesses."
       features={webAppFeatures.map((feature) => ({

@@ -8,12 +8,12 @@ export function EdTechIntroduction() {
     <ContentOverview
       badge="About EduTech"
       title={
-        <>
+        <Fragment key="about-edutech-title">
           Technology that makes{" "}
           <span className="text-primary">
             education more connected.
           </span>
-        </>
+        </Fragment>
       }
       image={{
         src: "/images/edtech-solution/edutech-about.png",

@@ -1,6 +1,6 @@
 import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
 import { iotHeroFeatures } from "@/lib/data/software-services/iot-development-data";
-
+import {Fragment} from "react"
 export function IoTHero() {
   return (
     <BackgroundHero
@@ -18,12 +18,12 @@ export function IoTHero() {
       ]}
       badge="Connected • Intelligent • Automated"
       title={
-        <>
+        <Fragment key="connected-intelligent-automated">
           Connect the Physical World with{" "}
           <span className="text-primary">
             Intelligent Technology
           </span>
-        </>
+        </Fragment>
       }
       description="Build connected, intelligent, and automated operations with TEKNOVIA's IoT development solutions. Connect devices, capture real-time data, automate processes, and turn operational information into actionable business intelligence."
       features={iotHeroFeatures}

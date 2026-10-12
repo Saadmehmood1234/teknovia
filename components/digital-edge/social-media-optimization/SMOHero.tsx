@@ -1,6 +1,6 @@
 import { SplitHero } from "@/components/ui/heroes/SplitHero";
 import { smoheroFeatures } from "@/lib/data/digital-edge/social-media-optimization-data";
-
+import {Fragment} from "react"
 export function SMOHero() {
   return (
     <SplitHero
@@ -15,12 +15,12 @@ export function SMOHero() {
       ]}
       badge="Boost Your Brand. Grow Your Business"
       title={
-        <>
+        <Fragment key="smo-hero-title">
           Turn Social Presence Into{" "}
           <span className="text-primary">
             Real Brand Growth.
           </span>
-        </>
+        </Fragment>
       }
       description="Grow your business with strategic Instagram and Facebook marketing designed to improve visibility, engagement, and conversions."
       image={{

@@ -3,7 +3,7 @@
 import { ArrowLeft, ArrowRight, Check, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { KeyboardEvent } from "react";
-
+import {Fragment} from "react"
 import { Container } from "@/components/ui/Container";
 import { industries } from "@/lib/data/industries";
 import { SectionHeading } from "../ui/SectionHeading";
@@ -142,10 +142,10 @@ export function IndustriesGrid() {
           variant="centered"
           badge="Industries&nbsp;We&nbsp;Serve"
           title={[
-            <>
+            <Fragment key="industies-we-serve-title">
               Domains and Industry
               <span className="text-primary"> we serve.</span>
-            </>,
+            </Fragment>,
           ]}
           description="Technology solutions designed around the operational needs, challenges, and growth goals of organizations across diverse industries."
         />

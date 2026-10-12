@@ -1,5 +1,5 @@
 import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
-
+import {Fragment} from "react"
 export function IndustriesHero() {
   return (
     <BackgroundHero
@@ -15,12 +15,12 @@ export function IndustriesHero() {
       ]}
       badge="Industries We Serve"
       title={
-        <>
+        <Fragment key="industies-we-serve">
           Solutions Built for{" "}
           <span className="text-primary-300">
             Every Industry.
           </span>
-        </>
+        </Fragment>
       }
       description="We understand every industry has unique challenges. Our solutions are crafted to drive growth, efficiency, and long-term impact across diverse sectors."
       overlay="bg-[#040506]/30"

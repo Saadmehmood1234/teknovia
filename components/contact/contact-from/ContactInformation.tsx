@@ -1,6 +1,6 @@
 import { CalendarDays, Mail, MapPin, Phone } from "lucide-react";
 import { ContactDetail } from "./ContactDetail";
-
+import {Fragment} from "react"
 export function ContactInformation() {
   return (
     <div className="w-full lg:flex-1">
@@ -17,11 +17,11 @@ export function ContactInformation() {
           icon={MapPin}
           label="Head Office"
           value={
-            <>
+            <Fragment key="head-office">
               Noida, Uttar Pradesh
               <br />
               India
-            </>
+            </Fragment>
           }
         />
 

@@ -1,5 +1,5 @@
 import { BarChart3, GraduationCap, ShieldCheck, Smartphone } from "lucide-react";
-
+import {Fragment} from "react"
 import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
 
 export function EdTechHero() {
@@ -20,10 +20,10 @@ export function EdTechHero() {
       ]}
       badge="Edutech By Teknovia"
       title={
-        <>
+        <Fragment key="edutech-hero-title">
           Powering the Future of{" "}
           <span className="text-primary">Digital Learning</span>
-        </>
+        </Fragment>
       }
       description="Smart solutions to create engaging, scalable and technology-driven learning experiences."
       features={[

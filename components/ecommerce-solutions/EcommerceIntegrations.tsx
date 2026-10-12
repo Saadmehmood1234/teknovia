@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { ecommerceIntegrations } from "@/lib/data/ecommerce-solutions-data";
 import { Card2 } from "../ui/Card2";
 import { SectionHeading } from "../ui/SectionHeading";
-
+import {Fragment} from "react"
 export function EcommerceIntegrations() {
   return (
     <section
@@ -14,10 +14,10 @@ export function EcommerceIntegrations() {
           variant="centered"
           badge="Integrate Your Business"
           title={[
-            <>
+            <Fragment key="ecommerce-integration-title">
               Connect commerce with your{" "}
               <span className="text-primary">entire business.</span>
-            </>
+            </Fragment>
           ]}
           description="Your eCommerce platform should work as part of your business ecosystem. Connect the systems, channels and tools your business already depends on."
         />

@@ -1,6 +1,6 @@
 import { GraduationCap } from "lucide-react";
 import Image from "next/image";
-
+import {Fragment} from "react"
 import { Container } from "@/components/ui/Container";
 import { edTechIndustries } from "@/lib/data/edutech-data";
 import { SectionHeading } from "../ui/SectionHeading";
@@ -75,12 +75,12 @@ export function EdTechIndustries() {
           variant="centered"
           badge="CASE USE / INDUSTRIES"
           title={[
-            <>
+            <Fragment key="edutech-industries-title">
               EduTech Built for{" "}
               <span className="text-primary">
                 Different Learning Ecosystems
               </span>
-            </>,
+            </Fragment>,
           ]}
           description="From traditional institutions to digital-first education businesses, TEKNOVIA creates technology that adapts to different learning models, operational needs, and growth goals."
         />

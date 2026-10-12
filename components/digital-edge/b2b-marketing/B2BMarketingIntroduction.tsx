@@ -5,12 +5,12 @@ export function B2BMarketingIntroduction() {
     <ContentOverview
       badge="WHAT IS B2B MARKETING?"
       title={
-        <>
+        <Fragment key="what-is-b2b">
           Marketing built around{" "}
           <span className="text-primary">
             business decisions.
           </span>
-        </>
+        </Fragment>
       }
       image={{
         src: "/images/digital-edge/b2b-background.png",

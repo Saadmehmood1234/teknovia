@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
-
+import {Fragment} from "react"
 type HeroProps = {
   breadcrumb: string;
   badge: string;
@@ -31,7 +31,7 @@ export function Hero({
       className={`relative isolate overflow-hidden border-b border-gray-200 bg-[#EFF3F6] pt-8 pb-12 ${!image && "hero-grid "}`}
     >
       {image && (
-        <>
+        <Fragment key="policies-hero-image">
           <div className="absolute inset-0 -z-10">
             <Image
               src={image}
@@ -44,7 +44,7 @@ export function Hero({
           </div>
           <div className="absolute inset-0 bg-[#040506]/50" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.14),transparent_55%)]" />
-        </>
+        </Fragment>
       )}
 
       <Container>

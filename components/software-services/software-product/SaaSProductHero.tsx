@@ -1,6 +1,6 @@
 import { BackgroundHero } from "@/components/ui/heroes/BackgroundHero";
 import { highlights } from "@/lib/data/software-services/software-product-data";
-
+import {Fragment} from "react"
 export function SaaSProductHero() {
   return (
     <BackgroundHero
@@ -19,12 +19,12 @@ export function SaaSProductHero() {
       ]}
       badge="Scalable • Secure • Product-Focused"
       title={
-        <>
+        <Fragment key="scalable-secure-product-focused">
           Build, Launch &{" "}
           <span className="text-primary">
             Scale SaaS Products
           </span>
-        </>
+        </Fragment>
       }
       description="Transform your ideas into secure, cloud-native, and market-ready software products with TEKNOVIA. From MVP development to enterprise-grade SaaS platforms, we build solutions designed for scalability, performance, and long-term success."
       features={highlights.map((item) => ({
