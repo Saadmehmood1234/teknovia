@@ -1,28 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CheckCircle2, Clock3 } from "lucide-react";
+import { ArrowLeft, Clock3 } from "lucide-react";
 
 import { BlogCard } from "@/components/blog/BlogCard";
 import { CTA } from "@/components/CTA";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import {
-  blogPosts,
-  formatPostDate,
-  getPostBySlug,
-  getRelatedPosts,
-} from "@/lib/data/blogs-data";
+import { formatPostDate } from "@/lib/data/blogs-data";
 import Image from "next/image";
-import { getCmsBlogPost, getCmsBlogPosts } from "@/lib/cms-blog";
+import { getCmsBlogPost, getCmsBlogPosts, getCmsBlogSlugs } from "@/lib/cms-blog";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+export async function generateStaticParams() {
+  try {
+    const { items } = await getCmsBlogSlugs();
+    return items.filter((post) => !post.noIndex).map((post) => ({ slug: post.slug }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getCmsBlogPost(slug);
 
   if (!post) notFound();
 
@@ -79,10 +79,10 @@ export default async function BlogPostPage({ params }: Props) {
 
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500">
                 <span className="font-semibold text-gray-700">
-                  {post.author}
+                  {post.author.name}
                 </span>
 
-                <time dateTime={post.date}>{formatPostDate(post.date)}</time>
+                <time dateTime={post.publishedAt}>{formatPostDate(post.publishedAt.slice(0, 10))}</time>
 
                 <span className="inline-flex items-center gap-1.5">
                   <Clock3 className="size-4" />
@@ -93,8 +93,8 @@ export default async function BlogPostPage({ params }: Props) {
 
             <div className="relative aspect-16/10 overflow-hidden rounded-3xl bg-gray-200">
               <Image
-                src={post.image}
-                alt={post.imageAlt}
+                src={post.featuredImage?.url || "/images/blogs/blog-bg.png"}
+                alt={post.featuredImage?.altText || post.title}
                 fill
                 preload
                 sizes="(max-width: 1024px) 100vw, 45vw"
@@ -107,9 +107,7 @@ export default async function BlogPostPage({ params }: Props) {
       <section className="bg-white py-10 sm:py-16">
         <Container>
           <article className="max-w-3xl">
-            <p className="text-lg font-medium leading-8 text-gray-800">
-              <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-            </p>
+            <div className="cms-post-content text-base leading-8 text-gray-700" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
 
             <Link
               href="/blog"
