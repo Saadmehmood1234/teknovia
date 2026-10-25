@@ -1,6 +1,5 @@
 import "server-only";
 
-import { Target } from "lucide-react";
 import type { BlogPost } from "@/lib/data/blogs-data";
 
 const API_BASE = (process.env.CMS_API_URL || "https://headless-cms-api-test.onrender.com/api/v1").replace(/\/+$/, "");
@@ -67,7 +66,7 @@ async function cmsData<T>(path: string): Promise<T> {
   return body.data;
 }
 
-function toBlogCard(post: CmsPostSummary): BlogPost {
+function toBlogCard(post: CmsPostSummary): Omit<BlogPost, "icon"> {
   const image = post.featuredImage?.url || "/images/blogs/blog-bg.png";
   const date = post.publishedAt.slice(0, 10);
   return {
@@ -77,7 +76,6 @@ function toBlogCard(post: CmsPostSummary): BlogPost {
     category: post.categories[0]?.name || post.tags[0]?.name || "Insights",
     date,
     author: post.author?.name || "Teknovia Team",
-    icon: Target,
     image,
     imageAlt: post.featuredImage?.altText || post.title,
     intro: post.excerpt || "",
