@@ -28,7 +28,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
           role="group"
           aria-label="Filter articles by category"
         >
-          {blogCategories.map((item) => {
+          {categories.map((item) => {
             const isActive = item === category;
 
             return (
