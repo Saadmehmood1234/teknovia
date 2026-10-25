@@ -15,6 +15,7 @@ import {
   getRelatedPosts,
 } from "@/lib/data/blogs-data";
 import Image from "next/image";
+import { getCmsBlogPost, getCmsBlogPosts } from "@/lib/cms-blog";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -26,36 +27,24 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
-
+  const post = await getCmsBlogPost(slug);
   if (!post) return {};
-
+  const description = post.seo.description ?? post.excerpt ?? undefined;
   return {
-    title: `${post.title} | Teknovia Blog`,
-    description: post.excerpt,
-    alternates: { canonical: `/blog/${post.slug}` },
+    title: post.seo.title ?? `${post.title} | Teknovia Blog`,
+    description,
+    alternates: { canonical: post.seo.canonicalUrl ?? `/blog/${post.slug}` },
+    robots: post.seo.noIndex ? { index: false, follow: true } : undefined,
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: post.seo.ogTitle ?? post.seo.title ?? post.title,
+      description: post.seo.ogDescription ?? description,
       url: `/blog/${post.slug}`,
       type: "article",
-      publishedTime: post.date,
-      authors: [post.author],
-      images: [
-        {
-          url: post.image,
-          width: 1200,
-          height: 630,
-          alt: post.imageAlt,
-        },
-      ],
+      publishedTime: post.publishedAt,
+      authors: [post.author.name],
+      images: post.featuredImage ? [{ url: post.featuredImage.url, alt: post.featuredImage.altText }] : undefined,
     },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image],
-    },
+    twitter: { card: post.featuredImage ? "summary_large_image" : "summary", title: post.title, description },
   };
 }
 
@@ -65,7 +54,8 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound();
 
-  const related = getRelatedPosts(post);
+  const relatedPage = await getCmsBlogPosts(1, 50);
+  const related = relatedPage.items.filter((item) => item.slug !== post.slug).slice(0, 3);
 
   return (
     <main>
@@ -77,7 +67,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="grid items-center gap-8 pt-8 lg:grid-cols-[1fr_0.85fr] lg:gap-12">
             <div>
-              <TopBadge data={post.category} />
+              <TopBadge data={post.categories[0]?.name || post.tags[0]?.name || "Insights"} />
 
               <h1 className="mt-5 font-heading text-3xl font-bold leading-[1.2] tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
                 {post.title}
@@ -96,7 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
 
                 <span className="inline-flex items-center gap-1.5">
                   <Clock3 className="size-4" />
-                  {post.readTime} min read
+                  {3} min read
                 </span>
               </div>
             </div>
@@ -118,38 +108,8 @@ export default async function BlogPostPage({ params }: Props) {
         <Container>
           <article className="max-w-3xl">
             <p className="text-lg font-medium leading-8 text-gray-800">
-              {post.intro}
+              <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
             </p>
-
-            {post.sections.map((section) => (
-              <div key={section.heading} className="mt-10">
-                <h2 className="font-heading text-2xl font-bold tracking-tight text-gray-950">
-                  {section.heading}
-                </h2>
-
-                {section.paragraphs?.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="mt-4 text-base leading-8 text-gray-600"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-
-                {section.points && (
-                  <ul className="mt-4 space-y-3">
-                    {section.points.map((point) => (
-                      <li key={point} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-1 size-5 shrink-0 text-primary" />
-                        <span className="text-base leading-7 text-gray-700">
-                          {point}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
 
             <Link
               href="/blog"
