@@ -1,8 +1,16 @@
 import type { MetadataRoute } from "next";
+import { getCmsBlogSlugs } from "@/lib/cms-blog";
 
 const BASE_URL = "https://www.teknovia.in";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  let blogEntries: MetadataRoute.Sitemap = [];
+  try {
+    const result = await getCmsBlogSlugs();
+    blogEntries = result.items.filter((post) => !post.noIndex && (!post.canonicalUrl || post.canonicalUrl.startsWith(`${BASE_URL}/blog/`))).map((post) => ({ url: post.canonicalUrl || `${BASE_URL}/blog/${post.slug}`, lastModified: new Date(post.updatedAt), changeFrequency: "weekly" as const, priority: 0.7 }));
+  } catch (error) {
+    console.error("[cms-blog] sitemap posts could not be loaded", error instanceof Error ? error.message : "unknown error");
+  }
   return [
     {
       url: BASE_URL,
@@ -101,5 +109,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    ...blogEntries,
   ];
 }
