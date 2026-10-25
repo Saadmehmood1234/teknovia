@@ -118,3 +118,17 @@ Flexible technology solutions designed to support businesses from early-stage gr
   divider
 />
 ```
+
+## Headless Blog CMS
+
+The `/blog` listing and `/blog/[slug]` article pages read published content from the Headless Blog CMS using server-side requests. The site key is never exposed to browser JavaScript.
+
+Add this environment variable in Vercel (**Project → Settings → Environment Variables**) and redeploy:
+
+```dotenv
+CMS_SITE_KEY=pk_your_teknovia_website_public_key
+```
+
+The API base defaults to `https://headless-cms-api-test.onrender.com/api/v1`. If your CMS API URL changes, optionally set `CMS_API_URL` to the full API base ending in `/api/v1`. Copy the **public site key** from the CMS website settings for the Teknovia website; do not use an admin token, session cookie, or webhook secret.
+
+Publish posts in the CMS to make them publicly visible. The blog caches API responses for up to 60 seconds. CMS post titles, excerpts, featured images, categories, rich text, SEO metadata and published slugs are read from the CMS. Draft posts are not shown by the public API.
