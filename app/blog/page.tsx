@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { CTA } from "@/components/CTA";
 import { BlogList } from "@/components/blog/Bloglist";
 import { BlogHero } from "@/components/blog/BlogHero";
+import { getCmsBlogPosts } from "@/lib/cms-blog";
 
 export const metadata: Metadata = {
   title: "Blog | B2B Marketing, SEO & Technology Insights",
@@ -50,11 +51,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getCmsBlogPosts(1, 50);
   return (
     <main>
       <BlogHero />
-      <BlogList />
+      <BlogList posts={posts.items} />
 
       <CTA
         title="Let's Build Smart Solutions Together"
