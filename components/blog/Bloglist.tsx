@@ -1,18 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import type { BlogPost } from "@/lib/data/blogs-data";
 
 import { Container } from "@/components/ui/Container";
 import { BlogCard } from "./BlogCard";
-import { blogCategories, blogPosts } from "@/lib/data/blogs-data";
 
-export function BlogList() {
+
+export function BlogList({ posts }: { posts: BlogPost[] }) {
   const [category, setCategory] = useState("All");
+  const categories = ["All", ...Array.from(new Set(posts.map((post) => post.category)))];
 
   const filtered =
     category === "All"
-      ? blogPosts
-      : blogPosts.filter((post) => post.category === category);
+      ? posts
+      : posts.filter((post) => post.category === category);
 
   // The featured layout only makes sense on the unfiltered view
   const featured = category === "All" ? filtered[0] : undefined;
