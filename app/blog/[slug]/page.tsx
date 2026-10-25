@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Clock3 } from "lucide-react";
+import { ArrowLeft, Clock3, Target } from "lucide-react";
 
 import { BlogCard } from "@/components/blog/BlogCard";
 import { CTA } from "@/components/CTA";
@@ -127,7 +127,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((item) => (
-              <BlogCard key={item.slug} post={item} />
+              <BlogCard key={item.slug} post={{ ...item, icon: Target }} />
             ))}
           </div>
         </Container>
