@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { Target } from "lucide-react";
 import type { BlogPost } from "@/lib/data/blogs-data";
 
 import { Container } from "@/components/ui/Container";
 import { BlogCard } from "./BlogCard";
 
 
-export function BlogList({ posts }: { posts: BlogPost[] }) {
+type CmsBlogCard = Omit<BlogPost, "icon">;
+
+export function BlogList({ posts }: { posts: CmsBlogCard[] }) {
   const [category, setCategory] = useState("All");
   const categories = ["All", ...Array.from(new Set(posts.map((post) => post.category)))];
 
@@ -50,7 +53,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
         </div>
 
         <div className="mt-8 space-y-5 sm:mt-10">
-          {featured && <BlogCard post={featured} featured />}
+          {featured && <BlogCard post={{ ...featured, icon: Target }} featured />}
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {rest.map((post) => (
