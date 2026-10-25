@@ -57,7 +57,7 @@ export function BlogList({ posts }: { posts: CmsBlogCard[] }) {
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {rest.map((post) => (
-              <BlogCard key={post.slug} post={post} />
+              <BlogCard key={post.slug} post={{ ...post, icon: Target }} />
             ))}
           </div>
         </div>
