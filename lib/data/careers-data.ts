@@ -1,3 +1,5 @@
+import { cache } from "react";
+
 export type OpeningCategory = "all" | "job" | "internship";
 
 export interface JobOpening {
@@ -44,14 +46,17 @@ export async function getDynamicOpenings(): Promise<JobOpening[]> {
   }
 }
 
-export async function findJob(slug: string): Promise<JobOpening | undefined> {
+export const findJob = cache(async (slug: string): Promise<JobOpening | undefined> => {
+  if (!slug) return undefined;
+  const cleanSlug = decodeURIComponent(slug).trim().toLowerCase();
+
   try {
     const { getAllOpenings } = await import("./openings-store");
     const all = await getAllOpenings(true);
-    const found = all.find((j) => j.id === slug);
+    const found = all.find((j) => (j.id || "").trim().toLowerCase() === cleanSlug);
     if (found) return found;
-  } catch {
-    // fallback
+  } catch (err) {
+    console.warn("[findJob error]:", err);
   }
-  return getJobBySlug(slug);
-}
+  return openPositions.find((job) => (job.id || "").trim().toLowerCase() === cleanSlug);
+});

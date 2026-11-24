@@ -12,20 +12,17 @@ import {
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { findJob, getAllJobSlugs } from "@/lib/data/careers-data";
+import { findJob } from "@/lib/data/careers-data";
 import { JobForm } from "@/components/careers/JobForm";
 import { InternshipForm } from "@/components/careers/InternshipForm";
 
-export const dynamicParams = true;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 interface ApplyPageProps {
   params: Promise<{
     slug: string;
   }>;
-}
-
-export async function generateStaticParams() {
-  return getAllJobSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: ApplyPageProps): Promise<Metadata> {

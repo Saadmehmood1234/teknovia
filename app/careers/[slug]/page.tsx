@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { CTA } from "@/components/CTA";
-import { findJob, getAllJobSlugs } from "@/lib/data/careers-data";
+import { findJob } from "@/lib/data/careers-data";
 import { JobDetailHero } from "@/components/careers/detail/JobDetailHero";
 import { JobDetailOverview } from "@/components/careers/detail/JobDetailOverview";
 import { JobDetailResponsibilities } from "@/components/careers/detail/JobDetailResponsibilities";
@@ -12,16 +12,13 @@ import { JobDetailBenefits } from "@/components/careers/detail/JobDetailBenefits
 import { JobDetailHiringProcess } from "@/components/careers/detail/JobDetailHiringProcess";
 import { JobDetailSidebar } from "@/components/careers/detail/JobDetailSidebar";
 
-export const dynamicParams = true;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 interface JobPageProps {
   params: Promise<{
     slug: string;
   }>;
-}
-
-export async function generateStaticParams() {
-  return getAllJobSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: JobPageProps): Promise<Metadata> {
