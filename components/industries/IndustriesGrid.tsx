@@ -135,7 +135,7 @@ export function IndustriesGrid() {
   return (
     <section
       id="industries"
-      className="scroll-mt-20 border-b border-gray-100 bg-white py-10 sm:py-16 lg:py-20"
+      className="scroll-mt-20 bg-white py-8 sm:py-16"
     >
       <Container>
         <SectionHeading

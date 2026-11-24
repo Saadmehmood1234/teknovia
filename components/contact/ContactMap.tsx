@@ -6,7 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 export default function ContactMap() {
 
   return (
-      <section className="border-y border-gray-200 bg-white">
+      <section className="bg-white">
         <div className="container-page py-16 sm:py-20">
           <div className="grid gap-10 lg:grid-cols-[1.65fr_0.95fr] lg:items-center">
             <div className="relative min-h-76 overflow-hidden rounded-3xl bg-gray-100">

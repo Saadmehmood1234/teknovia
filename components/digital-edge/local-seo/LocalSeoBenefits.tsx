@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function LocalSeoBenefits() {
   return (
-    <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-16">
       <Container>
         <SectionHeading
           variant="centered"

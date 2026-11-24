@@ -40,7 +40,7 @@ export function CareersView({ initialOpenings }: { initialOpenings?: JobOpening[
   const internshipCount = allOpenings.filter((j) => j.category === "internship").length;
 
   return (
-    <section id="openings" className="bg-[#FAFAFA] py-16 sm:py-24">
+    <section id="openings" className="bg-[#FAFAFA] py-8 sm:py-16">
       <Container>
         <SectionHeading
           variant="left"

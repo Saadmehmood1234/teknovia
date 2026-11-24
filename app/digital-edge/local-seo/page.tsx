@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import { LocalSeoBenefits } from "@/components/digital-edge/local-seo/LocalSeoBenefits";
 import { LocalSeoBlogTopics } from "@/components/digital-edge/local-seo/LocalSeoBlogTopics";
 import { LocalSeoCaseStudies } from "@/components/digital-edge/local-seo/LocalSeoCaseStudies";
-import { LocalSeoCTA } from "@/components/digital-edge/local-seo/LocalSeoCTA";
 import { LocalSeoHero } from "@/components/digital-edge/local-seo/LocalSeoHero";
 import { LocalSeoIntroduction } from "@/components/digital-edge/local-seo/LocalSeoIntroduction";
 import { LocalSeoServices } from "@/components/digital-edge/local-seo/LocalSeoServices";
 import FAQ from "@/components/FAQ";
 import { localSeoFaqs } from "@/lib/data/digital-edge/local-seo-data";
 import { LocalProofAndReporting } from "@/components/digital-edge/local-seo/LocalProofAndReporting";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Local SEO Services | Google Business Profile",
@@ -80,8 +80,14 @@ export default function LocalSeoPage() {
         description="Common questions about Local SEO and Google Business Profile optimization"
         faqs={localSeoFaqs}
       />
-
-      <LocalSeoCTA />
+      <CTA
+        title="Ready to Improve Your Local Visibility?"
+        description="Get a free GMB audit and discover opportunities to improve your Google Maps visibility, local search presence, and customer acquisition."
+        button={{
+          label: "Get Free GMB Audit",
+          href: "/contact?tab=message#contact-form",
+        }}
+      />
     </main>
   );
 }

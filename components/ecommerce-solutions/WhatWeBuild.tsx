@@ -178,7 +178,7 @@ export function WhatWeBuild() {
   };
 
   return (
-    <section className="relative overflow-hidden border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16">
+    <section className="relative overflow-hidden bg-[#FAFAFA] py-8 sm:py-16">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-linear(rgba(0,150,137,0.14)_1.2px,transparent_1.2px)] bg-size-[18px_18px] mask-[radial-linear(ellipse_at_25%_35%,black,transparent_65%)]"

@@ -4,7 +4,7 @@ import { localSeoComingSoon } from "@/lib/data/digital-edge/local-seo-data";
 
 export function LocalSeoCaseStudies() {
   return (
-    <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-16">
       <Container>
         <SectionHeading
           variant="centered"

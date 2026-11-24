@@ -5,7 +5,7 @@ import { SectionHeading } from "../ui/SectionHeading";
 
 export default function Expertise() {
   return (
-    <section className="border-b border-gray-100 py-10 sm:py-20">
+    <section className="py-8 sm:py-16">
       <Container>
         <SectionHeading
           variant="centered"

@@ -114,15 +114,12 @@ export async function getAllOpenings(includeInactive = false): Promise<StoredOpe
   // Map to merge by ID
   const map = new Map<string, StoredOpening>();
 
+  // 1. Add base openings
   for (const item of baseOpenings) {
     map.set(item.id, item);
   }
 
-  for (const item of custom) {
-    map.set(item.id, normalizeOpening(item));
-  }
-
-  // Attempt to sync from Google Apps Script if reachable and has getOpenings
+  // 2. Fetch live from Google Apps Script if reachable
   const googleScriptUrl = process.env.GOOGLE_SCRIPT_WEBAPP_URL?.trim();
   if (googleScriptUrl) {
     try {
@@ -131,7 +128,8 @@ export async function getAllOpenings(includeInactive = false): Promise<StoredOpe
       if (includeInactive) url.searchParams.set("all", "true");
 
       const res = await fetch(url.toString(), {
-        next: { revalidate: 30 },
+        cache: includeInactive ? "no-store" : "default",
+        next: includeInactive ? undefined : { revalidate: 10 },
       });
 
       if (res.ok) {
@@ -150,6 +148,11 @@ export async function getAllOpenings(includeInactive = false): Promise<StoredOpe
     } catch {
       // Gracefully fall back to local store
     }
+  }
+
+  // 3. Overlay custom openings on top so recent local admin changes take precedence over sheet latency
+  for (const item of custom) {
+    map.set(item.id, normalizeOpening(item));
   }
 
   const all = Array.from(map.values());
@@ -172,18 +175,19 @@ export async function saveOpening(opening: StoredOpening): Promise<{ success: bo
 
   writeCustomOpenings(current);
 
-  // Sync to Google Apps Script in background/parallel
+  // Await Sync to Google Apps Script so serverless containers complete the request
   const googleScriptUrl = process.env.GOOGLE_SCRIPT_WEBAPP_URL?.trim();
   if (googleScriptUrl) {
     try {
-      fetch(googleScriptUrl, {
+      await fetch(googleScriptUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           formType: "createOpening",
           opening: normalized,
         }),
-      }).catch((err) => console.warn("[Google Apps Script sync warning]:", err));
+        cache: "no-store",
+      });
     } catch (err) {
       console.warn("[Google Apps Script dispatch error]:", err);
     }
@@ -200,19 +204,20 @@ export async function toggleOpeningStatus(id: string, newStatus: "Active" | "Ina
     current[existingIdx].status = newStatus;
     writeCustomOpenings(current);
   } else {
-    // If it's a static base role, add an override into custom openings
-    const base = openPositions.find((o) => o.id === id);
-    if (base) {
-      current.push(normalizeOpening({ ...base, status: newStatus }));
+    // If not yet in custom, find it from current openings (including Google Sheet or base)
+    const all = await getAllOpenings(true);
+    const found = all.find((o) => o.id === id);
+    if (found) {
+      current.push(normalizeOpening({ ...found, status: newStatus }));
       writeCustomOpenings(current);
     }
   }
 
-  // Sync to Google Apps Script
+  // Await Sync to Google Apps Script
   const googleScriptUrl = process.env.GOOGLE_SCRIPT_WEBAPP_URL?.trim();
   if (googleScriptUrl) {
     try {
-      fetch(googleScriptUrl, {
+      const res = await fetch(googleScriptUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -220,7 +225,11 @@ export async function toggleOpeningStatus(id: string, newStatus: "Active" | "Ina
           id,
           status: newStatus,
         }),
-      }).catch((err) => console.warn("[Google Apps Script toggle warning]:", err));
+        cache: "no-store",
+      });
+      if (!res.ok) {
+        console.warn("[Google Apps Script toggle status returned non-200]:", res.status);
+      }
     } catch (err) {
       console.warn("[Google Apps Script toggle error]:", err);
     }

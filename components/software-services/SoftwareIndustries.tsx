@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function SoftwareIndusties() {
   return (
-    <section className="border-y border-gray-200 bg-gray-50 py-8 sm:py-16">
+    <section className="py-8 sm:py-16">
       <Container>
         <SectionHeading
           variant="centered"

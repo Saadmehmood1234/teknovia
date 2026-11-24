@@ -6,7 +6,7 @@ export function SaaSProducts() {
   return (
     <section
       id="saas-products"
-      className="border-b border-gray-200/60 bg-white py-8 sm:py-16"
+      className="bg-white py-8 sm:py-16"
     >
       <Container>
         <SectionHeading

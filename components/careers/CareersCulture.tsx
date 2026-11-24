@@ -56,7 +56,7 @@ export const LifeAtTeknovia = [
 
 export function CareersCulture() {
   return (
-    <section id="culture" className="border-t border-slate-200/80 bg-white py-16 sm:py-24">
+    <section id="culture" className=" bg-white py-8 sm:py-16">
       <Container>
         <SectionHeading
           variant="centered"

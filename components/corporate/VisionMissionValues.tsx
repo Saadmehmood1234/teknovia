@@ -5,7 +5,7 @@ import { coreValues } from "@/lib/data/corporate-data";
 
 export function VisionMissionValues() {
   return (
-    <section className="border-b border-gray-200 bg-white py-8 lg:py-12">
+    <section className="bg-white py-8 lg:py-12">
       <Container>
         <div className="grid gap-4 lg:grid-cols-[1fr_1fr_1.65fr]">
           <Reveal delay={0} className="h-full">

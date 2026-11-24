@@ -18,7 +18,7 @@ const goals = [
 
 export function B2BMarketingAudience() {
   return (
-    <section className="border-b border-gray-100 bg-white py-8 sm:py-16">
+    <section className="bg-white py-8 sm:py-16">
       <Container>
         <div className="grid overflow-hidden lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative overflow-hidden bg-gray-950 p-7 text-white sm:p-10 lg:p-12">

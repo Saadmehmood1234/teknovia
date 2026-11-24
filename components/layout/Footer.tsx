@@ -137,6 +137,10 @@ export function Footer() {
                 Disclaimer
               </Link>
 
+              <Link href="/security" className="transition text-xs text-slate-400 hover:text-white">
+                Security & Trust
+              </Link>
+
               <Link href="/sitemap.xml" className="transition text-xs text-slate-400 hover:text-white">
                 Sitemap
               </Link>

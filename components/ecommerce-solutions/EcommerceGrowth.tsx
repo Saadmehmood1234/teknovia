@@ -9,7 +9,7 @@ const HERO_IMAGE = "/images/ecommerce-growth.png";
 
 export function EcommerceGrowth() {
   return (
-    <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-16">
       <Container className="relative">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
           <SectionHeading

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function MobileAppBenefits() {
   return (
-    <section className="relative overflow-hidden border-b border-white/5 bg-[#040706] py-8 text-white sm:py-16">
+    <section className="relative overflow-hidden bg-[#040706] py-8 text-white sm:py-16">
       <Image
         src="/images/mobile-app-benefits.png"
         alt=""

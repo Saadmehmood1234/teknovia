@@ -68,7 +68,7 @@ export function EdTechIndustries() {
   return (
     <section
       id="edtech-industries"
-      className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16"
+      className="relative overflow-hidden bg-white py-8 sm:py-16"
     >
       <Container className="relative">
         <SectionHeading

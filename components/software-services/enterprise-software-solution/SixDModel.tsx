@@ -7,7 +7,7 @@ import { Users } from "lucide-react";
 
 export default function SixDModel() {
   return (
-    <section className="relative overflow-hidden border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16">
+    <section className="relative overflow-hidden py-8 sm:py-16">
       <Container>
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-1/2 top-0 h-150 w-150 -translate-x-1/2 rounded-full bg-primary/5 blur-3xl" />

@@ -6,7 +6,7 @@ import { SectionHeading } from "../ui/SectionHeading";
 import {Fragment} from "react"
 export function OurPhilosophy() {
   return (
-    <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-16">
       <Container className="relative">
         <SectionHeading
           variant="centered"

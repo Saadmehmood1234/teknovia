@@ -7,7 +7,7 @@ import { ArrowRight, Target } from "lucide-react";
 
 export function IoTEcosystem() {
   return (
-    <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-16">
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-40" />
 
       <div className="pointer-events-none absolute left-1/2 top-20 size-100 -translate-x-1/2 rounded-full bg-primary-50/60 blur-3xl" />

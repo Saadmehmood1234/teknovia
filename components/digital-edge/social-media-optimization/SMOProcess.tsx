@@ -11,7 +11,7 @@ export function SMOProcess() {
   return (
     <section
       aria-labelledby="process-heading"
-      className="relative overflow-hidden border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16"
+      className="relative overflow-hidden bg-[#FAFAFA] py-8 sm:py-16"
     >
       <Container className="relative">
         <SectionHeading

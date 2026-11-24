@@ -9,7 +9,7 @@ export function GEOSection() {
   return (
     <section
       aria-labelledby="geo-heading"
-      className="border-b relative border-gray-100 bg-[#18342F] py-8 sm:py-16"
+      className="relative bg-[#18342F] py-8 sm:py-16"
     >
       <BackgroundEffect />
       <Container>

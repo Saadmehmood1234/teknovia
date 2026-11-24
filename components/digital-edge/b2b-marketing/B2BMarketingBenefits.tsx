@@ -10,7 +10,7 @@ export function B2BMarketingBenefits() {
   return (
     <section
       id="platform-capabilities"
-      className="relative border-b border-gray-100 bg-white py-8 sm:py-16"
+      className="relative bg-white py-8 sm:py-16"
     >
       <Container>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">

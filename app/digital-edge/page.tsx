@@ -136,8 +136,7 @@ export default function DigitalEdgePage() {
         }}
       />
 
-      {/* Pillars Section */}
-      <section className="border-b border-slate-100 bg-white py-12 sm:py-16">
+      <section className="bg-white py-8 sm:py-16">
         <Container>
           <div className="grid gap-6 md:grid-cols-3">
             {pillars.map((pillar) => {

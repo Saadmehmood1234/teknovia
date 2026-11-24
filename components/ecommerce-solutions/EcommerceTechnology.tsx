@@ -69,7 +69,7 @@ const benefits = [
 
 export function EcommerceTechnology() {
   return (
-    <section className="relative overflow-hidden border-b border-gray-100 bg-white py-8 sm:py-16">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-16">
       <div
         aria-hidden
         className="pointer-events-none absolute -right-24 -top-24 size-128 rounded-full bg-[radial-linear(circle,rgba(167,139,250,0.18),rgba(56,189,248,0.10)_50%,transparent_70%)]"

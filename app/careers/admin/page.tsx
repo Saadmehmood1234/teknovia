@@ -51,8 +51,9 @@ export default function CareersAdminPage() {
   const fetchOpenings = useCallback(async (authToken: string) => {
     setIsLoadingOpenings(true);
     try {
-      const res = await fetch("/api/careers/admin/openings", {
+      const res = await fetch(`/api/careers/admin/openings?t=${Date.now()}`, {
         headers: { Authorization: `Bearer ${authToken}` },
+        cache: "no-store",
       });
       const data = await res.json();
       if (data.success && Array.isArray(data.openings)) {
@@ -70,8 +71,9 @@ export default function CareersAdminPage() {
     if (!token) return;
     let ignore = false;
 
-    fetch("/api/careers/admin/openings", {
+    fetch(`/api/careers/admin/openings?t=${Date.now()}`, {
       headers: { Authorization: `Bearer ${token}` },
+      cache: "no-store",
     })
       .then((res) => res.json())
       .then((data) => {

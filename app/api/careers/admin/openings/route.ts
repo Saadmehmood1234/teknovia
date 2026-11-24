@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import crypto from "crypto";
 import { getAllOpenings, saveOpening, toggleOpeningStatus, StoredOpening } from "@/lib/data/openings-store";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 function verifyAdminToken(request: Request): boolean {
   const authHeader = request.headers.get("authorization");
   if (!authHeader || !authHeader.startsWith("Bearer ")) {

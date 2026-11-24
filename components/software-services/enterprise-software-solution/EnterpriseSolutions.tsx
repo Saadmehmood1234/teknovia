@@ -5,7 +5,7 @@ import { enterpriseSolutions } from "@/lib/data/software-services/enterprise-dat
 
 export function EnterpriseSolutions() {
   return (
-    <section className="py-8 sm:py-16 border-b border-gray-100">
+    <section className="py-8 sm:py-16">
       <Container>
         <SectionHeading
           variant="centered"

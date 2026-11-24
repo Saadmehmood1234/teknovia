@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function WhatsAppEconomics() {
   return (
-    <section className="border-b border-gray-100 bg-white py-8 sm:py-16">
+    <section className="bg-white py-8 sm:py-16">
       <Container>
         <div className="overflow-hidden rounded-4xl border border-primary/15 bg-[#18342F] text-white">
           <div className="grid lg:grid-cols-[1fr_0.9fr]">

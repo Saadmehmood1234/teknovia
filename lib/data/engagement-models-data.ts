@@ -1,4 +1,4 @@
-import { Users, Target, RefreshCw, ShieldCheck, Code, FileCheck, Clock, Zap } from "lucide-react";
+import { Users, Target, ShieldCheck, Code, FileCheck, Clock, Zap } from "lucide-react";
 
 export interface EngagementModel {
   id: string;
@@ -17,68 +17,71 @@ export interface EngagementModel {
 export const engagementModels: EngagementModel[] = [
   {
     id: "dedicated-pod",
-    name: "Dedicated Engineering Pod",
-    tagline: "Your autonomous, full-stack development team scaled to your roadmap.",
-    badge: "Most Popular for Scaling Startups & SaaS",
+    name: "Dedicated Team & Pods",
+    tagline: "Your dedicated multidisciplinary team — from software engineers to SEO strategists and growth specialists.",
+    badge: "Most Popular for Scaling Businesses",
     popular: true,
-    idealFor: "Startups, SaaS companies, and digital businesses needing continuous product velocity without internal hiring overhead.",
-    billingStructure: "Predictable monthly retainer per specialist with bi-weekly sprint planning.",
+    idealFor:
+      "Businesses, startups, and growing enterprises needing sustained velocity across software development, digital marketing, SEO, and brand growth without internal hiring overhead.",
+    billingStructure: "Predictable monthly retainer per dedicated specialist with flexible cross-functional allocation.",
     flexibility: "High",
     timeline: "3 to 12+ Months",
     keyFeatures: [
-      "Dedicated Full Stack Engineers, UI/UX Designers, QA, and Tech Lead allocated 100% to your codebase.",
-      "Direct integration into your Slack, Jira, GitHub, or preferred project workspace.",
-      "Daily asynchronous standups, weekly sprint demos, and real-time sprint velocity tracking.",
-      "Ability to scale team capacity up or down with 30-day notice flexibility.",
+      "Dedicated specialists across Software Engineering, UI/UX Design, SEO, Performance Marketing, and Social Media allocated 100% to your brand.",
+      "Direct communication and seamless integration into your Slack, WhatsApp, Google Workspace, or preferred management board.",
+      "Agile execution with regular progress demos, transparent weekly sprint velocity, and monthly ROI reviews.",
+      "Flexibility to scale team size or adjust cross-functional skill sets as your business priorities evolve.",
     ],
     deliverables: [
-      "Production-ready code shipped on a weekly sprint cadence.",
-      "Complete test coverage, automated CI/CD pipelines, and documentation.",
-      "Continuous architectural guidance and scalability reviews.",
+      "Continuous deliverables: Production-ready digital assets, campaigns, and software features shipped weekly.",
+      "Comprehensive analytics, SEO rank tracking, campaign performance dashboards, and code repositories.",
+      "Regular strategy alignment sessions covering technology roadmap and digital market expansion.",
     ],
   },
   {
     id: "fixed-scope-milestone",
-    name: "Fixed-Scope Milestone Delivery",
-    tagline: "Turnkey project execution with guaranteed timelines and agreed pricing.",
-    badge: "Best for Well-Defined MVPs & Digital Overhauls",
+    name: "Fixed-Scope Project Delivery",
+    tagline: "Turnkey project execution with clear milestones, guaranteed timelines, and transparent pricing.",
+    badge: "Best for Well-Defined Projects & Campaigns",
     popular: false,
-    idealFor: "Companies with clear technical requirements, discrete MVPs, website revamps, or standalone application builds.",
-    billingStructure: "Milestone-based payments tied directly to verified feature deliverables.",
+    idealFor:
+      "Organizations with clear deliverables — such as custom web/app launches, eCommerce storefronts, end-to-end SEO overhauls, or structured digital branding campaigns.",
+    billingStructure: "Milestone-based billing tied directly to verified deliverables and milestone sign-offs.",
     flexibility: "Medium",
-    timeline: "6 to 18 Weeks",
+    timeline: "4 to 16 Weeks",
     keyFeatures: [
-      "Exhaustive pre-development technical discovery and Software Requirement Specification (SRS).",
-      "Guaranteed delivery dates tied to clear staging demo approval gates.",
-      "Fixed budget with zero hidden fees or unexpected creep.",
-      "Comprehensive 60-day post-launch warranty and bug-fix guarantee included.",
+      "Exhaustive discovery and scope blueprint outlining technical specifications, creative deliverables, and campaign goals.",
+      "Guaranteed delivery timelines tied to agreed approval gates and milestone demos.",
+      "Fixed, transparent budget with zero hidden costs or unexpected scope fees.",
+      "Comprehensive post-launch warranty, transition handoff, and stabilization support included.",
     ],
     deliverables: [
-      "Complete turn-key production application deployed to your cloud environment.",
-      "Full design system, source code, database schemas, and architectural runbooks.",
-      "Interactive onboarding hand-off sessions for your internal teams.",
+      "Complete turnkey delivery: fully tested software, high-converting digital assets, or launched digital campaigns.",
+      "Full transfer of all creative assets, codebase, configurations, analytics setups, and accounts.",
+      "Walkthrough sessions and documentation for seamless team handoff.",
     ],
   },
   {
     id: "growth-retainer",
-    name: "Product Growth & DevOps Retainer",
-    tagline: "Continuous feature enhancement, cloud optimization, and security support.",
-    badge: "Best for Operational Reliability & Growth",
+    name: "Ongoing Growth & Retainer",
+    tagline: "Continuous optimization across technical maintenance, SEO rankings, social campaigns, and digital performance.",
+    badge: "Best for Ongoing Maintenance & Continuous Growth",
     popular: false,
-    idealFor: "Established platforms needing reliable 24/7 uptime, proactive security patches, continuous SEO tuning, and incremental feature rollouts.",
-    billingStructure: "Monthly bucket of committed engineering and digital marketing hours.",
+    idealFor:
+      "Established businesses needing consistent digital presence, continuous SEO & social media marketing, technical maintenance, and ongoing conversions optimization.",
+    billingStructure: "Flexible monthly hours or dedicated retainer packages across technical and marketing services.",
     flexibility: "Agile",
-    timeline: "Ongoing (Monthly / Annual)",
+    timeline: "Ongoing (Monthly / Quarterly)",
     keyFeatures: [
-      "Proactive cloud infrastructure monitoring, database tuning, and cost optimization.",
-      "Priority SLA response times for critical production incidents (< 1 hour).",
-      "Regular technical SEO audits, Core Web Vitals optimization, and security vulnerability patching.",
-      "Roll-over unused hours with complete transparency and time-log reporting.",
+      "Continuous multi-channel support covering SEO tuning, social media management, content creation, and platform updates.",
+      "Priority turnaround and dedicated account manager for rapid campaign changes and technical updates.",
+      "Proactive performance tracking, Core Web Vitals optimization, and conversion rate improvement.",
+      "Flexible allocation between technical development and digital marketing as seasonal demands shift.",
     ],
     deliverables: [
-      "Monthly performance and security health check reports.",
-      "Continuous dependency updates, bug fixes, and minor feature releases.",
-      "Quarterly technical roadmap and infrastructure modernization reviews.",
+      "Monthly digital marketing & SEO audit reports with ranking progress and traffic growth metrics.",
+      "Continuous scheduled social media campaigns, creatives, and performance reporting.",
+      "Regular technical updates, security patches, and incremental feature enhancements.",
     ],
   },
 ];
@@ -88,34 +91,40 @@ export const comparisonTable = [
     criteria: "Scope Definition",
     dedicated: "Evolving / Dynamic Roadmap",
     fixed: "Strictly Defined Upfront",
-    retainer: "Flexible Monthly Backlog",
+    retainer: "Flexible Monthly Backlog & Campaigns",
   },
   {
     criteria: "Billing Model",
-    dedicated: "Monthly Flat Rate / Engineer",
-    fixed: "Milestone-Based Payouts",
-    retainer: "Monthly Hours Retainer",
+    dedicated: "Predictable Monthly / Specialist",
+    fixed: "Milestone-Based Payments",
+    retainer: "Monthly Growth Retainer / Hours",
+  },
+  {
+    criteria: "Best For",
+    dedicated: "Continuous Tech & Growth Velocity",
+    fixed: "Specific Projects & New Launches",
+    retainer: "Ongoing SEO, Marketing & Support",
   },
   {
     criteria: "Team Dedicatedness",
-    dedicated: "100% Dedicated to Your Product",
+    dedicated: "100% Dedicated to Your Brand",
     fixed: "Project Squad Managed by Teknovia",
-    retainer: "Shared Specialists on Retainer",
+    retainer: "Multi-Disciplinary Specialists on Demand",
   },
   {
     criteria: "Direct Communication",
-    dedicated: "Direct Slack / GitHub Access",
-    fixed: "Weekly Milestones & Demo Calls",
-    retainer: "Monthly Reviews & Standby Desk",
+    dedicated: "Direct Slack / Workspace Access",
+    fixed: "Milestone Checkpoints & Reviews",
+    retainer: "Monthly Reviews & Dedicated Manager",
   },
   {
     criteria: "Speed to Kickoff",
     dedicated: "1 to 2 Weeks",
-    fixed: "2 to 3 Weeks (Scoping phase)",
+    fixed: "1 to 2 Weeks (Scoping phase)",
     retainer: "Immediate (< 48 Hours)",
   },
   {
-    criteria: "IP & Code Ownership",
+    criteria: "IP & Asset Ownership",
     dedicated: "100% Client Ownership from Day 1",
     fixed: "100% Transferred Upon Delivery",
     retainer: "100% Client Ownership Always",
@@ -125,49 +134,65 @@ export const comparisonTable = [
 export const onboardingSteps = [
   {
     step: "01",
-    title: "Discovery & Technical Alignment",
-    description: "We schedule an in-depth workshop to analyze your business goals, target audience, technology constraints, and budget expectations.",
+    title: "Discovery & Goal Alignment",
+    description:
+      "We schedule an in-depth workshop to analyze your business goals, target audience, technology requirements, digital marketing objectives, and budget.",
     icon: Target,
   },
   {
     step: "02",
-    title: "Architecture & Roadmap Blueprint",
-    description: "Our technical architects craft a granular roadmap with stack recommendations, sprint schedules, and clear milestones.",
+    title: "Strategy & Roadmap Blueprint",
+    description:
+      "Our strategists craft a granular roadmap with technical architecture, creative direction, campaign timelines, and clear milestones.",
     icon: Code,
   },
   {
     step: "03",
-    title: "Rapid Sprint Shipping & Transparency",
-    description: "We begin coding immediately in two-week agile sprints. You receive live staging previews, sprint demos, and direct access to task boards.",
+    title: "Agile Execution & Transparency",
+    description:
+      "We begin execution immediately. You receive live previews, campaign drafts, sprint demos, and direct access to task progress.",
     icon: Zap,
   },
   {
     step: "04",
-    title: "Deployment, Handover & SLA Support",
-    description: "We orchestrate production release on your cloud infrastructure, transfer all credentials and source code, and initiate ongoing support.",
+    title: "Launch, Growth & Handover",
+    description:
+      "We deploy your project or campaign, transfer full assets and access, and initiate continuous optimization and support.",
     icon: ShieldCheck,
   },
 ];
 
 export const clientProtections = [
   {
-    title: "100% IP & Source Code Transfer",
-    description: "All code, documentation, designs, and database architectures remain 100% your proprietary property with zero vendor lock-in.",
+    title: "100% IP & Asset Ownership",
+    description:
+      "All code, documentation, designs, marketing accounts, and digital assets remain 100% your proprietary property with zero vendor lock-in.",
     icon: FileCheck,
+    circle: "bg-primary/10 text-primary",
+    bar: "bg-primary",
   },
   {
     title: "Strict Mutual NDA Protection",
-    description: "We sign enforceable Non-Disclosure Agreements prior to sharing a single line of business context or technical documentation.",
+    description:
+      "We sign enforceable Non-Disclosure Agreements prior to sharing any confidential business context, customer data, or campaign plans.",
     icon: ShieldCheck,
+    circle: "bg-amber-100 text-amber-600",
+    bar: "bg-amber-500",
   },
   {
-    title: "Transparent Git Workflows",
-    description: "You have real-time visibility into every git commit, pull request, and code review directly inside your company’s GitHub or GitLab repository.",
+    title: "Complete Process Transparency",
+    description:
+      "You have real-time visibility into project boards, campaign analytics, and task tracking directly in your preferred communication workspace.",
     icon: Users,
+    circle: "bg-emerald-100 text-emerald-600",
+    bar: "bg-emerald-500",
   },
   {
-    title: "60-Day Post-Launch Warranty",
-    description: "Every fixed-scope project includes 60 days of complimentary bug fixing and performance stabilization to ensure flawless operations.",
+    title: "Dedicated Post-Launch Warranty",
+    description:
+      "Every fixed project includes dedicated post-launch support and performance stabilization to ensure flawless digital operations.",
     icon: Clock,
+    circle: "bg-blue-100 text-blue-600",
+    bar: "bg-blue-500",
   },
 ];

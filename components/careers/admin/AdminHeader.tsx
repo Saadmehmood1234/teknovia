@@ -1,8 +1,14 @@
 "use client";
 
-import { Plus, RefreshCw, LogOut, ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import { TopBadge } from "@/components/ui/Top-Badge";
+import {
+  Archive,
+  Briefcase,
+  CircleCheck,
+  LogOut,
+  Plus,
+  RefreshCw,
+  type LucideIcon,
+} from "lucide-react";
 
 interface AdminHeaderProps {
   totalCount: number;
@@ -12,6 +18,34 @@ interface AdminHeaderProps {
   onRefresh: () => void;
   onOpenCreateModal: () => void;
   onLogout: () => void;
+}
+
+interface StatProps {
+  icon: LucideIcon;
+  label: string;
+  value: number;
+  iconClassName: string;
+}
+
+function Stat({ icon: Icon, label, value, iconClassName }: StatProps) {
+  return (
+    <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-xs">
+      <span
+        className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${iconClassName}`}
+        aria-hidden="true"
+      >
+        <Icon className="size-5" />
+      </span>
+      <div className="min-w-0">
+        <p className="text-2xl font-bold leading-none tabular-nums text-slate-900">
+          {value}
+        </p>
+        <p className="mt-1 truncate text-xs font-medium text-slate-500">
+          {label}
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export function AdminHeader({
@@ -24,71 +58,84 @@ export function AdminHeader({
   onLogout,
 }: AdminHeaderProps) {
   return (
-    <div className="mb-8 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between border-b border-slate-200/80 pb-6">
-      <div>
-        <div className="flex items-center gap-3">
-          <TopBadge data="Careers Administration" />
-          <span className="text-xs text-slate-400">• Authenticated Session</span>
+    <header className="mb-8 flex flex-col gap-6">
+      {/* Title + actions */}
+      <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex items-start gap-4">
+          <span
+            className="hidden size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary sm:flex"
+            aria-hidden="true"
+          >
+            <Briefcase className="size-6" />
+          </span>
+          <div>
+            <h1 className="font-heading text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">
+              Role Openings
+            </h1>
+            <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-slate-500">
+              Create and edit job and internship roles, control which ones are
+              live, and review candidates.
+            </p>
+          </div>
         </div>
 
-        <h1 className="mt-2 font-heading text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">
-          Role Openings Management
-        </h1>
-        <p className="mt-1 text-xs text-slate-500">
-          Create, edit, toggle live visibility, and manage candidates for all Teknovia job and internship roles.
-        </p>
+        <div className="flex flex-wrap items-center gap-2.5">
+          <button
+            type="button"
+            onClick={onRefresh}
+            disabled={isLoading}
+            aria-label="Reload openings"
+            className="inline-flex h-10 items-center gap-2 rounded-lg border border-slate-200 bg-white px-3.5 text-sm font-semibold text-slate-700 shadow-xs transition hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            <RefreshCw
+              className={`size-4 ${isLoading ? "animate-spin text-primary" : "text-slate-500"}`}
+            />
+            <span>{isLoading ? "Reloading" : "Reload"}</span>
+          </button>
 
-        {/* Quick Stats Pill Bar */}
-        <div className="mt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
-          <span className="rounded-full bg-slate-900 px-3 py-1 text-white">
-            Total: {totalCount}
-          </span>
-          <span className="rounded-full bg-emerald-100 px-3 py-1 text-emerald-800">
-            Active: {activeCount}
-          </span>
-          <span className="rounded-full bg-slate-200 px-3 py-1 text-slate-700">
-            Archived / Inactive: {inactiveCount}
-          </span>
+          <button
+            type="button"
+            onClick={onOpenCreateModal}
+            className="inline-flex h-10 items-center gap-2 rounded-lg bg-primary px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            <Plus className="size-4" />
+            <span>Create opening</span>
+          </button>
+
+          <span className="mx-1 hidden h-6 w-px bg-slate-200 sm:block" aria-hidden="true" />
+
+          <button
+            type="button"
+            onClick={onLogout}
+            className="inline-flex h-10 items-center gap-2 rounded-lg px-3.5 text-sm font-semibold text-slate-600 transition hover:bg-red-50 hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500"
+          >
+            <LogOut className="size-4" />
+            <span>Sign out</span>
+          </button>
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-3">
-        <Link
-          href="/careers"
-          className="inline-flex h-10 items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 text-xs font-bold text-slate-700 shadow-xs hover:bg-slate-50 transition"
-        >
-          <ArrowLeft className="size-3.5" />
-          <span>View Public Careers</span>
-        </Link>
-
-        <button
-          type="button"
-          onClick={onRefresh}
-          disabled={isLoading}
-          className="inline-flex h-10 items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-4 text-xs font-bold text-slate-700 shadow-xs hover:bg-slate-50 transition disabled:opacity-50"
-        >
-          <RefreshCw className={`size-3.5 ${isLoading ? "animate-spin text-primary" : ""}`} />
-          <span>Sync Roles</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={onOpenCreateModal}
-          className="inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-5 text-xs font-bold text-white shadow-md shadow-primary/20 hover:bg-primary-dark transition"
-        >
-          <Plus className="size-4" />
-          <span>Create New Opening</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={onLogout}
-          className="inline-flex h-10 items-center gap-1.5 rounded-xl border border-red-200 bg-red-50/60 px-4 text-xs font-bold text-red-600 hover:bg-red-100 transition"
-        >
-          <LogOut className="size-3.5" />
-          <span>Sign Out</span>
-        </button>
+      {/* Stats */}
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <Stat
+          icon={Briefcase}
+          label="Total roles"
+          value={totalCount}
+          iconClassName="bg-slate-100 text-slate-700"
+        />
+        <Stat
+          icon={CircleCheck}
+          label="Live on careers page"
+          value={activeCount}
+          iconClassName="bg-emerald-50 text-emerald-600"
+        />
+        <Stat
+          icon={Archive}
+          label="Inactive or archived"
+          value={inactiveCount}
+          iconClassName="bg-amber-50 text-amber-600"
+        />
       </div>
-    </div>
+    </header>
   );
 }

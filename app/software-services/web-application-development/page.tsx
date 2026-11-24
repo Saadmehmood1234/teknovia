@@ -72,7 +72,7 @@ export default function WebApplicationDevelopmentPage() {
   return (
     <main>
       <WebDevHero />
-      <section className="border-b border-gray-100 bg-gray-50/50 py-8 sm:py-16">
+      <section className="py-8 sm:py-16">
         <Container>
           <div className="grid items-start gap-14 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
             <div className="relative flex flex-col gap-4">

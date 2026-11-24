@@ -68,7 +68,7 @@ export function AIOSection() {
     // </section>
     <section
       aria-labelledby="aeo-heading"
-      className="border-b border-gray-100 bg-white py-8 sm:py-16"
+      className="bg-white py-8 sm:py-16"
     >
       <Container>
         <div className="grid gap-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">

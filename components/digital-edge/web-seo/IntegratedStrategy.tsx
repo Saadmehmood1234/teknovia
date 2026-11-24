@@ -10,7 +10,7 @@ export function IntegratedStrategy() {
   return (
     <section
       aria-labelledby="strategy-heading"
-      className="border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16"
+      className="bg-[#FAFAFA] py-8 sm:py-16"
     >
       <Container>
         <SectionHeading

@@ -1,8 +1,7 @@
 "use client";
 
-import { ShieldAlert, ArrowLeft, KeyRound, Eye, EyeOff, Loader2 } from "lucide-react";
+import { ShieldAlert, KeyRound, Eye, EyeOff, Loader2 } from "lucide-react";
 import Link from "next/link";
-import { TopBadge } from "@/components/ui/Top-Badge";
 
 interface AdminAuthViewProps {
   passcode: string;

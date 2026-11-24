@@ -7,7 +7,7 @@ export function WhatsAppFeatures() {
   return (
     <section
       id="key-features"
-      className="relative overflow-hidden border-b border-gray-100 bg-[#FAFAFA] py-8 sm:py-16"
+      className="relative overflow-hidden bg-[#FAFAFA] py-8 sm:py-16"
     >
       <div className="pointer-events-none absolute inset-0 hero-grid opacity-25" />
 

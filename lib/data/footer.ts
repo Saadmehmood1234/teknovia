@@ -27,6 +27,10 @@ export const company = [
     href: "/services",
   },
   {
+    title: "Engagement Models",
+    href: "/engagement-models",
+  },
+  {
     title: "Careers",
     href: "/careers",
   },

@@ -7,7 +7,7 @@ export function IoTSolutions() {
   return (
     <section
       id="iot-solutions"
-      className="border-b border-gray-100 bg-white py-8 sm:py-16"
+      className="bg-white py-8 sm:py-16"
     >
       <Container>
         <SectionHeading
