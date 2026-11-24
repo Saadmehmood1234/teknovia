@@ -31,13 +31,9 @@ export function AdminAuthView({
         </div>
 
         <div className="text-center">
-          <TopBadge data="Authorized Personnel Only" />
           <h1 className="mt-3 font-heading text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
             Careers Admin Portal
           </h1>
-          <p className="mt-2 text-xs text-slate-500 leading-relaxed">
-            Enter the authorized admin passcode to manage job postings, activate or archive roles, and review hiring pipelines.
-          </p>
         </div>
 
         <form onSubmit={onSubmit} className="mt-8 space-y-4">
@@ -92,7 +88,6 @@ export function AdminAuthView({
             href="/careers"
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-primary transition"
           >
-            <ArrowLeft className="size-3.5" />
             <span>Return to Careers Page</span>
           </Link>
         </div>
