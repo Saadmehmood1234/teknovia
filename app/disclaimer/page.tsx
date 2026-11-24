@@ -3,9 +3,12 @@ import { Hero } from "@/components/policies/Hero";
 import { Intro } from "@/components/policies/Intro";
 import { Content } from "@/components/policies/Content";
 export const metadata = {
-  title: "Disclaimer | TEKNOVIA Technologies",
+  title: "Disclaimer",
   description:
     "Read the disclaimer governing the use of information, services, technology content, AI-generated materials, and third-party references on the TEKNOVIA website.",
+  alternates: {
+    canonical: "/disclaimer",
+  },
 };
 
 const sections = [

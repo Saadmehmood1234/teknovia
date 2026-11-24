@@ -4,18 +4,25 @@ import { SubmitButton } from "./SubmitButton";
 import { TextareaField } from "./TextareaField";
 import { Field } from "./Field";
 import { submitContactForm } from "@/app/actions/contact";
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { initialContactState } from "@/lib/data/contact-data";
 import { SpamHoneypot } from "./SpamHoneypot";
 
 export function MessageForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction, pending] = useActionState(
     submitContactForm,
     initialContactState,
   );
 
+  useEffect(() => {
+    if (state.success) {
+      formRef.current?.reset();
+    }
+  }, [state.success]);
+
   return (
-    <form action={formAction} className="relative space-y-6">
+    <form ref={formRef} action={formAction} className="relative space-y-6">
       <input type="hidden" name="formType" value="message" />
 
       <SpamHoneypot id="message-website" />

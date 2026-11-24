@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
-
+import { Container } from "./ui/Container";
 import { BackgroundEffect } from "./Background";
 import { animationConfig } from "@/lib/animations";
 
@@ -78,8 +78,7 @@ export function CTA({
 
       <BackgroundEffect />
 
-      <div className="relative flex w-full max-w-345 flex-col items-center justify-between gap-10 px-8 py-8 sm:py-16 lg:flex-row">
-        {/* Text enters from the left */}
+      <Container className="relative flex w-full flex-col items-center justify-between gap-10 py-8 sm:py-16 lg:flex-row">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -118,7 +117,7 @@ export function CTA({
             <ArrowRight size={17} />
           </Link>
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 }

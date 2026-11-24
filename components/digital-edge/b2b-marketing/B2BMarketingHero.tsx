@@ -9,8 +9,8 @@ export function B2BMarketingHero() {
       }}
       breadcrumb={[
         {
-          label: "Digital Services",
-          href: "/digital-services",
+          label: "Digital Edge",
+          href: "/digital-edge",
         },
         {
           label: "B2B Marketing",

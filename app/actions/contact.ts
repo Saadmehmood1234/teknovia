@@ -192,6 +192,33 @@ export async function submitContactForm(
       );
     }
 
+    // Simultaneously record submission in Google Sheets
+    const googleScriptUrl = process.env.GOOGLE_SCRIPT_WEBAPP_URL?.trim();
+    if (googleScriptUrl) {
+      try {
+        await fetch(googleScriptUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            formType: "contact",
+            type: formType,
+            name: fields.name,
+            email: fields.email,
+            phone: fields.phone,
+            company: fields.company,
+            service: fields.service,
+            date: fields.date,
+            time: fields.time,
+            subject: fields.subject,
+            message: fields.message || fields.details || fields.notes,
+          }),
+          redirect: "follow",
+        });
+      } catch (sheetErr) {
+        console.error("Google Sheets contact logging error:", sheetErr);
+      }
+    }
+
     if (formType === "callback") {
       return successState(
         "Your callback request has been submitted successfully.",

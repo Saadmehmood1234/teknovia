@@ -456,3 +456,12 @@ img {
 .cms-post-content sup { vertical-align: super; font-size: 0.75em; }
 .cms-post-content sub { vertical-align: sub; font-size: 0.75em; }
 .cms-post-content iframe { max-width: 100%; }
+
+/* Clean hidden scrollbar that remains scrollable */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

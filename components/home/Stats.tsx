@@ -40,7 +40,7 @@ export function Stats() {
         initial="hidden"
         whileInView="visible"
         viewport={{
-          once: false,
+          once: true,
           amount: animationConfig.viewportAmount,
         }}
       >

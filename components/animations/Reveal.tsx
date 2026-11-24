@@ -27,7 +27,7 @@ export function Reveal({
         opacity: 1,
         y: 0,
       }}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{
         duration: shouldReduceMotion ? 0 : 0.65,
         delay: shouldReduceMotion ? 0 : delay,

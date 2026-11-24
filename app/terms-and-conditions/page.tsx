@@ -3,9 +3,12 @@ import { Hero } from "@/components/policies/Hero";
 import { Intro } from "@/components/policies/Intro";
 import Link from "next/link";
 export const metadata = {
-  title: "Terms & Conditions | TEKNOVIA Technologies",
+  title: "Terms & Conditions",
   description:
     "Read the Terms & Conditions governing access to and use of the TEKNOVIA Technologies website and its services.",
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
 };
 
 export const sections = [

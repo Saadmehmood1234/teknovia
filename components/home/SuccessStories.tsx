@@ -20,7 +20,7 @@ export function SuccessStories() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.15 }}
           variants={{
             hidden: {},
             visible: {
@@ -85,7 +85,7 @@ export function SuccessStories() {
               opacity: 1,
               x: 0,
             }}
-            viewport={{ once: false, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{
               duration: shouldReduceMotion ? 0 : 0.65,
               delay: shouldReduceMotion ? 0 : 0.2,
@@ -131,12 +131,12 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
             </h3>
 
             <span
-              className={`mt-2 inline-flex rounded-md px-2 py-1 text-[10px] font-semibold ${study.categoryBg} ${study.categoryColor}`}
+              className={`mt-2 inline-flex rounded-md px-2 py-1 text-xs font-semibold ${study.categoryBg} ${study.categoryColor}`}
             >
               {study.category}
             </span>
 
-            <p className="mt-4 text-[11px] font-medium leading-5 text-slate-600">
+            <p className="mt-4 text-xs font-medium leading-5 text-slate-600">
               {study.description}
             </p>
           </div>
@@ -164,7 +164,7 @@ function MetricItem({ metric }: { metric: Metric }) {
           {metric.value}
         </p>
 
-        <p className="mt-1 text-[9px] font-medium leading-3 text-slate-600">
+        <p className="mt-1 text-xs font-medium leading-3 text-slate-600">
           {metric.label}
         </p>
       </div>

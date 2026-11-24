@@ -20,7 +20,7 @@ export function RevealGroup({ children, className }: AnimationProps) {
       initial="hidden"
       whileInView="visible"
       viewport={{
-        once: false,
+        once: true,
         amount: animationConfig.viewportAmount,
       }}
       variants={staggerContainerVariants}

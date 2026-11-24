@@ -2,7 +2,9 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import Image from "next/image";
-import {Fragment} from "react"
+import { Fragment } from "react";
+import { Calendar, Clock } from "lucide-react";
+
 type HeroProps = {
   breadcrumb: string;
   badge: string;
@@ -28,8 +30,12 @@ export function Hero({
 }: HeroProps) {
   return (
     <section
-      className={`relative isolate overflow-hidden border-b border-gray-200 bg-[#EFF3F6] pt-8 pb-12 ${!image && "hero-grid "}`}
+      className={`relative isolate overflow-hidden border-b border-gray-100 bg-[#F8FAFC] py-12 sm:py-16 ${
+        !image ? "hero-grid" : ""
+      }`}
     >
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(0,150,137,0.10),rgba(255,255,255,0))]" />
+
       {image && (
         <Fragment key="policies-hero-image">
           <div className="absolute inset-0 -z-10">
@@ -37,47 +43,56 @@ export function Hero({
               src={image}
               alt={imageAlt}
               fill
-              preload
+              priority
               className="object-cover object-center"
               sizes="100vw"
             />
           </div>
-          <div className="absolute inset-0 bg-[#040506]/50" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.14),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[#040506]/60 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,150,137,0.2),transparent_60%)]" />
         </Fragment>
       )}
 
-      <Container>
+      <Container className="relative z-10">
         <Breadcrumb
           items={[
             {
               label: breadcrumb,
             },
           ]}
-          textColor="text-white"
+          textColor={image ? "text-white" : "text-slate-600"}
         />
 
-        <div className="relative mt-8 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-          <div className="w-full">
+        <div className="mt-8 max-w-4xl">
+          <div className="mb-4">
             <TopBadge data={badge} />
+          </div>
 
-            <h1 className="max-w-4xl text-4xl font-bold leading-[1.2] tracking-tight text-black sm:text-5xl">
-              {title} <span className="text-primary">{highlightedTitle}</span>
-            </h1>
+          <h1
+            className={`text-3xl font-extrabold tracking-tight sm:text-5xl ${
+              image ? "text-white" : "text-slate-900"
+            }`}
+          >
+            {title} <span className="text-primary">{highlightedTitle}</span>
+          </h1>
 
-            <p className="mt-6 max-w-2xl text-md leading-7 text-gray-600 sm:leading-6">
-              {description}
-            </p>
+          <p
+            className={`mt-5 max-w-2xl text-base leading-relaxed sm:text-lg ${
+              image ? "text-slate-200" : "text-slate-600"
+            }`}
+          >
+            {description}
+          </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <div className="inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/80 px-4 py-2 text-xs font-medium text-gray-600 backdrop-blur-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                Effective: {effectiveDate}
-              </div>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-50/80 px-3.5 py-1.5 text-xs font-semibold text-primary shadow-xs backdrop-blur-sm">
+              <Calendar className="h-3.5 w-3.5 text-primary" />
+              Effective: {effectiveDate}
+            </div>
 
-              <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-4 py-2 text-xs font-medium text-gray-600 backdrop-blur-sm">
-                Last Updated: {lastUpdated}
-              </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3.5 py-1.5 text-xs font-medium text-slate-600 shadow-xs backdrop-blur-sm">
+              <Clock className="h-3.5 w-3.5 text-slate-400" />
+              Last Updated: {lastUpdated}
             </div>
           </div>
         </div>

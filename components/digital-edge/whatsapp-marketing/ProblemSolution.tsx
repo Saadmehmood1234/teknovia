@@ -82,9 +82,9 @@ function Bubble({ children, className = "" }: BubbleProps) {
 function Stat({ label, value, delta }: StatProps) {
   return (
     <div className="rounded-lg border border-gray-200 bg-white p-2">
-      <p className="text-[9px] text-gray-500">{label}</p>
+      <p className="text-xs text-gray-500">{label}</p>
       <p className="text-lg font-bold text-gray-900">{value}</p>
-      <p className="text-[9px] font-semibold text-green-600">
+      <p className="text-xs font-semibold text-green-600">
         ↑ {delta}
       </p>
     </div>
@@ -99,7 +99,7 @@ function ChatMsg({ side = "in", children }: ChatMsgProps) {
 
   return (
     <div
-      className={`max-w-[80%] rounded-lg px-2 py-1 text-[10px] text-gray-800 shadow-sm ${cls}`}
+      className={`max-w-[85%] rounded-lg px-2.5 py-1.5 text-xs text-gray-800 shadow-sm ${cls}`}
     >
       {children}
     </div>
@@ -139,7 +139,7 @@ function Dashboard() {
         <Stat label="Resolved" value="11,586" delta="32%" />
         <Stat label="Conversion Rate" value="23.6%" delta="21%" />
       </div>
-      <p className="mb-1 mt-3 text-[9px] font-semibold text-gray-600">Conversations Over Time</p>
+      <p className="mb-1 mt-3 text-xs font-semibold text-gray-600">Conversations Over Time</p>
       <svg viewBox="0 0 200 60" className="h-16 w-full">
         <polyline points="0,52 25,46 50,48 75,36 100,38 125,24 150,26 175,12 200,6" fill="none" stroke="#16a34a" strokeWidth="2" />
         <polyline points="0,52 25,46 50,48 75,36 100,38 125,24 150,26 175,12 200,6 200,60 0,60" fill="#16a34a" opacity="0.12" />

@@ -29,8 +29,9 @@ export function About() {
           business growth.
         </Fragment>,
         <Fragment key="about-solutions">
-          Integrated digital marketing, custom software, EduTech, and talent
-          solutions designed to help businesses scale efficiently.
+          From fast-growing startups to established enterprises, we engineer
+          custom architectures and performance marketing engines that adapt
+          to dynamic market demands.
         </Fragment>,
       ]}
     >

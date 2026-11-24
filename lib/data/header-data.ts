@@ -29,7 +29,7 @@ export const navigation = [
 
   {
     label: "Digital Edge",
-    href: "#",
+    href: "/digital-edge",
     children: [
       {
         label: "Google My Business - Local SEO",
@@ -125,7 +125,11 @@ export const navigation = [
   },
 
   {
-    label: "Blog",
-    href: "/blog",
+    label: "Careers",
+    href: "/careers",
   },
+  // {
+  //   label: "Blog",
+  //   href: "/blog",
+  // },
 ];

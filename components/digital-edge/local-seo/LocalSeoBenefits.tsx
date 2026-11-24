@@ -89,7 +89,7 @@ export function LocalSeoBenefits() {
                     <div className="flex size-12 items-center justify-center rounded-xl bg-primary-50 text-primary">
                       <Icon className="size-5" />
                     </div>
-                    <span className="absolute -right-2 -top-2 flex size-5 items-center justify-center rounded-full border border-white bg-primary font-mono text-[9px] font-bold text-white shadow-sm">
+                    <span className="absolute -right-2 -top-2 flex size-5 items-center justify-center rounded-full border border-white bg-primary font-mono text-xs font-bold text-white shadow-sm">
                       {index + 1}
                     </span>
                   </div>

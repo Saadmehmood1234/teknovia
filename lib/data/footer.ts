@@ -1,20 +1,16 @@
 export const solutions = [
   {
-    title: "Digital Edge Solutions",
-    href: "/digital-edge",
-  },
-  {
     title: "Custom Software Solutions",
     href: "/software-services",
   },
   {
-    title: "Marketplace & eCommerce Solutions",
+    title: "Digital Edge Solutions",
+    href: "/digital-edge",
+  },
+  {
+    title: "Marketplace & eCommerce",
     href: "/ecommerce-solutions",
   },
-  // {
-  //   title: "Talent Solutions",
-  //   href: "/talent-solutions",
-  // },
   {
     title: "EduTech Solutions",
     href: "/edtech-solution",
@@ -23,43 +19,51 @@ export const solutions = [
 
 export const company = [
   {
-    title: "About Us",
+    title: "About Teknovia",
     href: "/corporate",
   },
   {
-    title: "Our Process",
-    href: "/process",
-  },
-  {
-    title: "Case Studies",
-    href: "/case-studies",
+    title: "Our Services",
+    href: "/services",
   },
   {
     title: "Careers",
     href: "/careers",
   },
+  {
+    title: "Industries",
+    href: "/industries",
+  },
+  {
+    title: "FAQs",
+    href: "/faq",
+  },
+  {
+    title: "Contact Us",
+    href: "/contact",
+  },
 ];
 
 export const resources = [
   {
-    title: "Whitepapers",
-    href: "/whitepapers",
+    title: "Insights & Blog",
+    href: "/blog",
   },
   {
-    title: "Ebooks",
-    href: "/ebooks",
+    title: "Web App Development",
+    href: "/software-services/web-application-development",
   },
   {
-    title: "FAQ's",
-    href: "/faq",
+    title: "Mobile App Development",
+    href: "/software-services/mobile-application-development",
   },
   {
-    title: "Insights",
-    href: "/insights",
+    title: "Search & SEO Optimization",
+    href: "/digital-edge/web-seo",
   },
   {
-    title: "Help Center",
-    href: "/help-center",
+    title: "Local SEO & GMB",
+    href: "/digital-edge/local-seo",
   },
 ];
 

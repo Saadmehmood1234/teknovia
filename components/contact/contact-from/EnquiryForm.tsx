@@ -3,19 +3,26 @@ import { Field } from "./Field";
 import { FormFeedback } from "./FormFeedback";
 import { SubmitButton } from "./SubmitButton";
 import { TextareaField } from "./TextareaField";
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { initialContactState, services } from "@/lib/data/contact-data";
 import { SpamHoneypot } from "./SpamHoneypot";
 import { SelectField } from "./SelectField";
 
 export function EnquiryForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction, pending] = useActionState(
     submitContactForm,
     initialContactState,
   );
 
+  useEffect(() => {
+    if (state.success) {
+      formRef.current?.reset();
+    }
+  }, [state.success]);
+
   return (
-    <form action={formAction} className="relative space-y-6">
+    <form ref={formRef} action={formAction} className="relative space-y-6">
       <input type="hidden" name="formType" value="enquiry" />
 
       <SpamHoneypot id="enquiry-website" />

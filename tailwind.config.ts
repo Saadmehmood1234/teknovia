@@ -4,24 +4,25 @@ const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./data/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0B63F6",
-          50: "#EFF6FF",
-          100: "#DBEAFE",
-          200: "#BFDBFE",
-          300: "#93C5FD",
-          400: "#60A5FA",
-          500: "#3B82F6",
-          600: "#2563EB",
-          700: "#1D4ED8",
-          800: "#1E40AF",
-          900: "#1E3A8A",
+          DEFAULT: "#009689",
+          dark: "#00786f",
+          50: "#e6f7f5",
+          100: "#ccefeb",
+          200: "#99dfd7",
+          300: "#66cec3",
+          400: "#33bdb2",
+          500: "#009689",
+          600: "#00877d",
+          700: "#00786f",
+          800: "#00645d",
+          900: "#00514b",
         },
 
         ink: {
@@ -43,7 +44,8 @@ const config: Config = {
       },
 
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["var(--font-manrope)", "sans-serif"],
+        heading: ["var(--font-space-grotesk)", "sans-serif"],
       },
 
       maxWidth: {
@@ -63,7 +65,7 @@ const config: Config = {
 
       backgroundImage: {
         "hero-grid":
-          "linear-gradient(rgba(15,23,42,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,.05) 1px, transparent 1px)",
+          "linear-gradient(rgba(0,150,137,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,150,137,.06) 1px, transparent 1px)",
       },
     },
   },

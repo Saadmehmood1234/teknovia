@@ -6,8 +6,8 @@ export function LocalSeoHero() {
       id="local-seo-hero"
       breadcrumb={[
         {
-          label: "Digital Services",
-          href: "/digital-services",
+          label: "Digital Edge",
+          href: "/digital-edge",
         },
         {
           label: "Local SEO (GMB)",

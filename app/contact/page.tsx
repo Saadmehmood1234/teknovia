@@ -3,10 +3,10 @@ import { Suspense } from "react";
 
 import ContactHero from "@/components/contact/ContactHero";
 import ContactMap from "@/components/contact/ContactMap";
-import ContactFrom from "@/components/contact/ContactForm";
+import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Teknovia Technologies",
+  title: "Contact Us",
   description:
     "Contact Teknovia Technologies for software development, digital marketing, eCommerce solutions, and business technology consulting. Let's discuss your project.",
 
@@ -63,7 +63,7 @@ export default function ContactPage() {
           />
         }
       >
-        <ContactFrom />
+        <ContactForm />
       </Suspense>
 
       <ContactMap />

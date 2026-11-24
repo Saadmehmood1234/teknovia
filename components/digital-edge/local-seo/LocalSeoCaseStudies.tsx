@@ -58,7 +58,7 @@ export function LocalSeoCaseStudies() {
                     <div className="mb-3 flex items-center gap-2">
                       <span className="size-1.5 rounded-full bg-primary" />
 
-                      <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-primary">
+                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
                         Case Study
                       </span>
 

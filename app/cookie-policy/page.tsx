@@ -4,9 +4,12 @@ import { Intro } from "@/components/policies/Intro";
 import { Content } from "@/components/policies/Content";
 
 export const metadata = {
-  title: "Cookie Policy | TEKNOVIA Technologies",
+  title: "Cookie Policy",
   description:
     "Learn how TEKNOVIA Technologies uses cookies and similar technologies on its website.",
+  alternates: {
+    canonical: "/cookie-policy",
+  },
 };
 
 const sections = [

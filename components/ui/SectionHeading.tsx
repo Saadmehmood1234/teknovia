@@ -74,7 +74,7 @@ export function SectionHeading({
   };
 
   const viewport = {
-    once: false,
+    once: true,
     amount: animationConfig.viewportAmount,
   };
 

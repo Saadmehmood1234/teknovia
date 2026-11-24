@@ -1,5 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
-
+import { ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
 type IntroProps = {
@@ -8,33 +7,32 @@ type IntroProps = {
   message: React.ReactNode;
 };
 
-export function Intro({
-  label,
-  description,
-  message,
-}: IntroProps) {
+export function Intro({ label, description, message }: IntroProps) {
   return (
-    <section className="border-b border-gray-100 bg-white">
+    <section className="border-b border-slate-100 bg-white">
       <Container>
-        <div className="grid gap-10 py-14 sm:py-16 lg:grid-cols-[280px_1fr] lg:gap-16 lg:py-20">
+        <div className="grid gap-8 py-12 sm:py-16 lg:grid-cols-[280px_1fr] lg:gap-14 lg:py-16">
           <div>
             <div className="sticky top-28">
-              <p className="eyebrow">{label}</p>
+              <span className="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-slate-700">
+                {label}
+              </span>
 
-              <p className="mt-3 text-sm leading-6 text-gray-500">
+              <p className="mt-3 text-sm leading-relaxed text-slate-500">
                 {description}
               </p>
             </div>
           </div>
 
           <div className="max-w-3xl">
-            <div className="flex items-start gap-3 rounded-xl border border-primary-100 bg-primary-50/60 p-5 sm:p-6">
-              <CheckCircle2
-                size={20}
-                className="mt-0.5 shrink-0 text-primary"
-              />
+            <div className="flex items-start gap-4 rounded-2xl border border-primary-100/80 bg-gradient-to-br from-primary-50/50 to-white p-6 shadow-xs ring-1 ring-primary/10">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-100 text-primary">
+                <ShieldCheck className="h-5 w-5" />
+              </div>
 
-              <p className="text-sm leading-6 text-gray-700">{message}</p>
+              <div className="text-sm leading-relaxed text-slate-700">
+                {message}
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getCmsBlogSlugs } from "@/lib/cms-blog";
+import { getDynamicOpenings } from "@/lib/data/careers-data";
 
 const BASE_URL = "https://www.teknovia.in";
 
@@ -7,20 +8,60 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogEntries: MetadataRoute.Sitemap = [];
   try {
     const result = await getCmsBlogSlugs();
-    blogEntries = result.items.filter((post) => !post.noIndex && (!post.canonicalUrl || post.canonicalUrl.startsWith(`${BASE_URL}/blog/`))).map((post) => ({ url: post.canonicalUrl || `${BASE_URL}/blog/${post.slug}`, lastModified: new Date(post.updatedAt), changeFrequency: "weekly" as const, priority: 0.7 }));
+    blogEntries = result.items
+      .filter((post) => !post.noIndex && (!post.canonicalUrl || post.canonicalUrl.startsWith(`${BASE_URL}/blog/`)))
+      .map((post) => ({
+        url: post.canonicalUrl || `${BASE_URL}/blog/${post.slug}`,
+        lastModified: new Date(post.updatedAt),
+        changeFrequency: "weekly" as const,
+        priority: 0.7,
+      }));
   } catch (error) {
     console.error("[cms-blog] sitemap posts could not be loaded", error instanceof Error ? error.message : "unknown error");
   }
+
+  let careerEntries: MetadataRoute.Sitemap = [];
+  try {
+    const openings = await getDynamicOpenings();
+    careerEntries = openings.map((job) => ({
+      url: `${BASE_URL}/careers/${job.id}`,
+      lastModified: job.postedDate ? new Date(job.postedDate) : new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }));
+  } catch (error) {
+    console.error("[careers] sitemap openings could not be loaded", error instanceof Error ? error.message : "unknown error");
+  }
+
   return [
     {
       url: BASE_URL,
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
-
+    {
+      url: `${BASE_URL}/services`,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
     {
       url: `${BASE_URL}/corporate`,
       changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/contact`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/faq`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/careers`,
+      changeFrequency: "weekly",
       priority: 0.8,
     },
 
@@ -58,6 +99,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Digital Edge
     {
+      url: `${BASE_URL}/digital-edge`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/digital-edge/web-seo`,
       changeFrequency: "monthly",
       priority: 0.8,
@@ -89,7 +135,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    // ecommerce
+    // eCommerce
     {
       url: `${BASE_URL}/ecommerce-solutions`,
       changeFrequency: "monthly",
@@ -109,6 +155,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+
+    // Legal & Policies
+    {
+      url: `${BASE_URL}/privacy-policy`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terms-and-conditions`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/cookie-policy`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/disclaimer`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+
+    ...careerEntries,
     ...blogEntries,
   ];
 }

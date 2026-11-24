@@ -8,14 +8,17 @@ import { ProgressBar } from "./home/ProgressBar";
 
 export function WhyTeknoviaReasons() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
+
     const timer = setTimeout(() => {
       setActiveIndex((prev) => (prev + 1) % reasons.length);
-    }, 3000);
+    }, 4000);
 
     return () => clearTimeout(timer);
-  }, [activeIndex]);
+  }, [activeIndex, isPaused]);
 
   const activeReason = reasons[activeIndex];
 
@@ -26,7 +29,13 @@ export function WhyTeknoviaReasons() {
   const activeTxt = activeReason.txtColor;
 
   return (
-    <div className="mt-16 flex w-full max-w-5xl min-w-0 gap-3 overflow-hidden rounded-2xl bg-linear-to-br from-[#1D3C5F] to-[#009689] p-4">
+    <div
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+      className="mt-16 flex w-full max-w-5xl min-w-0 gap-3 overflow-hidden rounded-2xl bg-linear-to-br from-[#1D3C5F] to-[#009689] p-4"
+    >
       <div className="flex shrink-0 flex-col items-center gap-2 py-6">
         {Array.from({ length: 14 }).map((_, index) => (
           <div

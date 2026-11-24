@@ -1,7 +1,7 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
-import { BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
 import { company, industries, resources, solutions } from "@/lib/data/footer";
 
 export function Footer() {
@@ -12,7 +12,8 @@ export function Footer() {
           src="/images/footer-bg.png"
           alt=""
           fill
-          preload
+          priority
+          sizes="100vw"
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#040506]/30" />
@@ -23,16 +24,16 @@ export function Footer() {
         <Container>
           <div className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,1fr)] lg:gap-10">
             <div>
-              <a href="#home" className="flex shrink-0 items-center pr-4">
+              <Link href="/" className="flex shrink-0 items-center pr-4">
                 <Image
                   src="/dark-logo.png"
                   alt="Teknovia"
                   width={120}
                   height={40}
-                  preload
+                  priority
                   className="h-7 w-auto object-contain"
                 />
-              </a>
+              </Link>
 
               <p className="mt-5 max-w-xs text-sm leading-7 text-slate-400">
                 Teknovia Technologies Private Limited.
@@ -49,31 +50,32 @@ export function Footer() {
                       Head Office
                     </p>
                     <p>CLR Complex, Sector - 149</p>
-                    <p>Noida - INDIA</p>
+                    <p>Noida, Uttar Pradesh - INDIA</p>
                   </div>
                 </div>
               </div>
               <div className="mt-5 space-y-1.5 text-sm text-slate-400">
-                <div className="flex items-start justify-start gap-2">
-                  <Phone
-                    className="mt-0.5 shrink-0 text-primary-300"
-                    size={16}
-                  />
-
+                <div className="flex flex-col sm:flex-row items-start justify-start gap-2 sm:gap-4">
+                  <div className="flex items-center gap-2">
+                    <Phone
+                      className="mt-0.5 shrink-0 text-primary-300"
+                      size={16}
+                    />
+                    <a
+                      href="tel:+919712980864"
+                      className="block transition hover:text-white"
+                    >
+                      +91 97129 80864
+                    </a>
+                  </div>
                   <a
-                    href="tel:+919712980864"
-                    className="block transition hover:text-white"
+                    href="tel:+919897053555"
+                    className="block transition hover:text-white sm:border-l sm:border-slate-700 sm:pl-3"
                   >
-                    +91 97129 80864
-                  </a>
-                  <a
-                    href="tel:++919897053555"
-                    className="block transition hover:text-white"
-                  >
-                    +91 9897053555
+                    +91 98970 53555
                   </a>
                 </div>
-                <div className="flex items-center justify-start gap-4">
+                <div className="flex items-center justify-start gap-4 pt-1">
                   <div className="flex gap-2">
                     <Mail
                       className="mt-0.5 shrink-0 text-primary-300"
@@ -88,16 +90,21 @@ export function Footer() {
                     </a>
                   </div>
                   <div className="flex gap-2 items-center">
-                    <BsLinkedin
-                      className="mt-0.5 shrink-0 text-primary-300"
-                      size={16}
-                    />
+                    <svg
+                      className="size-4 shrink-0 text-primary-300 fill-current"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 0-3.06 1.53 1.53 0 0 0 0 3.06m1.4 9.74v-8.37H5.06v8.37h2.8z" />
+                    </svg>
 
                     <a
                       href="https://www.linkedin.com/company/teknovia-tech"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block transition hover:text-white"
                     >
-                      linkedin
+                      LinkedIn
                     </a>
                   </div>
                 </div>
@@ -109,56 +116,30 @@ export function Footer() {
             <FooterColumn title="Resources" items={resources} />
             <FooterColumn title="Industries" items={industries} />
           </div>
-          {/* <div className="border-t border-white/10 py-8">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-              <div>
-                <p className="text-sm font-semibold text-white">
-                  Stay Connected
-                </p>
 
-                <p className="mt-1 text-sm text-slate-400">
-                  Subscribe to our newsletter for latest updates and insights.
-                </p>
-              </div>
-
-              <form className="flex w-full max-w-md">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="min-w-0 flex-1 rounded-l-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500 focus:border-primary"
-                />
-
-                <button
-                  type="submit"
-                  className="rounded-r-lg bg-primary px-5 text-sm font-semibold text-white transition hover:bg-primary/90"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div> */}
           <div className="flex flex-col gap-4 border-t border-white/10 py-7 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 Teknovia. All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} Teknovia Technologies Private Limited. All Rights Reserved.</p>
 
             <div className="flex flex-wrap gap-x-6 gap-y-2">
-              <a href="/terms-and-conditions" className="transition text-xs hover:text-white">
+              <Link href="/terms-and-conditions" className="transition text-xs text-slate-400 hover:text-white">
                 Terms & Conditions
-              </a>
+              </Link>
 
-              <a href="/privacy-policy" className="transition text-xs hover:text-white">
+              <Link href="/privacy-policy" className="transition text-xs text-slate-400 hover:text-white">
                 Privacy Policy
-              </a>
+              </Link>
 
-              <a href="/cookie-policy" className="transition text-xs hover:text-white">
+              <Link href="/cookie-policy" className="transition text-xs text-slate-400 hover:text-white">
                 Cookie Policy
-              </a>
-              <a href="/disclaimer" className="transition text-xs hover:text-white">
-                Disclaimer
-              </a>
+              </Link>
 
-              <a href="/sitemap.xml" className="transition text-xs hover:text-white">
+              <Link href="/disclaimer" className="transition text-xs text-slate-400 hover:text-white">
+                Disclaimer
+              </Link>
+
+              <Link href="/sitemap.xml" className="transition text-xs text-slate-400 hover:text-white">
                 Sitemap
-              </a>
+              </Link>
             </div>
           </div>
         </Container>
@@ -171,10 +152,12 @@ type ItemsType = {
   title: string;
   href: string;
 };
+
 type FooterColumnProps = {
   title: string;
   items: ItemsType[];
 };
+
 function FooterColumn({ title, items }: FooterColumnProps) {
   return (
     <div>
@@ -184,7 +167,7 @@ function FooterColumn({ title, items }: FooterColumnProps) {
 
       <div className="mt-5 space-y-3">
         {items.map((item) => (
-          <a
+          <Link
             key={item.title}
             href={item.href}
             className="group flex items-center gap-1 text-sm text-slate-400 transition hover:text-white"
@@ -199,7 +182,7 @@ function FooterColumn({ title, items }: FooterColumnProps) {
               size={11}
               className="text-primary opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100"
             />
-          </a>
+          </Link>
         ))}
       </div>
     </div>

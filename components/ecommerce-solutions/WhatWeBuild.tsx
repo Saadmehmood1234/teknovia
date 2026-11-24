@@ -31,7 +31,7 @@ const productTints = [
 const categories = ["Electronics", "Fashion", "Home"];
 function DeviceStage() {
   return (
-    <div className="relative mx-auto aspect-[4/3.3] w-full max-w-2xl">
+    <div aria-hidden="true" className="relative mx-auto aspect-[4/3.3] w-full max-w-2xl select-none">
       <div
         aria-hidden
         className="absolute inset-0 rounded-full bg-[radial-linear(circle_at_50%_45%,rgba(0,150,137,0.16),transparent_65%)]"

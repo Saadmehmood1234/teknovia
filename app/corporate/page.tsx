@@ -8,7 +8,7 @@ import { CorporateHero } from "@/components/corporate/CorporateHero";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "About Teknovia Technologies | Software & Digital Solutions",
+  title: "Corporate & About Us",
 
   description:
     "Learn about Teknovia Technologies, a technology company in Noida offering custom software development, digital marketing, EdTech, business automation, ERP and talent solutions.",

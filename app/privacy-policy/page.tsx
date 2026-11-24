@@ -3,9 +3,12 @@ import { Hero } from "@/components/policies/Hero";
 import { Intro } from "@/components/policies/Intro";
 import Link from "next/link";
 export const metadata = {
-  title: "Privacy Policy | TEKNOVIA Technologies",
+  title: "Privacy Policy",
   description:
     "Learn how TEKNOVIA Technologies collects, uses, protects, stores, and handles personal information when you use our website or communicate with us.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
 };
 
 const sections = [

@@ -14,15 +14,21 @@ export type ContactTab = "message" | "callback" | "enquiry";
 
 const validTabs: ContactTab[] = ["message", "callback", "enquiry"];
 
-export default function ContactFrom() {
+export default function ContactForm() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
 
-  const [activeTab, setActiveTab] = useState<ContactTab>(() =>
-    validTabs.includes(tabParam as ContactTab)
+  const [userTab, setUserTab] = useState<ContactTab | null>(null);
+
+  const activeTab: ContactTab =
+    userTab ??
+    (validTabs.includes(tabParam as ContactTab)
       ? (tabParam as ContactTab)
-      : "message",
-  );
+      : "message");
+
+  const handleTabChange = (tab: ContactTab) => {
+    setUserTab(tab);
+  };
   return (
     <section id="contact-form" className="bg-[#FAFAFA] py-8 lg:py-16">
       <Container>
@@ -58,7 +64,7 @@ export default function ContactFrom() {
                     <button
                       key={tab.id}
                       type="button"
-                      onClick={() => setActiveTab(tab.id as ContactTab)}
+                      onClick={() => handleTabChange(tab.id as ContactTab)}
                       aria-pressed={active}
                       className={`relative flex items-center gap-2 rounded-2xl px-8 py-3 text-sm font-semibold transition ${
                         active

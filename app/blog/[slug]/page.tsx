@@ -10,7 +10,11 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
 import { formatPostDate } from "@/lib/data/blogs-data";
 import Image from "next/image";
-import { getCmsBlogPost, getCmsBlogPosts, getCmsBlogSlugs } from "@/lib/cms-blog";
+import {
+  getCmsBlogPost,
+  getCmsBlogPosts,
+  getCmsBlogSlugs,
+} from "@/lib/cms-blog";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -19,7 +23,9 @@ type Props = {
 export async function generateStaticParams() {
   try {
     const { items } = await getCmsBlogSlugs();
-    return items.filter((post) => !post.noIndex).map((post) => ({ slug: post.slug }));
+    return items
+      .filter((post) => !post.noIndex)
+      .map((post) => ({ slug: post.slug }));
   } catch {
     return [];
   }
@@ -42,9 +48,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.publishedAt,
       authors: [post.author.name],
-      images: post.featuredImage ? [{ url: post.featuredImage.url, alt: post.featuredImage.altText }] : undefined,
+      images: post.featuredImage
+        ? [{ url: post.featuredImage.url, alt: post.featuredImage.altText }]
+        : undefined,
     },
-    twitter: { card: post.featuredImage ? "summary_large_image" : "summary", title: post.title, description },
+    twitter: {
+      card: post.featuredImage ? "summary_large_image" : "summary",
+      title: post.title,
+      description,
+    },
   };
 }
 
@@ -54,11 +66,43 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound();
 
-  const relatedPage = await getCmsBlogPosts(1, 50);
-  const related = relatedPage.items.filter((item) => item.slug !== post.slug).slice(0, 3);
+  const relatedPage = await getCmsBlogPosts(1, 4);
+  const related = relatedPage.items
+    .filter((item) => item.slug !== post.slug)
+    .slice(0, 3);
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.seo.description ?? post.excerpt ?? "",
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt,
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Teknovia Technologies",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.teknovia.in/teknovia-logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.teknovia.in/blog/${post.slug}`,
+    },
+    image: post.featuredImage?.url || "https://www.teknovia.in/og-image.jpg",
+  };
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <section className="border-b border-gray-200 bg-[#EFF3F6] py-8 sm:py-12 lg:py-16">
         <Container>
           <Breadcrumb
@@ -67,7 +111,11 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="grid items-center gap-8 pt-8 lg:grid-cols-[1fr_0.85fr] lg:gap-12">
             <div>
-              <TopBadge data={post.categories[0]?.name || post.tags[0]?.name || "Insights"} />
+              <TopBadge
+                data={
+                  post.categories[0]?.name || post.tags[0]?.name || "Insights"
+                }
+              />
 
               <h1 className="mt-5 font-heading text-3xl font-bold leading-[1.2] tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
                 {post.title}
@@ -82,7 +130,9 @@ export default async function BlogPostPage({ params }: Props) {
                   {post.author.name}
                 </span>
 
-                <time dateTime={post.publishedAt}>{formatPostDate(post.publishedAt.slice(0, 10))}</time>
+                <time dateTime={post.publishedAt}>
+                  {formatPostDate(post.publishedAt.slice(0, 10))}
+                </time>
 
                 <span className="inline-flex items-center gap-1.5">
                   <Clock3 className="size-4" />
@@ -107,7 +157,10 @@ export default async function BlogPostPage({ params }: Props) {
       <section className="bg-white py-10 sm:py-16">
         <Container>
           <article className="max-w-3xl">
-            <div className="cms-post-content text-base leading-8 text-gray-700" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+            <div
+              className="cms-post-content text-base leading-8 text-gray-700"
+              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            />
 
             <Link
               href="/blog"

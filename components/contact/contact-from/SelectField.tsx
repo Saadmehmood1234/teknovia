@@ -1,3 +1,5 @@
+import { ChevronDown } from "lucide-react";
+
 export function SelectField({
   label,
   name,
@@ -24,23 +26,26 @@ export function SelectField({
         )}
       </label>
 
-      <select
-        id={name}
-        name={name}
-        required={required}
-        defaultValue=""
-        className="h-12 w-full rounded-xl border border-gray-200 bg-white px-4 text-sm text-gray-700 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
-      >
-        <option value="" disabled>
-          {placeholder}
-        </option>
-
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
+      <div className="relative">
+        <select
+          id={name}
+          name={name}
+          required={required}
+          defaultValue=""
+          className="h-12 w-full appearance-none rounded-xl border border-gray-200 bg-white pl-4 pr-11 text-sm text-gray-700 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10 cursor-pointer"
+        >
+          <option value="" disabled>
+            {placeholder}
           </option>
-        ))}
-      </select>
+
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+        <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 text-gray-400" />
+      </div>
     </div>
   );
 }
