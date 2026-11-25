@@ -143,7 +143,7 @@ export function InternshipForm({
 
   if (submitSuccess) {
     return (
-      <div className="rounded-3xl border border-slate-200/80 bg-white p-8 sm:p-12 shadow-xl shadow-slate-100/50">
+      <div>
         <div className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-primary-50 text-primary ring-8 ring-primary-50/50">
           <CheckCircle2 className="size-8 text-primary" />
         </div>
@@ -186,45 +186,6 @@ export function InternshipForm({
                 </>
               )}
             </button>
-          </div>
-        </div>
-
-        {/* Roadmap */}
-        <div className="mt-10 border-t border-slate-100 pt-8">
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 text-center mb-6">
-            Next Steps for Intern Candidates
-          </h3>
-
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-4">
-              <span className="flex size-7 items-center justify-center rounded-lg bg-primary-100 text-xs font-bold text-primary">
-                1
-              </span>
-              <h4 className="mt-2 text-xs font-bold text-slate-900">Academic & Project Review</h4>
-              <p className="mt-1 text-xs text-slate-500 leading-5">
-                We review your college coursework, projects, and portfolio within 3 business days.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-4">
-              <span className="flex size-7 items-center justify-center rounded-lg bg-primary-100 text-xs font-bold text-primary">
-                2
-              </span>
-              <h4 className="mt-2 text-xs font-bold text-slate-900">Task or Mentorship Chat</h4>
-              <p className="mt-1 text-xs text-slate-500 leading-5">
-                A simple hands-on mini-assignment or informal technical chat with a senior mentor.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-4">
-              <span className="flex size-7 items-center justify-center rounded-lg bg-primary-100 text-xs font-bold text-primary">
-                3
-              </span>
-              <h4 className="mt-2 text-xs font-bold text-slate-900">Offer & Onboarding</h4>
-              <p className="mt-1 text-xs text-slate-500 leading-5">
-                Offer letter issued with monthly stipend details, project track, and start date.
-              </p>
-            </div>
           </div>
         </div>
 
