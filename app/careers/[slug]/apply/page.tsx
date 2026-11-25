@@ -231,8 +231,8 @@ export default async function JobApplyPage({ params }: ApplyPageProps) {
               <div className="mt-4 border-t border-primary-100 pt-3 flex items-center gap-2 text-xs text-slate-600">
                 <Mail className="size-3.5 text-primary" />
                 <span>Careers Help: </span>
-                <a href="mailto:info@teknovia.in" className="font-semibold text-primary hover:underline">
-                  info@teknovia.in
+                <a href="mailto:hr@teknovia.in" className="font-semibold text-primary hover:underline">
+                  hr@teknovia.in
                 </a>
               </div>
             </div>

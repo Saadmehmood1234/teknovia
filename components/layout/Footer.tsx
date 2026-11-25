@@ -68,12 +68,6 @@ export function Footer() {
                       +91 97129 80864
                     </a>
                   </div>
-                  <a
-                    href="tel:+919897053555"
-                    className="block transition hover:text-white sm:border-l sm:border-slate-700 sm:pl-3"
-                  >
-                    +91 98970 53555
-                  </a>
                 </div>
                 <div className="flex items-center justify-start gap-4 pt-1">
                   <div className="flex gap-2">
