@@ -1,4 +1,7 @@
+import { cache } from "react";
 import { openPositions, JobOpening } from "./careers-data";
+import { connectToDatabase } from "@/lib/mongodb";
+import { OpeningModel } from "@/lib/models/Opening";
 
 export interface StoredOpening extends JobOpening {
   status: "Active" | "Inactive";
@@ -84,6 +87,7 @@ export function normalizeOpening(rawInput: RawOpeningInput): StoredOpening {
 // Global in-memory storage that survives server module reloads
 const globalStore = globalThis as unknown as {
   teknoviaCustomOpenings?: StoredOpening[];
+  teknoviaLastKnownGoodOpenings?: StoredOpening[];
 };
 
 if (!globalStore.teknoviaCustomOpenings) {
@@ -99,87 +103,173 @@ export function writeCustomOpenings(openings: StoredOpening[]): void {
 }
 
 /**
- * Get all openings, merging base static roles + custom roles + Google Sheet roles
+ * Fetch live from Google Apps Script (secondary fallback / seed source)
+ */
+async function fetchGoogleSheetOpenings(includeInactive = false): Promise<StoredOpening[]> {
+  const googleScriptUrl = process.env.GOOGLE_SCRIPT_WEBAPP_URL?.trim();
+  if (!googleScriptUrl) return [];
+
+  try {
+    const url = new URL(googleScriptUrl);
+    url.searchParams.set("action", "getOpenings");
+    if (includeInactive) url.searchParams.set("all", "true");
+
+    const res = await fetch(url.toString(), {
+      cache: "no-store",
+      headers: { "Accept": "application/json" },
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      if (data.success && Array.isArray(data.openings) && data.openings.length > 0) {
+        return data.openings.map((o: unknown) => normalizeOpening(o as RawOpeningInput));
+      }
+    }
+  } catch (err) {
+    console.warn("[Google Apps Script fetch warning]:", err);
+  }
+  return [];
+}
+
+/**
+ * Get all openings:
+ * 1. Primary: MongoDB (Fast, transactional, 100% reliable)
+ * 2. Secondary fallback: Google Apps Script + In-memory store
+ * 3. Resilient cache: Never returns empty [] if openings previously existed
  */
 export async function getAllOpenings(includeInactive = false): Promise<StoredOpening[]> {
-  const baseOpenings: StoredOpening[] = openPositions.map((p) =>
-    normalizeOpening({
-      ...p,
-      status: "Active" as const,
-    })
-  );
+  // 1. Try MongoDB
+  try {
+    const mongooseConn = await connectToDatabase();
+    if (mongooseConn) {
+      const query: { status?: "Active" | "Inactive" } = includeInactive ? {} : { status: "Active" };
+      const docs = await OpeningModel.find(query).sort({ createdAt: -1 }).lean();
 
-  const custom = readCustomOpenings();
+      if (docs && docs.length > 0) {
+        const mongoOpenings: StoredOpening[] = docs.map((doc) =>
+          normalizeOpening({
+            id: doc.id,
+            title: doc.title,
+            department: doc.department,
+            category: doc.category,
+            type: doc.type,
+            location: doc.location,
+            workplaceType: doc.workplaceType,
+            experience: doc.experience,
+            duration: doc.duration,
+            stipendOrSalary: doc.stipendOrSalary,
+            shortDescription: doc.shortDescription,
+            aboutRole: doc.aboutRole,
+            responsibilities: doc.responsibilities,
+            requirements: doc.requirements,
+            whoYouAre: doc.whoYouAre,
+            benefits: doc.benefits,
+            featured: doc.featured,
+            status: doc.status,
+            postedDate: doc.postedDate,
+          })
+        );
 
-  // Map to merge by ID
-  const map = new Map<string, StoredOpening>();
+        // Update last-known-good cache
+        globalStore.teknoviaLastKnownGoodOpenings = mongoOpenings;
+        return mongoOpenings;
+      }
 
-  // 1. Add base openings
-  for (const item of baseOpenings) {
-    map.set(item.id, item);
-  }
+      // If MongoDB is connected but empty, auto-migrate/seed from Google Sheet or static
+      const sheetOpenings = await fetchGoogleSheetOpenings(true);
+      const seedSource = sheetOpenings.length > 0 ? sheetOpenings : openPositions.map((p) => normalizeOpening(p));
 
-  // 2. Fetch live from Google Apps Script if reachable
-  const googleScriptUrl = process.env.GOOGLE_SCRIPT_WEBAPP_URL?.trim();
-  if (googleScriptUrl) {
-    try {
-      const url = new URL(googleScriptUrl);
-      url.searchParams.set("action", "getOpenings");
-      if (includeInactive) url.searchParams.set("all", "true");
-
-      const res = await fetch(url.toString(), {
-        cache: includeInactive ? "no-store" : "default",
-        next: includeInactive ? undefined : { revalidate: 10 },
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        if (data.success && Array.isArray(data.openings) && data.openings.length > 0) {
-          for (const sheetOpening of data.openings) {
-            if (sheetOpening && sheetOpening.id) {
-              map.set(sheetOpening.id, normalizeOpening({
-                ...sheetOpening,
-                status: sheetOpening.status || "Active",
-              }));
-            }
+      if (seedSource.length > 0) {
+        try {
+          for (const item of seedSource) {
+            await OpeningModel.findOneAndUpdate(
+              { id: item.id },
+              item,
+              { upsert: true, new: true, setDefaultsOnInsert: true }
+            );
           }
+          console.log(`[MongoDB Auto-Seed] Successfully seeded ${seedSource.length} openings into MongoDB.`);
+          const seeded = await OpeningModel.find(query).sort({ createdAt: -1 }).lean();
+          const seededOpenings = seeded.map((doc) => normalizeOpening(doc as unknown as RawOpeningInput));
+          globalStore.teknoviaLastKnownGoodOpenings = seededOpenings;
+          return seededOpenings;
+        } catch (seedErr) {
+          console.warn("[MongoDB Seed Error]:", seedErr);
         }
       }
-    } catch {
-      // Gracefully fall back to local store
     }
+  } catch (mongoErr) {
+    console.warn("[MongoDB query error, falling back]:", mongoErr);
   }
 
-  // 3. Overlay custom openings on top so recent local admin changes take precedence over sheet latency
+  // 2. Fallback to Google Sheet & in-memory store
+  const map = new Map<string, StoredOpening>();
+
+  for (const item of openPositions) {
+    map.set(item.id, normalizeOpening({ ...item, status: "Active" }));
+  }
+
+  const sheetOpenings = await fetchGoogleSheetOpenings(includeInactive);
+  for (const sheetOpening of sheetOpenings) {
+    map.set(sheetOpening.id, sheetOpening);
+  }
+
+  const custom = readCustomOpenings();
   for (const item of custom) {
     map.set(item.id, normalizeOpening(item));
   }
 
   const all = Array.from(map.values());
-  if (includeInactive) {
-    return all;
+  const filtered = includeInactive ? all : all.filter((o) => o.status !== "Inactive");
+
+  // Update last-known-good cache if we got results
+  if (filtered.length > 0) {
+    globalStore.teknoviaLastKnownGoodOpenings = filtered;
+    return filtered;
   }
-  return all.filter((o) => o.status !== "Inactive");
+
+  // Resilient protection against cold-start empty drops:
+  if (globalStore.teknoviaLastKnownGoodOpenings && globalStore.teknoviaLastKnownGoodOpenings.length > 0) {
+    return includeInactive
+      ? globalStore.teknoviaLastKnownGoodOpenings
+      : globalStore.teknoviaLastKnownGoodOpenings.filter((o) => o.status !== "Inactive");
+  }
+
+  return filtered;
 }
 
 export async function saveOpening(opening: StoredOpening): Promise<{ success: boolean; id: string }> {
   const normalized = normalizeOpening(opening);
+
+  // 1. Save to MongoDB if available
+  try {
+    const mongooseConn = await connectToDatabase();
+    if (mongooseConn) {
+      await OpeningModel.findOneAndUpdate(
+        { id: normalized.id },
+        normalized,
+        { upsert: true, new: true, setDefaultsOnInsert: true }
+      );
+    }
+  } catch (mongoErr) {
+    console.error("[MongoDB saveOpening error]:", mongoErr);
+  }
+
+  // 2. Update in-memory store
   const current = readCustomOpenings();
   const existingIdx = current.findIndex((o) => o.id === normalized.id);
-
   if (existingIdx >= 0) {
     current[existingIdx] = normalized;
   } else {
     current.unshift(normalized);
   }
-
   writeCustomOpenings(current);
 
-  // Await Sync to Google Apps Script so serverless containers complete the request
+  // 3. Sync to Google Apps Script as secondary backup
   const googleScriptUrl = process.env.GOOGLE_SCRIPT_WEBAPP_URL?.trim();
   if (googleScriptUrl) {
     try {
-      await fetch(googleScriptUrl, {
+      fetch(googleScriptUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -187,9 +277,9 @@ export async function saveOpening(opening: StoredOpening): Promise<{ success: bo
           opening: normalized,
         }),
         cache: "no-store",
-      });
-    } catch (err) {
-      console.warn("[Google Apps Script dispatch error]:", err);
+      }).catch((e) => console.warn("[Google Apps Script sync warning]:", e));
+    } catch {
+      // non-blocking
     }
   }
 
@@ -197,14 +287,27 @@ export async function saveOpening(opening: StoredOpening): Promise<{ success: bo
 }
 
 export async function toggleOpeningStatus(id: string, newStatus: "Active" | "Inactive"): Promise<boolean> {
+  // 1. Update in MongoDB if available
+  try {
+    const mongooseConn = await connectToDatabase();
+    if (mongooseConn) {
+      await OpeningModel.findOneAndUpdate(
+        { id },
+        { $set: { status: newStatus } },
+        { new: true }
+      );
+    }
+  } catch (mongoErr) {
+    console.error("[MongoDB toggleOpeningStatus error]:", mongoErr);
+  }
+
+  // 2. Update in-memory store
   const current = readCustomOpenings();
   const existingIdx = current.findIndex((o) => o.id === id);
-
   if (existingIdx >= 0) {
     current[existingIdx].status = newStatus;
     writeCustomOpenings(current);
   } else {
-    // If not yet in custom, find it from current openings (including Google Sheet or base)
     const all = await getAllOpenings(true);
     const found = all.find((o) => o.id === id);
     if (found) {
@@ -213,11 +316,11 @@ export async function toggleOpeningStatus(id: string, newStatus: "Active" | "Ina
     }
   }
 
-  // Await Sync to Google Apps Script
+  // 3. Sync to Google Apps Script as secondary backup
   const googleScriptUrl = process.env.GOOGLE_SCRIPT_WEBAPP_URL?.trim();
   if (googleScriptUrl) {
     try {
-      const res = await fetch(googleScriptUrl, {
+      fetch(googleScriptUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -226,14 +329,49 @@ export async function toggleOpeningStatus(id: string, newStatus: "Active" | "Ina
           status: newStatus,
         }),
         cache: "no-store",
-      });
-      if (!res.ok) {
-        console.warn("[Google Apps Script toggle status returned non-200]:", res.status);
-      }
-    } catch (err) {
-      console.warn("[Google Apps Script toggle error]:", err);
+      }).catch((e) => console.warn("[Google Apps Script toggle sync warning]:", e));
+    } catch {
+      // non-blocking
     }
   }
 
   return true;
 }
+
+export async function deleteOpening(id: string): Promise<boolean> {
+  try {
+    const mongooseConn = await connectToDatabase();
+    if (mongooseConn) {
+      await OpeningModel.findOneAndDelete({ id });
+    }
+  } catch (mongoErr) {
+    console.error("[MongoDB deleteOpening error]:", mongoErr);
+  }
+
+  const current = readCustomOpenings().filter((o) => o.id !== id);
+  writeCustomOpenings(current);
+  return true;
+}
+
+export async function getDynamicOpenings(): Promise<JobOpening[]> {
+  try {
+    return await getAllOpenings(false);
+  } catch {
+    return openPositions;
+  }
+}
+
+export const findJob = cache(async (slug: string): Promise<JobOpening | undefined> => {
+  if (!slug) return undefined;
+  const cleanSlug = decodeURIComponent(slug).trim().toLowerCase();
+
+  try {
+    const all = await getAllOpenings(true);
+    const found = all.find((j) => (j.id || "").trim().toLowerCase() === cleanSlug);
+    if (found) return found;
+  } catch (err) {
+    console.warn("[findJob error]:", err);
+  }
+  return openPositions.find((job) => (job.id || "").trim().toLowerCase() === cleanSlug);
+});
+

@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getCmsBlogSlugs } from "@/lib/cms-blog";
-import { getDynamicOpenings } from "@/lib/data/careers-data";
+import { getDynamicOpenings } from "@/lib/data/openings-store";
+
+export const dynamic = "force-dynamic";
 
 const BASE_URL = "https://www.teknovia.in";
 

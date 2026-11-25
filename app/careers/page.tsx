@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { CareersHero } from "@/components/careers/CareersHero";
 import { CareersView } from "@/components/careers/CareersView";
 import { CareersCulture } from "@/components/careers/CareersCulture";
-import { getDynamicOpenings } from "@/lib/data/careers-data";
+import { getDynamicOpenings } from "@/lib/data/openings-store";
 import FAQ, { FAQItem } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: "Careers & Internships",

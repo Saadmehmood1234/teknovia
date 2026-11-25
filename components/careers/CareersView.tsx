@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   MapPin,
@@ -18,9 +18,22 @@ import { openPositions, OpeningCategory, JobOpening } from "@/lib/data/careers-d
 export function CareersView({ initialOpenings }: { initialOpenings?: JobOpening[] }) {
   const [selectedCategory, setSelectedCategory] = useState<OpeningCategory>("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [openings, setOpenings] = useState<JobOpening[]>(initialOpenings ?? openPositions);
   const shouldReduceMotion = useReducedMotion();
 
-  const allOpenings = initialOpenings ?? openPositions;
+  // Background re-fetch to ensure the list is always fresh even across edge/CDN caching
+  useEffect(() => {
+    fetch(`/api/careers/openings?t=${Date.now()}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data && data.success && Array.isArray(data.openings) && data.openings.length > 0) {
+          setOpenings(data.openings);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const allOpenings = openings;
 
   const filteredOpenings = allOpenings.filter((job) => {
     const matchesCategory =
@@ -49,8 +62,7 @@ export function CareersView({ initialOpenings }: { initialOpenings?: JobOpening[
           description="We are actively hiring engineering, product design, and digital marketing talent in Noida. Click 'View Details' to explore the role specs or 'Apply Now' to submit your application directly."
         />
 
-        <div className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between border-b border-slate-200/80 pb-6">
-          {/* Category Tabs */}
+        {/* <div className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between border-b border-slate-200/80 pb-6">
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
@@ -88,8 +100,6 @@ export function CareersView({ initialOpenings }: { initialOpenings?: JobOpening[
               Paid Internships ({internshipCount})
             </button>
           </div>
-
-          {/* Search Input */}
           <div className="relative w-full sm:w-72">
             <Search className="absolute left-3.5 top-3 size-4 text-slate-400" />
             <input
@@ -100,7 +110,7 @@ export function CareersView({ initialOpenings }: { initialOpenings?: JobOpening[
               className="w-full rounded-2xl border border-slate-200 bg-white py-2 pl-10 pr-4 text-xs text-slate-900 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Job Listings Grid */}
         <div className="mt-8 space-y-4">

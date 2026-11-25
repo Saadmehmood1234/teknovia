@@ -1,5 +1,3 @@
-import { cache } from "react";
-
 export type OpeningCategory = "all" | "job" | "internship";
 
 export interface JobOpening {
@@ -32,31 +30,3 @@ export function getJobBySlug(slug: string): JobOpening | undefined {
 export function getAllJobSlugs(): string[] {
   return openPositions.map((job) => job.id);
 }
-
-/**
- * Fetch dynamic openings merging base static positions, custom admin creations,
- * and live Google Sheet updates.
- */
-export async function getDynamicOpenings(): Promise<JobOpening[]> {
-  try {
-    const { getAllOpenings } = await import("./openings-store");
-    return await getAllOpenings(false);
-  } catch {
-    return openPositions;
-  }
-}
-
-export const findJob = cache(async (slug: string): Promise<JobOpening | undefined> => {
-  if (!slug) return undefined;
-  const cleanSlug = decodeURIComponent(slug).trim().toLowerCase();
-
-  try {
-    const { getAllOpenings } = await import("./openings-store");
-    const all = await getAllOpenings(true);
-    const found = all.find((j) => (j.id || "").trim().toLowerCase() === cleanSlug);
-    if (found) return found;
-  } catch (err) {
-    console.warn("[findJob error]:", err);
-  }
-  return openPositions.find((job) => (job.id || "").trim().toLowerCase() === cleanSlug);
-});

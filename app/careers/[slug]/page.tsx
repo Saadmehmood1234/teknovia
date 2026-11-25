@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { CTA } from "@/components/CTA";
-import { findJob } from "@/lib/data/careers-data";
+import { findJob } from "@/lib/data/openings-store";
 import { JobDetailHero } from "@/components/careers/detail/JobDetailHero";
 import { JobDetailOverview } from "@/components/careers/detail/JobDetailOverview";
 import { JobDetailResponsibilities } from "@/components/careers/detail/JobDetailResponsibilities";

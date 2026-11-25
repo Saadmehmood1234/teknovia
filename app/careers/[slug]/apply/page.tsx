@@ -12,7 +12,7 @@ import {
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { TopBadge } from "@/components/ui/Top-Badge";
-import { findJob } from "@/lib/data/careers-data";
+import { findJob } from "@/lib/data/openings-store";
 import { JobForm } from "@/components/careers/JobForm";
 import { InternshipForm } from "@/components/careers/InternshipForm";
 
