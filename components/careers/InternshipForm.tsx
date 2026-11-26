@@ -441,11 +441,10 @@ export function InternshipForm({
                 onChange={(e) => setGradYear(e.target.value)}
                 className="w-full appearance-none rounded-xl border border-slate-200 bg-white pl-3.5 pr-11 py-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10 cursor-pointer"
               >
-                <option>2027</option>
-                <option>2026</option>
-                <option>2025</option>
-                <option>2024</option>
-                <option>2023 or earlier</option>
+                <option value="2028">2028</option>
+                <option value="2027">2027</option>
+                <option value="2026">2026</option>
+                <option value="2025 or Earlier">2025 or Earlier</option>
               </select>
               <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
             </div>

@@ -19,6 +19,7 @@ export function JobForm({ defaultJobTitle = "General Job Application" }: JobForm
   const [location, setLocation] = useState("");
   const [qualification, setQualification] = useState("B.Tech / B.E. (Computer Science / IT)");
   const [customQualification, setCustomQualification] = useState("");
+  const [gradYear, setGradYear] = useState("2026");
   const [totalExperience, setTotalExperience] = useState("1 - 3 Years");
   const [currentCompany, setCurrentCompany] = useState("");
   const [currentCtc, setCurrentCtc] = useState("");
@@ -95,6 +96,7 @@ export function JobForm({ defaultJobTitle = "General Job Application" }: JobForm
           qualification === "Other Equivalent" && customQualification.trim()
             ? customQualification.trim()
             : qualification,
+        gradYear,
         totalExperience,
         currentCompany,
         currentCtc,
@@ -395,6 +397,27 @@ export function JobForm({ defaultJobTitle = "General Job Application" }: JobForm
 
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              Year of Graduation <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
+              <select
+                value={gradYear}
+                onChange={(e) => setGradYear(e.target.value)}
+                className="w-full appearance-none rounded-xl border border-slate-200 bg-white pl-3.5 pr-11 py-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10 cursor-pointer"
+              >
+                <option value="2028">2028</option>
+                <option value="2027">2027</option>
+                <option value="2026">2026</option>
+                <option value="2025 or Earlier">2025 or Earlier</option>
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
+            </div>
+          </div>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
               Total Professional Experience <span className="text-red-500">*</span>
             </label>
             <div className="relative">
@@ -408,6 +431,26 @@ export function JobForm({ defaultJobTitle = "General Job Application" }: JobForm
                 <option>2 - 4 Years</option>
                 <option>4 - 7 Years</option>
                 <option>7+ Years</option>
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              Notice Period <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
+              <select
+                value={noticePeriod}
+                onChange={(e) => setNoticePeriod(e.target.value)}
+                className="w-full appearance-none rounded-xl border border-slate-200 bg-white pl-3.5 pr-11 py-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10 cursor-pointer"
+              >
+                <option>Immediate / Available Now</option>
+                <option>15 Days</option>
+                <option>30 Days</option>
+                <option>45 - 60 Days</option>
+                <option>Currently Serving Notice</option>
               </select>
               <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
             </div>
@@ -452,46 +495,24 @@ export function JobForm({ defaultJobTitle = "General Job Application" }: JobForm
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-              Notice Period <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <select
-                value={noticePeriod}
-                onChange={(e) => setNoticePeriod(e.target.value)}
-                className="w-full appearance-none rounded-xl border border-slate-200 bg-white pl-3.5 pr-11 py-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10 cursor-pointer"
-              >
-                <option>Immediate / Available Now</option>
-                <option>15 Days</option>
-                <option>30 Days</option>
-                <option>45 - 60 Days</option>
-                <option>Currently Serving Notice</option>
-              </select>
-              <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-              How did you hear about us?
-            </label>
-            <div className="relative">
-              <select
-                value={source}
-                onChange={(e) => setSource(e.target.value)}
-                className="w-full appearance-none rounded-xl border border-slate-200 bg-white pl-3.5 pr-11 py-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10 cursor-pointer"
-              >
-                <option>LinkedIn</option>
-                <option>Google Search</option>
-                <option>Employee Referral</option>
-                <option>Instagram / Social Media</option>
-                <option>College Placement</option>
-                <option>Other</option>
-              </select>
-              <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
-            </div>
+        <div>
+          <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+            How did you hear about us?
+          </label>
+          <div className="relative">
+            <select
+              value={source}
+              onChange={(e) => setSource(e.target.value)}
+              className="w-full appearance-none rounded-xl border border-slate-200 bg-white pl-3.5 pr-11 py-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-primary focus:ring-4 focus:ring-primary/10 cursor-pointer"
+            >
+              <option>LinkedIn</option>
+              <option>Google Search</option>
+              <option>Employee Referral</option>
+              <option>Instagram / Social Media</option>
+              <option>College Placement</option>
+              <option>Other</option>
+            </select>
+            <ChevronDown className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
           </div>
         </div>
 

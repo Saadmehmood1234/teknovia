@@ -313,6 +313,7 @@ function doPost(e) {
         "Email Address",
         "Current Location",
         "Highest Qualification",
+        "Graduation Year",
         "Total Experience",
         "Current Company",
         "Current CTC",
@@ -326,6 +327,16 @@ function doPost(e) {
         "Consent Given",
       ]);
 
+      // If existing sheet is missing "Graduation Year" column, auto-insert it at column 9
+      const lastCol = sheet.getLastColumn();
+      if (lastCol >= 8) {
+        const headerRow = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+        if (headerRow.indexOf("Graduation Year") === -1) {
+          sheet.insertColumnAfter(8);
+          sheet.getRange(1, 9).setValue("Graduation Year").setBackground("#009689").setFontColor("#FFFFFF").setFontWeight("bold");
+        }
+      }
+
       const appId = "JOB-" + Utilities.getUuid().slice(0, 8).toUpperCase();
       const resumeLink = saveFileToDrive(targetFolder, data.resumeFile, "Resume_" + data.fullName);
 
@@ -338,6 +349,7 @@ function doPost(e) {
         data.email || "",
         data.location || "",
         data.qualification || "",
+        data.gradYear || data.graduationYear || "",
         data.totalExperience || "",
         data.currentCompany || "",
         data.currentCtc || "",
